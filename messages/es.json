@@ -96,6 +96,28 @@
       "delete": "Eliminar",
       "load": "Cargar"
     },
+    "portfolio": {
+      "title": "Construye Tu Portafolio Ideal",
+      "description": "Elige acciones y mira como podria crecer tu dinero!",
+      "pickStocks": "1. Elige Acciones para Agregar",
+      "yourPortfolio": "2. Tu Portafolio",
+      "clearAll": "Borrar Todo",
+      "timeHorizon": "Cuantos anos vas a invertir?",
+      "projectedResults": "3. Tus Resultados Proyectados",
+      "totalInvested": "Total que Invertirias",
+      "avgReturn": "Rendimiento Promedio Esperado",
+      "conservative": "Conservador",
+      "expected": "Esperado",
+      "optimistic": "Optimista",
+      "disclaimer": "El rendimiento pasado no garantiza resultados futuros. Estas proyecciones son solo para fines educativos. El mercado de valores tiene riesgos y podrias perder dinero.",
+      "emptyTitle": "Empieza a Construir Tu Portafolio",
+      "emptyDescription": "Haz clic en las acciones arriba para agregarlas a tu portafolio y ver rendimientos proyectados.",
+      "tipsTitle": "Consejos de Inversion",
+      "tip1": "No pongas todo tu dinero en una sola accion",
+      "tip2": "VOO y VTI son excelentes para principiantes - tienen cientos de acciones!",
+      "tip3": "Entre mas tiempo inviertas, mas puede crecer tu dinero",
+      "tip4": "No entres en panico cuando los precios bajen - mantente firme!"
+    },
     "compoundInterest": {
       "title": "Mira Tu Dinero Crecer!",
       "description": "Mira como ahorrar un poco puede convertirse en mucho con el tiempo",
@@ -769,7 +791,10 @@
     "noHoldings": "No tienes acciones todavia. Compra tu primera!",
     "trade": {
       "title": "Operar Acciones",
-      "searchStock": "Buscar una accion...",
+      "searchStock": "Escribe el nombre de una empresa o simbolo...",
+      "searchLabel": "Buscar cualquier accion:",
+      "popularStocks": "O elige una accion popular:",
+      "placeOrder": "Hacer Tu Orden",
       "buy": "Comprar",
       "sell": "Vender",
       "shares": "Acciones",
@@ -781,6 +806,11 @@
       "insufficientFunds": "Fondos insuficientes",
       "insufficientShares": "No tienes suficientes acciones",
       "success": "Operacion ejecutada con exito!"
+    },
+    "chart": {
+      "title": "Grafico de Precios",
+      "viewOnYahoo": "Ver en Yahoo Finance",
+      "disclaimer": "Los datos del grafico pueden tener un retraso de 15-20 minutos. Solo para fines educativos."
     },
     "history": {
       "title": "Tus Operaciones",

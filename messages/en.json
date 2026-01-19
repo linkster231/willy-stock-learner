@@ -96,6 +96,28 @@
       "delete": "Delete",
       "load": "Load"
     },
+    "portfolio": {
+      "title": "Build Your Dream Portfolio",
+      "description": "Pick stocks and see how your money could grow!",
+      "pickStocks": "1. Pick Stocks to Add",
+      "yourPortfolio": "2. Your Portfolio",
+      "clearAll": "Clear All",
+      "timeHorizon": "How many years will you invest?",
+      "projectedResults": "3. Your Projected Results",
+      "totalInvested": "Total You Would Invest",
+      "avgReturn": "Average Expected Return",
+      "conservative": "Conservative",
+      "expected": "Expected",
+      "optimistic": "Optimistic",
+      "disclaimer": "Past performance does not guarantee future results. These projections are for educational purposes only. The stock market involves risk and you could lose money.",
+      "emptyTitle": "Start Building Your Portfolio",
+      "emptyDescription": "Click on stocks above to add them to your portfolio and see projected returns.",
+      "tipsTitle": "Investment Tips",
+      "tip1": "Don't put all your money in one stock",
+      "tip2": "VOO and VTI are great for beginners - they hold hundreds of stocks!",
+      "tip3": "The longer you invest, the more your money can grow",
+      "tip4": "Don't panic when prices drop - stay the course!"
+    },
     "compoundInterest": {
       "title": "Watch Your Money Grow!",
       "description": "See how saving a little can turn into a lot over time",
@@ -769,7 +791,10 @@
     "noHoldings": "You don't own any stocks yet. Buy your first one!",
     "trade": {
       "title": "Trade Stocks",
-      "searchStock": "Search for a stock...",
+      "searchStock": "Type a company name or stock symbol...",
+      "searchLabel": "Search for any stock:",
+      "popularStocks": "Or pick a popular stock:",
+      "placeOrder": "Place Your Order",
       "buy": "Buy",
       "sell": "Sell",
       "shares": "Shares",
@@ -781,6 +806,11 @@
       "insufficientFunds": "Insufficient funds",
       "insufficientShares": "You don't own enough shares",
       "success": "Trade executed successfully!"
+    },
+    "chart": {
+      "title": "Price Chart",
+      "viewOnYahoo": "View on Yahoo Finance",
+      "disclaimer": "Chart data may be delayed 15-20 minutes. For educational purposes only."
     },
     "history": {
       "title": "Your Trades",

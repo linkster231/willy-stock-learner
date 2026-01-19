@@ -13,6 +13,13 @@ import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/Ca
  */
 const calculators = [
   {
+    href: '/calculators/portfolio',
+    key: 'portfolio',
+    icon: '📊',
+    color: 'bg-gradient-to-br from-blue-50 to-green-50 border-blue-300 hover:border-blue-400',
+    featured: true,
+  },
+  {
     href: '/calculators/compound-interest',
     key: 'compoundInterest',
     icon: '📈',

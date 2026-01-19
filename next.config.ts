@@ -27,6 +27,9 @@ const nextConfig: NextConfig = {
   // Enable React Strict Mode for better development experience
   reactStrictMode: true,
 
+  // Enable typed routes for better TypeScript support (moved from experimental in Next.js 16)
+  typedRoutes: true,
+
   // Image optimization configuration
   images: {
     remotePatterns: [
@@ -41,12 +44,6 @@ const nextConfig: NextConfig = {
         hostname: 'placehold.co',
       },
     ],
-  },
-
-  // Experimental features
-  experimental: {
-    // Enable typed routes for better TypeScript support
-    typedRoutes: true,
   },
 };
 

@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "mkdir -p .next/server && echo '{}' > .next/server/pages-manifest.json",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
