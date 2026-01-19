@@ -18,6 +18,7 @@ import { cn } from '@/lib/utils';
 import { glossaryTerms, getTermById } from '@/content/glossary/terms';
 
 const CATEGORIES = ['basics', 'trading', 'analysis', 'psychology', 'tax'] as const;
+const DEFINITION_MAX_LENGTH = 150;
 
 export default function GlossaryPage() {
   const t = useTranslations('glossary');
@@ -27,6 +28,8 @@ export default function GlossaryPage() {
   const [myWords, setMyWords] = useState<Set<string>>(new Set());
   // Track collapsed terms - expanded by default (empty set means all expanded)
   const [collapsedTerms, setCollapsedTerms] = useState<Set<string>>(new Set());
+  // Track which long definitions are fully expanded (for "read more" feature)
+  const [fullyExpandedDefs, setFullyExpandedDefs] = useState<Set<string>>(new Set());
 
   // Filter terms based on search and category
   const filteredTerms = useMemo(() => {
@@ -71,6 +74,22 @@ export default function GlossaryPage() {
 
   // Check if a term is expanded (not in collapsed set)
   const isExpanded = (termId: string) => !collapsedTerms.has(termId);
+
+  // Toggle full definition expansion for "read more"
+  const toggleFullDefinition = (termId: string) => {
+    setFullyExpandedDefs((prev) => {
+      const next = new Set(prev);
+      if (next.has(termId)) {
+        next.delete(termId);
+      } else {
+        next.add(termId);
+      }
+      return next;
+    });
+  };
+
+  // Check if definition is fully expanded
+  const isFullyExpanded = (termId: string) => fullyExpandedDefs.has(termId);
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
@@ -189,10 +208,29 @@ export default function GlossaryPage() {
                   {/* Expanded content - shown by default */}
                   {expanded && (
                     <div className="mt-3 pl-6">
-                      {/* Definition */}
-                      <p className="text-sm text-gray-700">
-                        {tTerms(term.definitionKey)}
-                      </p>
+                      {/* Definition with read more for long text */}
+                      {(() => {
+                        const definition = tTerms(term.definitionKey);
+                        const isLong = definition.length > DEFINITION_MAX_LENGTH;
+                        const showFull = isFullyExpanded(term.id);
+                        const displayText = isLong && !showFull
+                          ? definition.slice(0, DEFINITION_MAX_LENGTH) + '...'
+                          : definition;
+
+                        return (
+                          <p className="text-sm text-gray-700">
+                            {displayText}
+                            {isLong && (
+                              <button
+                                onClick={() => toggleFullDefinition(term.id)}
+                                className="ml-1 text-blue-600 hover:underline text-sm font-medium"
+                              >
+                                {showFull ? t('showLess') : t('readMore')}
+                              </button>
+                            )}
+                          </p>
+                        );
+                      })()}
 
                       {/* Example */}
                       {term.example && (
