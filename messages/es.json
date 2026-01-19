@@ -1,0 +1,498 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ocurrio un error",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "continue": "Continuar",
+    "back": "Atras",
+    "search": "Buscar",
+    "close": "Cerrar",
+    "yes": "Si",
+    "no": "No",
+    "or": "o"
+  },
+  "nav": {
+    "home": "Inicio",
+    "learn": "Aprender",
+    "calculators": "Calculadoras",
+    "trading": "Trading de Practica",
+    "glossary": "Glosario",
+    "progress": "Mi Progreso",
+    "settings": "Configuracion"
+  },
+  "home": {
+    "welcome": "Bienvenido a Stock Learner",
+    "subtitle": "Aprende a invertir en la bolsa de valores, paso a paso",
+    "startLearning": "Comenzar a Aprender",
+    "continueWhere": "Continua Donde Lo Dejaste",
+    "quickActions": "Acciones Rapidas",
+    "yourProgress": "Tu Progreso",
+    "modulesCompleted": "Modulos Completados",
+    "paperPortfolio": "Portafolio de Practica",
+    "portfolioValue": "Valor del Portafolio",
+    "wordsLearned": "Palabras Aprendidas",
+    "quizzesPassed": "Examenes Aprobados",
+    "activePositions": "Posiciones Activas",
+    "mastered": "dominadas",
+    "learnDescription": "Lecciones interactivas sobre acciones, trading y fundamentos de inversion",
+    "calculatorsDescription": "Herramientas financieras para planificar tus inversiones",
+    "tradingDescription": "Practica con $100,000 en dinero virtual",
+    "glossaryDescription": "Aprende terminos financieros clave con tarjetas de memoria",
+    "quickTips": "Consejos Rapidos",
+    "tip1": "Empieza con lo basico. Completa el Modulo 1 antes de avanzar.",
+    "tip2": "Usa la funcion de trading de practica para practicar sin arriesgar dinero real.",
+    "tip3": "Agrega palabras desconocidas a tu glosario para aprendizaje con repeticion espaciada.",
+    "greeting": {
+      "morning": "Buenos dias!",
+      "afternoon": "Buenas tardes!",
+      "evening": "Buenas noches!"
+    },
+    "streak": {
+      "days": "dias seguidos",
+      "keepItUp": "Sigue aprendiendo cada dia!",
+      "best": "Mejor racha"
+    },
+    "wordsDue": "palabras listas para repasar",
+    "reviewPrompt": "Mantiene tu racha!",
+    "reviewNow": "Repasar Ahora"
+  },
+  "auth": {
+    "login": "Iniciar Sesion",
+    "signup": "Crear Cuenta",
+    "logout": "Cerrar Sesion",
+    "email": "Correo Electronico",
+    "password": "Contrasena",
+    "confirmPassword": "Confirmar Contrasena",
+    "forgotPassword": "Olvidaste tu contrasena?",
+    "noAccount": "No tienes una cuenta?",
+    "hasAccount": "Ya tienes una cuenta?",
+    "loginSuccess": "Bienvenido de vuelta!",
+    "signupSuccess": "Cuenta creada! Revisa tu correo para confirmar.",
+    "errorInvalid": "Correo o contrasena invalidos",
+    "errorEmailTaken": "Este correo ya esta registrado"
+  },
+  "calculators": {
+    "title": "Calculadoras Financieras",
+    "description": "Herramientas para entender las matematicas de inversion",
+    "inputs": "Ingresa Tus Valores",
+    "results": "Resultados",
+    "visualization": "Grafico",
+    "howItWorks": "Como Funciona",
+    "calculate": "Calcular",
+    "reset": "Reiniciar",
+    "presets": {
+      "title": "Ajustes Guardados",
+      "description": "Guarda y carga configuraciones de calculadora",
+      "examples": "Ejemplos",
+      "saved": "Tus Ajustes Guardados",
+      "saveCurrent": "Guardar Valores Actuales",
+      "namePlaceholder": "Nombra tu ajuste...",
+      "save": "Guardar",
+      "cancel": "Cancelar",
+      "delete": "Eliminar",
+      "load": "Cargar"
+    },
+    "compoundInterest": {
+      "title": "Calculadora de Interes Compuesto",
+      "description": "Mira como tu dinero crece con el tiempo con interes compuesto",
+      "principal": "Cantidad Inicial",
+      "principalHelp": "Cuanto dinero tienes para empezar",
+      "rate": "Tasa de Interes Anual (%)",
+      "rateHelp": "Rendimiento anual esperado (8% es tipico para acciones)",
+      "years": "Anos de Crecimiento",
+      "yearsHelp": "Por cuanto tiempo planeas invertir",
+      "frequency": "Frecuencia de Capitalizacion",
+      "frequencyOptions": {
+        "annually": "Anual",
+        "semiannually": "Cada 6 meses",
+        "quarterly": "Cada 3 meses",
+        "monthly": "Mensual",
+        "daily": "Diario"
+      },
+      "finalAmount": "Cantidad Final",
+      "totalInterest": "Interes Total Ganado",
+      "formula": "Formula: A = P(1 + r/n)^(nt)",
+      "formulaExplain": "Tu dinero crece ganando interes sobre tu interes. Entre mas veces se capitalice, mas ganas."
+    },
+    "profitLoss": {
+      "title": "Calculadora de Ganancia/Perdida",
+      "description": "Calcula tus ganancias o perdidas de una operacion",
+      "buyPrice": "Precio de Compra (por accion)",
+      "sellPrice": "Precio de Venta (por accion)",
+      "shares": "Numero de Acciones",
+      "buyCommission": "Comision de Compra ($)",
+      "sellCommission": "Comision de Venta ($)",
+      "totalProfit": "Ganancia/Perdida Total",
+      "percentGain": "Porcentaje de Ganancia/Perdida",
+      "breakEven": "Precio de Equilibrio"
+    },
+    "tax": {
+      "title": "Calculadora de Impuestos (NJ)",
+      "description": "Calcula impuestos sobre tus ganancias de inversion en Nueva Jersey",
+      "capitalGain": "Cantidad de Ganancia de Capital",
+      "holdingPeriod": "Periodo de Tenencia",
+      "shortTerm": "Corto plazo (1 ano o menos)",
+      "longTerm": "Largo plazo (mas de 1 ano)",
+      "filingStatus": "Estado Civil",
+      "single": "Soltero",
+      "married": "Casado Declarando Juntos",
+      "totalIncome": "Ingreso Anual Total",
+      "federalTax": "Impuesto Federal",
+      "stateTax": "Impuesto Estatal de NJ",
+      "totalTax": "Impuesto Total",
+      "netProfit": "Ganancia Neta Despues de Impuestos",
+      "njNote": "Nota: Nueva Jersey cobra impuestos sobre todas las ganancias de capital como ingreso regular. No hay tasa especial para ganancias a largo plazo."
+    },
+    "dividend": {
+      "title": "Calculadora de Rendimiento de Dividendos",
+      "description": "Calcula tu ingreso por dividendos de acciones",
+      "stockPrice": "Precio Actual de la Accion",
+      "dividendPerShare": "Dividendo Por Accion",
+      "dividendFrequency": "Frecuencia del Dividendo",
+      "quarterly": "Trimestral",
+      "monthly": "Mensual",
+      "annually": "Anual",
+      "numberOfShares": "Numero de Acciones",
+      "annualYield": "Rendimiento Anual de Dividendos",
+      "annualIncome": "Ingreso Anual por Dividendos",
+      "monthlyIncome": "Ingreso Mensual"
+    },
+    "dca": {
+      "title": "Calculadora de Promedio de Costo",
+      "description": "Mira como invertir regularmente suaviza la volatilidad de precios",
+      "monthlyInvestment": "Inversion Mensual",
+      "months": "Numero de Meses",
+      "totalInvested": "Total Invertido",
+      "totalShares": "Total de Acciones",
+      "averageCost": "Costo Promedio Por Accion",
+      "explanation": "Promediar el costo significa invertir la misma cantidad regularmente. Compras mas acciones cuando los precios estan bajos y menos cuando estan altos."
+    },
+    "positionSize": {
+      "title": "Calculadora de Tamano de Posicion",
+      "description": "Calcula cuanto invertir basado en tu tolerancia al riesgo",
+      "accountBalance": "Balance de la Cuenta",
+      "riskPercent": "Riesgo Por Operacion (%)",
+      "riskHelp": "La mayoria de traders arriesgan 1-2% por operacion",
+      "entryPrice": "Precio de Entrada (precio de compra)",
+      "stopLoss": "Precio de Stop Loss",
+      "stopLossHelp": "Precio donde venderas para limitar perdidas",
+      "positionSize": "Tamano de Posicion (acciones)",
+      "dollarAmount": "Cantidad a Invertir",
+      "maxLoss": "Perdida Maxima"
+    },
+    "rule72": {
+      "title": "Calculadora de la Regla del 72",
+      "description": "Descubre cuanto tiempo toma duplicar tu dinero",
+      "interestRate": "Rendimiento Anual (%)",
+      "yearsToDouble": "Anos para Duplicar",
+      "explanation": "La Regla del 72 es una forma simple de estimar cuanto tiempo tomara duplicar una inversion. Divide 72 entre tu rendimiento anual esperado."
+    },
+    "futureValue": {
+      "title": "Calculadora de Valor Futuro",
+      "description": "Proyecta cuanto valdra tu inversion",
+      "currentInvestment": "Inversion Actual",
+      "annualReturn": "Rendimiento Anual Esperado (%)",
+      "investmentYears": "Periodo de Inversion (anos)",
+      "futureValue": "Valor Futuro",
+      "totalGain": "Ganancia Total"
+    }
+  },
+  "learn": {
+    "title": "Modulos de Aprendizaje",
+    "subtitle": "Domina los fundamentos de invertir, paso a paso",
+    "progress": "Tu Progreso",
+    "lessons": "lecciones",
+    "hours": "horas",
+    "startModule": "Comenzar Modulo",
+    "continueModule": "Continuar",
+    "retakeQuiz": "Repetir Examen",
+    "completed": "Completado",
+    "locked": "Completa los modulos anteriores para desbloquear",
+    "quizScore": "Puntuacion del Examen: {score}%",
+    "passScore": "Puntuacion para Pasar: 80%",
+    "markComplete": "Marcar como Completado",
+    "keyPoints": "Puntos Clave",
+    "modules": {
+      "1": {
+        "title": "Que es la Bolsa de Valores?",
+        "description": "Aprende lo basico: que son las acciones, como funciona el mercado y su historia"
+      },
+      "2": {
+        "title": "Como Empezar a Invertir",
+        "description": "Abre una cuenta de corretaje, entiende las comisiones y haz tu primera inversion"
+      },
+      "3": {
+        "title": "Entendiendo el Riesgo",
+        "description": "Aprende sobre diversificacion, volatilidad y como proteger tu dinero"
+      },
+      "4": {
+        "title": "Psicologia del Trading",
+        "description": "Controla tus emociones, evita errores comunes y construye disciplina"
+      },
+      "5": {
+        "title": "Manipulacion del Mercado",
+        "description": "Reconoce estafas, entiende el trading de informacion privilegiada y protegete"
+      },
+      "6": {
+        "title": "Politica y los Mercados",
+        "description": "Como las elecciones, la Fed y eventos mundiales afectan tus inversiones"
+      },
+      "7": {
+        "title": "Impuestos para Inversores en NJ",
+        "description": "Entiende ganancias de capital, cuentas con ventajas fiscales y reglas de impuestos de NJ"
+      },
+      "8": {
+        "title": "Usando Plataformas de Trading",
+        "description": "Aprende a usar Fidelity y otras plataformas para comprar acciones",
+        "lessons": {
+          "1": {
+            "title": "Introduccion a las Plataformas de Trading",
+            "content": "Una plataforma de trading (tambien llamada corredora o brokerage) es donde compras y vendes acciones. Piensa en ella como una tienda de aplicaciones, pero para inversiones. Cuando quieres comprar una accion de Apple o Tesla, necesitas una cuenta de corretaje para hacerlo.\n\nHay dos tipos principales de corredoras:\n\n**Corredoras de Servicio Completo** cobran tarifas mas altas pero proporcionan asesores financieros personales que te ayudan a tomar decisiones. Estas son mejores para personas con situaciones financieras complejas o grandes portafolios.\n\n**Corredoras de Descuento** (como Fidelity, Charles Schwab y Robinhood) cobran poco o nada y te dejan tomar tus propias decisiones. Estas son perfectas para principiantes y la mayoria de inversores individuales.\n\nAl elegir una plataforma, busca:\n- Trading de acciones sin comisiones\n- Aplicacion movil y sitio web faciles de usar\n- Recursos educativos para principiantes\n- Buen servicio al cliente\n- Minimos de cuenta (muchas tienen $0 de minimo)\n- Herramientas de investigacion y filtros de acciones",
+            "point1": "Una corredora es donde compras y vendes acciones - necesitas una para invertir",
+            "point2": "Las corredoras de servicio completo ofrecen asesoramiento pero cobran tarifas mas altas",
+            "point3": "Las corredoras de descuento como Fidelity son mejores para la mayoria de principiantes",
+            "point4": "Busca trading sin comisiones, buena educacion e interfaces faciles"
+          },
+          "2": {
+            "title": "Fidelity en Detalle",
+            "content": "Fidelity es una de las mejores plataformas para principiantes. Ofrece trading sin comisiones, excelentes herramientas de investigacion y fuerte soporte al cliente.\n\n**Por que se Recomienda Fidelity:**\n- Sin comisiones en acciones y ETFs\n- Sin minimos de cuenta\n- Excelente servicio al cliente (telefono, chat, en persona)\n- Fuerte contenido educativo\n- Acciones fraccionadas (compra acciones parciales desde $1)\n- Sin pago por flujo de ordenes en acciones\n\n**Resumen de Configuracion de Cuenta:**\n1. Visita Fidelity.com y haz clic en 'Abrir una Cuenta'\n2. Elige el tipo de cuenta (Corretaje Individual para la mayoria)\n3. Proporciona informacion personal y verifica tu identidad\n4. Vincula tu cuenta bancaria para transferencias\n5. Deposita fondos en tu cuenta\n\n**Navegando la Interfaz:**\n- El tablero muestra tu resumen de portafolio\n- Boton 'Trade' para comprar/vender acciones\n- 'Research' para analisis de acciones y noticias\n- 'News & Research' para actualizaciones del mercado\n\n**Movil vs Escritorio:**\n- La app movil es excelente para operaciones rapidas y monitoreo\n- Escritorio/web ofrece herramientas de investigacion mas avanzadas\n- Ambos se sincronizan automaticamente - usa lo que sea conveniente",
+            "point1": "Fidelity ofrece trading sin comisiones sin minimos de cuenta",
+            "point2": "Puedes comprar acciones fraccionadas desde solo $1",
+            "point3": "El tablero muestra tu portafolio, con facil acceso para operar e investigar",
+            "point4": "Las apps movil y de escritorio se sincronizan para tu conveniencia"
+          },
+          "3": {
+            "title": "Entendiendo las Tarifas y Costos",
+            "content": "Aunque muchas corredoras anuncian trading 'gratis', es importante entender todos los costos potenciales involucrados.\n\n**Trading Sin Comisiones:**\nLa mayoria de las corredoras principales ya no cobran comisiones en operaciones de acciones y ETFs. Esto significa que puedes comprar $100 de acciones de Apple sin pagar $5-10 extra en tarifas.\n\n**Tarifas de Cuenta a Vigilar:**\n- Tarifas de mantenimiento: Algunas corredoras cobran si tu balance es bajo\n- Tarifas de inactividad: Cargos si no operas por un periodo\n- Tarifas de transferencia: Costos para mover tu cuenta a otra corredora\n- Tarifas de estados de cuenta en papel: Cargos extra por correo fisico\n\n**Costos Ocultos (Pago por Flujo de Ordenes):**\nAlgunas corredoras 'gratis' como Robinhood ganan dinero vendiendo tus ordenes a creadores de mercado. Esto puede resultar en precios ligeramente peores en tus operaciones. Fidelity y Schwab no hacen esto para acciones.\n\n**Comparando Plataformas:**\n| Plataforma | Comisiones | Minimo de Cuenta | PFOF |\n|------------|-----------|-----------------|------|\n| Fidelity | $0 | $0 | No |\n| Schwab | $0 | $0 | No |\n| Robinhood | $0 | $0 | Si |\n| TD Ameritrade | $0 | $0 | Si |",
+            "point1": "La mayoria de las corredoras principales ahora ofrecen trading de acciones sin comisiones",
+            "point2": "Cuidado con las tarifas de cuenta como mantenimiento, inactividad y transferencia",
+            "point3": "El pago por flujo de ordenes puede resultar en precios de operacion ligeramente peores"
+          },
+          "4": {
+            "title": "Realizando Tu Primera Operacion",
+            "content": "Cuando estes listo para comprar tu primera accion, necesitaras entender los diferentes tipos de ordenes y como usarlos.\n\n**Orden de Mercado:**\nCompra o vende al precio actual del mercado inmediatamente. Mejor para acciones activamente negociadas cuando quieres operar de inmediato.\n- Ventajas: Se ejecuta rapidamente\n- Desventajas: El precio puede diferir ligeramente de lo que viste\n\n**Orden Limite:**\nEstablece un precio especifico que estas dispuesto a pagar. La operacion solo ocurre si la accion alcanza tu precio.\n- Ventajas: Tu controlas el precio exacto\n- Desventajas: Puede no ejecutarse si el precio no alcanza tu limite\n\n**Duracion de la Orden:**\n- **Orden del Dia**: Expira al final del dia de operaciones si no se llena\n- **GTC (Valida Hasta Cancelar)**: Permanece activa hasta llenarse o cancelarla (usualmente 60-180 dias)\n\n**Pasos para Realizar una Operacion:**\n1. Busca la accion por nombre o simbolo\n2. Haz clic en 'Trade' o 'Comprar'\n3. Elige el tipo de orden (Mercado o Limite)\n4. Ingresa el numero de acciones o cantidad en dolares\n5. Revisa todos los detalles cuidadosamente\n6. Confirma y envia\n\n**Leyendo Tu Confirmacion:**\nDespues de una operacion, veras: acciones compradas, precio por accion, costo total y cualquier tarifa. Guarda esto para tus registros e impuestos.",
+            "point1": "Las ordenes de mercado se ejecutan inmediatamente al precio actual",
+            "point2": "Las ordenes limite te permiten establecer el precio exacto que pagaras",
+            "point3": "Las ordenes del dia expiran al cierre del mercado; las ordenes GTC permanecen activas mas tiempo",
+            "point4": "Siempre revisa los detalles de tu orden antes de confirmar"
+          },
+          "5": {
+            "title": "Mecanica del Mercado",
+            "content": "Entender cuando y como opera el mercado te ayuda a operar mas efectivamente.\n\n**Horario Regular del Mercado:**\nEl mercado de valores de EE.UU. esta abierto de lunes a viernes, 9:30 AM a 4:00 PM hora del Este. Esta cerrado en dias festivos importantes.\n\n**Pre-Mercado y Fuera de Horario:**\n- Pre-mercado: 4:00 AM - 9:30 AM ET\n- Fuera de horario: 4:00 PM - 8:00 PM ET\n- Menor volumen = mayores oscilaciones de precio y spreads mas amplios\n- No recomendado para principiantes\n\n**Datos en Tiempo Real vs Retrasados:**\nLas cotizaciones gratuitas de acciones a menudo tienen un retraso de 15-20 minutos. Esto importa para trading activo pero menos para inversores a largo plazo. La mayoria de corredoras proporcionan datos en tiempo real gratis a los titulares de cuentas.\n\n**Pausas de Trading y Cortacircuitos:**\nEl trading puede pausarse cuando:\n- Una accion se mueve demasiado rapido (pausa especifica de la empresa)\n- Todo el mercado cae significativamente (cortacircuito)\n- Nivel 1: caida del 7% = pausa de 15 minutos\n- Nivel 2: caida del 13% = pausa de 15 minutos\n- Nivel 3: caida del 20% = el mercado cierra por el dia\n\n**Ordenes Stop:**\n- **Orden Stop**: Se convierte en orden de mercado cuando el precio alcanza tu precio stop\n- **Orden Stop-Limite**: Se convierte en orden limite a tu precio especificado\n- Usadas para limitar perdidas o proteger ganancias automaticamente",
+            "point1": "El horario regular del mercado es 9:30 AM - 4:00 PM hora del Este",
+            "point2": "El trading pre-mercado y fuera de horario tiene menor volumen y mayor riesgo",
+            "point3": "Las cotizaciones gratuitas de acciones pueden tener un retraso de 15-20 minutos",
+            "point4": "Los cortacircuitos pausan el trading si el mercado cae 7%, 13% o 20%"
+          }
+        }
+      }
+    },
+    "quiz": {
+      "title": "Examen del Modulo",
+      "question": "Pregunta",
+      "passScore": "Puntuacion para aprobar",
+      "selectAnswer": "Selecciona una respuesta para continuar",
+      "checkAnswer": "Verificar Respuesta",
+      "next": "Siguiente Pregunta",
+      "seeResults": "Ver Resultados",
+      "correct": "Correcto!",
+      "incorrect": "No exactamente. Aqui esta la explicacion:",
+      "ready": "Completaste todas las lecciones! Listo para probar tus conocimientos?",
+      "completeLessons": "Completa todas las lecciones para desbloquear el examen",
+      "start": "Comenzar Examen",
+      "results": {
+        "title": "Resultados del Examen",
+        "score": "Obtuviste {score} de {total}",
+        "passed": "Felicidades! Aprobaste!",
+        "failed": "Necesitas 80% para aprobar. Revisa el material e intenta de nuevo.",
+        "tryAgain": "Intentar de Nuevo",
+        "nextModule": "Siguiente Modulo"
+      }
+    },
+    "quizzes": {
+      "8": {
+        "q1": {
+          "question": "Cual es la principal diferencia entre una corredora de servicio completo y una corredora de descuento?",
+          "optionA": "Las corredoras de servicio completo solo operan acciones, las de descuento operan todo",
+          "optionB": "Las corredoras de servicio completo tienen mejores apps moviles",
+          "optionC": "Las corredoras de servicio completo proporcionan asesores financieros personales pero cobran tarifas mas altas",
+          "optionD": "Las corredoras de descuento no permiten comprar acciones individuales",
+          "explanation": "Las corredoras de servicio completo cobran tarifas mas altas pero proporcionan asesores financieros personales que te ayudan a tomar decisiones de inversion. Las corredoras de descuento como Fidelity cobran poco o nada pero tu tomas tus propias decisiones."
+        },
+        "q2": {
+          "question": "Cual de los siguientes es un beneficio de usar Fidelity para principiantes?",
+          "optionA": "Garantizan que tus inversiones ganaran dinero",
+          "optionB": "Ofrecen acciones fraccionadas desde $1 y no tienen minimos de cuenta",
+          "optionC": "Proporcionan asesoramiento de inversion gratuito de asesores humanos",
+          "optionD": "Tienen las tasas mas bajas de pago por flujo de ordenes",
+          "explanation": "Fidelity ofrece acciones fraccionadas desde solo $1, no tiene minimos de cuenta, no cobra comisiones en acciones y ETFs, y de hecho no usa pago por flujo de ordenes en acciones."
+        },
+        "q3": {
+          "question": "Que es el 'pago por flujo de ordenes' y por que importa?",
+          "optionA": "Es cuando las corredoras venden tus ordenes a creadores de mercado, lo que puede resultar en precios ligeramente peores en las operaciones",
+          "optionB": "Es una tarifa que pagas al realizar una orden",
+          "optionC": "Es la comision cobrada por corredoras de servicio completo",
+          "optionD": "Es el interes ganado en tu balance de efectivo",
+          "explanation": "El pago por flujo de ordenes (PFOF) es cuando corredoras como Robinhood venden tus ordenes de operacion a creadores de mercado. Asi es como ganan dinero del trading 'gratis', pero puede resultar en que obtengas precios ligeramente peores en tus operaciones."
+        },
+        "q4": {
+          "question": "Cual es la diferencia clave entre una orden de mercado y una orden limite?",
+          "optionA": "Las ordenes de mercado solo pueden realizarse durante horario pre-mercado",
+          "optionB": "Las ordenes limite son solo para vender, no para comprar",
+          "optionC": "Las ordenes de mercado tienen tarifas mas bajas que las ordenes limite",
+          "optionD": "Las ordenes de mercado se ejecutan inmediatamente al precio actual, mientras que las ordenes limite solo se ejecutan a tu precio especificado o mejor",
+          "explanation": "Una orden de mercado se ejecuta inmediatamente al precio actual del mercado. Una orden limite te permite establecer un precio especifico, y la operacion solo ocurre si la accion alcanza ese precio."
+        },
+        "q5": {
+          "question": "Cual es el horario regular del mercado de valores de EE.UU.?",
+          "optionA": "8:00 AM - 5:00 PM hora del Este",
+          "optionB": "9:30 AM - 4:00 PM hora del Este",
+          "optionC": "9:00 AM - 4:30 PM hora del Este",
+          "optionD": "10:00 AM - 3:00 PM hora del Este",
+          "explanation": "El mercado de valores de EE.UU. esta abierto de lunes a viernes de 9:30 AM a 4:00 PM hora del Este. El trading pre-mercado comienza a las 4:00 AM ET y el trading fuera de horario continua hasta las 8:00 PM ET."
+        }
+      }
+    }
+  },
+  "glossary": {
+    "title": "Glosario Financiero",
+    "subtitle": "Aprende terminos clave de inversion en lenguaje simple",
+    "searchPlaceholder": "Buscar un termino...",
+    "myWords": "Mi Lista de Palabras",
+    "addToList": "Agregar a Mi Lista",
+    "removeFromList": "Eliminar",
+    "noResults": "No se encontraron terminos que coincidan con tu busqueda",
+    "reviewMode": "Repaso con Tarjetas",
+    "showDefinition": "Mostrar Definicion",
+    "gotIt": "Lo Entendi!",
+    "needsReview": "Repasar de Nuevo",
+    "wordsToReview": "{count} palabras listas para repasar",
+    "myWordsTitle": "Mi Lista de Palabras",
+    "myWordsSubtitle": "Sigue tu progreso de aprendizaje de vocabulario",
+    "noWordsYet": "Sin Palabras Todavia",
+    "addWordsPrompt": "Agrega palabras del glosario para empezar a aprender!",
+    "browseGlossary": "Explorar Glosario",
+    "totalWords": "Total de Palabras",
+    "mastered": "Dominadas",
+    "learning": "Aprendiendo",
+    "dueToday": "Pendientes Hoy",
+    "dayStreak": "dias seguidos",
+    "bestStreak": "Mejor",
+    "days": "dias",
+    "reviewNow": "Repasar Ahora",
+    "startReview": "Iniciar Repaso",
+    "backToGlossary": "Volver al Glosario",
+    "yourWords": "Tus Palabras",
+    "reviews": "repasos",
+    "newWord": "Palabra nueva",
+    "due": "Pendiente!",
+    "reviewTitle": "Repaso con Tarjetas",
+    "chooseReviewMode": "Elige que repasar",
+    "reviewDue": "Repasar Palabras Pendientes",
+    "wordsDue": "{count} palabras listas",
+    "noDueWords": "Todo al dia!",
+    "reviewAll": "Repasar Todas las Palabras",
+    "allWordsCount": "{count} palabras en total",
+    "back": "Atras",
+    "reviewingDue": "Repasando Palabras Pendientes",
+    "reviewingAll": "Repasando Todas las Palabras",
+    "noCardsToReview": "Todo al Dia!",
+    "allCaughtUp": "No hay palabras pendientes para repasar. Vuelve mas tarde!",
+    "sessionComplete": "Sesion Completada!",
+    "correct": "Correctas",
+    "accuracy": "Precision",
+    "reviewMistakes": "Repasar Errores",
+    "done": "Listo",
+    "swipeInstructions": "Desliza a la derecha si lo sabias, a la izquierda para repasar"
+  },
+  "trading": {
+    "title": "Trading de Practica",
+    "subtitle": "Practica operaciones con $100,000 en dinero virtual",
+    "portfolio": "Mi Portafolio",
+    "cashBalance": "Balance en Efectivo",
+    "portfolioValue": "Valor del Portafolio",
+    "totalReturn": "Rendimiento Total",
+    "holdings": "Posiciones",
+    "noHoldings": "Sin posiciones todavia. Compra tu primera accion!",
+    "trade": {
+      "title": "Operar Acciones",
+      "searchStock": "Buscar una accion...",
+      "buy": "Comprar",
+      "sell": "Vender",
+      "shares": "Acciones",
+      "estimatedCost": "Costo Estimado",
+      "estimatedProceeds": "Ingresos Estimados",
+      "currentPrice": "Precio Actual",
+      "confirmBuy": "Confirmar Compra",
+      "confirmSell": "Confirmar Venta",
+      "insufficientFunds": "Fondos insuficientes",
+      "insufficientShares": "No tienes suficientes acciones",
+      "success": "Operacion ejecutada con exito!"
+    },
+    "history": {
+      "title": "Historial de Transacciones",
+      "noTransactions": "Sin transacciones todavia",
+      "bought": "Compro",
+      "sold": "Vendio",
+      "date": "Fecha",
+      "symbol": "Simbolo",
+      "action": "Accion",
+      "shares": "Acciones",
+      "price": "Precio",
+      "total": "Total",
+      "sortBy": "Ordenar por",
+      "newestFirst": "Mas Recientes",
+      "oldestFirst": "Mas Antiguos"
+    },
+    "reset": {
+      "title": "Reiniciar Cuenta",
+      "confirm": "Estas seguro? Esto reiniciara tu portafolio a $100,000 y eliminara todas tus posiciones y operaciones.",
+      "button": "Reiniciar Cuenta",
+      "remaining": "reinicio(s) restante(s)",
+      "lastReset": "Advertencia: Este es tu ultimo reinicio!",
+      "cancel": "Cancelar",
+      "continue": "Continuar",
+      "finalTitle": "Confirmacion Final",
+      "finalWarning": "Esta accion no se puede deshacer.",
+      "finalConfirm": "Si, estoy seguro, reiniciar cuenta de trading",
+      "noResetsTitle": "Sin Reinicios Disponibles",
+      "noResetsLeft": "Has usado los 3 reinicios de tu portafolio.",
+      "requestTitle": "Necesitas otro reinicio?",
+      "requestPlaceholder": "Explica por que necesitas un reinicio adicional (opcional)...",
+      "requestButton": "Solicitar Reinicio Adicional",
+      "requestSentTitle": "Solicitud Enviada",
+      "requestSentMessage": "Tu solicitud ha sido registrada. Un administrador la revisara.",
+      "close": "Cerrar"
+    },
+    "page": {
+      "stockQuote": "Cotizacion de Accion",
+      "placeOrder": "Realizar Orden",
+      "clearSelection": "Limpiar Seleccion",
+      "cancelReset": "Cancelar"
+    }
+  },
+  "errors": {
+    "somethingWentWrong": "Algo Salio Mal",
+    "errorDescription": "Pedimos disculpas por el inconveniente. Por favor intenta de nuevo.",
+    "tryAgain": "Intentar de Nuevo",
+    "goHome": "Ir al Inicio",
+    "notFound": "Pagina No Encontrada",
+    "notFoundDescription": "La pagina que buscas no existe.",
+    "offline": "Estas Desconectado",
+    "offlineDescription": "Algunas funciones pueden estar limitadas. Conectate a internet para acceso completo."
+  },
+  "settings": {
+    "title": "Configuracion",
+    "language": "Idioma",
+    "english": "Ingles",
+    "spanish": "Espanol",
+    "theme": "Tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  }
+}

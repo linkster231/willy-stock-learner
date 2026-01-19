@@ -1,0 +1,498 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "continue": "Continue",
+    "back": "Back",
+    "search": "Search",
+    "close": "Close",
+    "yes": "Yes",
+    "no": "No",
+    "or": "or"
+  },
+  "nav": {
+    "home": "Home",
+    "learn": "Learn",
+    "calculators": "Calculators",
+    "trading": "Paper Trading",
+    "glossary": "Glossary",
+    "progress": "My Progress",
+    "settings": "Settings"
+  },
+  "home": {
+    "welcome": "Welcome to Stock Learner",
+    "subtitle": "Learn to invest in the stock market, step by step",
+    "startLearning": "Start Learning",
+    "continueWhere": "Continue Where You Left Off",
+    "quickActions": "Quick Actions",
+    "yourProgress": "Your Progress",
+    "modulesCompleted": "Modules Completed",
+    "paperPortfolio": "Paper Portfolio",
+    "portfolioValue": "Portfolio Value",
+    "wordsLearned": "Words Learned",
+    "quizzesPassed": "Quizzes Passed",
+    "activePositions": "Active Positions",
+    "mastered": "mastered",
+    "learnDescription": "Interactive lessons on stocks, trading, and investing basics",
+    "calculatorsDescription": "Financial tools to plan your investments",
+    "tradingDescription": "Practice with $100,000 in virtual money",
+    "glossaryDescription": "Learn key financial terms with flashcards",
+    "quickTips": "Quick Tips",
+    "tip1": "Start with the basics. Complete Module 1 before moving on.",
+    "tip2": "Use the paper trading feature to practice without risking real money.",
+    "tip3": "Add unfamiliar words to your glossary for spaced repetition learning.",
+    "greeting": {
+      "morning": "Good morning!",
+      "afternoon": "Good afternoon!",
+      "evening": "Good evening!"
+    },
+    "streak": {
+      "days": "day streak",
+      "keepItUp": "Keep learning every day!",
+      "best": "Best streak"
+    },
+    "wordsDue": "words ready for review",
+    "reviewPrompt": "Keep your streak going!",
+    "reviewNow": "Review Now"
+  },
+  "auth": {
+    "login": "Log In",
+    "signup": "Sign Up",
+    "logout": "Log Out",
+    "email": "Email Address",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "loginSuccess": "Welcome back!",
+    "signupSuccess": "Account created! Check your email to confirm.",
+    "errorInvalid": "Invalid email or password",
+    "errorEmailTaken": "This email is already registered"
+  },
+  "calculators": {
+    "title": "Financial Calculators",
+    "description": "Tools to help you understand investing math",
+    "inputs": "Enter Your Values",
+    "results": "Results",
+    "visualization": "Chart",
+    "howItWorks": "How This Works",
+    "calculate": "Calculate",
+    "reset": "Reset",
+    "presets": {
+      "title": "Presets",
+      "description": "Save and load calculator settings",
+      "examples": "Examples",
+      "saved": "Your Saved Presets",
+      "saveCurrent": "Save Current Values",
+      "namePlaceholder": "Name your preset...",
+      "save": "Save",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "load": "Load"
+    },
+    "compoundInterest": {
+      "title": "Compound Interest Calculator",
+      "description": "See how your money grows over time with compound interest",
+      "principal": "Starting Amount",
+      "principalHelp": "How much money you're starting with",
+      "rate": "Annual Interest Rate (%)",
+      "rateHelp": "Expected yearly return (8% is typical for stocks)",
+      "years": "Years to Grow",
+      "yearsHelp": "How long you plan to invest",
+      "frequency": "Compounding Frequency",
+      "frequencyOptions": {
+        "annually": "Yearly",
+        "semiannually": "Every 6 months",
+        "quarterly": "Every 3 months",
+        "monthly": "Monthly",
+        "daily": "Daily"
+      },
+      "finalAmount": "Final Amount",
+      "totalInterest": "Total Interest Earned",
+      "formula": "Formula: A = P(1 + r/n)^(nt)",
+      "formulaExplain": "Your money grows by earning interest on your interest. The more often it compounds, the more you earn."
+    },
+    "profitLoss": {
+      "title": "Stock Profit/Loss Calculator",
+      "description": "Calculate your gains or losses from a stock trade",
+      "buyPrice": "Buy Price (per share)",
+      "sellPrice": "Sell Price (per share)",
+      "shares": "Number of Shares",
+      "buyCommission": "Buy Commission ($)",
+      "sellCommission": "Sell Commission ($)",
+      "totalProfit": "Total Profit/Loss",
+      "percentGain": "Percentage Gain/Loss",
+      "breakEven": "Break-Even Price"
+    },
+    "tax": {
+      "title": "Investment Tax Calculator (NJ)",
+      "description": "Calculate taxes on your investment gains in New Jersey",
+      "capitalGain": "Capital Gain Amount",
+      "holdingPeriod": "Holding Period",
+      "shortTerm": "Short-term (1 year or less)",
+      "longTerm": "Long-term (more than 1 year)",
+      "filingStatus": "Filing Status",
+      "single": "Single",
+      "married": "Married Filing Jointly",
+      "totalIncome": "Total Annual Income",
+      "federalTax": "Federal Tax Owed",
+      "stateTax": "NJ State Tax Owed",
+      "totalTax": "Total Tax",
+      "netProfit": "Net Profit After Taxes",
+      "njNote": "Note: New Jersey taxes all capital gains as regular income. There is no special rate for long-term gains."
+    },
+    "dividend": {
+      "title": "Dividend Yield Calculator",
+      "description": "Calculate your dividend income from stocks",
+      "stockPrice": "Current Stock Price",
+      "dividendPerShare": "Dividend Per Share",
+      "dividendFrequency": "Dividend Frequency",
+      "quarterly": "Quarterly",
+      "monthly": "Monthly",
+      "annually": "Annually",
+      "numberOfShares": "Number of Shares",
+      "annualYield": "Annual Dividend Yield",
+      "annualIncome": "Annual Dividend Income",
+      "monthlyIncome": "Monthly Income"
+    },
+    "dca": {
+      "title": "Dollar-Cost Averaging Calculator",
+      "description": "See how regular investing smooths out price volatility",
+      "monthlyInvestment": "Monthly Investment",
+      "months": "Number of Months",
+      "totalInvested": "Total Invested",
+      "totalShares": "Total Shares",
+      "averageCost": "Average Cost Per Share",
+      "explanation": "Dollar-cost averaging means investing the same amount regularly. You buy more shares when prices are low and fewer when prices are high."
+    },
+    "positionSize": {
+      "title": "Position Size Calculator",
+      "description": "Calculate how much to invest based on your risk tolerance",
+      "accountBalance": "Account Balance",
+      "riskPercent": "Risk Per Trade (%)",
+      "riskHelp": "Most traders risk 1-2% per trade",
+      "entryPrice": "Entry Price (buy price)",
+      "stopLoss": "Stop Loss Price",
+      "stopLossHelp": "Price where you'll sell to limit losses",
+      "positionSize": "Position Size (shares)",
+      "dollarAmount": "Amount to Invest",
+      "maxLoss": "Maximum Loss"
+    },
+    "rule72": {
+      "title": "Rule of 72 Calculator",
+      "description": "Find out how long it takes to double your money",
+      "interestRate": "Annual Return (%)",
+      "yearsToDouble": "Years to Double",
+      "explanation": "The Rule of 72 is a simple way to estimate how long an investment will take to double. Divide 72 by your expected annual return."
+    },
+    "futureValue": {
+      "title": "Future Value Calculator",
+      "description": "Project how much your investment will be worth",
+      "currentInvestment": "Current Investment",
+      "annualReturn": "Expected Annual Return (%)",
+      "investmentYears": "Investment Period (years)",
+      "futureValue": "Future Value",
+      "totalGain": "Total Gain"
+    }
+  },
+  "learn": {
+    "title": "Learning Modules",
+    "subtitle": "Master the basics of investing, one step at a time",
+    "progress": "Your Progress",
+    "lessons": "lessons",
+    "hours": "hours",
+    "startModule": "Start Module",
+    "continueModule": "Continue",
+    "retakeQuiz": "Retake Quiz",
+    "completed": "Completed",
+    "locked": "Complete previous modules to unlock",
+    "quizScore": "Quiz Score: {score}%",
+    "passScore": "Pass Score: 80%",
+    "markComplete": "Mark as Complete",
+    "keyPoints": "Key Takeaways",
+    "modules": {
+      "1": {
+        "title": "What is the Stock Market?",
+        "description": "Learn the basics: what stocks are, how the market works, and its history"
+      },
+      "2": {
+        "title": "How to Start Investing",
+        "description": "Open a brokerage account, understand fees, and make your first investment"
+      },
+      "3": {
+        "title": "Understanding Risk",
+        "description": "Learn about diversification, volatility, and how to protect your money"
+      },
+      "4": {
+        "title": "Psychology of Trading",
+        "description": "Control your emotions, avoid common mistakes, and build discipline"
+      },
+      "5": {
+        "title": "Market Manipulation",
+        "description": "Recognize scams, understand insider trading, and protect yourself"
+      },
+      "6": {
+        "title": "Politics and Markets",
+        "description": "How elections, the Fed, and world events affect your investments"
+      },
+      "7": {
+        "title": "Taxes for NJ Investors",
+        "description": "Understand capital gains, tax-advantaged accounts, and NJ tax rules"
+      },
+      "8": {
+        "title": "Using Trading Platforms",
+        "description": "Learn to use Fidelity and other platforms to trade stocks",
+        "lessons": {
+          "1": {
+            "title": "Introduction to Trading Platforms",
+            "content": "A trading platform (also called a brokerage) is where you buy and sell stocks. Think of it like an app store, but for investments. When you want to buy a share of Apple or Tesla, you need a brokerage account to do it.\n\nThere are two main types of brokerages:\n\n**Full-Service Brokers** charge higher fees but provide personal financial advisors who help you make decisions. These are better for people with complex financial situations or large portfolios.\n\n**Discount Brokers** (like Fidelity, Charles Schwab, and Robinhood) charge little to no fees and let you make your own decisions. These are perfect for beginners and most individual investors.\n\nWhen choosing a platform, look for:\n- Commission-free stock trading\n- Easy-to-use mobile app and website\n- Educational resources for beginners\n- Good customer service\n- Account minimums (many have $0 minimums)\n- Research tools and stock screeners",
+            "point1": "A brokerage is where you buy and sell stocks - you need one to invest",
+            "point2": "Full-service brokers offer advice but charge higher fees",
+            "point3": "Discount brokers like Fidelity are best for most beginners",
+            "point4": "Look for commission-free trading, good education, and easy interfaces"
+          },
+          "2": {
+            "title": "Deep Dive into Fidelity",
+            "content": "Fidelity is one of the best platforms for beginners. It offers commission-free trading, excellent research tools, and strong customer support.\n\n**Why Fidelity is Recommended:**\n- No commissions on stocks and ETFs\n- No account minimums\n- Excellent customer service (phone, chat, in-person)\n- Strong educational content\n- Fractional shares (buy partial shares starting at $1)\n- No payment for order flow on stocks\n\n**Account Setup Overview:**\n1. Visit Fidelity.com and click 'Open an Account'\n2. Choose account type (Individual Brokerage for most people)\n3. Provide personal information and verify identity\n4. Link your bank account for transfers\n5. Fund your account\n\n**Navigating the Interface:**\n- Dashboard shows your portfolio overview\n- 'Trade' button to buy/sell stocks\n- 'Research' for stock analysis and news\n- 'News & Research' for market updates\n\n**Mobile vs Desktop:**\n- Mobile app is great for quick trades and monitoring\n- Desktop/web offers more advanced research tools\n- Both sync automatically - use whatever is convenient",
+            "point1": "Fidelity offers commission-free trading with no account minimums",
+            "point2": "You can buy fractional shares starting at just $1",
+            "point3": "The dashboard shows your portfolio, with easy access to trade and research",
+            "point4": "Mobile and desktop apps sync together for convenience"
+          },
+          "3": {
+            "title": "Understanding Fees and Costs",
+            "content": "While many brokerages advertise 'free' trading, it's important to understand all the potential costs involved.\n\n**Commission-Free Trading:**\nMost major brokerages no longer charge commissions on stock and ETF trades. This means you can buy $100 of Apple stock without paying $5-10 extra in fees.\n\n**Account Fees to Watch:**\n- Maintenance fees: Some brokers charge if your balance is low\n- Inactivity fees: Charges if you don't trade for a period\n- Transfer fees: Costs to move your account to another broker\n- Paper statement fees: Extra charges for physical mail\n\n**Hidden Costs (Payment for Order Flow):**\nSome 'free' brokers like Robinhood make money by selling your orders to market makers. This can result in slightly worse prices on your trades. Fidelity and Schwab don't do this for stocks.\n\n**Comparing Platforms:**\n| Platform | Stock Commissions | Account Minimum | PFOF |\n|----------|------------------|-----------------|------|\n| Fidelity | $0 | $0 | No |\n| Schwab | $0 | $0 | No |\n| Robinhood | $0 | $0 | Yes |\n| TD Ameritrade | $0 | $0 | Yes |",
+            "point1": "Most major brokers now offer commission-free stock trading",
+            "point2": "Watch out for account fees like maintenance, inactivity, and transfer fees",
+            "point3": "Payment for order flow can result in slightly worse trade prices"
+          },
+          "4": {
+            "title": "Placing Your First Trade",
+            "content": "When you're ready to buy your first stock, you'll need to understand the different order types and how to use them.\n\n**Market Order:**\nBuys or sells at the current market price immediately. Best for actively traded stocks when you want to trade right away.\n- Pros: Executes quickly\n- Cons: Price may differ slightly from what you saw\n\n**Limit Order:**\nSets a specific price you're willing to pay. The trade only happens if the stock reaches your price.\n- Pros: You control the exact price\n- Cons: May not execute if price doesn't reach your limit\n\n**Order Duration:**\n- **Day Order**: Expires at end of trading day if not filled\n- **GTC (Good Till Canceled)**: Stays active until filled or you cancel (usually 60-180 days)\n\n**Steps to Place a Trade:**\n1. Search for the stock by name or ticker symbol\n2. Click 'Trade' or 'Buy'\n3. Choose order type (Market or Limit)\n4. Enter number of shares or dollar amount\n5. Review all details carefully\n6. Confirm and submit\n\n**Reading Your Confirmation:**\nAfter a trade, you'll see: shares bought, price per share, total cost, and any fees. Save this for your records and taxes.",
+            "point1": "Market orders execute immediately at current price",
+            "point2": "Limit orders let you set the exact price you'll pay",
+            "point3": "Day orders expire at market close; GTC orders stay active longer",
+            "point4": "Always review your order details before confirming"
+          },
+          "5": {
+            "title": "Market Mechanics",
+            "content": "Understanding when and how the market operates helps you trade more effectively.\n\n**Regular Market Hours:**\nThe US stock market is open Monday-Friday, 9:30 AM to 4:00 PM Eastern Time. It's closed on major holidays.\n\n**Pre-Market and After-Hours:**\n- Pre-market: 4:00 AM - 9:30 AM ET\n- After-hours: 4:00 PM - 8:00 PM ET\n- Lower volume = bigger price swings and wider spreads\n- Not recommended for beginners\n\n**Real-Time vs Delayed Data:**\nFree stock quotes are often delayed 15-20 minutes. This matters for active trading but less for long-term investors. Most brokerages provide real-time data free to account holders.\n\n**Trading Halts and Circuit Breakers:**\nTrading can be paused when:\n- A stock moves too fast (company-specific halt)\n- The entire market drops significantly (circuit breaker)\n- Level 1: 7% drop = 15-minute pause\n- Level 2: 13% drop = 15-minute pause\n- Level 3: 20% drop = market closes for the day\n\n**Stop Orders:**\n- **Stop Order**: Becomes a market order when price reaches your stop price\n- **Stop-Limit Order**: Becomes a limit order at your specified price\n- Used to limit losses or protect profits automatically",
+            "point1": "Regular market hours are 9:30 AM - 4:00 PM Eastern Time",
+            "point2": "Pre-market and after-hours trading have lower volume and higher risk",
+            "point3": "Free stock quotes may be delayed 15-20 minutes",
+            "point4": "Circuit breakers pause trading if the market drops 7%, 13%, or 20%"
+          }
+        }
+      }
+    },
+    "quiz": {
+      "title": "Module Quiz",
+      "question": "Question",
+      "passScore": "Pass score",
+      "selectAnswer": "Select an answer to continue",
+      "checkAnswer": "Check Answer",
+      "next": "Next Question",
+      "seeResults": "See Results",
+      "correct": "Correct!",
+      "incorrect": "Not quite. Here's why:",
+      "ready": "You've completed all lessons! Ready to test your knowledge?",
+      "completeLessons": "Complete all lessons to unlock the quiz",
+      "start": "Start Quiz",
+      "results": {
+        "title": "Quiz Results",
+        "score": "You scored {score} out of {total}",
+        "passed": "Congratulations! You passed!",
+        "failed": "You need 80% to pass. Review the material and try again.",
+        "tryAgain": "Try Again",
+        "nextModule": "Next Module"
+      }
+    },
+    "quizzes": {
+      "8": {
+        "q1": {
+          "question": "What is the main difference between a full-service broker and a discount broker?",
+          "optionA": "Full-service brokers only trade stocks, discount brokers trade everything",
+          "optionB": "Full-service brokers have better mobile apps",
+          "optionC": "Full-service brokers provide personal financial advisors but charge higher fees",
+          "optionD": "Discount brokers don't allow you to buy individual stocks",
+          "explanation": "Full-service brokers charge higher fees but provide personal financial advisors who help you make investment decisions. Discount brokers like Fidelity charge little to no fees but you make your own decisions."
+        },
+        "q2": {
+          "question": "Which of the following is a benefit of using Fidelity for beginners?",
+          "optionA": "They guarantee your investments will make money",
+          "optionB": "They offer fractional shares starting at $1 and have no account minimums",
+          "optionC": "They provide free investment advice from human advisors",
+          "optionD": "They have the lowest payment for order flow rates",
+          "explanation": "Fidelity offers fractional shares starting at just $1, has no account minimums, no commissions on stocks and ETFs, and actually doesn't use payment for order flow on stocks at all."
+        },
+        "q3": {
+          "question": "What is 'payment for order flow' and why does it matter?",
+          "optionA": "It's when brokers sell your orders to market makers, which can result in slightly worse prices on trades",
+          "optionB": "It's a fee you pay when placing an order",
+          "optionC": "It's the commission charged by full-service brokers",
+          "optionD": "It's the interest earned on your cash balance",
+          "explanation": "Payment for order flow (PFOF) is when brokers like Robinhood sell your trade orders to market makers. This is how they make money from 'free' trading, but it can result in you getting slightly worse prices on your trades."
+        },
+        "q4": {
+          "question": "What is the key difference between a market order and a limit order?",
+          "optionA": "Market orders can only be placed during pre-market hours",
+          "optionB": "Limit orders are only for selling, not buying",
+          "optionC": "Market orders have lower fees than limit orders",
+          "optionD": "Market orders execute immediately at current price, while limit orders only execute at your specified price or better",
+          "explanation": "A market order executes immediately at whatever the current market price is. A limit order lets you set a specific price, and the trade only happens if the stock reaches that price."
+        },
+        "q5": {
+          "question": "What are the regular US stock market hours?",
+          "optionA": "8:00 AM - 5:00 PM Eastern Time",
+          "optionB": "9:30 AM - 4:00 PM Eastern Time",
+          "optionC": "9:00 AM - 4:30 PM Eastern Time",
+          "optionD": "10:00 AM - 3:00 PM Eastern Time",
+          "explanation": "The US stock market is open Monday through Friday from 9:30 AM to 4:00 PM Eastern Time. Pre-market trading starts at 4:00 AM ET and after-hours trading continues until 8:00 PM ET."
+        }
+      }
+    }
+  },
+  "glossary": {
+    "title": "Financial Glossary",
+    "subtitle": "Learn key investing terms in simple language",
+    "searchPlaceholder": "Search for a term...",
+    "myWords": "My Word List",
+    "addToList": "Add to My List",
+    "removeFromList": "Remove",
+    "noResults": "No terms found matching your search",
+    "reviewMode": "Flashcard Review",
+    "showDefinition": "Show Definition",
+    "gotIt": "Got It!",
+    "needsReview": "Review Again",
+    "wordsToReview": "{count} words ready for review",
+    "myWordsTitle": "My Word List",
+    "myWordsSubtitle": "Track your vocabulary learning progress",
+    "noWordsYet": "No Words Yet",
+    "addWordsPrompt": "Add words from the glossary to start learning!",
+    "browseGlossary": "Browse Glossary",
+    "totalWords": "Total Words",
+    "mastered": "Mastered",
+    "learning": "Learning",
+    "dueToday": "Due Today",
+    "dayStreak": "day streak",
+    "bestStreak": "Best",
+    "days": "days",
+    "reviewNow": "Review Now",
+    "startReview": "Start Review",
+    "backToGlossary": "Back to Glossary",
+    "yourWords": "Your Words",
+    "reviews": "reviews",
+    "newWord": "New word",
+    "due": "Due!",
+    "reviewTitle": "Flashcard Review",
+    "chooseReviewMode": "Choose what to review",
+    "reviewDue": "Review Due Words",
+    "wordsDue": "{count} words ready",
+    "noDueWords": "All caught up!",
+    "reviewAll": "Review All Words",
+    "allWordsCount": "{count} words total",
+    "back": "Back",
+    "reviewingDue": "Reviewing Due Words",
+    "reviewingAll": "Reviewing All Words",
+    "noCardsToReview": "All Caught Up!",
+    "allCaughtUp": "No words are due for review. Check back later!",
+    "sessionComplete": "Session Complete!",
+    "correct": "Correct",
+    "accuracy": "Accuracy",
+    "reviewMistakes": "Review Mistakes",
+    "done": "Done",
+    "swipeInstructions": "Swipe right if you knew it, left to review again"
+  },
+  "trading": {
+    "title": "Paper Trading",
+    "subtitle": "Practice trading with $100,000 in virtual money",
+    "portfolio": "My Portfolio",
+    "cashBalance": "Cash Balance",
+    "portfolioValue": "Portfolio Value",
+    "totalReturn": "Total Return",
+    "holdings": "Holdings",
+    "noHoldings": "No positions yet. Buy your first stock!",
+    "trade": {
+      "title": "Trade Stocks",
+      "searchStock": "Search for a stock...",
+      "buy": "Buy",
+      "sell": "Sell",
+      "shares": "Shares",
+      "estimatedCost": "Estimated Cost",
+      "estimatedProceeds": "Estimated Proceeds",
+      "currentPrice": "Current Price",
+      "confirmBuy": "Confirm Buy",
+      "confirmSell": "Confirm Sell",
+      "insufficientFunds": "Insufficient funds",
+      "insufficientShares": "You don't own enough shares",
+      "success": "Trade executed successfully!"
+    },
+    "history": {
+      "title": "Transaction History",
+      "noTransactions": "No transactions yet",
+      "bought": "Bought",
+      "sold": "Sold",
+      "date": "Date",
+      "symbol": "Symbol",
+      "action": "Action",
+      "shares": "Shares",
+      "price": "Price",
+      "total": "Total",
+      "sortBy": "Sort by",
+      "newestFirst": "Newest First",
+      "oldestFirst": "Oldest First"
+    },
+    "reset": {
+      "title": "Reset Account",
+      "confirm": "Are you sure? This will reset your portfolio to $100,000 and clear all your positions and trades.",
+      "button": "Reset Account",
+      "remaining": "reset(s) remaining",
+      "lastReset": "Warning: This is your last reset!",
+      "cancel": "Cancel",
+      "continue": "Continue",
+      "finalTitle": "Final Confirmation",
+      "finalWarning": "This action cannot be undone.",
+      "finalConfirm": "Yes, I am sure, reset paper trade account",
+      "noResetsTitle": "No Resets Available",
+      "noResetsLeft": "You have used all 3 of your portfolio resets.",
+      "requestTitle": "Need another reset?",
+      "requestPlaceholder": "Explain why you need an additional reset (optional)...",
+      "requestButton": "Request Additional Reset",
+      "requestSentTitle": "Request Submitted",
+      "requestSentMessage": "Your request has been logged. An administrator will review it.",
+      "close": "Close"
+    },
+    "page": {
+      "stockQuote": "Stock Quote",
+      "placeOrder": "Place Order",
+      "clearSelection": "Clear Selection",
+      "cancelReset": "Cancel"
+    }
+  },
+  "errors": {
+    "somethingWentWrong": "Something Went Wrong",
+    "errorDescription": "We apologize for the inconvenience. Please try again.",
+    "tryAgain": "Try Again",
+    "goHome": "Go Home",
+    "notFound": "Page Not Found",
+    "notFoundDescription": "The page you're looking for doesn't exist.",
+    "offline": "You're Offline",
+    "offlineDescription": "Some features may be limited. Connect to the internet for full access."
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "english": "English",
+    "spanish": "Spanish",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  }
+}
