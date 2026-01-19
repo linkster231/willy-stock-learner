@@ -35,6 +35,10 @@
 import { NextResponse } from 'next/server';
 import { getStockQuote, StockQuoteData } from '@/lib/api/stock-api';
 
+// Force Node.js runtime (required for yahoo-finance2 which uses Node.js APIs)
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+
 // -----------------------------------------------------------------------------
 // Constants
 // -----------------------------------------------------------------------------
