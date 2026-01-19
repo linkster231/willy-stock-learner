@@ -93,7 +93,9 @@ function CustomTooltip({
  */
 export function GrowthChart({
   data,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   xAxisLabel = 'Year',
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   yAxisLabel = 'Value',
   primaryLabel = 'Balance',
   secondaryLabel,

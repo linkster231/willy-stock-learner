@@ -9,7 +9,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
-import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/Card';
+import { Card } from '@/components/ui/Card';
 import { cn } from '@/lib/utils';
 
 /**

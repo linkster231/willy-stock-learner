@@ -168,30 +168,28 @@ export default function PortfolioSimulatorPage() {
   }, [selectedSector]);
 
   // Add stock to portfolio (from popular stocks)
-  const addStock = (stock: (typeof POPULAR_STOCKS)[0]) => {
-    if (portfolio.find((p) => p.symbol === stock.symbol)) {
-      return;
-    }
-    setPortfolio([
-      ...portfolio,
-      {
-        symbol: stock.symbol,
-        name: stock.name,
-        emoji: stock.emoji,
-        amount: 1000,
-        avgReturn: stock.avgReturn,
-        dividendYield: stock.dividendYield,
-        sector: stock.sector,
-      },
-    ]);
-  };
+  const addStock = useCallback((stock: (typeof POPULAR_STOCKS)[0]) => {
+    setPortfolio((prev) => {
+      if (prev.find((p) => p.symbol === stock.symbol)) {
+        return prev;
+      }
+      return [
+        ...prev,
+        {
+          symbol: stock.symbol,
+          name: stock.name,
+          emoji: stock.emoji,
+          amount: 1000,
+          avgReturn: stock.avgReturn,
+          dividendYield: stock.dividendYield,
+          sector: stock.sector,
+        },
+      ];
+    });
+  }, []);
 
   // Add stock from search (any stock, ETF, or bond)
   const handleStockSearch = useCallback((symbol: string, name: string) => {
-    if (portfolio.find((p) => p.symbol === symbol)) {
-      return;
-    }
-
     // Check if it's a known popular stock
     const knownStock = POPULAR_STOCKS.find((s) => s.symbol === symbol);
     if (knownStock) {
@@ -203,19 +201,24 @@ export default function PortfolioSimulatorPage() {
     // Assume 10% growth and 1.5% dividend as conservative defaults
     const defaults = DEFAULT_RETURNS.default;
 
-    setPortfolio([
-      ...portfolio,
-      {
-        symbol,
-        name,
-        emoji: '📈', // Generic chart emoji for searched stocks
-        amount: 1000,
-        avgReturn: defaults.avgReturn,
-        dividendYield: defaults.dividendYield,
-        sector: 'Other',
-      },
-    ]);
-  }, [portfolio]);
+    setPortfolio((prev) => {
+      if (prev.find((p) => p.symbol === symbol)) {
+        return prev;
+      }
+      return [
+        ...prev,
+        {
+          symbol,
+          name,
+          emoji: '📈', // Generic chart emoji for searched stocks
+          amount: 1000,
+          avgReturn: defaults.avgReturn,
+          dividendYield: defaults.dividendYield,
+          sector: 'Other',
+        },
+      ];
+    });
+  }, [addStock]);
 
   // Remove stock
   const removeStock = (symbol: string) => {

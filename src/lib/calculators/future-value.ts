@@ -70,7 +70,6 @@ export function calculateFutureValue(input: FutureValueInput): FutureValueResult
   }
 
   const monthlyRate = annualReturn / 100 / 12;
-  const totalMonths = years * 12;
   const annualContribution = monthlyContribution * 12;
 
   // Build year-by-year projection

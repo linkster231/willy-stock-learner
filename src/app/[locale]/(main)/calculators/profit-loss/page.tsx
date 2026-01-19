@@ -90,7 +90,7 @@ export default function ProfitLossPage() {
               Important: Many brokers now offer commission-free trading.
             </p>
             <p className="mt-1 text-sm text-yellow-600">
-              If your broker charges fees, don't forget to include them!
+              If your broker charges fees, don&apos;t forget to include them!
             </p>
           </div>
         </div>

@@ -12,7 +12,6 @@ import { CalculatorShell, ResultCard, ResultGrid } from '@/components/calculator
 import { NumberInput } from '@/components/ui/Input';
 import { Select } from '@/components/ui/Select';
 import { calculateDividend, type DividendFrequency } from '@/lib/calculators';
-import { formatPercent } from '@/lib/utils';
 
 export default function DividendPage() {
   const t = useTranslations('calculators.dividend');
@@ -81,7 +80,7 @@ export default function DividendPage() {
       explanation={
         <div className="space-y-3">
           <p>
-            Dividend yield tells you what percentage of the stock price you'll
+            Dividend yield tells you what percentage of the stock price you&apos;ll
             receive in dividends each year.
           </p>
           <div className="rounded-lg bg-green-50 p-3">

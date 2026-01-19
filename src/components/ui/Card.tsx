@@ -69,7 +69,7 @@ Card.displayName = 'Card';
 /**
  * Card Header - Optional title area
  */
-interface CardHeaderProps extends HTMLAttributes<HTMLDivElement> {}
+type CardHeaderProps = HTMLAttributes<HTMLDivElement>;
 
 export const CardHeader = forwardRef<HTMLDivElement, CardHeaderProps>(
   ({ className, children, ...props }, ref) => {
@@ -90,7 +90,7 @@ CardHeader.displayName = 'CardHeader';
 /**
  * Card Title
  */
-interface CardTitleProps extends HTMLAttributes<HTMLHeadingElement> {}
+type CardTitleProps = HTMLAttributes<HTMLHeadingElement>;
 
 export const CardTitle = forwardRef<HTMLHeadingElement, CardTitleProps>(
   ({ className, children, ...props }, ref) => {
@@ -111,7 +111,7 @@ CardTitle.displayName = 'CardTitle';
 /**
  * Card Description
  */
-interface CardDescriptionProps extends HTMLAttributes<HTMLParagraphElement> {}
+type CardDescriptionProps = HTMLAttributes<HTMLParagraphElement>;
 
 export const CardDescription = forwardRef<HTMLParagraphElement, CardDescriptionProps>(
   ({ className, children, ...props }, ref) => {
@@ -132,7 +132,7 @@ CardDescription.displayName = 'CardDescription';
 /**
  * Card Footer - Optional action area
  */
-interface CardFooterProps extends HTMLAttributes<HTMLDivElement> {}
+type CardFooterProps = HTMLAttributes<HTMLDivElement>;
 
 export const CardFooter = forwardRef<HTMLDivElement, CardFooterProps>(
   ({ className, children, ...props }, ref) => {

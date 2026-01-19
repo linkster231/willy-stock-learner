@@ -12,7 +12,7 @@
 
 'use client';
 
-import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import { useState, useRef, useCallback, useMemo, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { Input } from '@/components/ui/Input';
 import { useStockSearch, type SearchResult } from '@/hooks/useStockQuote';
@@ -218,26 +218,14 @@ export function StockSearch({
   }, [isLoading, error, results.length, debouncedQuery.length, minQueryLength]);
 
   // ---------------------------------------------------------------------------
-  // Effects
+  // Derived State for Dropdown
   // ---------------------------------------------------------------------------
 
   /**
-   * Open dropdown when results arrive and query is valid
-   * This provides immediate feedback when search results become available
+   * Whether dropdown should be open - derived from results and user interaction
+   * The dropdown auto-opens when results arrive, but can be manually closed
    */
-  useEffect(() => {
-    if (results.length > 0 && hasValidQuery) {
-      setIsOpen(true);
-    }
-  }, [results.length, hasValidQuery]);
-
-  /**
-   * Reset highlighted index when results change
-   * This prevents stale index references when the list updates
-   */
-  useEffect(() => {
-    setHighlightedIndex(-1);
-  }, [results]);
+  const shouldShowDropdown = isOpen || (results.length > 0 && hasValidQuery);
 
   /**
    * Close dropdown when clicking outside the component
@@ -268,10 +256,12 @@ export function StockSearch({
 
   /**
    * Handle input value changes
+   * Also resets highlighted index when user types
    */
   const handleInputChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       setQuery(e.target.value);
+      setHighlightedIndex(-1); // Reset on typing
     },
     []
   );
@@ -292,7 +282,8 @@ export function StockSearch({
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
       // Early return if dropdown is closed or empty
-      if (!isOpen || results.length === 0) {
+      // Note: we check results.length > 0 && hasValidQuery as the condition for showing dropdown
+      if (results.length === 0) {
         return;
       }
 
@@ -330,7 +321,7 @@ export function StockSearch({
           break;
       }
     },
-    [isOpen, results, highlightedIndex, handleSelect]
+    [results, highlightedIndex, handleSelect]
   );
 
   /**
@@ -358,7 +349,7 @@ export function StockSearch({
         placeholder={placeholder ?? t('searchStock')}
         autoComplete="off"
         // Accessibility attributes
-        aria-expanded={isOpen}
+        aria-expanded={shouldShowDropdown}
         aria-haspopup="listbox"
         aria-controls="stock-search-results"
         aria-autocomplete="list"
@@ -368,7 +359,7 @@ export function StockSearch({
       />
 
       {/* Dropdown Results Container */}
-      {isOpen && (
+      {shouldShowDropdown && (
         <div
           id="stock-search-results"
           role="listbox"

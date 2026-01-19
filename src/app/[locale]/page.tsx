@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useSyncExternalStore } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/Card';
@@ -55,8 +55,15 @@ export default function HomePage() {
   const t = useTranslations('home');
   const navT = useTranslations('nav');
 
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [greeting, setGreeting] = useState('');
+  // Hydration-safe way to detect client-side rendering
+  const isLoaded = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
+
+  // Greeting is calculated on client only to avoid hydration mismatch
+  const greeting = isLoaded ? getTimeGreeting() : '';
 
   const cash = useTradingStore((state) => state.cash);
   const positionsList = useTradingStore((state) => state.positionsList);
@@ -65,11 +72,6 @@ export default function HomePage() {
   const reviewStreak = useGlossaryStore((state) => state.reviewStreak);
   const longestStreak = useGlossaryStore((state) => state.longestStreak);
   const dueCount = useGlossaryStore((state) => state.getDueCount);
-
-  useEffect(() => {
-    setIsLoaded(true);
-    setGreeting(getTimeGreeting());
-  }, []);
 
   const stats = isLoaded ? glossaryStats() : { totalWords: 0, mastered: 0, learning: 0, dueToday: 0, streak: 0 };
   const currentDueCount = isLoaded ? dueCount() : 0;

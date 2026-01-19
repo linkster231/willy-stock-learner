@@ -12,8 +12,8 @@
  * - Better reliability through redundancy
  */
 
-import { getYahooQuote, searchYahoo, YahooQuote, YahooSearchResult, YahooFinanceError } from './yahoo-finance';
-import { getQuote, searchStocks, NormalizedQuote, NormalizedSearchResult, FinnhubError } from './finnhub';
+import { getYahooQuote, searchYahoo } from './yahoo-finance';
+import { getQuote, searchStocks } from './finnhub';
 
 // =============================================================================
 // UNIFIED TYPES

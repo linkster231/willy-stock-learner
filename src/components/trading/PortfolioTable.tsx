@@ -29,7 +29,6 @@ import { useStockQuote } from '@/hooks/useStockQuote';
 import {
   useTradingStore,
   selectPositionsList,
-  selectCash,
   type Position,
 } from '@/stores/useTradingStore';
 import { cn, formatCurrency } from '@/lib/utils';

@@ -240,35 +240,35 @@
     "keyPoints": "What You Learned",
     "modules": {
       "1": {
-        "title": "Your First Steps Into Stocks!",
+        "title": "Your First Steps Into Stocks! (Stock Market Basics)",
         "description": "Discover what stocks really are, how the market works, and why people invest"
       },
       "2": {
-        "title": "Ready, Set, Invest!",
+        "title": "Ready, Set, Invest! (Getting Started)",
         "description": "Open your first account, understand the costs, and make your first trade"
       },
       "3": {
-        "title": "Don't Lose Your Shirt!",
+        "title": "Don't Lose Your Shirt! (Risk Management)",
         "description": "Master the art of protecting your money while still growing it"
       },
       "4": {
-        "title": "Think Like a Pro Trader",
+        "title": "Think Like a Pro Trader (Trading Psychology)",
         "description": "Control your emotions, avoid rookie mistakes, and build winning habits"
       },
       "5": {
-        "title": "Spot the Scammers!",
+        "title": "Spot the Scammers! (Avoiding Fraud)",
         "description": "Learn to recognize tricks, scams, and shady deals before they get you"
       },
       "6": {
-        "title": "How the World Moves Markets",
+        "title": "How the World Moves Markets (Market Influences)",
         "description": "See how presidents, news, and world events shake up stock prices"
       },
       "7": {
-        "title": "Keep More of Your Money (Taxes)",
+        "title": "Keep More of Your Money (Taxes & Strategy)",
         "description": "Smart strategies to pay less taxes on your investment gains"
       },
       "8": {
-        "title": "Master Your Trading App",
+        "title": "Master Your Trading App (Using Fidelity)",
         "description": "Learn to use Fidelity like a pro and place your trades with confidence",
         "lessons": {
           "1": {

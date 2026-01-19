@@ -10,10 +10,10 @@
 import { useState, useMemo, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import { CalculatorShell, ResultCard, ResultGrid, GrowthChart, PresetManager } from '@/components/calculators';
-import { Input, NumberInput } from '@/components/ui/Input';
+import { NumberInput } from '@/components/ui/Input';
 import { Select } from '@/components/ui/Select';
 import { calculateCompoundInterest, type CompoundInterestInput } from '@/lib/calculators';
-import { formatCurrency, formatPercent } from '@/lib/utils';
+import { formatCurrency } from '@/lib/utils';
 
 /**
  * Compounding frequency options
@@ -28,7 +28,6 @@ const FREQUENCY_OPTIONS = [
 
 export default function CompoundInterestPage() {
   const t = useTranslations('calculators.compoundInterest');
-  const commonT = useTranslations('calculators');
 
   // Form state
   const [principal, setPrincipal] = useState<number>(10000);

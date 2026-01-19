@@ -20,11 +20,9 @@
 'use client';
 
 import { memo, useMemo } from 'react';
-import { useTranslations } from 'next-intl';
 import { Card } from '@/components/ui/Card';
-import { useStockQuote, type QuoteData } from '@/hooks/useStockQuote';
-import { cn } from '@/lib/utils';
-import { formatCurrency, formatPercent } from '@/lib/utils';
+import { useStockQuote } from '@/hooks/useStockQuote';
+import { cn, formatCurrency } from '@/lib/utils';
 
 // =============================================================================
 // TYPES & INTERFACES
@@ -203,9 +201,6 @@ export function QuoteDisplay({
   className,
   showDetails = true,
 }: QuoteDisplayProps) {
-  // Fetch translations for internationalization
-  const t = useTranslations('trading.trade');
-
   // Fetch quote data using SWR-based hook
   // isValidating indicates background revalidation is in progress
   const { quote, isLoading, error, isValidating } = useStockQuote(symbol);

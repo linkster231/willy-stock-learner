@@ -7,7 +7,7 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useSyncExternalStore } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { Card, CardHeader, CardTitle } from '@/components/ui/Card';
@@ -33,12 +33,16 @@ export default function MyWordsPage() {
   const reviewStreak = useGlossaryStore((state) => state.reviewStreak);
   const longestStreak = useGlossaryStore((state) => state.longestStreak);
 
-  // For hydration safety
-  const [isLoaded, setIsLoaded] = useState(false);
+  // Hydration-safe way to detect client-side rendering
+  const isLoaded = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
 
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
+  // Get current time only on client - using useState with lazy initializer
+  // The initializer function only runs once on client
+  const [currentTime] = useState(() => (typeof window !== 'undefined' ? Date.now() : 0));
 
   // Get stats
   const stats = isLoaded ? getStats() : { totalWords: 0, mastered: 0, learning: 0, dueToday: 0, streak: 0 };
@@ -147,7 +151,8 @@ export default function MyWordsPage() {
             if (!term || !progress) return null;
 
             const confidenceLevel = progress.confidenceLevel;
-            const isDue = progress.nextReviewAt && progress.nextReviewAt <= Date.now();
+            // Note: isDue is recalculated on client after hydration via isLoaded check
+            const isDue = isLoaded && progress.nextReviewAt && progress.nextReviewAt <= currentTime;
 
             return (
               <div

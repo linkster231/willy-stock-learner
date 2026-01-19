@@ -9,7 +9,7 @@
 
 import { ReactNode } from 'react';
 import { useTranslations } from 'next-intl';
-import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/Card';
+import { Card, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
 
@@ -46,6 +46,7 @@ interface CalculatorShellProps {
  */
 export function CalculatorShell({
   titleKey,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   descriptionKey,
   children,
   results,

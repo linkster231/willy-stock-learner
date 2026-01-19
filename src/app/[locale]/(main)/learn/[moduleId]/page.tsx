@@ -14,7 +14,7 @@ import { Link } from '@/i18n/routing';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { Modal } from '@/components/ui/Modal';
-import { LessonCard, ProgressBar } from '@/components/learning';
+import { ProgressBar } from '@/components/learning';
 import { getModuleById } from '@/content/modules';
 import { hasQuiz } from '@/content/quizzes';
 import { cn } from '@/lib/utils';
@@ -35,9 +35,9 @@ export default function ModulePage() {
   const moduleId = `module-${params.moduleId}`;
 
   // Get module data
-  const module = getModuleById(moduleId);
+  const learningModule = getModuleById(moduleId);
 
-  if (!module) {
+  if (!learningModule) {
     notFound();
   }
 
@@ -48,16 +48,16 @@ export default function ModulePage() {
 
   // Calculate progress
   const progress = useMemo(() => {
-    if (module.lessons.length === 0) return 0;
-    return Math.round((completedLessons.length / module.lessons.length) * 100);
-  }, [completedLessons, module.lessons.length]);
+    if (learningModule.lessons.length === 0) return 0;
+    return Math.round((completedLessons.length / learningModule.lessons.length) * 100);
+  }, [completedLessons, learningModule.lessons.length]);
 
   // Check if all lessons completed
-  const allLessonsCompleted = completedLessons.length === module.lessons.length;
+  const allLessonsCompleted = completedLessons.length === learningModule.lessons.length;
 
   // Get current lesson
   const currentLesson = currentLessonId
-    ? module.lessons.find((l) => l.id === currentLessonId)
+    ? learningModule.lessons.find((l) => l.id === currentLessonId)
     : null;
 
   // Handle marking lesson complete
@@ -86,12 +86,12 @@ export default function ModulePage() {
       {/* Module Header */}
       <div className="mb-6">
         <div className="flex items-center gap-3">
-          <span className="text-4xl">{module.icon}</span>
+          <span className="text-4xl">{learningModule.icon}</span>
           <div>
             <h1 className="text-2xl font-bold text-gray-900">
-              {t(module.titleKey)}
+              {t(learningModule.titleKey)}
             </h1>
-            <p className="text-gray-600">{t(module.descriptionKey)}</p>
+            <p className="text-gray-600">{t(learningModule.descriptionKey)}</p>
           </div>
         </div>
 
@@ -100,7 +100,7 @@ export default function ModulePage() {
           <div className="mb-1 flex items-center justify-between text-sm">
             <span className="text-gray-600">{t('learn.progress')}</span>
             <span className="font-medium">
-              {completedLessons.length}/{module.lessons.length} {t('learn.lessons')}
+              {completedLessons.length}/{learningModule.lessons.length} {t('learn.lessons')}
             </span>
           </div>
           <ProgressBar progress={progress} />
@@ -123,18 +123,18 @@ export default function ModulePage() {
           />
         </svg>
         <span>
-          ~{module.estimatedHours} {t('learn.hours')}
+          ~{learningModule.estimatedHours} {t('learn.hours')}
         </span>
       </div>
 
       {/* Lessons List */}
       <div className="space-y-3">
-        {module.lessons.map((lesson, index) => {
+        {learningModule.lessons.map((lesson, index) => {
           const isCompleted = completedLessons.includes(lesson.id);
           const isNext =
             !isCompleted &&
             (index === 0 ||
-              completedLessons.includes(module.lessons[index - 1].id));
+              completedLessons.includes(learningModule.lessons[index - 1].id));
 
           return (
             <Card

@@ -7,7 +7,7 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useSyncExternalStore } from 'react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
@@ -26,12 +26,13 @@ export default function ReviewPage() {
   // State for term IDs to review
   const [termIds, setTermIds] = useState<string[]>([]);
   const [mode, setMode] = useState<'due' | 'all' | null>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
 
-  // Load words on mount
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
+  // Hydration-safe way to detect client-side rendering
+  const isLoaded = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
 
   // Get due words
   const dueWords = isLoaded ? getWordsDueForReview() : [];

@@ -88,7 +88,7 @@ export function calculateNextReview(
   // Validate quality rating
   const clampedQuality = Math.max(0, Math.min(5, Math.round(quality)));
 
-  let { easeFactor, interval, repetitions } = currentState;
+  const { easeFactor, interval, repetitions } = currentState;
 
   // If quality is below 3, the response was incorrect
   // Reset to the beginning but maintain the ease factor

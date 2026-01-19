@@ -22,8 +22,15 @@ import type { Database } from '@/types/database';
  * }
  */
 export function createClient() {
-  return createBrowserClient<Database>(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  );
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+  if (!supabaseUrl || !supabaseAnonKey) {
+    // Return a mock client for development without Supabase
+    // This allows the app to run without Supabase configuration
+    console.warn('Supabase environment variables not configured. Auth features will be disabled.');
+    return null;
+  }
+
+  return createBrowserClient<Database>(supabaseUrl, supabaseAnonKey);
 }

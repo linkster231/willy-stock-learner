@@ -119,7 +119,7 @@ export function ResetConfirmation({ onResetComplete, className }: ResetConfirmat
         🔄 {t('reset.button')}
         {canResetNow && (
           <span className="ml-2 text-xs text-gray-500">
-            ({remainingResets} {remainingResets === 1 ? 'left' : 'left'})
+            ({remainingResets} left)
           </span>
         )}
       </Button>

@@ -33,8 +33,8 @@ export const modules: Module[] = [
  * Module map for quick lookup by ID
  */
 export const moduleMap: Record<string, Module> = modules.reduce(
-  (acc, module) => {
-    acc[module.id] = module;
+  (acc, mod) => {
+    acc[mod.id] = mod;
     return acc;
   },
   {} as Record<string, Module>
@@ -54,9 +54,9 @@ export function getLessonById(
   moduleId: string,
   lessonId: string
 ): Lesson | undefined {
-  const module = getModuleById(moduleId);
-  if (!module) return undefined;
-  return module.lessons.find((lesson) => lesson.id === lessonId);
+  const learningModule = getModuleById(moduleId);
+  if (!learningModule) return undefined;
+  return learningModule.lessons.find((lesson) => lesson.id === lessonId);
 }
 
 /**
@@ -66,19 +66,19 @@ export function getNextLesson(
   moduleId: string,
   currentLessonId: string
 ): { lesson: Lesson; moduleId: string } | undefined {
-  const module = getModuleById(moduleId);
-  if (!module) return undefined;
+  const learningModule = getModuleById(moduleId);
+  if (!learningModule) return undefined;
 
-  const currentIndex = module.lessons.findIndex(
+  const currentIndex = learningModule.lessons.findIndex(
     (lesson) => lesson.id === currentLessonId
   );
   if (currentIndex === -1) return undefined;
 
   // If there's a next lesson in the same module
-  if (currentIndex < module.lessons.length - 1) {
+  if (currentIndex < learningModule.lessons.length - 1) {
     return {
-      lesson: module.lessons[currentIndex + 1],
-      moduleId: module.id,
+      lesson: learningModule.lessons[currentIndex + 1],
+      moduleId: learningModule.id,
     };
   }
 
@@ -102,10 +102,10 @@ export function getPreviousLesson(
   moduleId: string,
   currentLessonId: string
 ): { lesson: Lesson; moduleId: string } | undefined {
-  const module = getModuleById(moduleId);
-  if (!module) return undefined;
+  const learningModule = getModuleById(moduleId);
+  if (!learningModule) return undefined;
 
-  const currentIndex = module.lessons.findIndex(
+  const currentIndex = learningModule.lessons.findIndex(
     (lesson) => lesson.id === currentLessonId
   );
   if (currentIndex === -1) return undefined;
@@ -113,8 +113,8 @@ export function getPreviousLesson(
   // If there's a previous lesson in the same module
   if (currentIndex > 0) {
     return {
-      lesson: module.lessons[currentIndex - 1],
-      moduleId: module.id,
+      lesson: learningModule.lessons[currentIndex - 1],
+      moduleId: learningModule.id,
     };
   }
 
@@ -138,10 +138,10 @@ export function arePrerequisitesMet(
   moduleId: string,
   completedModuleIds: string[]
 ): boolean {
-  const module = getModuleById(moduleId);
-  if (!module) return false;
+  const learningModule = getModuleById(moduleId);
+  if (!learningModule) return false;
 
-  return module.prerequisites.every((prereqId) =>
+  return learningModule.prerequisites.every((prereqId) =>
     completedModuleIds.includes(prereqId)
   );
 }
@@ -189,14 +189,14 @@ export function calculateModuleProgress(
   moduleId: string,
   completedLessonIds: string[]
 ): number {
-  const module = getModuleById(moduleId);
-  if (!module || module.lessons.length === 0) return 0;
+  const learningModule = getModuleById(moduleId);
+  if (!learningModule || learningModule.lessons.length === 0) return 0;
 
-  const completedInModule = module.lessons.filter((lesson) =>
+  const completedInModule = learningModule.lessons.filter((lesson) =>
     completedLessonIds.includes(lesson.id)
   ).length;
 
-  return Math.round((completedInModule / module.lessons.length) * 100);
+  return Math.round((completedInModule / learningModule.lessons.length) * 100);
 }
 
 /**

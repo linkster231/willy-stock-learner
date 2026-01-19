@@ -13,7 +13,7 @@ import { useParams, notFound } from 'next/navigation';
 import { Link, useRouter } from '@/i18n/routing';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
-import { QuizQuestion, QuizResults, ProgressBar } from '@/components/learning';
+import { QuizResults, ProgressBar } from '@/components/learning';
 import { getModuleById } from '@/content/modules';
 import { getQuizByModuleId } from '@/content/quizzes';
 import { cn } from '@/lib/utils';
@@ -32,10 +32,10 @@ export default function QuizPage() {
   const moduleId = `module-${params.moduleId}`;
 
   // Get module and quiz data
-  const module = getModuleById(moduleId);
+  const learningModule = getModuleById(moduleId);
   const quiz = getQuizByModuleId(moduleId);
 
-  if (!module || !quiz) {
+  if (!learningModule || !quiz) {
     notFound();
   }
 
@@ -151,9 +151,9 @@ export default function QuizPage() {
       {/* Quiz Header */}
       <div className="mb-6">
         <div className="flex items-center gap-2">
-          <span className="text-2xl">{module.icon}</span>
+          <span className="text-2xl">{learningModule.icon}</span>
           <h1 className="text-xl font-bold text-gray-900">
-            {t(module.titleKey)} - {t('learn.quiz.title')}
+            {t(learningModule.titleKey)} - {t('learn.quiz.title')}
           </h1>
         </div>
 
