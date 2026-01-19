@@ -1,17 +1,17 @@
 {
   "common": {
     "loading": "Cargando...",
-    "error": "Ocurrio un error",
+    "error": "Ocurrió un error",
     "save": "Guardar",
     "cancel": "Cancelar",
     "next": "Siguiente",
     "previous": "Anterior",
     "submit": "Enviar",
     "continue": "Continuar",
-    "back": "Atras",
+    "back": "Atrás",
     "search": "Buscar",
     "close": "Cerrar",
-    "yes": "Si",
+    "yes": "Sí",
     "no": "No",
     "or": "o"
   },
@@ -22,66 +22,66 @@
     "trading": "Practica Trading",
     "glossary": "Mis Palabras",
     "progress": "Mi Progreso",
-    "settings": "Configuracion"
+    "settings": "Configuración"
   },
   "home": {
-    "welcome": "Hola, Futuro Inversionista!",
-    "subtitle": "Tu aventura hacia el dinero inteligente empieza aqui",
-    "startLearning": "Vamos!",
-    "continueWhere": "Continua Donde Lo Dejaste",
-    "quickActions": "Que Quieres Hacer?",
-    "yourProgress": "Como Te Va",
+    "welcome": "¡Hola, Futuro Inversionista!",
+    "subtitle": "Tu aventura hacia el dinero inteligente empieza aquí",
+    "startLearning": "¡Vamos!",
+    "continueWhere": "Continúa Donde Lo Dejaste",
+    "quickActions": "¿Qué Quieres Hacer?",
+    "yourProgress": "Cómo Te Va",
     "modulesCompleted": "Lecciones Terminadas",
-    "paperPortfolio": "Tu Portafolio de Practica",
+    "paperPortfolio": "Tu Portafolio de Práctica",
     "portfolioValue": "Valor Total",
     "wordsLearned": "Palabras Nuevas",
-    "quizzesPassed": "Examenes Pasados",
+    "quizzesPassed": "Exámenes Pasados",
     "activePositions": "Acciones que Tienes",
     "mastered": "dominadas",
-    "learnDescription": "Lecciones divertidas sobre acciones y como hacer crecer tu dinero",
-    "calculatorsDescription": "Herramientas geniales para ver como crece el dinero",
+    "learnDescription": "Lecciones divertidas sobre acciones y cómo hacer crecer tu dinero",
+    "calculatorsDescription": "Herramientas geniales para ver cómo crece el dinero",
     "tradingDescription": "Compra y vende acciones con dinero de juego",
     "glossaryDescription": "Aprende palabras de dinero con tarjetas",
-    "quickTips": "Consejos Utiles",
-    "tip1": "Empieza con lo basico. Termina la Leccion 1 antes de avanzar.",
-    "tip2": "Prueba el trading de practica para aprender sin usar dinero real.",
+    "quickTips": "Consejos Útiles",
+    "tip1": "Empieza con lo básico. Termina la Lección 1 antes de avanzar.",
+    "tip2": "Prueba el trading de práctica para aprender sin usar dinero real.",
     "tip3": "Agrega palabras nuevas a tu lista para recordarlas mejor.",
     "greeting": {
-      "morning": "Buenos dias!",
-      "afternoon": "Buenas tardes!",
-      "evening": "Buenas noches!"
+      "morning": "¡Buenos días!",
+      "afternoon": "¡Buenas tardes!",
+      "evening": "¡Buenas noches!"
     },
     "streak": {
-      "days": "dias seguidos",
-      "keepItUp": "Sigue aprendiendo cada dia!",
+      "days": "días seguidos",
+      "keepItUp": "¡Sigue aprendiendo cada día!",
       "best": "Mejor racha"
     },
     "wordsDue": "palabras listas para repasar",
-    "reviewPrompt": "Mantiene tu racha!",
+    "reviewPrompt": "¡Mantén tu racha!",
     "reviewNow": "Repasar Ahora"
   },
   "auth": {
-    "login": "Iniciar Sesion",
+    "login": "Iniciar Sesión",
     "signup": "Crear Cuenta",
-    "logout": "Cerrar Sesion",
-    "email": "Correo Electronico",
-    "password": "Contrasena",
-    "confirmPassword": "Confirmar Contrasena",
-    "forgotPassword": "Olvidaste tu contrasena?",
-    "noAccount": "No tienes una cuenta?",
-    "hasAccount": "Ya tienes una cuenta?",
-    "loginSuccess": "Bienvenido de vuelta!",
-    "signupSuccess": "Cuenta creada! Revisa tu correo para confirmar.",
-    "errorInvalid": "Correo o contrasena invalidos",
-    "errorEmailTaken": "Este correo ya esta registrado"
+    "logout": "Cerrar Sesión",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar Contraseña",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "noAccount": "¿No tienes una cuenta?",
+    "hasAccount": "¿Ya tienes una cuenta?",
+    "loginSuccess": "¡Bienvenido de vuelta!",
+    "signupSuccess": "¡Cuenta creada! Revisa tu correo para confirmar.",
+    "errorInvalid": "Correo o contraseña inválidos",
+    "errorEmailTaken": "Este correo ya está registrado"
   },
   "calculators": {
     "title": "Herramientas de Dinero",
-    "description": "Herramientas divertidas para entender como crece el dinero",
+    "description": "Herramientas divertidas para entender cómo crece el dinero",
     "inputs": "Ingresa Tus Valores",
     "results": "Resultados",
-    "visualization": "Grafico",
-    "howItWorks": "Como Funciona",
+    "visualization": "Gráfico",
+    "howItWorks": "Cómo Funciona",
     "calculate": "Calcular",
     "reset": "Reiniciar",
     "presets": {
@@ -98,36 +98,49 @@
     },
     "portfolio": {
       "title": "Construye Tu Portafolio Ideal",
-      "description": "Elige acciones y mira como podria crecer tu dinero!",
-      "pickStocks": "1. Elige Acciones para Agregar",
-      "yourPortfolio": "2. Tu Portafolio",
+      "description": "¡Elige acciones y mira cómo podría crecer tu dinero!",
+      "pickStocks": "Elige Acciones para Agregar",
+      "searchAny": "Busca cualquier acción, ETF o bono:",
+      "searchPlaceholder": "Escribe un símbolo o nombre de empresa...",
+      "searchHint": "Funciona con cualquier acción, ETF, fondo mutuo o bono de EE.UU.",
+      "orPickPopular": "o elige una acción popular",
+      "yourPortfolio": "Tu Portafolio",
       "clearAll": "Borrar Todo",
-      "timeHorizon": "Cuantos anos vas a invertir?",
-      "projectedResults": "3. Tus Resultados Proyectados",
-      "totalInvested": "Total que Invertirias",
+      "timeHorizon": "¿Cuántos años vas a invertir?",
+      "reinvestDividends": "Reinvertir Dividendos (DRIP)",
+      "showTaxes": "Mostrar Impacto de Impuestos",
+      "projectedResults": "Tus Resultados Proyectados",
+      "invested": "Total Invertido",
+      "futureValue": "Valor Futuro",
+      "totalGain": "Ganancia Total",
+      "totalDividends": "Ingresos por Dividendos",
+      "stockBreakdown": "Desglose por Acción",
+      "totalInvested": "Total que Invertirías",
       "avgReturn": "Rendimiento Promedio Esperado",
       "conservative": "Conservador",
       "expected": "Esperado",
       "optimistic": "Optimista",
-      "disclaimer": "El rendimiento pasado no garantiza resultados futuros. Estas proyecciones son solo para fines educativos. El mercado de valores tiene riesgos y podrias perder dinero.",
+      "disclaimerTitle": "Importante",
+      "disclaimer": "El rendimiento pasado no garantiza resultados futuros. Estas proyecciones son estimaciones solo para fines educativos. El mercado de valores tiene riesgos y podrías perder dinero.",
       "emptyTitle": "Empieza a Construir Tu Portafolio",
-      "emptyDescription": "Haz clic en las acciones arriba para agregarlas a tu portafolio y ver rendimientos proyectados.",
-      "tipsTitle": "Consejos de Inversion",
-      "tip1": "No pongas todo tu dinero en una sola accion",
-      "tip2": "VOO y VTI son excelentes para principiantes - tienen cientos de acciones!",
-      "tip3": "Entre mas tiempo inviertas, mas puede crecer tu dinero",
-      "tip4": "No entres en panico cuando los precios bajen - mantente firme!"
+      "emptyDescription": "Haz clic en las acciones de arriba para agregarlas. ¡Verás crecimiento proyectado, dividendos y más!",
+      "tipsTitle": "Consejos de Inversión Inteligente",
+      "tip1": "Mezcla acciones de crecimiento (AAPL, GOOGL) con pagadoras de dividendos (KO, JNJ) y ETFs (VOO)",
+      "tip2": "Reinvertir dividendos puede aumentar mucho tus rendimientos a largo plazo gracias al interés compuesto",
+      "tip3": "¡VOO te da 500 empresas en una sola compra - diversificación instantánea!",
+      "tip4": "Entre más tiempo mantengas tu inversión, más trabaja el crecimiento compuesto a tu favor",
+      "tip5": "Mantén las inversiones por más de 1 año para pagar menos impuestos sobre ganancias de capital"
     },
     "compoundInterest": {
-      "title": "Mira Tu Dinero Crecer!",
-      "description": "Mira como ahorrar un poco puede convertirse en mucho con el tiempo",
+      "title": "¡Mira Tu Dinero Crecer!",
+      "description": "Mira cómo ahorrar un poco puede convertirse en mucho con el tiempo",
       "principal": "Cantidad Inicial",
-      "principalHelp": "Cuanto dinero tienes para empezar",
-      "rate": "Tasa de Interes Anual (%)",
-      "rateHelp": "Rendimiento anual esperado (8% es tipico para acciones)",
-      "years": "Anos de Crecimiento",
-      "yearsHelp": "Por cuanto tiempo planeas invertir",
-      "frequency": "Frecuencia de Capitalizacion",
+      "principalHelp": "Cuánto dinero tienes para empezar",
+      "rate": "Tasa de Interés Anual (%)",
+      "rateHelp": "Rendimiento anual esperado (8% es típico para acciones)",
+      "years": "Años de Crecimiento",
+      "yearsHelp": "Por cuánto tiempo planeas invertir",
+      "frequency": "Frecuencia de Capitalización",
       "frequencyOptions": {
         "annually": "Anual",
         "semiannually": "Cada 6 meses",
@@ -136,29 +149,29 @@
         "daily": "Diario"
       },
       "finalAmount": "Cantidad Final",
-      "totalInterest": "Interes Total Ganado",
-      "formula": "Formula: A = P(1 + r/n)^(nt)",
-      "formulaExplain": "Tu dinero crece ganando interes sobre tu interes. Entre mas veces se capitalice, mas ganas."
+      "totalInterest": "Interés Total Ganado",
+      "formula": "Fórmula: A = P(1 + r/n)^(nt)",
+      "formulaExplain": "Tu dinero crece ganando interés sobre tu interés. Entre más veces se capitalice, más ganas."
     },
     "profitLoss": {
-      "title": "Gane Dinero?",
-      "description": "Descubre si ganaste o perdiste dinero en una operacion",
-      "buyPrice": "Precio de Compra (por accion)",
-      "sellPrice": "Precio de Venta (por accion)",
-      "shares": "Numero de Acciones",
-      "buyCommission": "Comision de Compra ($)",
-      "sellCommission": "Comision de Venta ($)",
-      "totalProfit": "Ganancia/Perdida Total",
-      "percentGain": "Porcentaje de Ganancia/Perdida",
+      "title": "¿Gané Dinero?",
+      "description": "Descubre si ganaste o perdiste dinero en una operación",
+      "buyPrice": "Precio de Compra (por acción)",
+      "sellPrice": "Precio de Venta (por acción)",
+      "shares": "Número de Acciones",
+      "buyCommission": "Comisión de Compra ($)",
+      "sellCommission": "Comisión de Venta ($)",
+      "totalProfit": "Ganancia/Pérdida Total",
+      "percentGain": "Porcentaje de Ganancia/Pérdida",
       "breakEven": "Precio de Equilibrio"
     },
     "tax": {
-      "title": "Cuanto Debo en Impuestos?",
-      "description": "Calcula cuanto pagaras de impuestos por tus ganancias en Nueva Jersey",
+      "title": "¿Cuánto Debo en Impuestos?",
+      "description": "Calcula cuánto pagarás de impuestos por tus ganancias en Nueva Jersey",
       "capitalGain": "Cantidad de Ganancia de Capital",
-      "holdingPeriod": "Periodo de Tenencia",
-      "shortTerm": "Corto plazo (1 ano o menos)",
-      "longTerm": "Largo plazo (mas de 1 ano)",
+      "holdingPeriod": "Período de Tenencia",
+      "shortTerm": "Corto plazo (1 año o menos)",
+      "longTerm": "Largo plazo (más de 1 año)",
       "filingStatus": "Estado Civil",
       "single": "Soltero",
       "married": "Casado Declarando Juntos",
@@ -166,145 +179,145 @@
       "federalTax": "Impuesto Federal",
       "stateTax": "Impuesto Estatal de NJ",
       "totalTax": "Impuesto Total",
-      "netProfit": "Ganancia Neta Despues de Impuestos",
+      "netProfit": "Ganancia Neta Después de Impuestos",
       "njNote": "Nota: Nueva Jersey cobra impuestos sobre todas las ganancias de capital como ingreso regular. No hay tasa especial para ganancias a largo plazo."
     },
     "dividend": {
-      "title": "Cuanto Me Pagaran?",
-      "description": "Mira cuanto dinero te pagaran las empresas por tener sus acciones",
-      "stockPrice": "Precio Actual de la Accion",
-      "dividendPerShare": "Dividendo Por Accion",
+      "title": "¿Cuánto Me Pagarán?",
+      "description": "Mira cuánto dinero te pagarán las empresas por tener sus acciones",
+      "stockPrice": "Precio Actual de la Acción",
+      "dividendPerShare": "Dividendo Por Acción",
       "dividendFrequency": "Frecuencia del Dividendo",
       "quarterly": "Trimestral",
       "monthly": "Mensual",
       "annually": "Anual",
-      "numberOfShares": "Numero de Acciones",
+      "numberOfShares": "Número de Acciones",
       "annualYield": "Rendimiento Anual de Dividendos",
       "annualIncome": "Ingreso Anual por Dividendos",
       "monthlyIncome": "Ingreso Mensual"
     },
     "dca": {
       "title": "Invirtiendo Poco a Poco",
-      "description": "Mira por que poner un poco de dinero cada mes es una idea inteligente",
-      "monthlyInvestment": "Inversion Mensual",
-      "months": "Numero de Meses",
+      "description": "Mira por qué poner un poco de dinero cada mes es una idea inteligente",
+      "monthlyInvestment": "Inversión Mensual",
+      "months": "Número de Meses",
       "totalInvested": "Total Invertido",
       "totalShares": "Total de Acciones",
-      "averageCost": "Costo Promedio Por Accion",
-      "explanation": "Promediar el costo significa invertir la misma cantidad regularmente. Compras mas acciones cuando los precios estan bajos y menos cuando estan altos."
+      "averageCost": "Costo Promedio Por Acción",
+      "explanation": "Promediar el costo significa invertir la misma cantidad regularmente. Compras más acciones cuando los precios están bajos y menos cuando están altos."
     },
     "positionSize": {
-      "title": "Cuanto Debo Comprar?",
-      "description": "Calcula cuantas acciones comprar sin arriesgar demasiado",
+      "title": "¿Cuánto Debo Comprar?",
+      "description": "Calcula cuántas acciones comprar sin arriesgar demasiado",
       "accountBalance": "Balance de la Cuenta",
-      "riskPercent": "Riesgo Por Operacion (%)",
-      "riskHelp": "La mayoria de traders arriesgan 1-2% por operacion",
+      "riskPercent": "Riesgo Por Operación (%)",
+      "riskHelp": "La mayoría de traders arriesgan 1-2% por operación",
       "entryPrice": "Precio de Entrada (precio de compra)",
       "stopLoss": "Precio de Stop Loss",
-      "stopLossHelp": "Precio donde venderas para limitar perdidas",
-      "positionSize": "Tamano de Posicion (acciones)",
+      "stopLossHelp": "Precio donde venderás para limitar pérdidas",
+      "positionSize": "Tamaño de Posición (acciones)",
       "dollarAmount": "Cantidad a Invertir",
-      "maxLoss": "Perdida Maxima"
+      "maxLoss": "Pérdida Máxima"
     },
     "rule72": {
-      "title": "Cuando Se Duplica Mi Dinero?",
-      "description": "Usa un truco simple para saber cuando tu dinero se duplicara",
+      "title": "¿Cuándo Se Duplica Mi Dinero?",
+      "description": "Usa un truco simple para saber cuándo tu dinero se duplicará",
       "interestRate": "Rendimiento Anual (%)",
-      "yearsToDouble": "Anos para Duplicar",
-      "explanation": "La Regla del 72 es una forma simple de estimar cuanto tiempo tomara duplicar una inversion. Divide 72 entre tu rendimiento anual esperado."
+      "yearsToDouble": "Años para Duplicar",
+      "explanation": "La Regla del 72 es una forma simple de estimar cuánto tiempo tomará duplicar una inversión. Divide 72 entre tu rendimiento anual esperado."
     },
     "futureValue": {
-      "title": "Cuanto Valdra Esto?",
-      "description": "Mira cuanto podria crecer tu dinero con el tiempo",
-      "currentInvestment": "Inversion Actual",
+      "title": "¿Cuánto Valdrá Esto?",
+      "description": "Mira cuánto podría crecer tu dinero con el tiempo",
+      "currentInvestment": "Inversión Actual",
       "annualReturn": "Rendimiento Anual Esperado (%)",
-      "investmentYears": "Periodo de Inversion (anos)",
+      "investmentYears": "Período de Inversión (años)",
       "futureValue": "Valor Futuro",
       "totalGain": "Ganancia Total"
     }
   },
   "learn": {
     "title": "Tu Viaje de Aprendizaje",
-    "subtitle": "Conviertete en un inversionista inteligente, paso a paso",
+    "subtitle": "Conviértete en un inversionista inteligente, paso a paso",
     "progress": "Tu Progreso",
     "lessons": "lecciones",
     "hours": "horas",
-    "startModule": "Vamos!",
+    "startModule": "¡Vamos!",
     "continueModule": "Seguir",
     "retakeQuiz": "Intentar de Nuevo",
-    "completed": "Listo!",
-    "locked": "Termina la leccion anterior para desbloquear",
-    "quizScore": "Puntuacion del Examen: {score}%",
+    "completed": "¡Listo!",
+    "locked": "Termina la lección anterior para desbloquear",
+    "quizScore": "Puntuación del Examen: {score}%",
     "passScore": "Necesitas 80% para pasar",
-    "markComplete": "Termine Esta!",
+    "markComplete": "¡Terminé Esta!",
     "keyPoints": "Lo Que Aprendiste",
     "modules": {
       "1": {
-        "title": "Tus Primeros Pasos en las Acciones!",
-        "description": "Descubre que son realmente las acciones, como funciona el mercado y por que la gente invierte"
+        "title": "¡Tus Primeros Pasos en las Acciones!",
+        "description": "Descubre qué son realmente las acciones, cómo funciona el mercado y por qué la gente invierte"
       },
       "2": {
-        "title": "Listos, Preparados, a Invertir!",
-        "description": "Abre tu primera cuenta, entiende los costos y haz tu primera operacion"
+        "title": "¡Listos, Preparados, a Invertir!",
+        "description": "Abre tu primera cuenta, entiende los costos y haz tu primera operación"
       },
       "3": {
-        "title": "No Pierdas Tu Dinero!",
+        "title": "¡No Pierdas Tu Dinero!",
         "description": "Domina el arte de proteger tu dinero mientras lo haces crecer"
       },
       "4": {
         "title": "Piensa Como un Trader Profesional",
-        "description": "Controla tus emociones, evita errores de novato y crea habitos ganadores"
+        "description": "Controla tus emociones, evita errores de novato y crea hábitos ganadores"
       },
       "5": {
-        "title": "Detecta a los Estafadores!",
+        "title": "¡Detecta a los Estafadores!",
         "description": "Aprende a reconocer trucos, estafas y tratos sospechosos antes de que te atrapen"
       },
       "6": {
-        "title": "Como el Mundo Mueve los Mercados",
-        "description": "Mira como los presidentes, las noticias y eventos mundiales sacuden los precios de las acciones"
+        "title": "Cómo el Mundo Mueve los Mercados",
+        "description": "Mira cómo los presidentes, las noticias y eventos mundiales sacuden los precios de las acciones"
       },
       "7": {
-        "title": "Queda con Mas de Tu Dinero (Impuestos)",
-        "description": "Estrategias inteligentes para pagar menos impuestos en tus ganancias de inversion"
+        "title": "Quédate con Más de Tu Dinero (Impuestos)",
+        "description": "Estrategias inteligentes para pagar menos impuestos en tus ganancias de inversión"
       },
       "8": {
         "title": "Domina Tu App de Trading",
         "description": "Aprende a usar Fidelity como un profesional y haz tus operaciones con confianza",
         "lessons": {
           "1": {
-            "title": "Introduccion a las Plataformas de Trading",
-            "content": "Una plataforma de trading (tambien llamada corredora o brokerage) es donde compras y vendes acciones. Piensa en ella como una tienda de aplicaciones, pero para inversiones. Cuando quieres comprar una accion de Apple o Tesla, necesitas una cuenta de corretaje para hacerlo.\n\nHay dos tipos principales de corredoras:\n\n**Corredoras de Servicio Completo** cobran tarifas mas altas pero proporcionan asesores financieros personales que te ayudan a tomar decisiones. Estas son mejores para personas con situaciones financieras complejas o grandes portafolios.\n\n**Corredoras de Descuento** (como Fidelity, Charles Schwab y Robinhood) cobran poco o nada y te dejan tomar tus propias decisiones. Estas son perfectas para principiantes y la mayoria de inversores individuales.\n\nAl elegir una plataforma, busca:\n- Trading de acciones sin comisiones\n- Aplicacion movil y sitio web faciles de usar\n- Recursos educativos para principiantes\n- Buen servicio al cliente\n- Minimos de cuenta (muchas tienen $0 de minimo)\n- Herramientas de investigacion y filtros de acciones",
-            "point1": "Una corredora es donde compras y vendes acciones - necesitas una para invertir",
-            "point2": "Las corredoras de servicio completo ofrecen asesoramiento pero cobran tarifas mas altas",
-            "point3": "Las corredoras de descuento como Fidelity son mejores para la mayoria de principiantes",
-            "point4": "Busca trading sin comisiones, buena educacion e interfaces faciles"
+            "title": "Introducción a las Plataformas de Trading",
+            "content": "Una plataforma de trading (también llamada correduría o brokerage) es donde compras y vendes acciones. Piensa en ella como una tienda de aplicaciones, pero para inversiones. Cuando quieres comprar una acción de Apple o Tesla, necesitas una cuenta de corretaje para hacerlo.\n\nHay dos tipos principales de corredurías:\n\n**Corredurías de Servicio Completo** cobran tarifas más altas pero proporcionan asesores financieros personales que te ayudan a tomar decisiones. Estas son mejores para personas con situaciones financieras complejas o grandes portafolios.\n\n**Corredurías de Descuento** (como Fidelity, Charles Schwab y Robinhood) cobran poco o nada y te dejan tomar tus propias decisiones. Estas son perfectas para principiantes y la mayoría de inversores individuales.\n\nAl elegir una plataforma, busca:\n- Trading de acciones sin comisiones\n- Aplicación móvil y sitio web fáciles de usar\n- Recursos educativos para principiantes\n- Buen servicio al cliente\n- Mínimos de cuenta (muchas tienen $0 de mínimo)\n- Herramientas de investigación y filtros de acciones",
+            "point1": "Una correduría es donde compras y vendes acciones - necesitas una para invertir",
+            "point2": "Las corredurías de servicio completo ofrecen asesoramiento pero cobran tarifas más altas",
+            "point3": "Las corredurías de descuento como Fidelity son mejores para la mayoría de principiantes",
+            "point4": "Busca trading sin comisiones, buena educación e interfaces fáciles"
           },
           "2": {
             "title": "Fidelity en Detalle",
-            "content": "Fidelity es una de las mejores plataformas para principiantes. Ofrece trading sin comisiones, excelentes herramientas de investigacion y fuerte soporte al cliente.\n\n**Por que se Recomienda Fidelity:**\n- Sin comisiones en acciones y ETFs\n- Sin minimos de cuenta\n- Excelente servicio al cliente (telefono, chat, en persona)\n- Fuerte contenido educativo\n- Acciones fraccionadas (compra acciones parciales desde $1)\n- Sin pago por flujo de ordenes en acciones\n\n**Resumen de Configuracion de Cuenta:**\n1. Visita Fidelity.com y haz clic en 'Abrir una Cuenta'\n2. Elige el tipo de cuenta (Corretaje Individual para la mayoria)\n3. Proporciona informacion personal y verifica tu identidad\n4. Vincula tu cuenta bancaria para transferencias\n5. Deposita fondos en tu cuenta\n\n**Navegando la Interfaz:**\n- El tablero muestra tu resumen de portafolio\n- Boton 'Trade' para comprar/vender acciones\n- 'Research' para analisis de acciones y noticias\n- 'News & Research' para actualizaciones del mercado\n\n**Movil vs Escritorio:**\n- La app movil es excelente para operaciones rapidas y monitoreo\n- Escritorio/web ofrece herramientas de investigacion mas avanzadas\n- Ambos se sincronizan automaticamente - usa lo que sea conveniente",
-            "point1": "Fidelity ofrece trading sin comisiones sin minimos de cuenta",
+            "content": "Fidelity es una de las mejores plataformas para principiantes. Ofrece trading sin comisiones, excelentes herramientas de investigación y fuerte soporte al cliente.\n\n**Por qué se Recomienda Fidelity:**\n- Sin comisiones en acciones y ETFs\n- Sin mínimos de cuenta\n- Excelente servicio al cliente (teléfono, chat, en persona)\n- Fuerte contenido educativo\n- Acciones fraccionadas (compra acciones parciales desde $1)\n- Sin pago por flujo de órdenes en acciones\n\n**Resumen de Configuración de Cuenta:**\n1. Visita Fidelity.com y haz clic en 'Abrir una Cuenta'\n2. Elige el tipo de cuenta (Corretaje Individual para la mayoría)\n3. Proporciona información personal y verifica tu identidad\n4. Vincula tu cuenta bancaria para transferencias\n5. Deposita fondos en tu cuenta\n\n**Navegando la Interfaz:**\n- El tablero muestra tu resumen de portafolio\n- Botón 'Trade' para comprar/vender acciones\n- 'Research' para análisis de acciones y noticias\n- 'News & Research' para actualizaciones del mercado\n\n**Móvil vs Escritorio:**\n- La app móvil es excelente para operaciones rápidas y monitoreo\n- Escritorio/web ofrece herramientas de investigación más avanzadas\n- Ambos se sincronizan automáticamente - usa lo que sea conveniente",
+            "point1": "Fidelity ofrece trading sin comisiones sin mínimos de cuenta",
             "point2": "Puedes comprar acciones fraccionadas desde solo $1",
-            "point3": "El tablero muestra tu portafolio, con facil acceso para operar e investigar",
-            "point4": "Las apps movil y de escritorio se sincronizan para tu conveniencia"
+            "point3": "El tablero muestra tu portafolio, con fácil acceso para operar e investigar",
+            "point4": "Las apps móvil y de escritorio se sincronizan para tu conveniencia"
           },
           "3": {
             "title": "Entendiendo las Tarifas y Costos",
-            "content": "Aunque muchas corredoras anuncian trading 'gratis', es importante entender todos los costos potenciales involucrados.\n\n**Trading Sin Comisiones:**\nLa mayoria de las corredoras principales ya no cobran comisiones en operaciones de acciones y ETFs. Esto significa que puedes comprar $100 de acciones de Apple sin pagar $5-10 extra en tarifas.\n\n**Tarifas de Cuenta a Vigilar:**\n- Tarifas de mantenimiento: Algunas corredoras cobran si tu balance es bajo\n- Tarifas de inactividad: Cargos si no operas por un periodo\n- Tarifas de transferencia: Costos para mover tu cuenta a otra corredora\n- Tarifas de estados de cuenta en papel: Cargos extra por correo fisico\n\n**Costos Ocultos (Pago por Flujo de Ordenes):**\nAlgunas corredoras 'gratis' como Robinhood ganan dinero vendiendo tus ordenes a creadores de mercado. Esto puede resultar en precios ligeramente peores en tus operaciones. Fidelity y Schwab no hacen esto para acciones.\n\n**Comparando Plataformas:**\n| Plataforma | Comisiones | Minimo de Cuenta | PFOF |\n|------------|-----------|-----------------|------|\n| Fidelity | $0 | $0 | No |\n| Schwab | $0 | $0 | No |\n| Robinhood | $0 | $0 | Si |\n| TD Ameritrade | $0 | $0 | Si |",
-            "point1": "La mayoria de las corredoras principales ahora ofrecen trading de acciones sin comisiones",
+            "content": "Aunque muchas corredurías anuncian trading 'gratis', es importante entender todos los costos potenciales involucrados.\n\n**Trading Sin Comisiones:**\nLa mayoría de las corredurías principales ya no cobran comisiones en operaciones de acciones y ETFs. Esto significa que puedes comprar $100 de acciones de Apple sin pagar $5-10 extra en tarifas.\n\n**Tarifas de Cuenta a Vigilar:**\n- Tarifas de mantenimiento: Algunas corredurías cobran si tu balance es bajo\n- Tarifas de inactividad: Cargos si no operas por un período\n- Tarifas de transferencia: Costos para mover tu cuenta a otra correduría\n- Tarifas de estados de cuenta en papel: Cargos extra por correo físico\n\n**Costos Ocultos (Pago por Flujo de Órdenes):**\nAlgunas corredurías 'gratis' como Robinhood ganan dinero vendiendo tus órdenes a creadores de mercado. Esto puede resultar en precios ligeramente peores en tus operaciones. Fidelity y Schwab no hacen esto para acciones.\n\n**Comparando Plataformas:**\n| Plataforma | Comisiones | Mínimo de Cuenta | PFOF |\n|------------|-----------|-----------------|------|\n| Fidelity | $0 | $0 | No |\n| Schwab | $0 | $0 | No |\n| Robinhood | $0 | $0 | Sí |\n| TD Ameritrade | $0 | $0 | Sí |",
+            "point1": "La mayoría de las corredurías principales ahora ofrecen trading de acciones sin comisiones",
             "point2": "Cuidado con las tarifas de cuenta como mantenimiento, inactividad y transferencia",
-            "point3": "El pago por flujo de ordenes puede resultar en precios de operacion ligeramente peores"
+            "point3": "El pago por flujo de órdenes puede resultar en precios de operación ligeramente peores"
           },
           "4": {
-            "title": "Realizando Tu Primera Operacion",
-            "content": "Cuando estes listo para comprar tu primera accion, necesitaras entender los diferentes tipos de ordenes y como usarlos.\n\n**Orden de Mercado:**\nCompra o vende al precio actual del mercado inmediatamente. Mejor para acciones activamente negociadas cuando quieres operar de inmediato.\n- Ventajas: Se ejecuta rapidamente\n- Desventajas: El precio puede diferir ligeramente de lo que viste\n\n**Orden Limite:**\nEstablece un precio especifico que estas dispuesto a pagar. La operacion solo ocurre si la accion alcanza tu precio.\n- Ventajas: Tu controlas el precio exacto\n- Desventajas: Puede no ejecutarse si el precio no alcanza tu limite\n\n**Duracion de la Orden:**\n- **Orden del Dia**: Expira al final del dia de operaciones si no se llena\n- **GTC (Valida Hasta Cancelar)**: Permanece activa hasta llenarse o cancelarla (usualmente 60-180 dias)\n\n**Pasos para Realizar una Operacion:**\n1. Busca la accion por nombre o simbolo\n2. Haz clic en 'Trade' o 'Comprar'\n3. Elige el tipo de orden (Mercado o Limite)\n4. Ingresa el numero de acciones o cantidad en dolares\n5. Revisa todos los detalles cuidadosamente\n6. Confirma y envia\n\n**Leyendo Tu Confirmacion:**\nDespues de una operacion, veras: acciones compradas, precio por accion, costo total y cualquier tarifa. Guarda esto para tus registros e impuestos.",
-            "point1": "Las ordenes de mercado se ejecutan inmediatamente al precio actual",
-            "point2": "Las ordenes limite te permiten establecer el precio exacto que pagaras",
-            "point3": "Las ordenes del dia expiran al cierre del mercado; las ordenes GTC permanecen activas mas tiempo",
+            "title": "Realizando Tu Primera Operación",
+            "content": "Cuando estés listo para comprar tu primera acción, necesitarás entender los diferentes tipos de órdenes y cómo usarlos.\n\n**Orden de Mercado:**\nCompra o vende al precio actual del mercado inmediatamente. Mejor para acciones activamente negociadas cuando quieres operar de inmediato.\n- Ventajas: Se ejecuta rápidamente\n- Desventajas: El precio puede diferir ligeramente de lo que viste\n\n**Orden Límite:**\nEstablece un precio específico que estás dispuesto a pagar. La operación solo ocurre si la acción alcanza tu precio.\n- Ventajas: Tú controlas el precio exacto\n- Desventajas: Puede no ejecutarse si el precio no alcanza tu límite\n\n**Duración de la Orden:**\n- **Orden del Día**: Expira al final del día de operaciones si no se llena\n- **GTC (Válida Hasta Cancelar)**: Permanece activa hasta llenarse o cancelarla (usualmente 60-180 días)\n\n**Pasos para Realizar una Operación:**\n1. Busca la acción por nombre o símbolo\n2. Haz clic en 'Trade' o 'Comprar'\n3. Elige el tipo de orden (Mercado o Límite)\n4. Ingresa el número de acciones o cantidad en dólares\n5. Revisa todos los detalles cuidadosamente\n6. Confirma y envía\n\n**Leyendo Tu Confirmación:**\nDespués de una operación, verás: acciones compradas, precio por acción, costo total y cualquier tarifa. Guarda esto para tus registros e impuestos.",
+            "point1": "Las órdenes de mercado se ejecutan inmediatamente al precio actual",
+            "point2": "Las órdenes límite te permiten establecer el precio exacto que pagarás",
+            "point3": "Las órdenes del día expiran al cierre del mercado; las órdenes GTC permanecen activas más tiempo",
             "point4": "Siempre revisa los detalles de tu orden antes de confirmar"
           },
           "5": {
-            "title": "Mecanica del Mercado",
-            "content": "Entender cuando y como opera el mercado te ayuda a operar mas efectivamente.\n\n**Horario Regular del Mercado:**\nEl mercado de valores de EE.UU. esta abierto de lunes a viernes, 9:30 AM a 4:00 PM hora del Este. Esta cerrado en dias festivos importantes.\n\n**Pre-Mercado y Fuera de Horario:**\n- Pre-mercado: 4:00 AM - 9:30 AM ET\n- Fuera de horario: 4:00 PM - 8:00 PM ET\n- Menor volumen = mayores oscilaciones de precio y spreads mas amplios\n- No recomendado para principiantes\n\n**Datos en Tiempo Real vs Retrasados:**\nLas cotizaciones gratuitas de acciones a menudo tienen un retraso de 15-20 minutos. Esto importa para trading activo pero menos para inversores a largo plazo. La mayoria de corredoras proporcionan datos en tiempo real gratis a los titulares de cuentas.\n\n**Pausas de Trading y Cortacircuitos:**\nEl trading puede pausarse cuando:\n- Una accion se mueve demasiado rapido (pausa especifica de la empresa)\n- Todo el mercado cae significativamente (cortacircuito)\n- Nivel 1: caida del 7% = pausa de 15 minutos\n- Nivel 2: caida del 13% = pausa de 15 minutos\n- Nivel 3: caida del 20% = el mercado cierra por el dia\n\n**Ordenes Stop:**\n- **Orden Stop**: Se convierte en orden de mercado cuando el precio alcanza tu precio stop\n- **Orden Stop-Limite**: Se convierte en orden limite a tu precio especificado\n- Usadas para limitar perdidas o proteger ganancias automaticamente",
+            "title": "Mecánica del Mercado",
+            "content": "Entender cuándo y cómo opera el mercado te ayuda a operar más efectivamente.\n\n**Horario Regular del Mercado:**\nEl mercado de valores de EE.UU. está abierto de lunes a viernes, 9:30 AM a 4:00 PM hora del Este. Está cerrado en días festivos importantes.\n\n**Pre-Mercado y Fuera de Horario:**\n- Pre-mercado: 4:00 AM - 9:30 AM ET\n- Fuera de horario: 4:00 PM - 8:00 PM ET\n- Menor volumen = mayores oscilaciones de precio y spreads más amplios\n- No recomendado para principiantes\n\n**Datos en Tiempo Real vs Retrasados:**\nLas cotizaciones gratuitas de acciones a menudo tienen un retraso de 15-20 minutos. Esto importa para trading activo pero menos para inversores a largo plazo. La mayoría de corredurías proporcionan datos en tiempo real gratis a los titulares de cuentas.\n\n**Pausas de Trading y Cortacircuitos:**\nEl trading puede pausarse cuando:\n- Una acción se mueve demasiado rápido (pausa específica de la empresa)\n- Todo el mercado cae significativamente (cortacircuito)\n- Nivel 1: caída del 7% = pausa de 15 minutos\n- Nivel 2: caída del 13% = pausa de 15 minutos\n- Nivel 3: caída del 20% = el mercado cierra por el día\n\n**Órdenes Stop:**\n- **Orden Stop**: Se convierte en orden de mercado cuando el precio alcanza tu precio stop\n- **Orden Stop-Límite**: Se convierte en orden límite a tu precio especificado\n- Usadas para limitar pérdidas o proteger ganancias automáticamente",
             "point1": "El horario regular del mercado es 9:30 AM - 4:00 PM hora del Este",
             "point2": "El trading pre-mercado y fuera de horario tiene menor volumen y mayor riesgo",
             "point3": "Las cotizaciones gratuitas de acciones pueden tener un retraso de 15-20 minutos",
@@ -314,486 +327,486 @@
       }
     },
     "quiz": {
-      "title": "Ponte a Prueba!",
+      "title": "¡Ponte a Prueba!",
       "question": "Pregunta",
-      "passScore": "Puntuacion para aprobar",
+      "passScore": "Puntuación para aprobar",
       "selectAnswer": "Elige una respuesta para continuar",
       "checkAnswer": "Revisar Mi Respuesta",
       "next": "Siguiente Pregunta",
-      "seeResults": "Ver Como Me Fue",
-      "correct": "Lo lograste!",
-      "incorrect": "No exactamente. Aqui esta la explicacion:",
-      "ready": "Terminaste todas las lecciones! Listo para mostrar lo que sabes?",
+      "seeResults": "Ver Cómo Me Fue",
+      "correct": "¡Lo lograste!",
+      "incorrect": "No exactamente. Aquí está la explicación:",
+      "ready": "¡Terminaste todas las lecciones! ¿Listo para mostrar lo que sabes?",
       "completeLessons": "Termina todas las lecciones para desbloquear el examen",
       "start": "Comenzar Examen",
       "results": {
         "title": "Tus Resultados",
         "score": "Obtuviste {score} de {total}",
-        "passed": "Increible! Pasaste!",
+        "passed": "¡Increíble! ¡Pasaste!",
         "failed": "Necesitas 80% para pasar. Revisa las lecciones e intenta de nuevo.",
         "tryAgain": "Intentar de Nuevo",
-        "nextModule": "Siguiente Leccion"
+        "nextModule": "Siguiente Lección"
       }
     },
     "quizzes": {
       "8": {
         "q1": {
-          "question": "Cual es la principal diferencia entre una corredora de servicio completo y una corredora de descuento?",
-          "optionA": "Las corredoras de servicio completo solo operan acciones, las de descuento operan todo",
-          "optionB": "Las corredoras de servicio completo tienen mejores apps moviles",
-          "optionC": "Las corredoras de servicio completo proporcionan asesores financieros personales pero cobran tarifas mas altas",
-          "optionD": "Las corredoras de descuento no permiten comprar acciones individuales",
-          "explanation": "Las corredoras de servicio completo cobran tarifas mas altas pero proporcionan asesores financieros personales que te ayudan a tomar decisiones de inversion. Las corredoras de descuento como Fidelity cobran poco o nada pero tu tomas tus propias decisiones."
+          "question": "¿Cuál es la principal diferencia entre una correduría de servicio completo y una correduría de descuento?",
+          "optionA": "Las corredurías de servicio completo solo operan acciones, las de descuento operan todo",
+          "optionB": "Las corredurías de servicio completo tienen mejores apps móviles",
+          "optionC": "Las corredurías de servicio completo proporcionan asesores financieros personales pero cobran tarifas más altas",
+          "optionD": "Las corredurías de descuento no permiten comprar acciones individuales",
+          "explanation": "Las corredurías de servicio completo cobran tarifas más altas pero proporcionan asesores financieros personales que te ayudan a tomar decisiones de inversión. Las corredurías de descuento como Fidelity cobran poco o nada pero tú tomas tus propias decisiones."
         },
         "q2": {
-          "question": "Cual de los siguientes es un beneficio de usar Fidelity para principiantes?",
-          "optionA": "Garantizan que tus inversiones ganaran dinero",
-          "optionB": "Ofrecen acciones fraccionadas desde $1 y no tienen minimos de cuenta",
-          "optionC": "Proporcionan asesoramiento de inversion gratuito de asesores humanos",
-          "optionD": "Tienen las tasas mas bajas de pago por flujo de ordenes",
-          "explanation": "Fidelity ofrece acciones fraccionadas desde solo $1, no tiene minimos de cuenta, no cobra comisiones en acciones y ETFs, y de hecho no usa pago por flujo de ordenes en acciones."
+          "question": "¿Cuál de los siguientes es un beneficio de usar Fidelity para principiantes?",
+          "optionA": "Garantizan que tus inversiones ganarán dinero",
+          "optionB": "Ofrecen acciones fraccionadas desde $1 y no tienen mínimos de cuenta",
+          "optionC": "Proporcionan asesoramiento de inversión gratuito de asesores humanos",
+          "optionD": "Tienen las tasas más bajas de pago por flujo de órdenes",
+          "explanation": "Fidelity ofrece acciones fraccionadas desde solo $1, no tiene mínimos de cuenta, no cobra comisiones en acciones y ETFs, y de hecho no usa pago por flujo de órdenes en acciones."
         },
         "q3": {
-          "question": "Que es el 'pago por flujo de ordenes' y por que importa?",
-          "optionA": "Es cuando las corredoras venden tus ordenes a creadores de mercado, lo que puede resultar en precios ligeramente peores en las operaciones",
+          "question": "¿Qué es el 'pago por flujo de órdenes' y por qué importa?",
+          "optionA": "Es cuando las corredurías venden tus órdenes a creadores de mercado, lo que puede resultar en precios ligeramente peores en las operaciones",
           "optionB": "Es una tarifa que pagas al realizar una orden",
-          "optionC": "Es la comision cobrada por corredoras de servicio completo",
-          "optionD": "Es el interes ganado en tu balance de efectivo",
-          "explanation": "El pago por flujo de ordenes (PFOF) es cuando corredoras como Robinhood venden tus ordenes de operacion a creadores de mercado. Asi es como ganan dinero del trading 'gratis', pero puede resultar en que obtengas precios ligeramente peores en tus operaciones."
+          "optionC": "Es la comisión cobrada por corredurías de servicio completo",
+          "optionD": "Es el interés ganado en tu balance de efectivo",
+          "explanation": "El pago por flujo de órdenes (PFOF) es cuando corredurías como Robinhood venden tus órdenes de operación a creadores de mercado. Así es como ganan dinero del trading 'gratis', pero puede resultar en que obtengas precios ligeramente peores en tus operaciones."
         },
         "q4": {
-          "question": "Cual es la diferencia clave entre una orden de mercado y una orden limite?",
-          "optionA": "Las ordenes de mercado solo pueden realizarse durante horario pre-mercado",
-          "optionB": "Las ordenes limite son solo para vender, no para comprar",
-          "optionC": "Las ordenes de mercado tienen tarifas mas bajas que las ordenes limite",
-          "optionD": "Las ordenes de mercado se ejecutan inmediatamente al precio actual, mientras que las ordenes limite solo se ejecutan a tu precio especificado o mejor",
-          "explanation": "Una orden de mercado se ejecuta inmediatamente al precio actual del mercado. Una orden limite te permite establecer un precio especifico, y la operacion solo ocurre si la accion alcanza ese precio."
+          "question": "¿Cuál es la diferencia clave entre una orden de mercado y una orden límite?",
+          "optionA": "Las órdenes de mercado solo pueden realizarse durante horario pre-mercado",
+          "optionB": "Las órdenes límite son solo para vender, no para comprar",
+          "optionC": "Las órdenes de mercado tienen tarifas más bajas que las órdenes límite",
+          "optionD": "Las órdenes de mercado se ejecutan inmediatamente al precio actual, mientras que las órdenes límite solo se ejecutan a tu precio especificado o mejor",
+          "explanation": "Una orden de mercado se ejecuta inmediatamente al precio actual del mercado. Una orden límite te permite establecer un precio específico, y la operación solo ocurre si la acción alcanza ese precio."
         },
         "q5": {
-          "question": "Cual es el horario regular del mercado de valores de EE.UU.?",
+          "question": "¿Cuál es el horario regular del mercado de valores de EE.UU.?",
           "optionA": "8:00 AM - 5:00 PM hora del Este",
           "optionB": "9:30 AM - 4:00 PM hora del Este",
           "optionC": "9:00 AM - 4:30 PM hora del Este",
           "optionD": "10:00 AM - 3:00 PM hora del Este",
-          "explanation": "El mercado de valores de EE.UU. esta abierto de lunes a viernes de 9:30 AM a 4:00 PM hora del Este. El trading pre-mercado comienza a las 4:00 AM ET y el trading fuera de horario continua hasta las 8:00 PM ET."
+          "explanation": "El mercado de valores de EE.UU. está abierto de lunes a viernes de 9:30 AM a 4:00 PM hora del Este. El trading pre-mercado comienza a las 4:00 AM ET y el trading fuera de horario continúa hasta las 8:00 PM ET."
         }
       }
     }
   },
   "glossary": {
     "title": "Mis Palabras",
-    "subtitle": "Palabras grandes hechas simples!",
+    "subtitle": "¡Palabras grandes hechas simples!",
     "searchPlaceholder": "Buscar una palabra...",
     "myWords": "Palabras que Estoy Aprendiendo",
     "addToList": "Agregar a Mi Lista",
     "removeFromList": "Eliminar",
-    "noResults": "No se encontraron palabras que coincidan con tu busqueda",
+    "noResults": "No se encontraron palabras que coincidan con tu búsqueda",
     "reviewMode": "Practicar Palabras",
-    "showDefinition": "Mostrar Definicion",
-    "gotIt": "Ya Lo Se!",
+    "showDefinition": "Mostrar Definición",
+    "gotIt": "¡Ya Lo Sé!",
     "needsReview": "Repasar de Nuevo",
     "wordsToReview": "{count} palabras listas para repasar",
     "myWordsTitle": "Palabras que Estoy Aprendiendo",
-    "myWordsSubtitle": "Sigue las nuevas palabras que estas aprendiendo",
-    "noWordsYet": "Sin Palabras Todavia",
-    "addWordsPrompt": "Agrega palabras de Mis Palabras para empezar a aprender!",
+    "myWordsSubtitle": "Sigue las nuevas palabras que estás aprendiendo",
+    "noWordsYet": "Sin Palabras Todavía",
+    "addWordsPrompt": "¡Agrega palabras de Mis Palabras para empezar a aprender!",
     "browseGlossary": "Ver Palabras",
     "totalWords": "Total de Palabras",
     "mastered": "Dominadas",
     "learning": "Aprendiendo",
     "dueToday": "Pendientes Hoy",
-    "dayStreak": "dias seguidos",
+    "dayStreak": "días seguidos",
     "bestStreak": "Mejor",
-    "days": "dias",
+    "days": "días",
     "reviewNow": "Repasar Ahora",
     "startReview": "Iniciar Repaso",
     "backToGlossary": "Volver a Mis Palabras",
     "yourWords": "Tus Palabras",
     "reviews": "repasos",
     "newWord": "Palabra nueva",
-    "due": "Pendiente!",
+    "due": "¡Pendiente!",
     "reviewTitle": "Practicar Palabras",
-    "chooseReviewMode": "Que quieres practicar?",
+    "chooseReviewMode": "¿Qué quieres practicar?",
     "reviewDue": "Repasar Palabras Pendientes",
     "wordsDue": "{count} palabras listas",
-    "noDueWords": "Todo al dia!",
+    "noDueWords": "¡Todo al día!",
     "reviewAll": "Repasar Todas las Palabras",
     "allWordsCount": "{count} palabras en total",
-    "back": "Atras",
+    "back": "Atrás",
     "reviewingDue": "Repasando Palabras Pendientes",
     "reviewingAll": "Repasando Todas las Palabras",
-    "noCardsToReview": "Todo al Dia!",
-    "allCaughtUp": "No hay palabras pendientes para repasar. Vuelve mas tarde!",
-    "sessionComplete": "Muy Bien!",
+    "noCardsToReview": "¡Todo al Día!",
+    "allCaughtUp": "No hay palabras pendientes para repasar. ¡Vuelve más tarde!",
+    "sessionComplete": "¡Muy Bien!",
     "correct": "Correctas",
-    "accuracy": "Precision",
+    "accuracy": "Precisión",
     "reviewMistakes": "Repasar Errores",
     "done": "Listo",
-    "swipeInstructions": "Desliza a la derecha si lo sabias, a la izquierda para repasar",
-    "readMore": "Leer mas",
+    "swipeInstructions": "Desliza a la derecha si lo sabías, a la izquierda para repasar",
+    "readMore": "Leer más",
     "showLess": "Ver menos",
     "terms": {
       "stock": {
-        "term": "Accion",
-        "definition": "Un pedacito de una empresa que puedes tener! Cuando compras una accion, te conviertes en dueno de parte de esa empresa - como tener una rebanada de una pizza muy grande.",
-        "example": "Si compras 1 accion de Apple, eres dueno de una pequenisima parte de la empresa que hace los iPhones!"
+        "term": "Acción",
+        "definition": "¡Un pedacito de una empresa que puedes tener! Cuando compras una acción, te conviertes en dueño de parte de esa empresa - como tener una rebanada de una pizza muy grande.",
+        "example": "Si compras 1 acción de Apple, ¡eres dueño de una pequeñísima parte de la empresa que hace los iPhones!"
       },
       "share": {
-        "term": "Accion",
-        "definition": "Una unidad de stock. Es como un boleto que demuestra que eres dueno de parte de una empresa. Entre mas acciones tengas, mas grande es tu pedazo del pastel!",
-        "example": "Comprar 10 acciones de Disney significa que tienes 10 boletos que prueban que eres dueno de parte de Disney."
+        "term": "Acción",
+        "definition": "Una unidad de stock. Es como un boleto que demuestra que eres dueño de parte de una empresa. ¡Entre más acciones tengas, más grande es tu pedazo del pastel!",
+        "example": "Comprar 10 acciones de Disney significa que tienes 10 boletos que prueban que eres dueño de parte de Disney."
       },
       "equity": {
         "term": "Capital",
         "definition": "Otra palabra para propiedad. Cuando la gente dice 'capital', se refiere a la parte de algo que realmente te pertenece.",
-        "example": "Si tienes acciones, tienes capital en esas empresas - eres un dueno de verdad!"
+        "example": "Si tienes acciones, tienes capital en esas empresas - ¡eres un dueño de verdad!"
       },
       "dividend": {
         "term": "Dividendo",
-        "definition": "Dinero gratis que las empresas te pagan solo por tener sus acciones! Es como recibir una mesada de una empresa por ser accionista.",
-        "example": "Coca-Cola paga dividendos - asi que si tienes sus acciones, te mandan dinero cada pocos meses. Que genial es eso?"
+        "definition": "¡Dinero gratis que las empresas te pagan solo por tener sus acciones! Es como recibir una mesada de una empresa por ser accionista.",
+        "example": "Coca-Cola paga dividendos - así que si tienes sus acciones, te mandan dinero cada pocos meses. ¿Qué genial es eso?"
       },
       "broker": {
         "term": "Corredor",
-        "definition": "Un ayudante (o app) que te permite comprar y vender acciones. No puedes ir a una tienda y comprar acciones - necesitas un corredor para hacerlo!",
+        "definition": "Un ayudante (o app) que te permite comprar y vender acciones. ¡No puedes ir a una tienda y comprar acciones - necesitas un corredor para hacerlo!",
         "example": "Fidelity y Robinhood son corredores - son como los cajeros del mercado de valores."
       },
       "brokerage": {
-        "term": "Correduria",
-        "definition": "La empresa o app donde guardas tus acciones y haces operaciones. Es como un banco, pero para tus inversiones!",
-        "example": "Abres una cuenta en una correduria como Fidelity para empezar a comprar acciones."
+        "term": "Correduría",
+        "definition": "La empresa o app donde guardas tus acciones y haces operaciones. ¡Es como un banco, pero para tus inversiones!",
+        "example": "Abres una cuenta en una correduría como Fidelity para empezar a comprar acciones."
       },
       "portfolio": {
         "term": "Portafolio",
-        "definition": "Tu coleccion de todas las acciones e inversiones que tienes. Piensa en el como tu mochila de inversiones - guarda todo!",
+        "definition": "Tu colección de todas las acciones e inversiones que tienes. ¡Piensa en él como tu mochila de inversiones - guarda todo!",
         "example": "Mi portafolio tiene acciones de Apple, Disney y Nike."
       },
       "index": {
-        "term": "Indice",
-        "definition": "Una lista que rastrea como le va a un grupo de acciones. Es como un marcador para el mercado de valores!",
-        "example": "El S&P 500 es un indice que rastrea 500 empresas grandes. Cuando dicen 'el mercado subio', usualmente se refieren a esto!"
+        "term": "Índice",
+        "definition": "Una lista que rastrea cómo le va a un grupo de acciones. ¡Es como un marcador para el mercado de valores!",
+        "example": "El S&P 500 es un índice que rastrea 500 empresas grandes. ¡Cuando dicen 'el mercado subió', usualmente se refieren a esto!"
       },
       "etf": {
         "term": "ETF",
-        "definition": "Un paquete de muchas acciones envueltas en una sola cosa que puedes comprar. Es como comprar un paquete variado en vez de un solo articulo!",
-        "example": "En vez de comprar 500 acciones diferentes, puedes comprar un ETF del S&P 500 y tener un poquito de las 500!"
+        "definition": "Un paquete de muchas acciones envueltas en una sola cosa que puedes comprar. ¡Es como comprar un paquete variado en vez de un solo artículo!",
+        "example": "¡En vez de comprar 500 acciones diferentes, puedes comprar un ETF del S&P 500 y tener un poquito de las 500!"
       },
       "mutual-fund": {
         "term": "Fondo Mutuo",
-        "definition": "Dinero de mucha gente juntado para comprar acciones. Un profesional escoge las acciones para todos!",
-        "example": "Tus papas pueden tener fondos mutuos en su cuenta de retiro - un experto en dinero escoge las acciones por ellos."
+        "definition": "¡Dinero de mucha gente juntado para comprar acciones. Un profesional escoge las acciones para todos!",
+        "example": "Tus papás pueden tener fondos mutuos en su cuenta de retiro - un experto en dinero escoge las acciones por ellos."
       },
       "bond": {
         "term": "Bono",
-        "definition": "Un prestamo que le das a una empresa o al gobierno. Prometen devolverte el dinero con intereses - como ser el banco!",
-        "example": "Si compras un bono del Tesoro de EE.UU., le estas prestando dinero al gobierno, y te devuelven mas de lo que prestaste."
+        "definition": "Un préstamo que le das a una empresa o al gobierno. ¡Prometen devolverte el dinero con intereses - como ser el banco!",
+        "example": "Si compras un bono del Tesoro de EE.UU., le estás prestando dinero al gobierno, y te devuelven más de lo que prestaste."
       },
       "diversification": {
-        "term": "Diversificacion",
-        "definition": "No poner todos los huevos en una sola canasta! Significa repartir tu dinero en diferentes inversiones para que si una va mal, las otras pueden ir bien.",
-        "example": "En vez de comprar solo acciones de Tesla, compras Tesla, Disney Y Coca-Cola - eso es diversificacion!"
+        "term": "Diversificación",
+        "definition": "¡No poner todos los huevos en una sola canasta! Significa repartir tu dinero en diferentes inversiones para que si una va mal, las otras pueden ir bien.",
+        "example": "¡En vez de comprar solo acciones de Tesla, compras Tesla, Disney Y Coca-Cola - eso es diversificación!"
       },
       "asset-allocation": {
-        "term": "Asignacion de Activos",
-        "definition": "Decidir como dividir tu dinero entre diferentes tipos de inversiones como acciones, bonos y efectivo.",
-        "example": "Puedes poner 70% en acciones para crecimiento y 30% en bonos para seguridad - esa es tu asignacion de activos!"
+        "term": "Asignación de Activos",
+        "definition": "Decidir cómo dividir tu dinero entre diferentes tipos de inversiones como acciones, bonos y efectivo.",
+        "example": "¡Puedes poner 70% en acciones para crecimiento y 30% en bonos para seguridad - esa es tu asignación de activos!"
       },
       "ownership": {
         "term": "Propiedad",
-        "definition": "Tener un pedazo de algo que te pertenece. Cuando tienes acciones, legalmente eres dueno de parte de esa empresa!",
-        "example": "Cuando compras acciones de Amazon, tienes propiedad real - hasta puedes votar en decisiones de la empresa!"
+        "definition": "Tener un pedazo de algo que te pertenece. ¡Cuando tienes acciones, legalmente eres dueño de parte de esa empresa!",
+        "example": "¡Cuando compras acciones de Amazon, tienes propiedad real - hasta puedes votar en decisiones de la empresa!"
       },
       "buy": {
         "term": "Comprar",
-        "definition": "Obtener acciones pagando dinero por ellas. Cuando compras, estas agregando a tu coleccion!",
-        "example": "Quiero comprar 5 acciones de Netflix porque me encantan sus series!"
+        "definition": "Obtener acciones pagando dinero por ellas. ¡Cuando compras, estás agregando a tu colección!",
+        "example": "¡Quiero comprar 5 acciones de Netflix porque me encantan sus series!"
       },
       "sell": {
         "term": "Vender",
-        "definition": "Cambiar tus acciones por efectivo. Cuando vendes, alguien mas recibe tus acciones y tu recibes dinero!",
-        "example": "Vendi mis acciones de GameStop cuando el precio subio y gane $50!"
+        "definition": "Cambiar tus acciones por efectivo. ¡Cuando vendes, alguien más recibe tus acciones y tú recibes dinero!",
+        "example": "¡Vendí mis acciones de GameStop cuando el precio subió y gané $50!"
       },
       "limit-order": {
         "term": "Orden Limitada",
-        "definition": "Decirle a tu corredor 'solo compra esta accion si llega a MI precio'. Tu controlas lo que pagas!",
-        "example": "Apple esta a $150, pero puse una orden limitada para comprar a $140. Mi corredor solo comprara si baja a ese precio."
+        "definition": "Decirle a tu corredor 'solo compra esta acción si llega a MI precio'. ¡Tú controlas lo que pagas!",
+        "example": "Apple está a $150, pero puse una orden limitada para comprar a $140. Mi corredor solo comprará si baja a ese precio."
       },
       "market-order": {
         "term": "Orden de Mercado",
-        "definition": "Decirle a tu corredor 'compra esta accion AHORA MISMO al precio actual'. Es rapido pero puedes pagar un poco mas.",
-        "example": "Puse una orden de mercado para Tesla y la obtuve al instante a $200 por accion."
+        "definition": "Decirle a tu corredor 'compra esta acción AHORA MISMO al precio actual'. Es rápido pero puedes pagar un poco más.",
+        "example": "Puse una orden de mercado para Tesla y la obtuve al instante a $200 por acción."
       },
       "stop-loss": {
         "term": "Stop-Loss",
-        "definition": "Una red de seguridad! Automaticamente vende tu accion si el precio baja mucho, para que no pierdas demasiado dinero.",
-        "example": "Compre una accion a $100 y puse un stop-loss a $90. Si baja tanto, se vende automaticamente para protegerme!"
+        "definition": "¡Una red de seguridad! Automáticamente vende tu acción si el precio baja mucho, para que no pierdas demasiado dinero.",
+        "example": "¡Compré una acción a $100 y puse un stop-loss a $90. Si baja tanto, se vende automáticamente para protegerme!"
       },
       "trailing-stop": {
-        "term": "Stop Dinamico",
-        "definition": "Un stop-loss inteligente que sube con el precio. Protege tus ganancias mientras deja que las ganadoras sigan subiendo!",
-        "example": "Mi accion subio de $100 a $150. Mi stop dinamico la siguio, asi que ahora venderia a $140 si baja."
+        "term": "Stop Dinámico",
+        "definition": "¡Un stop-loss inteligente que sube con el precio. Protege tus ganancias mientras deja que las ganadoras sigan subiendo!",
+        "example": "Mi acción subió de $100 a $150. Mi stop dinámico la siguió, así que ahora vendería a $140 si baja."
       },
       "bid": {
         "term": "Oferta de Compra",
-        "definition": "El precio mas alto que alguien esta dispuesto a PAGAR por una accion ahora mismo. Es como cuando alguien dice 'te doy $10 por eso!'",
-        "example": "La oferta para Apple es $149.50 - eso es lo maximo que cualquier comprador quiere pagar ahora."
+        "definition": "El precio más alto que alguien está dispuesto a PAGAR por una acción ahora mismo. Es como cuando alguien dice '¡te doy $10 por eso!'",
+        "example": "La oferta para Apple es $149.50 - eso es lo máximo que cualquier comprador quiere pagar ahora."
       },
       "ask": {
         "term": "Oferta de Venta",
-        "definition": "El precio mas bajo al que alguien esta dispuesto a VENDER una accion ahora mismo. Es como decir 'no acepto menos de $15!'",
-        "example": "La oferta de venta para Apple es $149.75 - ese es el precio mas bajo que cualquier vendedor aceptara."
+        "definition": "El precio más bajo al que alguien está dispuesto a VENDER una acción ahora mismo. Es como decir '¡no acepto menos de $15!'",
+        "example": "La oferta de venta para Apple es $149.75 - ese es el precio más bajo que cualquier vendedor aceptará."
       },
       "spread": {
         "term": "Diferencial",
-        "definition": "La brecha entre el precio de compra y el de venta. Un diferencial mas pequeno es mejor para ti!",
-        "example": "Si la oferta es $10 y la venta es $10.05, el diferencial es solo 5 centavos. Eso esta bastante bien!"
+        "definition": "La brecha entre el precio de compra y el de venta. ¡Un diferencial más pequeño es mejor para ti!",
+        "example": "Si la oferta es $10 y la venta es $10.05, el diferencial es solo 5 centavos. ¡Eso está bastante bien!"
       },
       "volume": {
         "term": "Volumen",
-        "definition": "Cuantas acciones se estan comprando y vendiendo. Alto volumen significa mucha accion, como una tienda llena!",
-        "example": "Apple tiene millones de acciones negociadas cada dia - eso es alto volumen!"
+        "definition": "Cuántas acciones se están comprando y vendiendo. ¡Alto volumen significa mucha acción, como una tienda llena!",
+        "example": "¡Apple tiene millones de acciones negociadas cada día - eso es alto volumen!"
       },
       "liquidity": {
         "term": "Liquidez",
-        "definition": "Que tan facil es comprar o vender algo. Alta liquidez significa que puedes operar rapidamente sin afectar mucho el precio.",
-        "example": "Las acciones de Apple son muy liquidas - puedes comprar o vender en cualquier momento. Las de una empresa pequena tal vez no."
+        "definition": "Qué tan fácil es comprar o vender algo. Alta liquidez significa que puedes operar rápidamente sin afectar mucho el precio.",
+        "example": "Las acciones de Apple son muy líquidas - puedes comprar o vender en cualquier momento. Las de una empresa pequeña tal vez no."
       },
       "short-selling": {
         "term": "Venta en Corto",
-        "definition": "Apostar a que una accion va a BAJAR. Pides prestadas acciones, las vendes, y esperas recomprarlas mas baratas. Es arriesgado!",
-        "example": "Algunos vendieron en corto GameStop, apostando a que bajaria. Cuando subio, perdieron MUCHO dinero!"
+        "definition": "¡Apostar a que una acción va a BAJAR. Pides prestadas acciones, las vendes, y esperas recomprarlas más baratas. Es arriesgado!",
+        "example": "¡Algunos vendieron en corto GameStop, apostando a que bajaría. Cuando subió, perdieron MUCHO dinero!"
       },
       "margin": {
         "term": "Margen",
-        "definition": "Pedir dinero prestado a tu corredor para comprar mas acciones. Es como usar una tarjeta de credito para invertir - peligroso si no tienes cuidado!",
-        "example": "Con $1,000 de tu dinero, el margen te permite comprar $2,000 en acciones. Pero si bajan, igual debes el dinero!"
+        "definition": "Pedir dinero prestado a tu corredor para comprar más acciones. ¡Es como usar una tarjeta de crédito para invertir - peligroso si no tienes cuidado!",
+        "example": "¡Con $1,000 de tu dinero, el margen te permite comprar $2,000 en acciones. Pero si bajan, igual debes el dinero!"
       },
       "day-trading": {
         "term": "Day Trading",
-        "definition": "Comprar y vender acciones en el mismo dia para tratar de hacer ganancias rapidas. Es muy arriesgado y la mayoria pierde dinero!",
-        "example": "Un day trader puede comprar Tesla a las 10am y venderla a las 2pm el mismo dia, esperando una pequena ganancia."
+        "definition": "¡Comprar y vender acciones en el mismo día para tratar de hacer ganancias rápidas. Es muy arriesgado y la mayoría pierde dinero!",
+        "example": "Un day trader puede comprar Tesla a las 10am y venderla a las 2pm el mismo día, esperando una pequeña ganancia."
       },
       "pe-ratio": {
         "term": "Ratio P/E",
-        "definition": "Relacion Precio-Beneficio - muestra si una accion es cara o barata comparada con cuanto dinero gana la empresa.",
-        "example": "Un P/E de 15 significa que pagas $15 por cada $1 que gana la empresa. Mas bajo puede significar mas barato, pero no siempre mejor!"
+        "definition": "Relación Precio-Beneficio - muestra si una acción es cara o barata comparada con cuánto dinero gana la empresa.",
+        "example": "¡Un P/E de 15 significa que pagas $15 por cada $1 que gana la empresa. Más bajo puede significar más barato, pero no siempre mejor!"
       },
       "market-cap": {
-        "term": "Capitalizacion de Mercado",
-        "definition": "El valor total de todas las acciones de una empresa. Te dice que tan grande es una empresa en el mercado!",
-        "example": "La capitalizacion de Apple es mas de $2 billones - eso significa que todas sus acciones juntas valen eso!"
+        "term": "Capitalización de Mercado",
+        "definition": "El valor total de todas las acciones de una empresa. ¡Te dice qué tan grande es una empresa en el mercado!",
+        "example": "¡La capitalización de Apple es más de $2 billones - eso significa que todas sus acciones juntas valen eso!"
       },
       "eps": {
-        "term": "BPA (Beneficio por Accion)",
-        "definition": "Cuanta ganancia genera una empresa por cada accion. Mayor es usualmente mejor!",
-        "example": "Si una empresa gano $1 mil millones y tiene 100 millones de acciones, el BPA es $10."
+        "term": "BPA (Beneficio por Acción)",
+        "definition": "¡Cuánta ganancia genera una empresa por cada acción. Mayor es usualmente mejor!",
+        "example": "Si una empresa ganó $1 mil millones y tiene 100 millones de acciones, el BPA es $10."
       },
       "revenue": {
         "term": "Ingresos",
-        "definition": "Todo el dinero que una empresa recibe por vender cosas. Es el total antes de pagar cualquier cuenta!",
-        "example": "Si Apple vende 10 millones de iPhones a $1,000 cada uno, eso son $10 mil millones en ingresos!"
+        "definition": "¡Todo el dinero que una empresa recibe por vender cosas. Es el total antes de pagar cualquier cuenta!",
+        "example": "¡Si Apple vende 10 millones de iPhones a $1,000 cada uno, eso son $10 mil millones en ingresos!"
       },
       "net-income": {
         "term": "Ingreso Neto",
-        "definition": "La ganancia real despues de pagar TODAS las cuentas. Este es el dinero real que la empresa guarda!",
-        "example": "Los ingresos fueron $100 millones, pero despues de pagar trabajadores, renta e impuestos, el ingreso neto fue $20 millones."
+        "definition": "¡La ganancia real después de pagar TODAS las cuentas. Este es el dinero real que la empresa guarda!",
+        "example": "Los ingresos fueron $100 millones, pero después de pagar trabajadores, renta e impuestos, el ingreso neto fue $20 millones."
       },
       "profit-margin": {
         "term": "Margen de Ganancia",
-        "definition": "Que porcentaje de las ventas se convierte en ganancia real. Margenes mas altos significan que la empresa guarda mas dinero!",
+        "definition": "¡Qué porcentaje de las ventas se convierte en ganancia real. Márgenes más altos significan que la empresa guarda más dinero!",
         "example": "Si una empresa gana $10 de ganancia por cada $100 en ventas, eso es un margen de ganancia del 10%."
       },
       "book-value": {
         "term": "Valor en Libros",
-        "definition": "Lo que valdria una empresa si vendiera todo y pagara todas sus deudas. Es como el valor 'minimo'.",
+        "definition": "Lo que valdría una empresa si vendiera todo y pagara todas sus deudas. Es como el valor 'mínimo'.",
         "example": "Una empresa con $100 millones en cosas y $40 millones en deudas tiene un valor en libros de $60 millones."
       },
       "pb-ratio": {
         "term": "Ratio P/B",
-        "definition": "Relacion Precio-Valor en Libros - compara el precio de la accion con el valor en libros. Menos de 1 podria significar que es ganga!",
-        "example": "Si una accion esta a $50 pero el valor en libros por accion es $100, el P/B es 0.5 - podria estar subvaluada!"
+        "definition": "Relación Precio-Valor en Libros - compara el precio de la acción con el valor en libros. ¡Menos de 1 podría significar que es ganga!",
+        "example": "¡Si una acción está a $50 pero el valor en libros por acción es $100, el P/B es 0.5 - podría estar subvaluada!"
       },
       "dividend-yield": {
         "term": "Rendimiento de Dividendo",
-        "definition": "Cuanto dividendo recibes comparado con el precio de la accion. Es como saber que tasa de interes ganaras!",
-        "example": "Una accion de $100 que paga $4 al ano en dividendos tiene un rendimiento de dividendo del 4%."
+        "definition": "¡Cuánto dividendo recibes comparado con el precio de la acción. Es como saber qué tasa de interés ganarás!",
+        "example": "Una acción de $100 que paga $4 al año en dividendos tiene un rendimiento de dividendo del 4%."
       },
       "roe": {
         "term": "ROE (Retorno sobre Capital)",
-        "definition": "Que tan bien una empresa usa tu dinero para hacer mas dinero. Mayor es usualmente mejor!",
+        "definition": "¡Qué tan bien una empresa usa tu dinero para hacer más dinero. Mayor es usualmente mejor!",
         "example": "Un ROE del 20% significa que por cada $100 invertidos, la empresa genera $20 en ganancias."
       },
       "roa": {
         "term": "ROA (Retorno sobre Activos)",
-        "definition": "Que tan bien una empresa usa TODO lo que tiene para hacer dinero. Muestra eficiencia!",
-        "example": "Una empresa con $1 millon en activos que gana $100,000 tiene un ROA del 10%."
+        "definition": "¡Qué tan bien una empresa usa TODO lo que tiene para hacer dinero. Muestra eficiencia!",
+        "example": "Una empresa con $1 millón en activos que gana $100,000 tiene un ROA del 10%."
       },
       "beta": {
         "term": "Beta",
-        "definition": "Cuanto salta una accion comparada con todo el mercado. Beta de 1 significa que se mueve con el mercado.",
-        "example": "Una accion con beta de 2 se mueve el doble que el mercado - mas riesgo pero mas potencial de ganancia!"
+        "definition": "Cuánto salta una acción comparada con todo el mercado. Beta de 1 significa que se mueve con el mercado.",
+        "example": "¡Una acción con beta de 2 se mueve el doble que el mercado - más riesgo pero más potencial de ganancia!"
       },
       "volatility": {
         "term": "Volatilidad",
-        "definition": "Que tan salvajemente el precio de una accion sube y baja. Alta volatilidad = paseo en montana rusa!",
-        "example": "GameStop fue super volatil - paso de $20 a $400 y de regreso en solo semanas!"
+        "definition": "¡Qué tan salvajemente el precio de una acción sube y baja. Alta volatilidad = paseo en montaña rusa!",
+        "example": "¡GameStop fue súper volátil - pasó de $20 a $400 y de regreso en solo semanas!"
       },
       "bull-market": {
         "term": "Mercado Alcista",
-        "definition": "Cuando las acciones van ARRIBA y todos estan contentos! El toro embiste hacia arriba con sus cuernos - asi lo recuerdas!",
-        "example": "De 2009 a 2020 fue un largo mercado alcista - las acciones seguian subiendo mas y mas!"
+        "definition": "¡Cuando las acciones van ARRIBA y todos están contentos! El toro embiste hacia arriba con sus cuernos - ¡así lo recuerdas!",
+        "example": "¡De 2009 a 2020 fue un largo mercado alcista - las acciones seguían subiendo más y más!"
       },
       "bear-market": {
         "term": "Mercado Bajista",
-        "definition": "Cuando las acciones van ABAJO y la gente esta preocupada. El oso golpea hacia abajo con sus garras - ese es el truco de memoria!",
-        "example": "En 2022, las acciones cayeron mas del 20% - eso fue un mercado bajista."
+        "definition": "Cuando las acciones van ABAJO y la gente está preocupada. ¡El oso golpea hacia abajo con sus garras - ese es el truco de memoria!",
+        "example": "En 2022, las acciones cayeron más del 20% - eso fue un mercado bajista."
       },
       "fomo": {
         "term": "FOMO",
-        "definition": "Miedo a Perderse Algo - cuando quieres comprar solo porque todos lo hacen, no porque sea inteligente. Peligroso!",
-        "example": "Todos estaban comprando crypto, y el FOMO hizo que la gente comprara en el punto mas alto justo antes de que cayera."
+        "definition": "¡Miedo a Perderse Algo - cuando quieres comprar solo porque todos lo hacen, no porque sea inteligente. Peligroso!",
+        "example": "Todos estaban comprando crypto, y el FOMO hizo que la gente comprara en el punto más alto justo antes de que cayera."
       },
       "fear": {
         "term": "Miedo",
-        "definition": "La emocion que te hace querer vender cuando los precios bajan. Los inversores inteligentes aprenden a controlar el miedo!",
-        "example": "El miedo hizo que la gente vendiera todas sus acciones en 2020, pero los que mantuvieron vieron los precios recuperarse rapidamente."
+        "definition": "¡La emoción que te hace querer vender cuando los precios bajan. Los inversores inteligentes aprenden a controlar el miedo!",
+        "example": "El miedo hizo que la gente vendiera todas sus acciones en 2020, pero los que mantuvieron vieron los precios recuperarse rápidamente."
       },
       "greed": {
         "term": "Avaricia",
-        "definition": "Querer demasiado, muy rapido. La avaricia hace que la gente tome riesgos locos o mantenga demasiado tiempo!",
-        "example": "La avaricia hizo que alguien mantuviera una accion que subio 500% queriendo mas, y luego se desplomo de regreso."
+        "definition": "¡Querer demasiado, muy rápido. La avaricia hace que la gente tome riesgos locos o mantenga demasiado tiempo!",
+        "example": "La avaricia hizo que alguien mantuviera una acción que subió 500% queriendo más, y luego se desplomó de regreso."
       },
       "panic-selling": {
-        "term": "Venta por Panico",
-        "definition": "Vender todo porque estas asustado, usualmente en el peor momento. Fija tus perdidas!",
-        "example": "Cuando llego COVID, la venta por panico hizo que las acciones cayeran, pero se recuperaron en meses."
+        "term": "Venta por Pánico",
+        "definition": "¡Vender todo porque estás asustado, usualmente en el peor momento. Fija tus pérdidas!",
+        "example": "Cuando llegó COVID, la venta por pánico hizo que las acciones cayeran, pero se recuperaron en meses."
       },
       "revenge-trading": {
         "term": "Trading de Venganza",
-        "definition": "Hacer operaciones arriesgadas para tratar de recuperar dinero que perdiste. Casi siempre empeora las cosas!",
-        "example": "Despues de perder $500, alguien hizo trading de venganza y perdio $1,000 mas tratando de recuperarlo."
+        "definition": "¡Hacer operaciones arriesgadas para tratar de recuperar dinero que perdiste. Casi siempre empeora las cosas!",
+        "example": "Después de perder $500, alguien hizo trading de venganza y perdió $1,000 más tratando de recuperarlo."
       },
       "paper-hands": {
         "term": "Manos de Papel",
-        "definition": "Vender muy rapido cuando las cosas se ponen feas. Tus manos son de 'papel' - muy debiles para aguantar!",
-        "example": "Vendio su Bitcoin cuando cayo 10%, pero subio 100% despues - manos de papel totales!"
+        "definition": "Vender muy rápido cuando las cosas se ponen feas. ¡Tus manos son de 'papel' - muy débiles para aguantar!",
+        "example": "¡Vendió su Bitcoin cuando cayó 10%, pero subió 100% después - manos de papel totales!"
       },
       "diamond-hands": {
         "term": "Manos de Diamante",
-        "definition": "Mantener tus inversiones sin importar que. Los diamantes son fuertes y no se pueden romper!",
-        "example": "Ella tenia manos de diamante - mantuvo durante la caida y salio muy adelante cuando se recupero."
+        "definition": "¡Mantener tus inversiones sin importar qué. Los diamantes son fuertes y no se pueden romper!",
+        "example": "Ella tenía manos de diamante - mantuvo durante la caída y salió muy adelante cuando se recuperó."
       },
       "risk-tolerance": {
         "term": "Tolerancia al Riesgo",
-        "definition": "Cuanta perdida puedes manejar sin volverte loco. La de cada quien es diferente!",
-        "example": "Si una caida del 20% te quita el sueno, podrias tener baja tolerancia al riesgo y deberias invertir mas seguro."
+        "definition": "¡Cuánta pérdida puedes manejar sin volverte loco. La de cada quien es diferente!",
+        "example": "Si una caída del 20% te quita el sueño, podrías tener baja tolerancia al riesgo y deberías invertir más seguro."
       },
       "confirmation-bias": {
-        "term": "Sesgo de Confirmacion",
-        "definition": "Solo creer informacion que coincide con lo que ya piensas. Puede cegarte a los problemas!",
-        "example": "Le encantaba tanto Tesla que ignoro todas las advertencias y solo leyo noticias positivas sobre ella."
+        "term": "Sesgo de Confirmación",
+        "definition": "¡Solo creer información que coincide con lo que ya piensas. Puede cegarte a los problemas!",
+        "example": "Le encantaba tanto Tesla que ignoró todas las advertencias y solo leyó noticias positivas sobre ella."
       },
       "herd-mentality": {
-        "term": "Mentalidad de Rebano",
-        "definition": "Seguir a la multitud sin pensar por ti mismo. Solo porque todos lo hacen no significa que sea inteligente!",
-        "example": "La mentalidad de rebano hizo que todos compraran acciones meme en el pico porque 'todos lo estaban haciendo.'"
+        "term": "Mentalidad de Rebaño",
+        "definition": "¡Seguir a la multitud sin pensar por ti mismo. Solo porque todos lo hacen no significa que sea inteligente!",
+        "example": "La mentalidad de rebaño hizo que todos compraran acciones meme en el pico porque 'todos lo estaban haciendo.'"
       },
       "loss-aversion": {
-        "term": "Aversion a la Perdida",
-        "definition": "Odiar las perdidas mas de lo que amas las ganancias. Perder $100 se siente peor de lo bien que se siente ganar $100!",
-        "example": "La aversion a la perdida hace que la gente mantenga acciones perdedoras demasiado tiempo, esperando que se recuperen en vez de cortar perdidas."
+        "term": "Aversión a la Pérdida",
+        "definition": "¡Odiar las pérdidas más de lo que amas las ganancias. Perder $100 se siente peor de lo bien que se siente ganar $100!",
+        "example": "La aversión a la pérdida hace que la gente mantenga acciones perdedoras demasiado tiempo, esperando que se recuperen en vez de cortar pérdidas."
       },
       "overconfidence": {
         "term": "Exceso de Confianza",
-        "definition": "Pensar que eres mejor invirtiendo de lo que realmente eres. Hasta los profesionales son humillados por el mercado!",
-        "example": "Despues de tres operaciones ganadoras, el exceso de confianza lo hizo apostar todo en una accion y perderlo todo."
+        "definition": "¡Pensar que eres mejor invirtiendo de lo que realmente eres. Hasta los profesionales son humillados por el mercado!",
+        "example": "Después de tres operaciones ganadoras, el exceso de confianza lo hizo apostar todo en una acción y perderlo todo."
       },
       "patience": {
         "term": "Paciencia",
-        "definition": "Esperar con calma a que tus inversiones crezcan. El mercado de valores recompensa a los que pueden esperar!",
-        "example": "Warren Buffett dice que su periodo de tenencia favorito es 'para siempre' - eso es paciencia!"
+        "definition": "¡Esperar con calma a que tus inversiones crezcan. El mercado de valores recompensa a los que pueden esperar!",
+        "example": "¡Warren Buffett dice que su período de tenencia favorito es 'para siempre' - eso es paciencia!"
       },
       "capital-gains": {
         "term": "Ganancias de Capital",
-        "definition": "La ganancia que obtienes cuando vendes algo por mas de lo que pagaste. El gobierno quiere una parte de esto!",
-        "example": "Compraste una accion a $100 y la vendiste a $150. Tu ganancia de $50 es una ganancia de capital."
+        "definition": "¡La ganancia que obtienes cuando vendes algo por más de lo que pagaste. El gobierno quiere una parte de esto!",
+        "example": "Compraste una acción a $100 y la vendiste a $150. Tu ganancia de $50 es una ganancia de capital."
       },
       "capital-loss": {
-        "term": "Perdida de Capital",
-        "definition": "Cuando vendes algo por menos de lo que pagaste. El lado bueno? Puede reducir tus impuestos!",
-        "example": "Vender una accion que compraste a $100 por $80 significa una perdida de capital de $20."
+        "term": "Pérdida de Capital",
+        "definition": "Cuando vendes algo por menos de lo que pagaste. ¿El lado bueno? ¡Puede reducir tus impuestos!",
+        "example": "Vender una acción que compraste a $100 por $80 significa una pérdida de capital de $20."
       },
       "short-term-gain": {
         "term": "Ganancia a Corto Plazo",
-        "definition": "Ganancia por vender algo que tuviste por menos de un ano. Estas pagan mas impuestos - ouch!",
+        "definition": "¡Ganancia por vender algo que tuviste por menos de un año. Estas pagan más impuestos - ouch!",
         "example": "Compraste en enero y vendiste en junio - cualquier ganancia es a corto plazo y paga impuestos como ingreso regular."
       },
       "long-term-gain": {
         "term": "Ganancia a Largo Plazo",
-        "definition": "Ganancia por vender algo que tuviste por MAS de un ano. La tasa de impuestos es mucho menor - genial!",
-        "example": "Mantener una accion por al menos un ano y un dia, y tus ganancias obtienen la tasa de impuestos mas baja de largo plazo."
+        "definition": "¡Ganancia por vender algo que tuviste por MÁS de un año. La tasa de impuestos es mucho menor - genial!",
+        "example": "Mantener una acción por al menos un año y un día, y tus ganancias obtienen la tasa de impuestos más baja de largo plazo."
       },
       "tax-loss-harvesting": {
-        "term": "Cosecha de Perdidas Fiscales",
-        "definition": "Vender inversiones perdedoras para reducir tus impuestos. Conviertes limones en limonada!",
-        "example": "Tienes $5,000 en ganancias pero tambien una accion que esta abajo $2,000. Venderla reduce tus ganancias gravables a $3,000."
+        "term": "Cosecha de Pérdidas Fiscales",
+        "definition": "¡Vender inversiones perdedoras para reducir tus impuestos. Conviertes limones en limonada!",
+        "example": "Tienes $5,000 en ganancias pero también una acción que está abajo $2,000. Venderla reduce tus ganancias gravables a $3,000."
       },
       "wash-sale": {
         "term": "Venta Ficticia",
-        "definition": "Una regla que te impide vender una accion a perdida y recomprarla inmediatamente. El IRS no permite ese truco!",
-        "example": "Si vendes Apple a perdida, no puedes recomprarla por 30 dias o la perdida no cuenta para impuestos."
+        "definition": "¡Una regla que te impide vender una acción a pérdida y recomprarla inmediatamente. El IRS no permite ese truco!",
+        "example": "Si vendes Apple a pérdida, no puedes recomprarla por 30 días o la pérdida no cuenta para impuestos."
       },
       "401k": {
         "term": "401(k)",
-        "definition": "Una cuenta especial de retiro a traves de tu trabajo. Pones dinero ANTES de impuestos, y crece libre de impuestos hasta el retiro!",
-        "example": "Tu empresa puede igualar lo que pones en tu 401(k) - eso es dinero gratis!"
+        "definition": "¡Una cuenta especial de retiro a través de tu trabajo. Pones dinero ANTES de impuestos, y crece libre de impuestos hasta el retiro!",
+        "example": "¡Tu empresa puede igualar lo que pones en tu 401(k) - eso es dinero gratis!"
       },
       "ira": {
         "term": "IRA",
-        "definition": "Cuenta Individual de Retiro - una cuenta especial donde tus inversiones crecen con beneficios fiscales. Genial para ahorrar para cuando seas viejo!",
-        "example": "Puedes abrir una IRA en cualquier correduria y empezar a ahorrar para el retiro por tu cuenta."
+        "definition": "¡Cuenta Individual de Retiro - una cuenta especial donde tus inversiones crecen con beneficios fiscales. Genial para ahorrar para cuando seas viejo!",
+        "example": "Puedes abrir una IRA en cualquier correduría y empezar a ahorrar para el retiro por tu cuenta."
       },
       "roth-ira": {
         "term": "Roth IRA",
-        "definition": "Una cuenta de retiro donde pagas impuestos AHORA, pero todo crece y sale LIBRE DE IMPUESTOS despues. Increible para jovenes!",
-        "example": "Pon $1,000 en un Roth IRA a los 18, y a los 65 podrian ser $20,000+ y no pagas NADA de impuestos!"
+        "definition": "¡Una cuenta de retiro donde pagas impuestos AHORA, pero todo crece y sale LIBRE DE IMPUESTOS después. Increíble para jóvenes!",
+        "example": "¡Pon $1,000 en un Roth IRA a los 18, y a los 65 podrían ser $20,000+ y no pagas NADA de impuestos!"
       },
       "traditional-ira": {
         "term": "IRA Tradicional",
         "definition": "Una cuenta de retiro donde te saltas impuestos AHORA, pero los pagas cuando sacas dinero en el retiro.",
-        "example": "Contribuir a una IRA Tradicional baja tus impuestos este ano, pero pagaras despues cuando retires."
+        "example": "Contribuir a una IRA Tradicional baja tus impuestos este año, pero pagarás después cuando retires."
       },
       "cost-basis": {
         "term": "Base de Costo",
-        "definition": "El precio original que pagaste por una inversion. Lo necesitas para calcular tu ganancia o perdida!",
-        "example": "Compraste 10 acciones a $50 cada una, asi que tu base de costo es $500. Si vendes por $600, tu ganancia es $100."
+        "definition": "¡El precio original que pagaste por una inversión. Lo necesitas para calcular tu ganancia o pérdida!",
+        "example": "Compraste 10 acciones a $50 cada una, así que tu base de costo es $500. Si vendes por $600, tu ganancia es $100."
       },
       "tax-deferred": {
         "term": "Impuestos Diferidos",
-        "definition": "No pagar impuestos ahora, sino despues. Tu dinero crece mas rapido porque no pierdes algo en impuestos cada ano!",
+        "definition": "¡No pagar impuestos ahora, sino después. Tu dinero crece más rápido porque no pierdes algo en impuestos cada año!",
         "example": "En un 401(k), tus inversiones tienen impuestos diferidos - solo pagas impuestos cuando te retiras y sacas dinero."
       },
       "dividend-tax": {
         "term": "Impuesto sobre Dividendos",
-        "definition": "Impuestos que pagas sobre ingresos de dividendos. Los dividendos calificados tienen una tasa mas baja que el ingreso regular!",
-        "example": "Si ganas $1,000 en dividendos, podrias deber $150-$200 en impuestos dependiendo de tus ingresos."
+        "definition": "¡Impuestos que pagas sobre ingresos de dividendos. Los dividendos calificados tienen una tasa más baja que el ingreso regular!",
+        "example": "Si ganas $1,000 en dividendos, podrías deber $150-$200 en impuestos dependiendo de tus ingresos."
       }
     }
   },
   "trading": {
     "title": "Practica Trading",
-    "subtitle": "Opera con $100,000 en dinero de juego - no necesitas dinero real!",
+    "subtitle": "¡Opera con $100,000 en dinero de juego - no necesitas dinero real!",
     "portfolio": "Mi Portafolio",
     "cashBalance": "Efectivo que Tienes",
     "portfolioValue": "Valor Total",
-    "totalReturn": "Cuanto Has Ganado",
+    "totalReturn": "Cuánto Has Ganado",
     "holdings": "Acciones que Tienes",
-    "noHoldings": "No tienes acciones todavia. Compra tu primera!",
+    "noHoldings": "No tienes acciones todavía. ¡Compra tu primera!",
     "trade": {
       "title": "Operar Acciones",
-      "searchStock": "Escribe el nombre de una empresa o simbolo...",
-      "searchLabel": "Buscar cualquier accion:",
-      "popularStocks": "O elige una accion popular:",
+      "searchStock": "Escribe el nombre de una empresa o símbolo...",
+      "searchLabel": "Buscar cualquier acción:",
+      "popularStocks": "O elige una acción popular:",
       "placeOrder": "Hacer Tu Orden",
       "buy": "Comprar",
       "sell": "Vender",
@@ -805,70 +818,70 @@
       "confirmSell": "Confirmar Venta",
       "insufficientFunds": "Fondos insuficientes",
       "insufficientShares": "No tienes suficientes acciones",
-      "success": "Operacion ejecutada con exito!"
+      "success": "¡Operación ejecutada con éxito!"
     },
     "chart": {
-      "title": "Grafico de Precios",
+      "title": "Gráfico de Precios",
       "viewOnYahoo": "Ver en Yahoo Finance",
-      "disclaimer": "Los datos del grafico pueden tener un retraso de 15-20 minutos. Solo para fines educativos."
+      "disclaimer": "Los datos del gráfico pueden tener un retraso de 15-20 minutos. Solo para fines educativos."
     },
     "history": {
       "title": "Tus Operaciones",
-      "noTransactions": "Sin operaciones todavia",
-      "bought": "Compro",
-      "sold": "Vendio",
+      "noTransactions": "Sin operaciones todavía",
+      "bought": "Compró",
+      "sold": "Vendió",
       "date": "Fecha",
-      "symbol": "Simbolo",
-      "action": "Accion",
+      "symbol": "Símbolo",
+      "action": "Acción",
       "shares": "Acciones",
       "price": "Precio",
       "total": "Total",
       "sortBy": "Ordenar por",
-      "newestFirst": "Mas Recientes",
-      "oldestFirst": "Mas Antiguos"
+      "newestFirst": "Más Recientes",
+      "oldestFirst": "Más Antiguos"
     },
     "reset": {
       "title": "Empezar de Nuevo",
-      "confirm": "Estas seguro? Esto te dara un nuevo comienzo con $100,000 y eliminara todas tus acciones y operaciones.",
+      "confirm": "¿Estás seguro? Esto te dará un nuevo comienzo con $100,000 y eliminará todas tus acciones y operaciones.",
       "button": "Empezar de Nuevo",
       "remaining": "reinicio(s) restante(s)",
-      "lastReset": "Advertencia: Este es tu ultimo reinicio!",
+      "lastReset": "¡Advertencia: Este es tu último reinicio!",
       "cancel": "Cancelar",
       "continue": "Continuar",
-      "finalTitle": "Confirmacion Final",
-      "finalWarning": "Esta accion no se puede deshacer.",
-      "finalConfirm": "Si, estoy seguro, reiniciar cuenta de trading",
+      "finalTitle": "Confirmación Final",
+      "finalWarning": "Esta acción no se puede deshacer.",
+      "finalConfirm": "Sí, estoy seguro, reiniciar cuenta de trading",
       "noResetsTitle": "Sin Reinicios Disponibles",
       "noResetsLeft": "Has usado los 3 reinicios de tu portafolio.",
-      "requestTitle": "Necesitas otro reinicio?",
-      "requestPlaceholder": "Explica por que necesitas un reinicio adicional (opcional)...",
+      "requestTitle": "¿Necesitas otro reinicio?",
+      "requestPlaceholder": "Explica por qué necesitas un reinicio adicional (opcional)...",
       "requestButton": "Solicitar Reinicio Adicional",
       "requestSentTitle": "Solicitud Enviada",
-      "requestSentMessage": "Tu solicitud ha sido registrada. Un administrador la revisara.",
+      "requestSentMessage": "Tu solicitud ha sido registrada. Un administrador la revisará.",
       "close": "Cerrar"
     },
     "page": {
-      "stockQuote": "Cotizacion de Accion",
+      "stockQuote": "Cotización de Acción",
       "placeOrder": "Realizar Orden",
-      "clearSelection": "Limpiar Seleccion",
+      "clearSelection": "Limpiar Selección",
       "cancelReset": "Cancelar"
     }
   },
   "errors": {
-    "somethingWentWrong": "Algo Salio Mal",
+    "somethingWentWrong": "Algo Salió Mal",
     "errorDescription": "Pedimos disculpas por el inconveniente. Por favor intenta de nuevo.",
     "tryAgain": "Intentar de Nuevo",
     "goHome": "Ir al Inicio",
-    "notFound": "Pagina No Encontrada",
-    "notFoundDescription": "La pagina que buscas no existe.",
-    "offline": "Estas Desconectado",
-    "offlineDescription": "Algunas funciones pueden estar limitadas. Conectate a internet para acceso completo."
+    "notFound": "Página No Encontrada",
+    "notFoundDescription": "La página que buscas no existe.",
+    "offline": "Estás Desconectado",
+    "offlineDescription": "Algunas funciones pueden estar limitadas. Conéctate a internet para acceso completo."
   },
   "settings": {
-    "title": "Configuracion",
+    "title": "Configuración",
     "language": "Idioma",
-    "english": "Ingles",
-    "spanish": "Espanol",
+    "english": "Inglés",
+    "spanish": "Español",
     "theme": "Tema",
     "light": "Claro",
     "dark": "Oscuro",
