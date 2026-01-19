@@ -218,36 +218,36 @@
     "keyPoints": "Lo Que Aprendiste",
     "modules": {
       "1": {
-        "title": "Que es la Bolsa de Valores?",
-        "description": "Aprende lo basico: que son las acciones, como funciona el mercado y su historia"
+        "title": "Tus Primeros Pasos en las Acciones!",
+        "description": "Descubre que son realmente las acciones, como funciona el mercado y por que la gente invierte"
       },
       "2": {
-        "title": "Como Empezar a Invertir",
-        "description": "Abre una cuenta de corretaje, entiende las comisiones y haz tu primera inversion"
+        "title": "Listos, Preparados, a Invertir!",
+        "description": "Abre tu primera cuenta, entiende los costos y haz tu primera operacion"
       },
       "3": {
-        "title": "Entendiendo el Riesgo",
-        "description": "Aprende sobre diversificacion, volatilidad y como proteger tu dinero"
+        "title": "No Pierdas Tu Dinero!",
+        "description": "Domina el arte de proteger tu dinero mientras lo haces crecer"
       },
       "4": {
-        "title": "Psicologia del Trading",
-        "description": "Controla tus emociones, evita errores comunes y construye disciplina"
+        "title": "Piensa Como un Trader Profesional",
+        "description": "Controla tus emociones, evita errores de novato y crea habitos ganadores"
       },
       "5": {
-        "title": "Manipulacion del Mercado",
-        "description": "Reconoce estafas, entiende el trading de informacion privilegiada y protegete"
+        "title": "Detecta a los Estafadores!",
+        "description": "Aprende a reconocer trucos, estafas y tratos sospechosos antes de que te atrapen"
       },
       "6": {
-        "title": "Politica y los Mercados",
-        "description": "Como las elecciones, la Fed y eventos mundiales afectan tus inversiones"
+        "title": "Como el Mundo Mueve los Mercados",
+        "description": "Mira como los presidentes, las noticias y eventos mundiales sacuden los precios de las acciones"
       },
       "7": {
-        "title": "Impuestos para Inversores en NJ",
-        "description": "Entiende ganancias de capital, cuentas con ventajas fiscales y reglas de impuestos de NJ"
+        "title": "Queda con Mas de Tu Dinero (Impuestos)",
+        "description": "Estrategias inteligentes para pagar menos impuestos en tus ganancias de inversion"
       },
       "8": {
-        "title": "Usando Plataformas de Trading",
-        "description": "Aprende a usar Fidelity y otras plataformas para comprar acciones",
+        "title": "Domina Tu App de Trading",
+        "description": "Aprende a usar Fidelity como un profesional y haz tus operaciones con confianza",
         "lessons": {
           "1": {
             "title": "Introduccion a las Plataformas de Trading",
@@ -409,7 +409,354 @@
     "done": "Listo",
     "swipeInstructions": "Desliza a la derecha si lo sabias, a la izquierda para repasar",
     "readMore": "Leer mas",
-    "showLess": "Ver menos"
+    "showLess": "Ver menos",
+    "terms": {
+      "stock": {
+        "term": "Accion",
+        "definition": "Un pedacito de una empresa que puedes tener! Cuando compras una accion, te conviertes en dueno de parte de esa empresa - como tener una rebanada de una pizza muy grande.",
+        "example": "Si compras 1 accion de Apple, eres dueno de una pequenisima parte de la empresa que hace los iPhones!"
+      },
+      "share": {
+        "term": "Accion",
+        "definition": "Una unidad de stock. Es como un boleto que demuestra que eres dueno de parte de una empresa. Entre mas acciones tengas, mas grande es tu pedazo del pastel!",
+        "example": "Comprar 10 acciones de Disney significa que tienes 10 boletos que prueban que eres dueno de parte de Disney."
+      },
+      "equity": {
+        "term": "Capital",
+        "definition": "Otra palabra para propiedad. Cuando la gente dice 'capital', se refiere a la parte de algo que realmente te pertenece.",
+        "example": "Si tienes acciones, tienes capital en esas empresas - eres un dueno de verdad!"
+      },
+      "dividend": {
+        "term": "Dividendo",
+        "definition": "Dinero gratis que las empresas te pagan solo por tener sus acciones! Es como recibir una mesada de una empresa por ser accionista.",
+        "example": "Coca-Cola paga dividendos - asi que si tienes sus acciones, te mandan dinero cada pocos meses. Que genial es eso?"
+      },
+      "broker": {
+        "term": "Corredor",
+        "definition": "Un ayudante (o app) que te permite comprar y vender acciones. No puedes ir a una tienda y comprar acciones - necesitas un corredor para hacerlo!",
+        "example": "Fidelity y Robinhood son corredores - son como los cajeros del mercado de valores."
+      },
+      "brokerage": {
+        "term": "Correduria",
+        "definition": "La empresa o app donde guardas tus acciones y haces operaciones. Es como un banco, pero para tus inversiones!",
+        "example": "Abres una cuenta en una correduria como Fidelity para empezar a comprar acciones."
+      },
+      "portfolio": {
+        "term": "Portafolio",
+        "definition": "Tu coleccion de todas las acciones e inversiones que tienes. Piensa en el como tu mochila de inversiones - guarda todo!",
+        "example": "Mi portafolio tiene acciones de Apple, Disney y Nike."
+      },
+      "index": {
+        "term": "Indice",
+        "definition": "Una lista que rastrea como le va a un grupo de acciones. Es como un marcador para el mercado de valores!",
+        "example": "El S&P 500 es un indice que rastrea 500 empresas grandes. Cuando dicen 'el mercado subio', usualmente se refieren a esto!"
+      },
+      "etf": {
+        "term": "ETF",
+        "definition": "Un paquete de muchas acciones envueltas en una sola cosa que puedes comprar. Es como comprar un paquete variado en vez de un solo articulo!",
+        "example": "En vez de comprar 500 acciones diferentes, puedes comprar un ETF del S&P 500 y tener un poquito de las 500!"
+      },
+      "mutual-fund": {
+        "term": "Fondo Mutuo",
+        "definition": "Dinero de mucha gente juntado para comprar acciones. Un profesional escoge las acciones para todos!",
+        "example": "Tus papas pueden tener fondos mutuos en su cuenta de retiro - un experto en dinero escoge las acciones por ellos."
+      },
+      "bond": {
+        "term": "Bono",
+        "definition": "Un prestamo que le das a una empresa o al gobierno. Prometen devolverte el dinero con intereses - como ser el banco!",
+        "example": "Si compras un bono del Tesoro de EE.UU., le estas prestando dinero al gobierno, y te devuelven mas de lo que prestaste."
+      },
+      "diversification": {
+        "term": "Diversificacion",
+        "definition": "No poner todos los huevos en una sola canasta! Significa repartir tu dinero en diferentes inversiones para que si una va mal, las otras pueden ir bien.",
+        "example": "En vez de comprar solo acciones de Tesla, compras Tesla, Disney Y Coca-Cola - eso es diversificacion!"
+      },
+      "asset-allocation": {
+        "term": "Asignacion de Activos",
+        "definition": "Decidir como dividir tu dinero entre diferentes tipos de inversiones como acciones, bonos y efectivo.",
+        "example": "Puedes poner 70% en acciones para crecimiento y 30% en bonos para seguridad - esa es tu asignacion de activos!"
+      },
+      "ownership": {
+        "term": "Propiedad",
+        "definition": "Tener un pedazo de algo que te pertenece. Cuando tienes acciones, legalmente eres dueno de parte de esa empresa!",
+        "example": "Cuando compras acciones de Amazon, tienes propiedad real - hasta puedes votar en decisiones de la empresa!"
+      },
+      "buy": {
+        "term": "Comprar",
+        "definition": "Obtener acciones pagando dinero por ellas. Cuando compras, estas agregando a tu coleccion!",
+        "example": "Quiero comprar 5 acciones de Netflix porque me encantan sus series!"
+      },
+      "sell": {
+        "term": "Vender",
+        "definition": "Cambiar tus acciones por efectivo. Cuando vendes, alguien mas recibe tus acciones y tu recibes dinero!",
+        "example": "Vendi mis acciones de GameStop cuando el precio subio y gane $50!"
+      },
+      "limit-order": {
+        "term": "Orden Limitada",
+        "definition": "Decirle a tu corredor 'solo compra esta accion si llega a MI precio'. Tu controlas lo que pagas!",
+        "example": "Apple esta a $150, pero puse una orden limitada para comprar a $140. Mi corredor solo comprara si baja a ese precio."
+      },
+      "market-order": {
+        "term": "Orden de Mercado",
+        "definition": "Decirle a tu corredor 'compra esta accion AHORA MISMO al precio actual'. Es rapido pero puedes pagar un poco mas.",
+        "example": "Puse una orden de mercado para Tesla y la obtuve al instante a $200 por accion."
+      },
+      "stop-loss": {
+        "term": "Stop-Loss",
+        "definition": "Una red de seguridad! Automaticamente vende tu accion si el precio baja mucho, para que no pierdas demasiado dinero.",
+        "example": "Compre una accion a $100 y puse un stop-loss a $90. Si baja tanto, se vende automaticamente para protegerme!"
+      },
+      "trailing-stop": {
+        "term": "Stop Dinamico",
+        "definition": "Un stop-loss inteligente que sube con el precio. Protege tus ganancias mientras deja que las ganadoras sigan subiendo!",
+        "example": "Mi accion subio de $100 a $150. Mi stop dinamico la siguio, asi que ahora venderia a $140 si baja."
+      },
+      "bid": {
+        "term": "Oferta de Compra",
+        "definition": "El precio mas alto que alguien esta dispuesto a PAGAR por una accion ahora mismo. Es como cuando alguien dice 'te doy $10 por eso!'",
+        "example": "La oferta para Apple es $149.50 - eso es lo maximo que cualquier comprador quiere pagar ahora."
+      },
+      "ask": {
+        "term": "Oferta de Venta",
+        "definition": "El precio mas bajo al que alguien esta dispuesto a VENDER una accion ahora mismo. Es como decir 'no acepto menos de $15!'",
+        "example": "La oferta de venta para Apple es $149.75 - ese es el precio mas bajo que cualquier vendedor aceptara."
+      },
+      "spread": {
+        "term": "Diferencial",
+        "definition": "La brecha entre el precio de compra y el de venta. Un diferencial mas pequeno es mejor para ti!",
+        "example": "Si la oferta es $10 y la venta es $10.05, el diferencial es solo 5 centavos. Eso esta bastante bien!"
+      },
+      "volume": {
+        "term": "Volumen",
+        "definition": "Cuantas acciones se estan comprando y vendiendo. Alto volumen significa mucha accion, como una tienda llena!",
+        "example": "Apple tiene millones de acciones negociadas cada dia - eso es alto volumen!"
+      },
+      "liquidity": {
+        "term": "Liquidez",
+        "definition": "Que tan facil es comprar o vender algo. Alta liquidez significa que puedes operar rapidamente sin afectar mucho el precio.",
+        "example": "Las acciones de Apple son muy liquidas - puedes comprar o vender en cualquier momento. Las de una empresa pequena tal vez no."
+      },
+      "short-selling": {
+        "term": "Venta en Corto",
+        "definition": "Apostar a que una accion va a BAJAR. Pides prestadas acciones, las vendes, y esperas recomprarlas mas baratas. Es arriesgado!",
+        "example": "Algunos vendieron en corto GameStop, apostando a que bajaria. Cuando subio, perdieron MUCHO dinero!"
+      },
+      "margin": {
+        "term": "Margen",
+        "definition": "Pedir dinero prestado a tu corredor para comprar mas acciones. Es como usar una tarjeta de credito para invertir - peligroso si no tienes cuidado!",
+        "example": "Con $1,000 de tu dinero, el margen te permite comprar $2,000 en acciones. Pero si bajan, igual debes el dinero!"
+      },
+      "day-trading": {
+        "term": "Day Trading",
+        "definition": "Comprar y vender acciones en el mismo dia para tratar de hacer ganancias rapidas. Es muy arriesgado y la mayoria pierde dinero!",
+        "example": "Un day trader puede comprar Tesla a las 10am y venderla a las 2pm el mismo dia, esperando una pequena ganancia."
+      },
+      "pe-ratio": {
+        "term": "Ratio P/E",
+        "definition": "Relacion Precio-Beneficio - muestra si una accion es cara o barata comparada con cuanto dinero gana la empresa.",
+        "example": "Un P/E de 15 significa que pagas $15 por cada $1 que gana la empresa. Mas bajo puede significar mas barato, pero no siempre mejor!"
+      },
+      "market-cap": {
+        "term": "Capitalizacion de Mercado",
+        "definition": "El valor total de todas las acciones de una empresa. Te dice que tan grande es una empresa en el mercado!",
+        "example": "La capitalizacion de Apple es mas de $2 billones - eso significa que todas sus acciones juntas valen eso!"
+      },
+      "eps": {
+        "term": "BPA (Beneficio por Accion)",
+        "definition": "Cuanta ganancia genera una empresa por cada accion. Mayor es usualmente mejor!",
+        "example": "Si una empresa gano $1 mil millones y tiene 100 millones de acciones, el BPA es $10."
+      },
+      "revenue": {
+        "term": "Ingresos",
+        "definition": "Todo el dinero que una empresa recibe por vender cosas. Es el total antes de pagar cualquier cuenta!",
+        "example": "Si Apple vende 10 millones de iPhones a $1,000 cada uno, eso son $10 mil millones en ingresos!"
+      },
+      "net-income": {
+        "term": "Ingreso Neto",
+        "definition": "La ganancia real despues de pagar TODAS las cuentas. Este es el dinero real que la empresa guarda!",
+        "example": "Los ingresos fueron $100 millones, pero despues de pagar trabajadores, renta e impuestos, el ingreso neto fue $20 millones."
+      },
+      "profit-margin": {
+        "term": "Margen de Ganancia",
+        "definition": "Que porcentaje de las ventas se convierte en ganancia real. Margenes mas altos significan que la empresa guarda mas dinero!",
+        "example": "Si una empresa gana $10 de ganancia por cada $100 en ventas, eso es un margen de ganancia del 10%."
+      },
+      "book-value": {
+        "term": "Valor en Libros",
+        "definition": "Lo que valdria una empresa si vendiera todo y pagara todas sus deudas. Es como el valor 'minimo'.",
+        "example": "Una empresa con $100 millones en cosas y $40 millones en deudas tiene un valor en libros de $60 millones."
+      },
+      "pb-ratio": {
+        "term": "Ratio P/B",
+        "definition": "Relacion Precio-Valor en Libros - compara el precio de la accion con el valor en libros. Menos de 1 podria significar que es ganga!",
+        "example": "Si una accion esta a $50 pero el valor en libros por accion es $100, el P/B es 0.5 - podria estar subvaluada!"
+      },
+      "dividend-yield": {
+        "term": "Rendimiento de Dividendo",
+        "definition": "Cuanto dividendo recibes comparado con el precio de la accion. Es como saber que tasa de interes ganaras!",
+        "example": "Una accion de $100 que paga $4 al ano en dividendos tiene un rendimiento de dividendo del 4%."
+      },
+      "roe": {
+        "term": "ROE (Retorno sobre Capital)",
+        "definition": "Que tan bien una empresa usa tu dinero para hacer mas dinero. Mayor es usualmente mejor!",
+        "example": "Un ROE del 20% significa que por cada $100 invertidos, la empresa genera $20 en ganancias."
+      },
+      "roa": {
+        "term": "ROA (Retorno sobre Activos)",
+        "definition": "Que tan bien una empresa usa TODO lo que tiene para hacer dinero. Muestra eficiencia!",
+        "example": "Una empresa con $1 millon en activos que gana $100,000 tiene un ROA del 10%."
+      },
+      "beta": {
+        "term": "Beta",
+        "definition": "Cuanto salta una accion comparada con todo el mercado. Beta de 1 significa que se mueve con el mercado.",
+        "example": "Una accion con beta de 2 se mueve el doble que el mercado - mas riesgo pero mas potencial de ganancia!"
+      },
+      "volatility": {
+        "term": "Volatilidad",
+        "definition": "Que tan salvajemente el precio de una accion sube y baja. Alta volatilidad = paseo en montana rusa!",
+        "example": "GameStop fue super volatil - paso de $20 a $400 y de regreso en solo semanas!"
+      },
+      "bull-market": {
+        "term": "Mercado Alcista",
+        "definition": "Cuando las acciones van ARRIBA y todos estan contentos! El toro embiste hacia arriba con sus cuernos - asi lo recuerdas!",
+        "example": "De 2009 a 2020 fue un largo mercado alcista - las acciones seguian subiendo mas y mas!"
+      },
+      "bear-market": {
+        "term": "Mercado Bajista",
+        "definition": "Cuando las acciones van ABAJO y la gente esta preocupada. El oso golpea hacia abajo con sus garras - ese es el truco de memoria!",
+        "example": "En 2022, las acciones cayeron mas del 20% - eso fue un mercado bajista."
+      },
+      "fomo": {
+        "term": "FOMO",
+        "definition": "Miedo a Perderse Algo - cuando quieres comprar solo porque todos lo hacen, no porque sea inteligente. Peligroso!",
+        "example": "Todos estaban comprando crypto, y el FOMO hizo que la gente comprara en el punto mas alto justo antes de que cayera."
+      },
+      "fear": {
+        "term": "Miedo",
+        "definition": "La emocion que te hace querer vender cuando los precios bajan. Los inversores inteligentes aprenden a controlar el miedo!",
+        "example": "El miedo hizo que la gente vendiera todas sus acciones en 2020, pero los que mantuvieron vieron los precios recuperarse rapidamente."
+      },
+      "greed": {
+        "term": "Avaricia",
+        "definition": "Querer demasiado, muy rapido. La avaricia hace que la gente tome riesgos locos o mantenga demasiado tiempo!",
+        "example": "La avaricia hizo que alguien mantuviera una accion que subio 500% queriendo mas, y luego se desplomo de regreso."
+      },
+      "panic-selling": {
+        "term": "Venta por Panico",
+        "definition": "Vender todo porque estas asustado, usualmente en el peor momento. Fija tus perdidas!",
+        "example": "Cuando llego COVID, la venta por panico hizo que las acciones cayeran, pero se recuperaron en meses."
+      },
+      "revenge-trading": {
+        "term": "Trading de Venganza",
+        "definition": "Hacer operaciones arriesgadas para tratar de recuperar dinero que perdiste. Casi siempre empeora las cosas!",
+        "example": "Despues de perder $500, alguien hizo trading de venganza y perdio $1,000 mas tratando de recuperarlo."
+      },
+      "paper-hands": {
+        "term": "Manos de Papel",
+        "definition": "Vender muy rapido cuando las cosas se ponen feas. Tus manos son de 'papel' - muy debiles para aguantar!",
+        "example": "Vendio su Bitcoin cuando cayo 10%, pero subio 100% despues - manos de papel totales!"
+      },
+      "diamond-hands": {
+        "term": "Manos de Diamante",
+        "definition": "Mantener tus inversiones sin importar que. Los diamantes son fuertes y no se pueden romper!",
+        "example": "Ella tenia manos de diamante - mantuvo durante la caida y salio muy adelante cuando se recupero."
+      },
+      "risk-tolerance": {
+        "term": "Tolerancia al Riesgo",
+        "definition": "Cuanta perdida puedes manejar sin volverte loco. La de cada quien es diferente!",
+        "example": "Si una caida del 20% te quita el sueno, podrias tener baja tolerancia al riesgo y deberias invertir mas seguro."
+      },
+      "confirmation-bias": {
+        "term": "Sesgo de Confirmacion",
+        "definition": "Solo creer informacion que coincide con lo que ya piensas. Puede cegarte a los problemas!",
+        "example": "Le encantaba tanto Tesla que ignoro todas las advertencias y solo leyo noticias positivas sobre ella."
+      },
+      "herd-mentality": {
+        "term": "Mentalidad de Rebano",
+        "definition": "Seguir a la multitud sin pensar por ti mismo. Solo porque todos lo hacen no significa que sea inteligente!",
+        "example": "La mentalidad de rebano hizo que todos compraran acciones meme en el pico porque 'todos lo estaban haciendo.'"
+      },
+      "loss-aversion": {
+        "term": "Aversion a la Perdida",
+        "definition": "Odiar las perdidas mas de lo que amas las ganancias. Perder $100 se siente peor de lo bien que se siente ganar $100!",
+        "example": "La aversion a la perdida hace que la gente mantenga acciones perdedoras demasiado tiempo, esperando que se recuperen en vez de cortar perdidas."
+      },
+      "overconfidence": {
+        "term": "Exceso de Confianza",
+        "definition": "Pensar que eres mejor invirtiendo de lo que realmente eres. Hasta los profesionales son humillados por el mercado!",
+        "example": "Despues de tres operaciones ganadoras, el exceso de confianza lo hizo apostar todo en una accion y perderlo todo."
+      },
+      "patience": {
+        "term": "Paciencia",
+        "definition": "Esperar con calma a que tus inversiones crezcan. El mercado de valores recompensa a los que pueden esperar!",
+        "example": "Warren Buffett dice que su periodo de tenencia favorito es 'para siempre' - eso es paciencia!"
+      },
+      "capital-gains": {
+        "term": "Ganancias de Capital",
+        "definition": "La ganancia que obtienes cuando vendes algo por mas de lo que pagaste. El gobierno quiere una parte de esto!",
+        "example": "Compraste una accion a $100 y la vendiste a $150. Tu ganancia de $50 es una ganancia de capital."
+      },
+      "capital-loss": {
+        "term": "Perdida de Capital",
+        "definition": "Cuando vendes algo por menos de lo que pagaste. El lado bueno? Puede reducir tus impuestos!",
+        "example": "Vender una accion que compraste a $100 por $80 significa una perdida de capital de $20."
+      },
+      "short-term-gain": {
+        "term": "Ganancia a Corto Plazo",
+        "definition": "Ganancia por vender algo que tuviste por menos de un ano. Estas pagan mas impuestos - ouch!",
+        "example": "Compraste en enero y vendiste en junio - cualquier ganancia es a corto plazo y paga impuestos como ingreso regular."
+      },
+      "long-term-gain": {
+        "term": "Ganancia a Largo Plazo",
+        "definition": "Ganancia por vender algo que tuviste por MAS de un ano. La tasa de impuestos es mucho menor - genial!",
+        "example": "Mantener una accion por al menos un ano y un dia, y tus ganancias obtienen la tasa de impuestos mas baja de largo plazo."
+      },
+      "tax-loss-harvesting": {
+        "term": "Cosecha de Perdidas Fiscales",
+        "definition": "Vender inversiones perdedoras para reducir tus impuestos. Conviertes limones en limonada!",
+        "example": "Tienes $5,000 en ganancias pero tambien una accion que esta abajo $2,000. Venderla reduce tus ganancias gravables a $3,000."
+      },
+      "wash-sale": {
+        "term": "Venta Ficticia",
+        "definition": "Una regla que te impide vender una accion a perdida y recomprarla inmediatamente. El IRS no permite ese truco!",
+        "example": "Si vendes Apple a perdida, no puedes recomprarla por 30 dias o la perdida no cuenta para impuestos."
+      },
+      "401k": {
+        "term": "401(k)",
+        "definition": "Una cuenta especial de retiro a traves de tu trabajo. Pones dinero ANTES de impuestos, y crece libre de impuestos hasta el retiro!",
+        "example": "Tu empresa puede igualar lo que pones en tu 401(k) - eso es dinero gratis!"
+      },
+      "ira": {
+        "term": "IRA",
+        "definition": "Cuenta Individual de Retiro - una cuenta especial donde tus inversiones crecen con beneficios fiscales. Genial para ahorrar para cuando seas viejo!",
+        "example": "Puedes abrir una IRA en cualquier correduria y empezar a ahorrar para el retiro por tu cuenta."
+      },
+      "roth-ira": {
+        "term": "Roth IRA",
+        "definition": "Una cuenta de retiro donde pagas impuestos AHORA, pero todo crece y sale LIBRE DE IMPUESTOS despues. Increible para jovenes!",
+        "example": "Pon $1,000 en un Roth IRA a los 18, y a los 65 podrian ser $20,000+ y no pagas NADA de impuestos!"
+      },
+      "traditional-ira": {
+        "term": "IRA Tradicional",
+        "definition": "Una cuenta de retiro donde te saltas impuestos AHORA, pero los pagas cuando sacas dinero en el retiro.",
+        "example": "Contribuir a una IRA Tradicional baja tus impuestos este ano, pero pagaras despues cuando retires."
+      },
+      "cost-basis": {
+        "term": "Base de Costo",
+        "definition": "El precio original que pagaste por una inversion. Lo necesitas para calcular tu ganancia o perdida!",
+        "example": "Compraste 10 acciones a $50 cada una, asi que tu base de costo es $500. Si vendes por $600, tu ganancia es $100."
+      },
+      "tax-deferred": {
+        "term": "Impuestos Diferidos",
+        "definition": "No pagar impuestos ahora, sino despues. Tu dinero crece mas rapido porque no pierdes algo en impuestos cada ano!",
+        "example": "En un 401(k), tus inversiones tienen impuestos diferidos - solo pagas impuestos cuando te retiras y sacas dinero."
+      },
+      "dividend-tax": {
+        "term": "Impuesto sobre Dividendos",
+        "definition": "Impuestos que pagas sobre ingresos de dividendos. Los dividendos calificados tienen una tasa mas baja que el ingreso regular!",
+        "example": "Si ganas $1,000 en dividendos, podrias deber $150-$200 en impuestos dependiendo de tus ingresos."
+      }
+    }
   },
   "trading": {
     "title": "Practica Trading",

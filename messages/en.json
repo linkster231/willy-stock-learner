@@ -218,36 +218,36 @@
     "keyPoints": "What You Learned",
     "modules": {
       "1": {
-        "title": "What is the Stock Market?",
-        "description": "Learn the basics: what stocks are, how the market works, and its history"
+        "title": "Your First Steps Into Stocks!",
+        "description": "Discover what stocks really are, how the market works, and why people invest"
       },
       "2": {
-        "title": "How to Start Investing",
-        "description": "Open a brokerage account, understand fees, and make your first investment"
+        "title": "Ready, Set, Invest!",
+        "description": "Open your first account, understand the costs, and make your first trade"
       },
       "3": {
-        "title": "Understanding Risk",
-        "description": "Learn about diversification, volatility, and how to protect your money"
+        "title": "Don't Lose Your Shirt!",
+        "description": "Master the art of protecting your money while still growing it"
       },
       "4": {
-        "title": "Psychology of Trading",
-        "description": "Control your emotions, avoid common mistakes, and build discipline"
+        "title": "Think Like a Pro Trader",
+        "description": "Control your emotions, avoid rookie mistakes, and build winning habits"
       },
       "5": {
-        "title": "Market Manipulation",
-        "description": "Recognize scams, understand insider trading, and protect yourself"
+        "title": "Spot the Scammers!",
+        "description": "Learn to recognize tricks, scams, and shady deals before they get you"
       },
       "6": {
-        "title": "Politics and Markets",
-        "description": "How elections, the Fed, and world events affect your investments"
+        "title": "How the World Moves Markets",
+        "description": "See how presidents, news, and world events shake up stock prices"
       },
       "7": {
-        "title": "Taxes for NJ Investors",
-        "description": "Understand capital gains, tax-advantaged accounts, and NJ tax rules"
+        "title": "Keep More of Your Money (Taxes)",
+        "description": "Smart strategies to pay less taxes on your investment gains"
       },
       "8": {
-        "title": "Using Trading Platforms",
-        "description": "Learn to use Fidelity and other platforms to trade stocks",
+        "title": "Master Your Trading App",
+        "description": "Learn to use Fidelity like a pro and place your trades with confidence",
         "lessons": {
           "1": {
             "title": "Introduction to Trading Platforms",
@@ -409,7 +409,354 @@
     "done": "Done",
     "swipeInstructions": "Swipe right if you knew it, left to review again",
     "readMore": "Read more",
-    "showLess": "Show less"
+    "showLess": "Show less",
+    "terms": {
+      "stock": {
+        "term": "Stock",
+        "definition": "A tiny piece of a company you can own! When you buy a stock, you become a part-owner of that company - like having a slice of a really big pizza.",
+        "example": "If you buy 1 share of Apple, you own a teeny tiny piece of the company that makes iPhones!"
+      },
+      "share": {
+        "term": "Share",
+        "definition": "One unit of stock. It's like a ticket that proves you own part of a company. The more shares you have, the bigger your piece of the pie!",
+        "example": "Buying 10 shares of Disney means you have 10 tickets that prove you own part of Disney."
+      },
+      "equity": {
+        "term": "Equity",
+        "definition": "Another word for ownership. When people say 'equity', they mean the part of something you actually own.",
+        "example": "If you own stocks, you have equity in those companies - you're a real owner!"
+      },
+      "dividend": {
+        "term": "Dividend",
+        "definition": "Free money companies pay you just for owning their stock! It's like getting an allowance from a company for being a shareholder.",
+        "example": "Coca-Cola pays dividends - so if you own their stock, they send you money every few months. How cool is that?"
+      },
+      "broker": {
+        "term": "Broker",
+        "definition": "A helper (or app) that lets you buy and sell stocks. You can't just walk into a store and buy stocks - you need a broker to do it for you!",
+        "example": "Fidelity and Robinhood are brokers - they're like the cashiers of the stock market."
+      },
+      "brokerage": {
+        "term": "Brokerage",
+        "definition": "The company or app where you keep your stocks and make trades. It's like a bank, but for your investments!",
+        "example": "You open an account at a brokerage like Fidelity to start buying stocks."
+      },
+      "portfolio": {
+        "term": "Portfolio",
+        "definition": "Your collection of all the stocks and investments you own. Think of it like your investment backpack - it holds everything!",
+        "example": "My portfolio has Apple, Disney, and Nike stocks in it."
+      },
+      "index": {
+        "term": "Index",
+        "definition": "A list that tracks how a group of stocks is doing. It's like a scoreboard for the stock market!",
+        "example": "The S&P 500 is an index that tracks 500 big companies. When people say 'the market is up', they usually mean this!"
+      },
+      "etf": {
+        "term": "ETF",
+        "definition": "A bundle of many stocks wrapped up into one thing you can buy. It's like buying a variety pack instead of just one item!",
+        "example": "Instead of buying 500 different stocks, you can buy one S&P 500 ETF and own a little bit of all 500!"
+      },
+      "mutual-fund": {
+        "term": "Mutual Fund",
+        "definition": "Money from lots of people pooled together to buy stocks. A professional picks the stocks for everyone!",
+        "example": "Your parents might have mutual funds in their retirement account - a money expert picks the stocks for them."
+      },
+      "bond": {
+        "term": "Bond",
+        "definition": "A loan you give to a company or the government. They promise to pay you back with interest - like being the bank!",
+        "example": "If you buy a US Treasury bond, you're lending money to the government, and they'll pay you back more than you lent them."
+      },
+      "diversification": {
+        "term": "Diversification",
+        "definition": "Not putting all your eggs in one basket! It means spreading your money across different investments so if one does badly, others might do well.",
+        "example": "Instead of buying only Tesla stock, you buy Tesla, Disney, AND Coca-Cola - that's diversification!"
+      },
+      "asset-allocation": {
+        "term": "Asset Allocation",
+        "definition": "Deciding how to split up your money between different types of investments like stocks, bonds, and cash.",
+        "example": "You might put 70% in stocks for growth and 30% in bonds for safety - that's your asset allocation!"
+      },
+      "ownership": {
+        "term": "Ownership",
+        "definition": "Having a piece of something that belongs to you. When you own stock, you legally own part of that company!",
+        "example": "When you buy Amazon stock, you have real ownership - you can even vote on company decisions!"
+      },
+      "buy": {
+        "term": "Buy",
+        "definition": "Getting stocks by paying money for them. When you buy, you're adding to your collection!",
+        "example": "I want to buy 5 shares of Netflix because I love their shows!"
+      },
+      "sell": {
+        "term": "Sell",
+        "definition": "Trading your stocks for cash. When you sell, someone else gets your shares and you get money!",
+        "example": "I sold my GameStop shares when the price went up and made $50!"
+      },
+      "limit-order": {
+        "term": "Limit Order",
+        "definition": "Telling your broker 'only buy this stock if it reaches MY price'. You're in control of what you pay!",
+        "example": "Apple is $150, but I set a limit order to buy at $140. My broker will only buy if it drops to that price."
+      },
+      "market-order": {
+        "term": "Market Order",
+        "definition": "Telling your broker 'buy this stock RIGHT NOW at whatever the current price is'. It's fast but you might pay a bit more.",
+        "example": "I placed a market order for Tesla and got it instantly at $200 per share."
+      },
+      "stop-loss": {
+        "term": "Stop-Loss",
+        "definition": "A safety net! It automatically sells your stock if the price drops too much, so you don't lose too much money.",
+        "example": "I bought a stock at $100 and set a stop-loss at $90. If it drops that low, it sells automatically to protect me!"
+      },
+      "trailing-stop": {
+        "term": "Trailing Stop",
+        "definition": "A smart stop-loss that moves up with the price. It protects your profits while letting your winners keep running!",
+        "example": "My stock went from $100 to $150. My trailing stop followed it up, so now it would sell at $140 if it drops."
+      },
+      "bid": {
+        "term": "Bid",
+        "definition": "The highest price someone is willing to PAY for a stock right now. It's like when someone says 'I'll give you $10 for that!'",
+        "example": "The bid for Apple is $149.50 - that's the most any buyer wants to pay right now."
+      },
+      "ask": {
+        "term": "Ask",
+        "definition": "The lowest price someone is willing to SELL a stock for right now. It's like saying 'I won't take less than $15!'",
+        "example": "The ask for Apple is $149.75 - that's the lowest price any seller will accept."
+      },
+      "spread": {
+        "term": "Spread",
+        "definition": "The gap between the bid and the ask price. A smaller spread is better for you!",
+        "example": "If the bid is $10 and the ask is $10.05, the spread is just 5 cents. That's pretty good!"
+      },
+      "volume": {
+        "term": "Volume",
+        "definition": "How many shares are being bought and sold. High volume means lots of action, like a busy store!",
+        "example": "Apple has millions of shares traded every day - that's high volume!"
+      },
+      "liquidity": {
+        "term": "Liquidity",
+        "definition": "How easy it is to buy or sell something. High liquidity means you can trade quickly without affecting the price much.",
+        "example": "Apple stock is very liquid - you can buy or sell anytime. A tiny company's stock might not be."
+      },
+      "short-selling": {
+        "term": "Short Selling",
+        "definition": "Betting that a stock will go DOWN. You borrow shares, sell them, and hope to buy them back cheaper. It's risky!",
+        "example": "Some people shorted GameStop, betting it would fall. When it went up instead, they lost a LOT of money!"
+      },
+      "margin": {
+        "term": "Margin",
+        "definition": "Borrowing money from your broker to buy more stocks. It's like using a credit card for investing - dangerous if you're not careful!",
+        "example": "With $1,000 of your own money, margin might let you buy $2,000 worth of stocks. But if they drop, you still owe the money!"
+      },
+      "day-trading": {
+        "term": "Day Trading",
+        "definition": "Buying and selling stocks within the same day to try to make quick profits. It's very risky and most people lose money!",
+        "example": "A day trader might buy Tesla at 10am and sell it at 2pm the same day, hoping to make a small profit."
+      },
+      "pe-ratio": {
+        "term": "P/E Ratio",
+        "definition": "Price-to-Earnings ratio - it shows if a stock is expensive or cheap compared to how much money the company makes.",
+        "example": "A P/E of 15 means you're paying $15 for every $1 the company earns. Lower can mean cheaper, but not always better!"
+      },
+      "market-cap": {
+        "term": "Market Cap",
+        "definition": "The total value of all a company's stock. It tells you how big a company is in the stock market!",
+        "example": "Apple's market cap is over $2 trillion - that means all their shares together are worth that much!"
+      },
+      "eps": {
+        "term": "EPS (Earnings Per Share)",
+        "definition": "How much profit a company makes for each share of stock. Higher is usually better!",
+        "example": "If a company earned $1 billion and has 100 million shares, the EPS is $10."
+      },
+      "revenue": {
+        "term": "Revenue",
+        "definition": "All the money a company brings in from selling stuff. It's the total before paying any bills!",
+        "example": "If Apple sells 10 million iPhones at $1,000 each, that's $10 billion in revenue!"
+      },
+      "net-income": {
+        "term": "Net Income",
+        "definition": "The actual profit after paying ALL the bills. This is the real money the company keeps!",
+        "example": "Revenue was $100 million, but after paying workers, rent, and taxes, net income was $20 million."
+      },
+      "profit-margin": {
+        "term": "Profit Margin",
+        "definition": "What percentage of sales becomes actual profit. Higher margins mean the company keeps more money!",
+        "example": "If a company makes $10 profit for every $100 in sales, that's a 10% profit margin."
+      },
+      "book-value": {
+        "term": "Book Value",
+        "definition": "What a company would be worth if it sold everything and paid all its debts. It's like the 'floor' value.",
+        "example": "A company with $100 million in stuff and $40 million in debts has a book value of $60 million."
+      },
+      "pb-ratio": {
+        "term": "P/B Ratio",
+        "definition": "Price-to-Book ratio - compares stock price to book value. Under 1 might mean it's a bargain!",
+        "example": "If a stock is $50 but the book value per share is $100, the P/B ratio is 0.5 - could be undervalued!"
+      },
+      "dividend-yield": {
+        "term": "Dividend Yield",
+        "definition": "How much dividend you get compared to the stock price. It's like knowing what interest rate you'll earn!",
+        "example": "A $100 stock that pays $4 per year in dividends has a 4% dividend yield."
+      },
+      "roe": {
+        "term": "ROE (Return on Equity)",
+        "definition": "How well a company uses your money to make more money. Higher is usually better!",
+        "example": "An ROE of 20% means for every $100 invested, the company generates $20 in profit."
+      },
+      "roa": {
+        "term": "ROA (Return on Assets)",
+        "definition": "How well a company uses EVERYTHING it owns to make money. It shows efficiency!",
+        "example": "A company with $1 million in assets that earns $100,000 has a 10% ROA."
+      },
+      "beta": {
+        "term": "Beta",
+        "definition": "How much a stock jumps around compared to the whole market. Beta of 1 means it moves with the market.",
+        "example": "A stock with beta of 2 moves twice as much as the market - more risk but more potential reward!"
+      },
+      "volatility": {
+        "term": "Volatility",
+        "definition": "How wildly a stock's price swings up and down. High volatility = roller coaster ride!",
+        "example": "GameStop was super volatile - it went from $20 to $400 and back in just weeks!"
+      },
+      "bull-market": {
+        "term": "Bull Market",
+        "definition": "When stocks are going UP and everyone's happy! The bull charges up with its horns - that's how you remember it!",
+        "example": "From 2009 to 2020 was a long bull market - stocks kept climbing higher and higher!"
+      },
+      "bear-market": {
+        "term": "Bear Market",
+        "definition": "When stocks are going DOWN and people are worried. The bear swipes down with its paws - that's the memory trick!",
+        "example": "In 2022, stocks dropped over 20% - that was a bear market."
+      },
+      "fomo": {
+        "term": "FOMO",
+        "definition": "Fear Of Missing Out - when you want to buy just because everyone else is, not because it's smart. Dangerous!",
+        "example": "Everyone was buying crypto, and FOMO made people buy at the top right before it crashed."
+      },
+      "fear": {
+        "term": "Fear",
+        "definition": "The emotion that makes you want to sell when prices drop. Smart investors learn to control fear!",
+        "example": "Fear made people sell all their stocks in 2020, but those who held on saw prices recover quickly."
+      },
+      "greed": {
+        "term": "Greed",
+        "definition": "Wanting too much, too fast. Greed makes people take crazy risks or hold on too long!",
+        "example": "Greed made someone hold a stock that went up 500% wanting more, then it crashed back down."
+      },
+      "panic-selling": {
+        "term": "Panic Selling",
+        "definition": "Selling everything because you're scared, usually at the worst time. It locks in your losses!",
+        "example": "When COVID hit, panic selling caused stocks to crash, but they recovered within months."
+      },
+      "revenge-trading": {
+        "term": "Revenge Trading",
+        "definition": "Making risky trades to try to win back money you lost. It almost always makes things worse!",
+        "example": "After losing $500, someone revenge traded and lost $1,000 more trying to win it back."
+      },
+      "paper-hands": {
+        "term": "Paper Hands",
+        "definition": "Selling too quickly when things get scary. Your hands are 'paper' - too weak to hold on!",
+        "example": "He sold his Bitcoin when it dropped 10%, but it went up 100% after - total paper hands!"
+      },
+      "diamond-hands": {
+        "term": "Diamond Hands",
+        "definition": "Holding onto your investments no matter what. Diamonds are strong and can't be broken!",
+        "example": "She had diamond hands - held through the crash and came out way ahead when it recovered."
+      },
+      "risk-tolerance": {
+        "term": "Risk Tolerance",
+        "definition": "How much loss you can handle without freaking out. Everyone's is different!",
+        "example": "If a 20% drop makes you lose sleep, you might have low risk tolerance and should invest more safely."
+      },
+      "confirmation-bias": {
+        "term": "Confirmation Bias",
+        "definition": "Only believing information that agrees with what you already think. It can blind you to problems!",
+        "example": "He loved Tesla so much he ignored all warnings and only read positive news about it."
+      },
+      "herd-mentality": {
+        "term": "Herd Mentality",
+        "definition": "Following the crowd without thinking for yourself. Just because everyone's doing it doesn't make it smart!",
+        "example": "Herd mentality made everyone buy meme stocks at the peak because 'everyone else was doing it.'"
+      },
+      "loss-aversion": {
+        "term": "Loss Aversion",
+        "definition": "Hating losses more than you love wins. Losing $100 feels worse than gaining $100 feels good!",
+        "example": "Loss aversion makes people hold losing stocks too long, hoping they'll come back instead of cutting losses."
+      },
+      "overconfidence": {
+        "term": "Overconfidence",
+        "definition": "Thinking you're better at investing than you really are. Even pros get humbled by the market!",
+        "example": "After three winning trades, overconfidence made him bet everything on one stock and lose it all."
+      },
+      "patience": {
+        "term": "Patience",
+        "definition": "Waiting calmly for your investments to grow. The stock market rewards those who can wait!",
+        "example": "Warren Buffett says his favorite holding period is 'forever' - that's patience!"
+      },
+      "capital-gains": {
+        "term": "Capital Gains",
+        "definition": "The profit you make when you sell something for more than you paid. The government wants a piece of this!",
+        "example": "You bought a stock at $100 and sold it at $150. Your $50 profit is a capital gain."
+      },
+      "capital-loss": {
+        "term": "Capital Loss",
+        "definition": "When you sell something for less than you paid. The silver lining? It can lower your taxes!",
+        "example": "Selling a stock you bought at $100 for $80 means a $20 capital loss."
+      },
+      "short-term-gain": {
+        "term": "Short-Term Gain",
+        "definition": "Profit from selling something you owned for less than a year. These are taxed higher - ouch!",
+        "example": "You bought in January and sold in June - any profit is a short-term gain and taxed like regular income."
+      },
+      "long-term-gain": {
+        "term": "Long-Term Gain",
+        "definition": "Profit from selling something you owned for MORE than a year. The tax rate is much lower - nice!",
+        "example": "Hold a stock for at least a year and a day, and your profits get the lower long-term tax rate."
+      },
+      "tax-loss-harvesting": {
+        "term": "Tax-Loss Harvesting",
+        "definition": "Selling losing investments to reduce your taxes. You turn lemons into lemonade!",
+        "example": "You have $5,000 in gains but also a stock that's down $2,000. Selling it reduces your taxable gains to $3,000."
+      },
+      "wash-sale": {
+        "term": "Wash Sale",
+        "definition": "A rule that stops you from selling a stock for a loss and immediately buying it back. The IRS doesn't allow that trick!",
+        "example": "If you sell Apple at a loss, you can't buy it back for 30 days or the loss doesn't count for taxes."
+      },
+      "401k": {
+        "term": "401(k)",
+        "definition": "A special retirement account through your job. You put money in BEFORE taxes, and it grows tax-free until retirement!",
+        "example": "Your company might match what you put in your 401(k) - that's free money!"
+      },
+      "ira": {
+        "term": "IRA",
+        "definition": "Individual Retirement Account - a special account where your investments grow with tax benefits. Great for saving for when you're old!",
+        "example": "You can open an IRA at any brokerage and start saving for retirement on your own."
+      },
+      "roth-ira": {
+        "term": "Roth IRA",
+        "definition": "A retirement account where you pay taxes NOW, but everything grows and comes out TAX-FREE later. Amazing for young people!",
+        "example": "Put $1,000 in a Roth IRA at 18, and at 65 it could be $20,000+ and you pay ZERO taxes on it!"
+      },
+      "traditional-ira": {
+        "term": "Traditional IRA",
+        "definition": "A retirement account where you skip taxes NOW, but pay them when you take money out in retirement.",
+        "example": "Contributing to a Traditional IRA lowers your taxes this year, but you'll pay later when you withdraw."
+      },
+      "cost-basis": {
+        "term": "Cost Basis",
+        "definition": "The original price you paid for an investment. You need this to figure out your profit or loss!",
+        "example": "You bought 10 shares at $50 each, so your cost basis is $500. If you sell for $600, your profit is $100."
+      },
+      "tax-deferred": {
+        "term": "Tax-Deferred",
+        "definition": "Not paying taxes now, but later. Your money grows faster because you're not losing some to taxes each year!",
+        "example": "In a 401(k), your investments are tax-deferred - you only pay taxes when you retire and take money out."
+      },
+      "dividend-tax": {
+        "term": "Dividend Tax",
+        "definition": "Taxes you pay on dividend income. Qualified dividends get a lower rate than regular income!",
+        "example": "If you earn $1,000 in dividends, you might owe $150-$200 in taxes depending on your income."
+      }
+    }
   },
   "trading": {
     "title": "Practice Trading",
