@@ -2,7 +2,8 @@
  * Advanced Portfolio Simulator Calculator
  *
  * Comprehensive portfolio building tool with:
- * - Stock selection with real dividend yields
+ * - Stock search for ANY stock, ETF, or bond
+ * - Popular stock quick picks
  * - Compound growth calculations
  * - Dividend reinvestment option (DRIP)
  * - Tax impact estimation
@@ -14,11 +15,12 @@
 
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import { Card, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
+import { StockSearch } from '@/components/trading';
 import { cn } from '@/lib/utils';
 
 // Popular stocks with realistic data (as of 2024)
@@ -36,6 +38,7 @@ const POPULAR_STOCKS = [
   { symbol: 'QQQ', name: 'Nasdaq 100', emoji: '💹', avgReturn: 15, dividendYield: 0.6, sector: 'ETF' },
   { symbol: 'SCHD', name: 'Dividend ETF', emoji: '💰', avgReturn: 8, dividendYield: 3.5, sector: 'ETF' },
   { symbol: 'VYM', name: 'High Div ETF', emoji: '💵', avgReturn: 7, dividendYield: 3.0, sector: 'ETF' },
+  { symbol: 'BND', name: 'Bond ETF', emoji: '📜', avgReturn: 4, dividendYield: 3.8, sector: 'Bonds' },
   { symbol: 'DIS', name: 'Disney', emoji: '🏰', avgReturn: 8, dividendYield: 0, sector: 'Entertainment' },
   { symbol: 'KO', name: 'Coca-Cola', emoji: '🥤', avgReturn: 8, dividendYield: 3.1, sector: 'Consumer' },
   { symbol: 'MCD', name: "McDonald's", emoji: '🍔', avgReturn: 10, dividendYield: 2.2, sector: 'Consumer' },
@@ -45,6 +48,15 @@ const POPULAR_STOCKS = [
   { symbol: 'V', name: 'Visa', emoji: '💳', avgReturn: 15, dividendYield: 0.8, sector: 'Finance' },
   { symbol: 'O', name: 'Realty Income', emoji: '🏢', avgReturn: 5, dividendYield: 5.5, sector: 'REIT' },
 ];
+
+// Default return estimates by security type
+const DEFAULT_RETURNS: Record<string, { avgReturn: number; dividendYield: number }> = {
+  EQUITY: { avgReturn: 10, dividendYield: 1.5 },
+  ETF: { avgReturn: 8, dividendYield: 2.0 },
+  MUTUALFUND: { avgReturn: 7, dividendYield: 2.5 },
+  INDEX: { avgReturn: 10, dividendYield: 1.5 },
+  default: { avgReturn: 8, dividendYield: 1.0 },
+};
 
 interface PortfolioItem {
   symbol: string;
@@ -155,7 +167,7 @@ export default function PortfolioSimulatorPage() {
       : POPULAR_STOCKS;
   }, [selectedSector]);
 
-  // Add stock to portfolio
+  // Add stock to portfolio (from popular stocks)
   const addStock = (stock: (typeof POPULAR_STOCKS)[0]) => {
     if (portfolio.find((p) => p.symbol === stock.symbol)) {
       return;
@@ -173,6 +185,37 @@ export default function PortfolioSimulatorPage() {
       },
     ]);
   };
+
+  // Add stock from search (any stock, ETF, or bond)
+  const handleStockSearch = useCallback((symbol: string, name: string) => {
+    if (portfolio.find((p) => p.symbol === symbol)) {
+      return;
+    }
+
+    // Check if it's a known popular stock
+    const knownStock = POPULAR_STOCKS.find((s) => s.symbol === symbol);
+    if (knownStock) {
+      addStock(knownStock);
+      return;
+    }
+
+    // For unknown stocks, use default returns based on type
+    // Assume 10% growth and 1.5% dividend as conservative defaults
+    const defaults = DEFAULT_RETURNS.default;
+
+    setPortfolio([
+      ...portfolio,
+      {
+        symbol,
+        name,
+        emoji: '📈', // Generic chart emoji for searched stocks
+        amount: 1000,
+        avgReturn: defaults.avgReturn,
+        dividendYield: defaults.dividendYield,
+        sector: 'Other',
+      },
+    ]);
+  }, [portfolio]);
 
   // Remove stock
   const removeStock = (symbol: string) => {
@@ -285,7 +328,34 @@ export default function PortfolioSimulatorPage() {
             {t('pickStocks') || 'Pick Stocks to Add'}
           </CardTitle>
         </CardHeader>
-        <div className="p-4 pt-0">
+        <div className="p-4 pt-0 space-y-4">
+          {/* Search for ANY stock */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              🔍 {t('searchAny') || 'Search for any stock, ETF, or bond:'}
+            </label>
+            <StockSearch
+              onSelect={handleStockSearch}
+              placeholder={t('searchPlaceholder') || 'Type a symbol or company name...'}
+            />
+            <p className="mt-1 text-xs text-gray-500">
+              {t('searchHint') || 'Search works with any US stock, ETF, mutual fund, or bond'}
+            </p>
+          </div>
+
+          {/* Divider */}
+          <div className="relative">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-gray-200" />
+            </div>
+            <div className="relative flex justify-center text-sm">
+              <span className="bg-white px-3 text-gray-500">
+                {t('orPickPopular') || 'or pick a popular stock'}
+              </span>
+            </div>
+          </div>
+
+          {/* Popular stocks grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-2">
             {filteredStocks.map((stock) => {
               const inPortfolio = portfolio.some((p) => p.symbol === stock.symbol);

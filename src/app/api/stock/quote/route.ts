@@ -3,17 +3,18 @@
  *
  * Endpoint: GET /api/stock/quote?symbol=AAPL
  *
- * This route proxies requests to the Finnhub API to fetch real-time stock quotes.
- * It includes server-side caching to reduce API calls and improve response times.
+ * This route fetches real-time stock quotes using Yahoo Finance (primary)
+ * with Finnhub as fallback. Supports stocks, ETFs, bonds, and mutual funds.
  *
  * Request:
  *   - Method: GET
  *   - Query Parameters:
- *     - symbol (required): Stock ticker symbol (1-5 uppercase letters, e.g., "AAPL", "MSFT")
+ *     - symbol (required): Stock ticker symbol (e.g., "AAPL", "VOO", "BND")
  *
  * Response (200 OK):
  *   {
  *     "symbol": "AAPL",
+ *     "name": "Apple Inc.",
  *     "currentPrice": 178.50,
  *     "change": 2.35,
  *     "changePercent": 1.33,
@@ -21,19 +22,18 @@
  *     "low": 176.10,
  *     "open": 176.50,
  *     "previousClose": 176.15,
- *     "timestamp": 1705000000000
+ *     "type": "EQUITY",
+ *     "source": "yahoo"
  *   }
  *
  * Error Responses:
  *   - 400 Bad Request: Missing or invalid symbol parameter
  *   - 404 Not Found: Stock symbol not found
- *   - 429 Too Many Requests: Rate limit exceeded
- *   - 503 Service Unavailable: API key not configured
  *   - 500 Internal Server Error: Unexpected error
  */
 
 import { NextResponse } from 'next/server';
-import { getQuote, NormalizedQuote } from '@/lib/api/finnhub';
+import { getStockQuote, StockQuoteData } from '@/lib/api/stock-api';
 
 // -----------------------------------------------------------------------------
 // Constants
@@ -42,20 +42,17 @@ import { getQuote, NormalizedQuote } from '@/lib/api/finnhub';
 /** Cache duration in seconds for CDN and browser caching */
 const CACHE_DURATION_SECONDS = 15;
 
-/** Regex pattern for valid stock symbols (1-5 uppercase letters) */
-const SYMBOL_PATTERN = /^[A-Z]{1,5}$/;
+/** Regex pattern for valid stock symbols (1-10 chars, letters and some punctuation) */
+const SYMBOL_PATTERN = /^[A-Z0-9.\-^]{1,10}$/;
 
 // -----------------------------------------------------------------------------
 // Type Definitions
 // -----------------------------------------------------------------------------
 
-/** Error response structure returned by this API */
+/** Error response structure */
 interface ErrorResponse {
   error: string;
 }
-
-/** Successful response structure (re-exported from finnhub for documentation) */
-type QuoteResponse = NormalizedQuote;
 
 // -----------------------------------------------------------------------------
 // Helper Functions
@@ -63,10 +60,6 @@ type QuoteResponse = NormalizedQuote;
 
 /**
  * Creates a standardized JSON error response.
- *
- * @param message - Human-readable error message
- * @param status - HTTP status code
- * @returns NextResponse with error JSON and appropriate status
  */
 function createErrorResponse(message: string, status: number): NextResponse<ErrorResponse> {
   return NextResponse.json({ error: message }, { status });
@@ -74,16 +67,12 @@ function createErrorResponse(message: string, status: number): NextResponse<Erro
 
 /**
  * Validates and normalizes a stock symbol.
- *
- * @param symbol - Raw symbol from query parameter
- * @returns Object with isValid flag and normalized symbol or error message
  */
 function validateSymbol(symbol: string | null): {
   isValid: boolean;
   normalizedSymbol?: string;
   errorMessage?: string;
 } {
-  // Check if symbol is provided
   if (!symbol) {
     return {
       isValid: false,
@@ -91,14 +80,20 @@ function validateSymbol(symbol: string | null): {
     };
   }
 
-  // Normalize: trim whitespace and convert to uppercase
   const normalizedSymbol = symbol.trim().toUpperCase();
 
-  // Validate format (1-5 uppercase letters only)
+  if (!normalizedSymbol) {
+    return {
+      isValid: false,
+      errorMessage: 'Symbol cannot be empty.',
+    };
+  }
+
+  // Allow broader symbol format for international stocks, ETFs, etc.
   if (!SYMBOL_PATTERN.test(normalizedSymbol)) {
     return {
       isValid: false,
-      errorMessage: 'Invalid symbol format. Must be 1-5 letters (e.g., AAPL, MSFT).',
+      errorMessage: 'Invalid symbol format. Must be 1-10 characters (letters, numbers, periods, hyphens).',
     };
   }
 
@@ -109,10 +104,7 @@ function validateSymbol(symbol: string | null): {
 }
 
 /**
- * Maps known error types to appropriate HTTP status codes and messages.
- *
- * @param error - The caught error
- * @returns Object with status code and user-friendly message
+ * Maps errors to appropriate HTTP responses.
  */
 function mapErrorToResponse(error: unknown): { status: number; message: string } {
   if (!(error instanceof Error)) {
@@ -124,7 +116,15 @@ function mapErrorToResponse(error: unknown): { status: number; message: string }
 
   const errorMessage = error.message;
 
-  // Rate limit exceeded (from Finnhub or our internal limiter)
+  // Not found errors
+  if (errorMessage.includes('No data found') || errorMessage.includes('NOT_FOUND') || errorMessage.includes('Invalid symbol')) {
+    return {
+      status: 404,
+      message: errorMessage,
+    };
+  }
+
+  // Rate limit errors
   if (errorMessage.includes('Rate limit')) {
     return {
       status: 429,
@@ -132,23 +132,7 @@ function mapErrorToResponse(error: unknown): { status: number; message: string }
     };
   }
 
-  // Invalid or unknown stock symbol
-  if (errorMessage.includes('Invalid symbol')) {
-    return {
-      status: 404,
-      message: errorMessage, // Pass through the specific message (includes symbol)
-    };
-  }
-
-  // API key configuration error (don't expose internal details to client)
-  if (errorMessage.includes('FINNHUB_API_KEY')) {
-    return {
-      status: 503,
-      message: 'Stock quote service is temporarily unavailable. Please try again later.',
-    };
-  }
-
-  // Generic server error for unhandled cases
+  // Generic server error
   return {
     status: 500,
     message: 'Failed to fetch stock quote. Please try again.',
@@ -162,37 +146,30 @@ function mapErrorToResponse(error: unknown): { status: number; message: string }
 /**
  * GET handler for fetching stock quotes.
  *
- * Validates the symbol parameter, fetches the quote from Finnhub,
- * and returns the normalized quote data with appropriate cache headers.
+ * Uses Yahoo Finance as primary source (no API key required) with
+ * Finnhub as fallback for better reliability.
  */
-export async function GET(request: Request): Promise<NextResponse<QuoteResponse | ErrorResponse>> {
+export async function GET(request: Request): Promise<NextResponse<StockQuoteData | ErrorResponse>> {
   try {
-    // Extract symbol from query parameters
     const { searchParams } = new URL(request.url);
     const rawSymbol = searchParams.get('symbol');
 
-    // Validate the symbol parameter
     const validation = validateSymbol(rawSymbol);
     if (!validation.isValid) {
       return createErrorResponse(validation.errorMessage!, 400);
     }
 
-    // Fetch quote from Finnhub API (includes internal caching)
-    const quote = await getQuote(validation.normalizedSymbol!);
+    // Fetch quote using unified API (Yahoo Finance + Finnhub)
+    const quote = await getStockQuote(validation.normalizedSymbol!);
 
-    // Return successful response with cache headers
-    // - s-maxage: CDN cache duration
-    // - stale-while-revalidate: Allow serving stale content while revalidating
     return NextResponse.json(quote, {
       headers: {
         'Cache-Control': `public, s-maxage=${CACHE_DURATION_SECONDS}, stale-while-revalidate=${CACHE_DURATION_SECONDS * 2}`,
       },
     });
   } catch (error) {
-    // Log error for debugging (server-side only)
     console.error('[API] Stock quote error:', error);
 
-    // Map error to appropriate response
     const { status, message } = mapErrorToResponse(error);
     return createErrorResponse(message, status);
   }

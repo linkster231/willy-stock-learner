@@ -3,9 +3,8 @@
  *
  * Endpoint: GET /api/stock/search?q=apple
  *
- * This route proxies requests to the Finnhub API to search for stocks by
- * symbol or company name. Results are filtered to show only Common Stocks
- * and ETFs, limited to the top 10 matches.
+ * This route searches for stocks, ETFs, bonds, and mutual funds using
+ * Yahoo Finance (primary) with Finnhub as fallback.
  *
  * Request:
  *   - Method: GET
@@ -16,25 +15,21 @@
  *   [
  *     {
  *       "symbol": "AAPL",
- *       "name": "Apple Inc",
- *       "type": "Common Stock"
+ *       "name": "Apple Inc.",
+ *       "type": "EQUITY",
+ *       "exchange": "NASDAQ",
+ *       "source": "yahoo"
  *     },
- *     {
- *       "symbol": "APLE",
- *       "name": "Apple Hospitality REIT Inc",
- *       "type": "Common Stock"
- *     }
+ *     ...
  *   ]
  *
  * Error Responses:
  *   - 400 Bad Request: Missing or invalid query parameter
- *   - 429 Too Many Requests: Rate limit exceeded
- *   - 503 Service Unavailable: API key not configured
  *   - 500 Internal Server Error: Unexpected error
  */
 
 import { NextResponse } from 'next/server';
-import { searchStocks, NormalizedSearchResult } from '@/lib/api/finnhub';
+import { searchAllStocks, StockSearchResult } from '@/lib/api/stock-api';
 
 // -----------------------------------------------------------------------------
 // Constants
@@ -53,13 +48,10 @@ const MAX_QUERY_LENGTH = 50;
 // Type Definitions
 // -----------------------------------------------------------------------------
 
-/** Error response structure returned by this API */
+/** Error response structure */
 interface ErrorResponse {
   error: string;
 }
-
-/** Successful response structure (array of search results) */
-type SearchResponse = NormalizedSearchResult[];
 
 // -----------------------------------------------------------------------------
 // Helper Functions
@@ -67,10 +59,6 @@ type SearchResponse = NormalizedSearchResult[];
 
 /**
  * Creates a standardized JSON error response.
- *
- * @param message - Human-readable error message
- * @param status - HTTP status code
- * @returns NextResponse with error JSON and appropriate status
  */
 function createErrorResponse(message: string, status: number): NextResponse<ErrorResponse> {
   return NextResponse.json({ error: message }, { status });
@@ -78,16 +66,12 @@ function createErrorResponse(message: string, status: number): NextResponse<Erro
 
 /**
  * Validates and normalizes a search query.
- *
- * @param query - Raw query from query parameter
- * @returns Object with isValid flag and normalized query or error message
  */
 function validateQuery(query: string | null): {
   isValid: boolean;
   normalizedQuery?: string;
   errorMessage?: string;
 } {
-  // Check if query is provided
   if (!query) {
     return {
       isValid: false,
@@ -95,10 +79,8 @@ function validateQuery(query: string | null): {
     };
   }
 
-  // Normalize: trim whitespace
   const normalizedQuery = query.trim();
 
-  // Check minimum length
   if (normalizedQuery.length < MIN_QUERY_LENGTH) {
     return {
       isValid: false,
@@ -106,7 +88,6 @@ function validateQuery(query: string | null): {
     };
   }
 
-  // Check maximum length (prevent abuse and overly long queries)
   if (normalizedQuery.length > MAX_QUERY_LENGTH) {
     return {
       isValid: false,
@@ -120,45 +101,6 @@ function validateQuery(query: string | null): {
   };
 }
 
-/**
- * Maps known error types to appropriate HTTP status codes and messages.
- *
- * @param error - The caught error
- * @returns Object with status code and user-friendly message
- */
-function mapErrorToResponse(error: unknown): { status: number; message: string } {
-  if (!(error instanceof Error)) {
-    return {
-      status: 500,
-      message: 'An unexpected error occurred while searching for stocks.',
-    };
-  }
-
-  const errorMessage = error.message;
-
-  // Rate limit exceeded (from Finnhub or our internal limiter)
-  if (errorMessage.includes('Rate limit')) {
-    return {
-      status: 429,
-      message: 'Rate limit exceeded. Please wait a moment before trying again.',
-    };
-  }
-
-  // API key configuration error (don't expose internal details to client)
-  if (errorMessage.includes('FINNHUB_API_KEY')) {
-    return {
-      status: 503,
-      message: 'Stock search service is temporarily unavailable. Please try again later.',
-    };
-  }
-
-  // Generic server error for unhandled cases
-  return {
-    status: 500,
-    message: 'Failed to search for stocks. Please try again.',
-  };
-}
-
 // -----------------------------------------------------------------------------
 // Route Handler
 // -----------------------------------------------------------------------------
@@ -166,39 +108,29 @@ function mapErrorToResponse(error: unknown): { status: number; message: string }
 /**
  * GET handler for searching stocks.
  *
- * Validates the search query, fetches results from Finnhub,
- * and returns the filtered/normalized results with appropriate cache headers.
+ * Uses Yahoo Finance as primary source (no API key required, supports
+ * stocks, ETFs, bonds, mutual funds) with Finnhub as fallback.
  */
-export async function GET(request: Request): Promise<NextResponse<SearchResponse | ErrorResponse>> {
+export async function GET(request: Request): Promise<NextResponse<StockSearchResult[] | ErrorResponse>> {
   try {
-    // Extract query from query parameters
     const { searchParams } = new URL(request.url);
     const rawQuery = searchParams.get('q');
 
-    // Validate the query parameter
     const validation = validateQuery(rawQuery);
     if (!validation.isValid) {
       return createErrorResponse(validation.errorMessage!, 400);
     }
 
-    // Search stocks via Finnhub API (includes internal caching and filtering)
-    const results = await searchStocks(validation.normalizedQuery!);
+    // Search using unified API (Yahoo Finance + Finnhub)
+    const results = await searchAllStocks(validation.normalizedQuery!);
 
-    // Return successful response with cache headers
-    // Search results are more stable, so we cache longer than quotes
-    // - s-maxage: CDN cache duration
-    // - stale-while-revalidate: Allow serving stale content while revalidating
     return NextResponse.json(results, {
       headers: {
         'Cache-Control': `public, s-maxage=${CACHE_DURATION_SECONDS}, stale-while-revalidate=${CACHE_DURATION_SECONDS * 2}`,
       },
     });
   } catch (error) {
-    // Log error for debugging (server-side only)
     console.error('[API] Stock search error:', error);
-
-    // Map error to appropriate response
-    const { status, message } = mapErrorToResponse(error);
-    return createErrorResponse(message, status);
+    return createErrorResponse('Failed to search for stocks. Please try again.', 500);
   }
 }

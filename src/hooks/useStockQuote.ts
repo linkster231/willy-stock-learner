@@ -28,6 +28,8 @@ import useSWR from 'swr';
 export interface QuoteData {
   /** Stock ticker symbol (e.g., "AAPL", "GOOGL") */
   symbol: string;
+  /** Company/security name */
+  name: string;
   /** Current trading price in USD */
   currentPrice: number;
   /** Price change from previous close in USD */
@@ -42,8 +44,18 @@ export interface QuoteData {
   open: number;
   /** Previous trading day's closing price */
   previousClose: number;
-  /** Unix timestamp (milliseconds) when the quote was fetched */
-  timestamp: number;
+  /** Security type (e.g., "EQUITY", "ETF") */
+  type: string;
+  /** Market cap (if available) */
+  marketCap?: number;
+  /** 52 week high (if available) */
+  fiftyTwoWeekHigh?: number;
+  /** 52 week low (if available) */
+  fiftyTwoWeekLow?: number;
+  /** Exchange name (if available) */
+  exchange?: string;
+  /** Data source */
+  source: 'yahoo' | 'finnhub';
 }
 
 /**
@@ -97,8 +109,12 @@ export interface SearchResult {
   symbol: string;
   /** Company name */
   name: string;
-  /** Security type (e.g., "Equity", "ETF") */
+  /** Security type (e.g., "EQUITY", "ETF", "MUTUALFUND") */
   type: string;
+  /** Exchange name (if available) */
+  exchange?: string;
+  /** Data source */
+  source: 'yahoo' | 'finnhub';
 }
 
 /**
@@ -117,8 +133,11 @@ export interface UseStockSearchReturn {
 // FETCHER FUNCTIONS
 // =============================================================================
 
+/** Request timeout in milliseconds */
+const REQUEST_TIMEOUT_MS = 15000;
+
 /**
- * Generic fetcher function for SWR.
+ * Generic fetcher function for SWR with timeout support.
  * Handles the fetch request and error parsing for stock quote API calls.
  *
  * @param url - The API endpoint URL to fetch
@@ -126,19 +145,31 @@ export interface UseStockSearchReturn {
  * @throws Error with message from API or generic error message
  */
 async function quoteFetcher(url: string): Promise<QuoteData> {
-  const response = await fetch(url);
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
 
-  if (!response.ok) {
-    // Attempt to parse error message from response body
-    const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
-    throw new Error(errorData.error || `Failed to fetch quote: ${response.statusText}`);
+  try {
+    const response = await fetch(url, { signal: controller.signal });
+
+    if (!response.ok) {
+      // Attempt to parse error message from response body
+      const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
+      throw new Error(errorData.error || `Failed to fetch quote: ${response.statusText}`);
+    }
+
+    return response.json();
+  } catch (error) {
+    if (error instanceof Error && error.name === 'AbortError') {
+      throw new Error('Request timed out. Please try again.');
+    }
+    throw error;
+  } finally {
+    clearTimeout(timeoutId);
   }
-
-  return response.json();
 }
 
 /**
- * Fetcher function for stock search API calls.
+ * Fetcher function for stock search API calls with timeout support.
  * Similar to quoteFetcher but returns an array of search results.
  *
  * @param url - The API endpoint URL to fetch
@@ -146,14 +177,26 @@ async function quoteFetcher(url: string): Promise<QuoteData> {
  * @throws Error with message from API or generic error message
  */
 async function searchFetcher(url: string): Promise<SearchResult[]> {
-  const response = await fetch(url);
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
 
-  if (!response.ok) {
-    const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
-    throw new Error(errorData.error || `Failed to search stocks: ${response.statusText}`);
+  try {
+    const response = await fetch(url, { signal: controller.signal });
+
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
+      throw new Error(errorData.error || `Failed to search stocks: ${response.statusText}`);
+    }
+
+    return response.json();
+  } catch (error) {
+    if (error instanceof Error && error.name === 'AbortError') {
+      throw new Error('Search timed out. Please try again.');
+    }
+    throw error;
+  } finally {
+    clearTimeout(timeoutId);
   }
-
-  return response.json();
 }
 
 // =============================================================================
