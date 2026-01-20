@@ -3,24 +3,26 @@
  *
  * This module provides a unified interface to fetch stock data from multiple sources:
  * - Primary: Yahoo Finance (no API key required, supports stocks, ETFs, bonds, mutual funds)
- * - Fallback: Finnhub (requires API key, good for real-time US stocks)
+ * - Fallback 1: Finnhub (requires API key, 60 requests/minute, good for real-time US stocks)
+ * - Fallback 2: Alpha Vantage (requires API key, 25 requests/day, good backup)
  *
  * Benefits:
- * - No API key required for basic functionality
+ * - No API key required for basic functionality (Yahoo Finance)
+ * - Triple redundancy for maximum reliability
  * - Supports ANY stock, ETF, bond, or mutual fund
- * - Automatic fallback if one source fails
- * - Better reliability through redundancy
+ * - Automatic fallback chain if one source fails
  */
 
 import { getYahooQuote, searchYahoo } from './yahoo-finance';
 import { getQuote, searchStocks } from './finnhub';
+import { getAlphaVantageQuote, searchAlphaVantage } from './alpha-vantage';
 
 // =============================================================================
 // UNIFIED TYPES
 // =============================================================================
 
 /**
- * Unified quote data combining the best of both APIs
+ * Unified quote data combining the best of all APIs
  */
 export interface StockQuoteData {
   symbol: string;
@@ -37,7 +39,7 @@ export interface StockQuoteData {
   fiftyTwoWeekHigh?: number;
   fiftyTwoWeekLow?: number;
   exchange?: string;
-  source: 'yahoo' | 'finnhub';
+  source: 'yahoo' | 'finnhub' | 'alphavantage';
 }
 
 /**
@@ -48,7 +50,7 @@ export interface StockSearchResult {
   name: string;
   type: string;
   exchange?: string;
-  source: 'yahoo' | 'finnhub';
+  source: 'yahoo' | 'finnhub' | 'alphavantage';
 }
 
 // =============================================================================
@@ -56,11 +58,12 @@ export interface StockSearchResult {
 // =============================================================================
 
 /**
- * Fetches stock quote data, trying Yahoo Finance first then Finnhub as fallback.
+ * Fetches stock quote data with triple fallback:
+ * Yahoo Finance -> Finnhub -> Alpha Vantage
  *
  * @param symbol - Stock ticker symbol
  * @returns Promise resolving to quote data
- * @throws Error if both sources fail
+ * @throws Error if all sources fail
  */
 export async function getStockQuote(symbol: string): Promise<StockQuoteData> {
   const errors: string[] = [];
@@ -91,7 +94,7 @@ export async function getStockQuote(symbol: string): Promise<StockQuoteData> {
     console.warn(`[StockAPI] Yahoo Finance failed for ${symbol}:`, msg);
   }
 
-  // Try Finnhub as fallback (requires API key)
+  // Try Finnhub as first fallback (60 requests/minute)
   try {
     const finnhubQuote = await getQuote(symbol);
     return {
@@ -113,13 +116,35 @@ export async function getStockQuote(symbol: string): Promise<StockQuoteData> {
     console.warn(`[StockAPI] Finnhub failed for ${symbol}:`, msg);
   }
 
-  // Both failed
+  // Try Alpha Vantage as last resort (25 requests/day - use sparingly)
+  try {
+    const avQuote = await getAlphaVantageQuote(symbol);
+    return {
+      symbol: avQuote.symbol,
+      name: avQuote.name,
+      currentPrice: avQuote.currentPrice,
+      change: avQuote.change,
+      changePercent: avQuote.changePercent,
+      high: avQuote.high,
+      low: avQuote.low,
+      open: avQuote.open,
+      previousClose: avQuote.previousClose,
+      type: 'EQUITY',
+      source: 'alphavantage',
+    };
+  } catch (error) {
+    const msg = error instanceof Error ? error.message : 'Unknown error';
+    errors.push(`AlphaVantage: ${msg}`);
+    console.warn(`[StockAPI] Alpha Vantage failed for ${symbol}:`, msg);
+  }
+
+  // All three failed
   throw new Error(`Failed to fetch quote for ${symbol}. ${errors.join('; ')}`);
 }
 
 /**
- * Searches for stocks/ETFs/bonds, trying Yahoo Finance first then Finnhub as fallback.
- * Combines and deduplicates results from both sources for better coverage.
+ * Searches for stocks/ETFs/bonds with triple source support.
+ * Combines and deduplicates results from all sources for better coverage.
  *
  * @param query - Search query (symbol or company name)
  * @returns Promise resolving to array of search results
@@ -147,7 +172,7 @@ export async function searchAllStocks(query: string): Promise<StockSearchResult[
     console.warn('[StockAPI] Yahoo search failed:', error instanceof Error ? error.message : error);
   }
 
-  // Also try Finnhub to potentially find more results (only if we need more)
+  // Try Finnhub if we need more results
   if (allResults.length < 10) {
     try {
       const finnhubResults = await searchStocks(query);
@@ -164,6 +189,26 @@ export async function searchAllStocks(query: string): Promise<StockSearchResult[
       }
     } catch (error) {
       console.warn('[StockAPI] Finnhub search failed:', error instanceof Error ? error.message : error);
+    }
+  }
+
+  // Try Alpha Vantage as last resort if still no results
+  if (allResults.length === 0) {
+    try {
+      const avResults = await searchAlphaVantage(query);
+      for (const result of avResults) {
+        if (!seenSymbols.has(result.symbol)) {
+          seenSymbols.add(result.symbol);
+          allResults.push({
+            symbol: result.symbol,
+            name: result.name,
+            type: result.type === 'Equity' ? 'EQUITY' : result.type,
+            source: 'alphavantage',
+          });
+        }
+      }
+    } catch (error) {
+      console.warn('[StockAPI] Alpha Vantage search failed:', error instanceof Error ? error.message : error);
     }
   }
 
