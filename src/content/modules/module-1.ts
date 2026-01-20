@@ -68,7 +68,7 @@ export const module1: Module = {
       id: 'lesson-1-5',
       titleKey: 'learn.modules.1.lessons.5.title',
       contentKey: 'learn.modules.1.lessons.5.content',
-      videoUrl: 'https://www.youtube.com/watch?v=CaWyMlxMSJk',
+      videoUrl: 'https://www.youtube.com/watch?v=yXZLNuMD6Y4',
       duration: 10,
       keyPoints: [
         'learn.modules.1.lessons.5.point1',
