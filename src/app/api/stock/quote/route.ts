@@ -120,11 +120,20 @@ function mapErrorToResponse(error: unknown): { status: number; message: string }
 
   const errorMessage = error.message;
 
+  // Config/Setup errors (missing API keys, etc.)
+  if (errorMessage.includes('CONFIG_ERROR') || errorMessage.includes('API_KEY') || errorMessage.includes('not set')) {
+    console.error('[API] Configuration error:', errorMessage);
+    return {
+      status: 503,
+      message: 'Stock data service temporarily unavailable. Please try again.',
+    };
+  }
+
   // Not found errors
   if (errorMessage.includes('No data found') || errorMessage.includes('NOT_FOUND') || errorMessage.includes('Invalid symbol')) {
     return {
       status: 404,
-      message: errorMessage,
+      message: `Stock symbol not found. Please check the symbol and try again.`,
     };
   }
 
@@ -132,11 +141,20 @@ function mapErrorToResponse(error: unknown): { status: number; message: string }
   if (errorMessage.includes('Rate limit')) {
     return {
       status: 429,
-      message: 'Rate limit exceeded. Please wait a moment before trying again.',
+      message: 'Too many requests. Please wait a moment before trying again.',
     };
   }
 
-  // Generic server error
+  // Network/timeout errors
+  if (errorMessage.includes('timeout') || errorMessage.includes('network') || errorMessage.includes('ECONNREFUSED') || errorMessage.includes('fetch')) {
+    return {
+      status: 503,
+      message: 'Network error. Please check your connection and try again.',
+    };
+  }
+
+  // Generic server error - log full details for debugging
+  console.error('[API] Unhandled quote error:', error);
   return {
     status: 500,
     message: 'Failed to fetch stock quote. Please try again.',

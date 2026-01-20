@@ -90,34 +90,46 @@ const QuoteLoadingSkeleton = memo(function QuoteLoadingSkeleton({
 
 /**
  * Error state component for quote display.
- * Shows error icon and message in a red-themed card.
+ * Shows error icon, message, and retry button in a red-themed card.
  */
 const QuoteErrorState = memo(function QuoteErrorState({
   message,
   className,
+  onRetry,
 }: {
   message: string;
   className?: string;
+  onRetry?: () => void;
 }) {
   return (
     <Card className={cn('border-red-200 bg-red-50', className)}>
-      <div className="flex items-center gap-2 text-red-600">
-        {/* Error icon (exclamation in circle) */}
-        <svg
-          className="h-5 w-5 flex-shrink-0"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          aria-hidden="true"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-        <span className="text-sm">{message}</span>
+      <div className="flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2 text-red-600">
+          {/* Error icon (exclamation in circle) */}
+          <svg
+            className="h-5 w-5 flex-shrink-0"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+          <span className="text-sm">{message}</span>
+        </div>
+        {onRetry && (
+          <button
+            onClick={onRetry}
+            className="rounded-lg bg-red-100 px-4 py-2 text-sm font-medium text-red-700 transition-colors hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-red-500 min-h-[44px]"
+          >
+            Retry
+          </button>
+        )}
       </div>
     </Card>
   );
@@ -186,6 +198,7 @@ const ChangeArrowIcon = memo(function ChangeArrowIcon({
  * - Current price with formatted currency
  * - Price change (absolute and percentage) with color coding
  * - Optional detailed stats (open, high, low, previous close)
+ * - Refresh button to manually update data
  *
  * @example
  * // Basic usage
@@ -203,7 +216,7 @@ export function QuoteDisplay({
 }: QuoteDisplayProps) {
   // Fetch quote data using SWR-based hook
   // isValidating indicates background revalidation is in progress
-  const { quote, isLoading, error, isValidating } = useStockQuote(symbol);
+  const { quote, isLoading, error, isValidating, mutate: refresh } = useStockQuote(symbol);
 
   // ---------------------------------------------------------------------------
   // MEMOIZED COMPUTED VALUES
@@ -250,11 +263,11 @@ export function QuoteDisplay({
 
   // ---------------------------------------------------------------------------
   // RENDER: ERROR STATE
-  // Show error message when quote fetch fails
+  // Show error message when quote fetch fails, with retry button
   // ---------------------------------------------------------------------------
 
   if (error) {
-    return <QuoteErrorState message={error.message} className={className} />;
+    return <QuoteErrorState message={error.message} className={className} onRetry={refresh} />;
   }
 
   // ---------------------------------------------------------------------------
@@ -272,12 +285,32 @@ export function QuoteDisplay({
 
   return (
     <Card className={cn('relative overflow-hidden', className)}>
-      {/* Revalidating indicator - shows when background update is in progress */}
-      {isValidating && (
-        <div className="absolute right-2 top-2" aria-label="Updating quote">
-          <span className="h-2 w-2 animate-pulse rounded-full bg-blue-500" />
-        </div>
-      )}
+      {/* Refresh button and revalidating indicator */}
+      <div className="absolute right-2 top-2 flex items-center gap-2">
+        {isValidating && (
+          <span
+            className="h-2 w-2 animate-pulse rounded-full bg-blue-500"
+            aria-label="Updating quote"
+          />
+        )}
+        <button
+          onClick={() => refresh()}
+          disabled={isValidating}
+          className={cn(
+            'rounded-full p-2.5 text-gray-400 transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center',
+            'hover:bg-gray-100 hover:text-gray-600',
+            'focus:outline-none focus:ring-2 focus:ring-blue-500',
+            'disabled:opacity-50 disabled:cursor-not-allowed',
+            isValidating && 'animate-spin'
+          )}
+          aria-label="Refresh quote"
+          title="Refresh stock data"
+        >
+          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+        </button>
+      </div>
 
       {/* Main quote information section */}
       <div className="flex items-start justify-between">
