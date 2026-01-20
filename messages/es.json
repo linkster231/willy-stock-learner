@@ -62,14 +62,31 @@
   },
   "auth": {
     "login": "Iniciar Sesión",
-    "signup": "Crear Cuenta",
+    "loginTitle": "¡Bienvenido de Vuelta!",
+    "loginButton": "Iniciar Sesión",
+    "loginFailed": "No se pudo iniciar sesión. Verifica tu usuario y PIN.",
+    "signupTitle": "Crea Tu Cuenta",
+    "signupButton": "Crear Cuenta",
+    "signupFailed": "No se pudo crear la cuenta. Intenta de nuevo.",
+    "username": "Nombre de Usuario",
+    "usernamePlaceholder": "Elige un nombre genial",
+    "pin": "PIN de 4 Dígitos",
+    "confirmPin": "Confirmar PIN",
+    "pinMismatch": "Los PINs no coinciden",
+    "noAccount": "¿Eres nuevo aquí?",
+    "signupLink": "Crear una cuenta",
+    "hasAccount": "¿Ya tienes una cuenta?",
+    "loginLink": "Iniciar sesión",
     "logout": "Cerrar Sesión",
+    "memberSince": "Miembro desde {date}",
+    "yourProgress": "Tu Progreso",
+    "modulesCompleted": "Módulos",
+    "lessonsCompleted": "Lecciones",
+    "signup": "Crear Cuenta",
     "email": "Correo Electrónico",
     "password": "Contraseña",
     "confirmPassword": "Confirmar Contraseña",
     "forgotPassword": "¿Olvidaste tu contraseña?",
-    "noAccount": "¿No tienes una cuenta?",
-    "hasAccount": "¿Ya tienes una cuenta?",
     "loginSuccess": "¡Bienvenido de vuelta!",
     "signupSuccess": "¡Cuenta creada! Revisa tu correo para confirmar.",
     "errorInvalid": "Correo o contraseña inválidos",
@@ -246,9 +263,11 @@
     "continueModule": "Seguir",
     "retakeQuiz": "Intentar de Nuevo",
     "completed": "¡Listo!",
+    "passed": "Aprobado",
     "locked": "Termina la lección anterior para desbloquear",
     "quizScore": "Puntuación del Examen: {score}%",
     "passScore": "Necesitas 80% para pasar",
+    "loginToSave": "¡Inicia sesión para guardar tu progreso!",
     "markComplete": "¡Terminé Esta!",
     "lessonSummary": "Resumen de la Lección",
     "keyPoints": "Lo Que Aprendiste",
@@ -595,6 +614,44 @@
             "point4": "Los cortacircuitos pausan el trading si el mercado cae 7%, 13% o 20%"
           }
         }
+      },
+      "9": {
+        "title": "Leyendo Gráficos Como un Pro (Velas Japonesas)",
+        "description": "Aprende a leer gráficos de acciones y entender qué te dicen las velas",
+        "lessons": {
+          "1": {
+            "title": "Introducción a los Gráficos de Acciones",
+            "content": "Antes de invertir, necesitas entender lo que estás viendo. Los gráficos de acciones son tu ventana a cómo ha rendido una acción y hacia dónde podría ir.\n\n**Por Qué Importan los Gráficos:**\nLos gráficos te muestran el historial de precios de una acción de un vistazo. En lugar de leer miles de números, puedes ver patrones, tendencias y momentos clave visualmente.\n\n**Tipos de Gráficos:**\n\n**1. Gráficos de Línea**\nEl tipo más simple - solo una línea conectando precios de cierre a través del tiempo. Genial para ver la tendencia general.\n\n**2. Gráficos de Barras**\nMuestran cuatro precios para cada período: apertura, máximo, mínimo, cierre (OHLC). Más información que los gráficos de línea.\n\n**3. Gráficos de Velas**\nEl tipo más popular para traders. Cada 'vela' muestra los mismos cuatro precios que los gráficos de barras, pero en un formato visual más fácil de leer.\n\n**Marcos de Tiempo:**\nPuedes ver gráficos en diferentes períodos:\n- 1 día (minuto a minuto)\n- 1 semana, 1 mes (diario)\n- 1 año, 5 años (diario o semanal)\n- Todo el tiempo (semanal o mensual)\n\nLos traders de corto plazo se enfocan en marcos cortos. Los inversores de largo plazo miran meses y años.\n\n**Qué Buscar:**\n- **Tendencia**: ¿La acción va hacia arriba, abajo o lateral?\n- **Volatilidad**: ¿Cuánto rebota?\n- **Niveles Clave**: ¿Hay precios donde tiende a detenerse o revertir?\n\n**Consejo Pro:** Como principiante, enfócate en marcos de tiempo más largos (1 año o más). Los movimientos diarios son solo ruido - la tendencia a largo plazo es lo que importa para tus inversiones.",
+            "point1": "Los gráficos muestran el historial de precios visualmente - más fácil que leer miles de números",
+            "point2": "Los gráficos de velas son los más populares, mostrando apertura, máximo, mínimo y cierre",
+            "point3": "Usa marcos de tiempo más largos (1 año+) para invertir; marcos cortos para trading",
+            "point4": "Busca la tendencia general, no el ruido diario"
+          },
+          "2": {
+            "title": "Anatomía de una Vela",
+            "content": "Las velas pueden parecer confusas al principio, pero cada una cuenta una historia completa sobre lo que pasó con el precio de una acción. ¡Vamos a desglosarla!\n\n**Los Cuatro Precios Clave:**\nCada vela muestra cuatro números:\n- **Apertura**: El precio cuando comenzó el período\n- **Cierre**: El precio cuando terminó el período\n- **Máximo**: El precio más alto durante el período\n- **Mínimo**: El precio más bajo durante el período\n\n**El Cuerpo (La Parte Gruesa):**\nEl 'cuerpo' rectangular muestra el rango entre apertura y cierre:\n- **Vela verde/blanca**: El cierre es MÁS ALTO que la apertura (el precio SUBIÓ)\n- **Vela roja/negra**: El cierre es MÁS BAJO que la apertura (el precio BAJÓ)\n- Cuanto más grande el cuerpo, más grande el movimiento\n\n**Las Mechas/Sombras (Las Líneas Delgadas):**\nLas líneas delgadas arriba y abajo del cuerpo muestran el máximo y mínimo:\n- **Mecha superior**: Qué tan alto llegó el precio sobre la apertura/cierre\n- **Mecha inferior**: Qué tan bajo llegó el precio bajo la apertura/cierre\n\n**Leyendo la Historia de una Vela:**\nUna vela con una mecha inferior larga y cuerpo verde dice: 'El precio cayó mucho, pero los compradores entraron y lo empujaron hacia arriba.' ¡Eso es una historia de fortaleza!\n\n**Ejemplos:**\n- Cuerpo verde alto, sin mechas = Compra fuerte todo el día\n- Cuerpo rojo alto, sin mechas = Venta fuerte todo el día\n- Cuerpo pequeño, mechas largas = Indecisión, el precio se movió pero terminó cerca de donde empezó\n\n**Consejo Pro:** No memorices cada patrón. Solo entiende qué significan el cuerpo y las mechas. Una vela verde = los compradores ganaron ese día. Roja = los vendedores ganaron. Mechas largas = hubo una batalla.",
+            "point1": "El cuerpo muestra el rango de apertura a cierre; verde significa subió, rojo significa bajó",
+            "point2": "Las mechas muestran los extremos de máximo y mínimo durante el período",
+            "point3": "Cuerpos largos significan movimientos fuertes; cuerpos pequeños significan indecisión",
+            "point4": "Mechas largas muestran que el precio fue rechazado - rechazo de precios extremos"
+          },
+          "3": {
+            "title": "Patrones Comunes de Velas",
+            "content": "Ciertas formas de velas aparecen una y otra vez. Aunque los patrones no predicen el futuro perfectamente, pueden darte pistas sobre qué podría pasar después.\n\n**Nota Importante Primero:**\n¡Ningún patrón funciona el 100% de las veces! Estas son pistas, no garantías. ¡Siempre combina el reconocimiento de patrones con otra investigación!\n\n**Patrones Alcistas (Pueden Sugerir que los Precios SUBEN):**\n\n**Martillo**\nCuerpo pequeño arriba, mecha inferior larga. Después de una tendencia bajista, sugiere que los compradores están entrando. 'El precio intentó caer, pero los compradores lo empujaron hacia arriba.'\n\n**Envolvente Alcista**\nUna vela roja pequeña seguida de una vela verde más grande que la cubre completamente. Muestra compradores superando a los vendedores.\n\n**Estrella de la Mañana**\nTres velas: roja grande, cuerpo pequeño (cualquier color), verde grande. Sugiere un fondo y potencial reversión hacia arriba.\n\n**Patrones Bajistas (Pueden Sugerir que los Precios BAJAN):**\n\n**Estrella Fugaz**\nCuerpo pequeño abajo, mecha superior larga. Después de una tendencia alcista, sugiere que los vendedores están empujando hacia atrás. 'El precio intentó subir, pero los vendedores lo empujaron hacia abajo.'\n\n**Envolvente Bajista**\nVela verde pequeña seguida de una vela roja más grande que la envuelve. Muestra vendedores superando a los compradores.\n\n**Estrella de la Tarde**\nTres velas: verde grande, cuerpo pequeño, roja grande. Sugiere un techo y potencial reversión hacia abajo.\n\n**Patrón Neutral:**\n\n**Doji**\nApertura y cierre son casi iguales (cuerpo diminuto o sin cuerpo). Muestra indecisión - ni compradores ni vendedores ganaron.\n\n**Consejo Pro:** El reconocimiento de patrones es más arte que ciencia. No tomes decisiones de compra/venta basándote solo en patrones de velas. Úsalos como una pieza de información, no como el cuadro completo.",
+            "point1": "El Martillo y Estrella de la Mañana son patrones alcistas (pueden sugerir aumento de precio)",
+            "point2": "Estrella Fugaz y Estrella de la Tarde son patrones bajistas (pueden sugerir caída de precio)",
+            "point3": "Las velas Doji muestran indecisión - ni compradores ni vendedores dominaron",
+            "point4": "Los patrones son pistas, no garantías - úsalos con otra investigación, no solos"
+          },
+          "4": {
+            "title": "Soporte, Resistencia y Tendencias",
+            "content": "Ahora que puedes leer velas individuales, veamos el panorama general: tendencias y niveles de precio clave.\n\n**¿Qué es una Tendencia?**\n- **Tendencia alcista**: Máximos más altos y mínimos más altos - la acción está subiendo\n- **Tendencia bajista**: Máximos más bajos y mínimos más bajos - la acción está cayendo\n- **Lateral/Rango**: El precio rebota entre dos niveles - sin dirección clara\n\n**Niveles de Soporte:**\nEl soporte es un piso de precio donde los compradores tienden a entrar. Cuando una acción cae a este nivel, a menudo rebota hacia arriba. Piensa en él como el precio donde la gente dice 'Es suficientemente barato, compraré.'\n\n**Niveles de Resistencia:**\nLa resistencia es un techo de precio donde los vendedores tienden a aparecer. Cuando una acción sube a este nivel, a menudo es empujada hacia abajo. Piensa en él como el precio donde la gente dice 'Es suficientemente caro, venderé.'\n\n**Cómo Identificarlos:**\nBusca precios donde la acción ha rebotado múltiples veces. Si tocó $50 y rebotó hacia arriba tres veces, $50 es soporte. Si tocó $75 y cayó hacia atrás tres veces, $75 es resistencia.\n\n**Rompimientos:**\nCuando una acción atraviesa la resistencia o cae a través del soporte con volumen fuerte, se llama rompimiento. Esto a menudo lleva a un movimiento más grande en esa dirección.\n\n**Por Qué Importa Para Inversores:**\nIncluso los inversores a largo plazo pueden usar estos conceptos:\n- Comprar cerca del soporte = potencialmente mejor precio de entrada\n- Comprar durante una tendencia alcista clara = momentum a tu favor\n- Entender la resistencia = expectativas realistas para ganancias\n\n**Consejo Pro:** No te obsesiones con encontrar soporte y resistencia perfectos. Estos son zonas, no precios exactos. Enfócate en la tendencia general en lugar de intentar cronometrar precios exactos.",
+            "point1": "Tendencia alcista = máximos/mínimos más altos; tendencia bajista = máximos/mínimos más bajos; lateral = sin dirección clara",
+            "point2": "El soporte es un piso de precio donde los compradores entran; la resistencia es un techo donde los vendedores aparecen",
+            "point3": "Los rompimientos a través del soporte o resistencia a menudo llevan a movimientos más grandes",
+            "point4": "Enfócate en la tendencia general en lugar de intentar cronometrar precios exactos"
+          }
+        }
       }
     },
     "quiz": {
@@ -623,10 +680,333 @@
         "passed": "¡Increíble! ¡Pasaste!",
         "failed": "Necesitas 80% para pasar. Revisa las lecciones e intenta de nuevo.",
         "tryAgain": "Intentar de Nuevo",
-        "nextModule": "Siguiente Lección"
+        "nextModule": "Siguiente Lección",
+        "quizPassed": "¡Excelente Trabajo!",
+        "quizFailed": "¡Sigue Intentando!",
+        "finalReviewPassed": "¡Eres un Campeón del Mercado de Valores!",
+        "finalReviewFailed": "¡Ya Casi!",
+        "scoreDisplay": "Obtuviste {score} de {total} correctas",
+        "quizPassedMessage": "¡Realmente sabes mucho! ¿Listo para el siguiente desafío?",
+        "quizFailedMessage": "¡No te rindas! Revisa las lecciones e intenta de nuevo.",
+        "continueButton": "Continuar",
+        "retryButton": "Intentar de Nuevo",
+        "tryAgainButton": "Intentar de Nuevo",
+        "reviewLessonsButton": "Revisar Lecciones",
+        "quizTip": "Consejo: Vuelve a leer las lecciones. Presta atención a los puntos clave - ¡a menudo aparecen en los exámenes!"
       }
     },
+    "finalReview": {
+      "title": "¡El Desafío Final!",
+      "subtitle": "Preguntas de TODOS los módulos - ¡diferentes cada vez!",
+      "description": "¿Crees que lo has dominado todo? Este desafío toma preguntas de todas tus lecciones. ¡Pásalo para demostrar que estás listo para invertir!",
+      "startChallenge": "Comenzar Desafío",
+      "locked": "Completa todos los módulos para desbloquear el Desafío Final",
+      "passed": "¡Eres un Campeón del Mercado de Valores!",
+      "failed": "¡Ya casi! ¡Sigue aprendiendo!"
+    },
     "quizzes": {
+      "1": {
+        "q1": {
+          "question": "¿Qué significa ser dueño de una acción?",
+          "optionA": "Le prestaste dinero a la empresa y te lo devolverán",
+          "optionB": "Eres dueño de un pequeño pedazo de la empresa",
+          "optionC": "Trabajas para la empresa como empleado",
+          "optionD": "Puedes decirle al CEO qué hacer",
+          "explanation": "Cuando compras acciones, te conviertes en copropietario de la empresa. Incluso una sola acción te hace dueño oficial, aunque posees una parte muy pequeña de una empresa grande."
+        },
+        "q2": {
+          "question": "¿Cuándo está abierto el mercado de valores de EE.UU. para operaciones regulares?",
+          "optionA": "24 horas al día, 7 días a la semana",
+          "optionB": "9:00 AM a 5:00 PM, lunes a viernes",
+          "optionC": "9:30 AM a 4:00 PM hora del Este, lunes a viernes",
+          "optionD": "8:00 AM a 6:00 PM, todos los días incluyendo fines de semana",
+          "explanation": "El mercado de valores de EE.UU. está abierto de 9:30 AM a 4:00 PM hora del Este, de lunes a viernes. Está cerrado los fines de semana y días festivos importantes."
+        },
+        "q3": {
+          "question": "¿Qué es un símbolo de cotización?",
+          "optionA": "El precio de una acción",
+          "optionB": "Un código corto que identifica las acciones de una empresa (como AAPL para Apple)",
+          "optionC": "La contraseña que necesitas para comprar acciones",
+          "optionD": "El valor total de una empresa",
+          "explanation": "Un símbolo de cotización es un código corto (usualmente 1-5 letras) que identifica las acciones de una empresa. Por ejemplo, Apple es AAPL, Disney es DIS, y Tesla es TSLA."
+        },
+        "q4": {
+          "question": "¿Qué suele pasar con la gente que entra en pánico y vende todas sus acciones durante un crash del mercado?",
+          "optionA": "Usualmente ganan más dinero",
+          "optionB": "A menudo fijan sus pérdidas y se pierden la recuperación",
+          "optionC": "El gobierno les devuelve su dinero",
+          "optionD": "Automáticamente vuelven a comprar a un precio más bajo",
+          "explanation": "La gente que vende en pánico durante crashes a menudo vende a los precios más bajos y se pierde la recuperación. La historia muestra que los inversores pacientes que mantienen durante crashes usualmente salen adelante."
+        },
+        "q5": {
+          "question": "¿Por qué las empresas venden acciones al público (salen a bolsa)?",
+          "optionA": "El gobierno las obliga",
+          "optionB": "Para recaudar dinero y dejar que los primeros inversores cobren",
+          "optionC": "Para regalar dinero gratis a la gente común",
+          "optionD": "Porque están en bancarrota",
+          "explanation": "Las empresas salen a bolsa principalmente para recaudar dinero para hacer crecer su negocio y dejar que los primeros inversores (fundadores, empleados) vendan sus acciones. También aumenta la credibilidad de la empresa."
+        },
+        "q6": {
+          "question": "¿Qué es la capitalización de mercado?",
+          "optionA": "El límite de cuánto puedes invertir",
+          "optionB": "El valor total de todas las acciones de una empresa combinadas",
+          "optionC": "El cambio de precio desde ayer",
+          "optionD": "El edificio donde se negocian acciones",
+          "explanation": "La capitalización de mercado es el valor total de una empresa en el mercado de valores. Se calcula multiplicando el precio de la acción por el número total de acciones."
+        }
+      },
+      "2": {
+        "q1": {
+          "question": "¿Qué tipo de cuenta permite que tu dinero crezca 100% libre de impuestos?",
+          "optionA": "Cuenta individual de corretaje",
+          "optionB": "IRA Tradicional",
+          "optionC": "Roth IRA",
+          "optionD": "Cuenta de cheques",
+          "explanation": "Una Roth IRA permite que tus inversiones crezcan completamente libres de impuestos. Pagas impuestos sobre el dinero que entra, pero nunca pagas impuestos sobre el crecimiento o retiros en el retiro."
+        },
+        "q2": {
+          "question": "¿Qué es un ratio de gastos?",
+          "optionA": "La tarifa para abrir una cuenta de corretaje",
+          "optionB": "La tarifa anual cobrada por ETFs y fondos mutuos como porcentaje",
+          "optionC": "La comisión en cada operación",
+          "optionD": "La tasa de impuestos sobre tus inversiones",
+          "explanation": "Un ratio de gastos es la tarifa anual que cobran ETFs y fondos mutuos, expresada como porcentaje. Un ratio de 0.03% significa que pagas $0.30 al año por cada $1,000 invertidos."
+        },
+        "q3": {
+          "question": "¿Qué son las acciones fraccionadas?",
+          "optionA": "Acciones que han perdido valor",
+          "optionB": "Pedazos de una acción que te permiten invertir cualquier cantidad de dólares",
+          "optionC": "Acciones que se dividen en unidades más pequeñas",
+          "optionD": "Acciones con descuento para nuevos inversores",
+          "explanation": "Las acciones fraccionadas te permiten comprar una porción de una acción. Si una acción cuesta $500, puedes comprar $50 (0.1 acciones). Esto hace fácil invertir cualquier cantidad en acciones caras."
+        },
+        "q4": {
+          "question": "¿Cuál es el mejor tipo de orden para un principiante comprando acciones populares?",
+          "optionA": "Orden stop-loss",
+          "optionB": "Orden de mercado",
+          "optionC": "Orden trailing stop",
+          "optionD": "Orden fill-or-kill",
+          "explanation": "Las órdenes de mercado son las más simples para principiantes comprando acciones populares y líquidas. Se ejecutan inmediatamente al precio actual. Para acciones populares como Apple, el precio que obtienes será muy cercano a lo que ves."
+        },
+        "q5": {
+          "question": "¿Por qué es importante empezar a invertir temprano?",
+          "optionA": "Los inversores tempranos obtienen descuentos especiales",
+          "optionB": "El crecimiento compuesto significa más tiempo = dramáticamente más dinero",
+          "optionC": "Solo puedes abrir cuentas antes de los 30 años",
+          "optionD": "Las acciones rinden mejor para inversores jóvenes",
+          "explanation": "El crecimiento compuesto significa que tu dinero gana rendimientos sobre rendimientos. Empezar a los 15 vs 25 podría significar cientos de miles de dólares más para el retiro, incluso invirtiendo la misma cantidad mensual."
+        }
+      },
+      "3": {
+        "q1": {
+          "question": "¿Cuál es la relación entre riesgo y recompensa al invertir?",
+          "optionA": "Las inversiones de alto riesgo siempre pierden dinero",
+          "optionB": "Las inversiones de bajo riesgo tienen los mayores rendimientos",
+          "optionC": "Mayor recompensa potencial usualmente viene con mayor riesgo",
+          "optionD": "Riesgo y recompensa no están relacionados",
+          "explanation": "Generalmente, las inversiones con mayores rendimientos potenciales vienen con mayor riesgo de perder dinero. Las inversiones seguras como cuentas de ahorro tienen bajo riesgo pero también bajos rendimientos."
+        },
+        "q2": {
+          "question": "¿Qué es la diversificación?",
+          "optionA": "Comprar solo la acción con mejor rendimiento",
+          "optionB": "Repartir tu dinero en diferentes inversiones",
+          "optionC": "Invertir todo en fondos índice",
+          "optionD": "Cambiar tus inversiones frecuentemente",
+          "explanation": "La diversificación significa repartir tu dinero en diferentes inversiones, industrias y tipos de activos. Si una inversión cae, otras pueden subir, reduciendo tu riesgo general."
+        },
+        "q3": {
+          "question": "¿Cuánto de tu portafolio deberías poner en una sola acción?",
+          "optionA": "50% o más si realmente crees en ella",
+          "optionB": "No más del 10%",
+          "optionC": "100% - apuesta todo",
+          "optionD": "No importa",
+          "explanation": "Una regla común es nunca poner más del 10% en una sola acción. De esta manera, si esa empresa fracasa, solo pierdes 10% de tu portafolio, no todo."
+        },
+        "q4": {
+          "question": "¿Por qué necesitas un fondo de emergencia antes de invertir?",
+          "optionA": "Los bancos lo requieren para abrir cuentas de inversión",
+          "optionB": "Para no estar forzado a vender inversiones en mal momento",
+          "optionC": "Los fondos de emergencia ganan más rendimientos que las acciones",
+          "optionD": "Es requerido por ley",
+          "explanation": "Sin un fondo de emergencia, podrías tener que vender inversiones para cubrir gastos inesperados. Si el mercado está abajo, fijarías pérdidas. Un fondo de emergencia deja que tus inversiones crezcan sin molestias."
+        },
+        "q5": {
+          "question": "¿Qué mide la volatilidad?",
+          "optionA": "Cuánto dinero puedes perder",
+          "optionB": "Cuánto sube y baja el precio de una acción",
+          "optionC": "El rendimiento promedio de una acción",
+          "optionD": "Qué tan popular es una acción",
+          "explanation": "La volatilidad mide cuánto se mueve el precio de una acción hacia arriba y abajo. Alta volatilidad significa grandes cambios; baja volatilidad significa movimiento estable y predecible."
+        }
+      },
+      "4": {
+        "q1": {
+          "question": "¿Qué es FOMO al invertir?",
+          "optionA": "Un tipo de orden de acciones",
+          "optionB": "Miedo a perderse algo - comprar porque todos lo hacen",
+          "optionC": "Una estrategia de trading",
+          "optionD": "Un índice del mercado",
+          "explanation": "FOMO (Fear of Missing Out / Miedo a Perderse Algo) hace que los inversores compren acciones solo porque los precios suben y otros están comprando. A menudo lleva a comprar en el pico, justo antes de que los precios caigan."
+        },
+        "q2": {
+          "question": "¿Por qué es importante tener un plan de inversión escrito?",
+          "optionA": "Es requerido para abrir una cuenta de corretaje",
+          "optionB": "Te ayuda a tomar decisiones racionales cuando las emociones están altas",
+          "optionC": "Garantiza mayores rendimientos",
+          "optionD": "Reduce tus impuestos",
+          "explanation": "Un plan escrito hecho cuando estás tranquilo te ayuda a seguir tu estrategia cuando los mercados están aterradoros o emocionantes. Previene decisiones emocionales que a menudo perjudican los rendimientos."
+        },
+        "q3": {
+          "question": "¿Qué suele pasar cuando los inversores intentan cronometrar el mercado?",
+          "optionA": "Consistentemente superan al mercado",
+          "optionB": "A menudo se pierden los mejores días y tienen menor rendimiento",
+          "optionC": "Quedan igual",
+          "optionD": "Obtienen beneficios fiscales especiales",
+          "explanation": "Los estudios muestran que cronometrar el mercado raramente funciona. Perderse solo los 10 mejores días en 20 años puede cortar tus rendimientos a la mitad. El tiempo EN el mercado supera a cronometrar el mercado."
+        },
+        "q4": {
+          "question": "¿Qué es la aversión a la pérdida?",
+          "optionA": "Una estrategia para evitar todas las pérdidas",
+          "optionB": "Las pérdidas se sienten el doble de dolorosas que las ganancias equivalentes se sienten bien",
+          "optionC": "Vender acciones antes de que bajen",
+          "optionD": "Seguro contra crashes del mercado",
+          "explanation": "La aversión a la pérdida significa que perder $100 se siente aproximadamente el doble de mal que ganar $100 se siente bien. Este sesgo psicológico puede llevar a venta por pánico y malas decisiones de inversión."
+        },
+        "q5": {
+          "question": "¿Qué tan seguido deberías revisar tu portafolio de inversiones?",
+          "optionA": "Múltiples veces al día",
+          "optionB": "Cada hora que el mercado está abierto",
+          "optionC": "Una vez al mes usualmente es suficiente",
+          "optionD": "Nunca",
+          "explanation": "Revisar tu portafolio muy seguido lleva a decisiones emocionales y operar en exceso. Para inversores a largo plazo, una vez al mes o incluso trimestralmente es suficiente. Tus inversiones no crecen más rápido solo porque las observas."
+        }
+      },
+      "5": {
+        "q1": {
+          "question": "¿Qué es un esquema de pump and dump?",
+          "optionA": "Una estrategia de inversión legítima",
+          "optionB": "Estafadores inflan una acción, luego venden cuando otros compran",
+          "optionC": "Un tipo de fondo mutuo",
+          "optionD": "Una técnica de day trading",
+          "explanation": "En un pump and dump, los estafadores compran acciones baratas, las promocionan para que otros compren (inflando el precio), luego venden sus acciones (dump). Los inversores regulares quedan con acciones sin valor."
+        },
+        "q2": {
+          "question": "¿Por qué deberías sospechar de tips de acciones no solicitados?",
+          "optionA": "Siempre están equivocados",
+          "optionB": "La persona que da el tip a menudo gana cuando tú compras",
+          "optionC": "Es ilegal compartir tips de acciones",
+          "optionD": "Solo los corredores pueden dar consejos de acciones",
+          "explanation": "Cuando alguien te empuja una acción, pregunta por qué. A menudo ya la tienen y ganan cuando tú subes el precio, o les pagan para promocionarla. Las oportunidades legítimas no llegan por spam."
+        },
+        "q3": {
+          "question": "¿Qué es el insider trading?",
+          "optionA": "Operar durante horas de mercado",
+          "optionB": "Operar basándose en información no pública",
+          "optionC": "Trabajar dentro de una firma de corretaje",
+          "optionD": "Operar sin un corredor",
+          "explanation": "El insider trading es comprar o vender acciones basándose en información importante que aún no es pública. Es un crimen federal porque da ventaja injusta sobre los inversores regulares."
+        },
+        "q4": {
+          "question": "¿Qué deberías hacer si alguien ofrece invertir tu dinero con rendimientos garantizados?",
+          "optionA": "Darles tu dinero inmediatamente",
+          "optionB": "Pedir más detalles sobre la oportunidad",
+          "optionC": "Alejarte - los rendimientos garantizados no existen y probablemente es una estafa",
+          "optionD": "Invertir una pequeña cantidad para probarlo",
+          "explanation": "Ninguna inversión legítima puede garantizar rendimientos. Cualquiera que prometa ganancias garantizadas probablemente está corriendo una estafa. Incluso inversiones pequeñas de 'prueba' pueden llevar a pérdidas mayores."
+        },
+        "q5": {
+          "question": "¿Cuál es una señal de alerta al evaluar consejos de inversión en redes sociales?",
+          "optionA": "La persona tiene muchos seguidores",
+          "optionB": "Fotos de estilo de vida (carros, jets) en lugar de educación real",
+          "optionC": "Discuten múltiples acciones",
+          "optionD": "Tienen una cuenta verificada",
+          "explanation": "Los gurús falsos presumen estilos de vida caros para atraer seguidores. Los verdaderos inversores se enfocan en educación, no en presumir. Si alguien vende el sueño más que enseñar, sé muy escéptico."
+        }
+      },
+      "6": {
+        "q1": {
+          "question": "¿Qué controla principalmente la Reserva Federal?",
+          "optionA": "Precios de acciones",
+          "optionB": "Ganancias de empresas",
+          "optionC": "Tasas de interés y la oferta de dinero",
+          "optionD": "Tasas de impuestos",
+          "explanation": "La Reserva Federal (el Fed) controla las tasas de interés y la oferta de dinero para mantener la economía estable. Sus decisiones afectan todo, desde hipotecas hasta precios de acciones."
+        },
+        "q2": {
+          "question": "¿Qué típicamente pasa con las acciones cuando las tasas de interés BAJAN?",
+          "optionA": "Las acciones usualmente caen",
+          "optionB": "Las acciones usualmente suben",
+          "optionC": "No pasa nada",
+          "optionD": "Solo las acciones bancarias se afectan",
+          "explanation": "Tasas de interés más bajas hacen que pedir prestado sea más barato, ayudando a las empresas a crecer. También hacen las cuentas de ahorro menos atractivas, empujando a los inversores hacia las acciones. Las acciones usualmente suben cuando las tasas bajan."
+        },
+        "q3": {
+          "question": "¿Qué son los reportes de ganancias?",
+          "optionA": "Actualizaciones económicas del gobierno",
+          "optionB": "Resultados financieros trimestrales que las empresas deben reportar",
+          "optionC": "Documentos de impuestos anuales",
+          "optionD": "Predicciones de precios de acciones",
+          "explanation": "Las empresas públicas deben reportar sus resultados financieros (ingresos, ganancia, guía) cada trimestre. Estos reportes son los eventos más importantes para los precios de acciones individuales."
+        },
+        "q4": {
+          "question": "¿Qué mueve más las acciones en el día de ganancias?",
+          "optionA": "El número de ganancia total",
+          "optionB": "Si los resultados superan o fallan las expectativas",
+          "optionC": "El salario del CEO",
+          "optionD": "El volumen de trading de la acción",
+          "explanation": "No se trata solo de ser rentable - se trata de superar o fallar lo que los analistas esperaban. Una empresa rentable puede ver caer su acción si los resultados fueron menores a lo esperado."
+        },
+        "q5": {
+          "question": "¿Qué es una economía 'goldilocks'?",
+          "optionA": "Una economía solo buena para grandes empresas",
+          "optionB": "Una economía que no está ni muy caliente ni muy fría",
+          "optionC": "Una recesión",
+          "optionD": "Una economía con cero inflación",
+          "explanation": "Una economía 'goldilocks' está perfecta - suficientemente fuerte para las ganancias de las empresas pero no tan caliente que cause alta inflación y alzas de tasas. Los mercados aman este balance."
+        }
+      },
+      "7": {
+        "q1": {
+          "question": "¿Cuándo debes impuestos sobre ganancias de acciones?",
+          "optionA": "Cada año, aunque no vendas",
+          "optionB": "Solo cuando vendes con ganancia",
+          "optionC": "Nunca, las acciones son libres de impuestos",
+          "optionD": "Mensualmente, basado en el valor de tu portafolio",
+          "explanation": "Solo pagas impuesto de ganancias de capital cuando realmente vendes una inversión con ganancia. Si mantienes y no vendes, tienes 'ganancias no realizadas' - no debes impuestos todavía."
+        },
+        "q2": {
+          "question": "¿Cuál es la diferencia entre ganancias de capital a corto y largo plazo?",
+          "optionA": "Corto plazo es para acciones bajo $100",
+          "optionB": "Largo plazo obtiene tasas de impuestos más bajas si mantienes más de 1 año",
+          "optionC": "No hay diferencia",
+          "optionD": "Corto plazo tiene menos impuestos",
+          "explanation": "Mantén inversiones por más de 1 año para obtener tasas de largo plazo (usualmente 15%). Menos de 1 año, pagas tasas de corto plazo (igual que tu impuesto sobre la renta, hasta 37%). ¡La diferencia puede ser enorme!"
+        },
+        "q3": {
+          "question": "¿Qué es la cosecha de pérdidas fiscales?",
+          "optionA": "Vender ganadores para pagar menos impuestos",
+          "optionB": "Vender inversiones perdedoras para compensar ganancias y reducir impuestos",
+          "optionC": "Evitar todas las ventas de acciones",
+          "optionD": "Mudarse a estados libres de impuestos",
+          "explanation": "La cosecha de pérdidas fiscales significa vender inversiones que están abajo para realizar pérdidas, que compensan tus ganancias. Esto reduce tu cuenta de impuestos. Hasta $3,000 en exceso de pérdidas pueden compensar ingreso regular."
+        },
+        "q4": {
+          "question": "¿Qué es el 'step-up en base' para inversiones heredadas?",
+          "optionA": "Los herederos deben pagar todos los impuestos atrasados",
+          "optionB": "La base de costo se reinicia al valor al momento de la muerte, borrando ganancias no realizadas",
+          "optionC": "Debes vender acciones heredadas inmediatamente",
+          "optionD": "Las acciones heredadas no pueden venderse por 1 año",
+          "explanation": "Cuando heredas inversiones, tu base de costo 'sube' al valor en la fecha de muerte. Décadas de ganancias pueden borrarse completamente para propósitos fiscales. Esta es una herramienta poderosa de transferencia de riqueza."
+        },
+        "q5": {
+          "question": "¿Cuál es el mejor orden para invertir en cuentas con ventajas fiscales?",
+          "optionA": "Cuenta gravable primero, luego cuentas de retiro",
+          "optionB": "Match del 401k → Roth IRA → Maximizar 401k → Gravable",
+          "optionC": "Solo usar Roth IRA, nada más",
+          "optionD": "No importa",
+          "explanation": "Primero obtén el match de tu empleador en el 401k (¡dinero gratis!), luego maximiza un Roth IRA ($7,000/año), luego maximiza el resto de tu 401k, luego usa cuentas gravables para ahorros adicionales."
+        }
+      },
       "8": {
         "q1": {
           "question": "¿Cuál es la principal diferencia entre una correduría de servicio completo y una correduría de descuento?",
@@ -667,6 +1047,48 @@
           "optionC": "9:00 AM - 4:30 PM hora del Este",
           "optionD": "10:00 AM - 3:00 PM hora del Este",
           "explanation": "El mercado de valores de EE.UU. está abierto de lunes a viernes de 9:30 AM a 4:00 PM hora del Este. El trading pre-mercado comienza a las 4:00 AM ET y el trading fuera de horario continúa hasta las 8:00 PM ET."
+        }
+      },
+      "9": {
+        "q1": {
+          "question": "¿Cuáles son los cuatro precios mostrados en una vela?",
+          "optionA": "Compra, venta, promedio, volumen",
+          "optionB": "Apertura, máximo, mínimo, cierre",
+          "optionC": "Inicio, medio, fin, cambio",
+          "optionD": "Oferta, demanda, último, volumen",
+          "explanation": "Cada vela muestra cuatro precios: Apertura (inicio del período), Máximo (precio más alto alcanzado), Mínimo (precio más bajo), y Cierre (fin del período). Estos a menudo se llaman OHLC."
+        },
+        "q2": {
+          "question": "¿Qué significa un cuerpo de vela verde (o blanco)?",
+          "optionA": "El precio cerró más alto de lo que abrió",
+          "optionB": "El precio cerró más bajo de lo que abrió",
+          "optionC": "Alto volumen de trading",
+          "optionD": "La acción es buena para comprar",
+          "explanation": "Una vela verde significa que el cierre fue más alto que la apertura - el precio SUBIÓ durante ese período. Una vela roja significa que el cierre fue más bajo - el precio BAJÓ."
+        },
+        "q3": {
+          "question": "¿Qué muestran las 'mechas' (líneas delgadas) en una vela?",
+          "optionA": "Volumen de trading",
+          "optionB": "Los precios máximo y mínimo alcanzados durante el período",
+          "optionC": "El precio de apertura",
+          "optionD": "Cuántas acciones se operaron",
+          "explanation": "La mecha superior muestra qué tan alto llegó el precio por encima de la apertura/cierre. La mecha inferior muestra qué tan bajo llegó. Las mechas largas muestran que el precio fue rechazado de los extremos."
+        },
+        "q4": {
+          "question": "¿Qué es un patrón de 'martillo'?",
+          "optionA": "Una vela roja muy grande",
+          "optionB": "Cuerpo pequeño arriba con mecha inferior larga, potencialmente alcista después de una tendencia bajista",
+          "optionC": "Tres velas seguidas",
+          "optionD": "Una vela sin mechas",
+          "explanation": "Un martillo tiene un cuerpo pequeño arriba y una mecha inferior larga. Después de una tendencia bajista, sugiere que los compradores entraron y empujaron el precio hacia arriba - una señal potencialmente alcista."
+        },
+        "q5": {
+          "question": "¿Qué es un nivel de soporte?",
+          "optionA": "El precio más alto que una acción puede alcanzar",
+          "optionB": "Un piso de precio donde los compradores tienden a entrar",
+          "optionC": "El precio promedio a través del tiempo",
+          "optionD": "Un precio garantizado para vender",
+          "explanation": "El soporte es un nivel de precio donde una acción históricamente ha rebotado hacia arriba. Es como un piso - cuando la acción cae a este nivel, los compradores entran porque lo ven como buen valor."
         }
       }
     }

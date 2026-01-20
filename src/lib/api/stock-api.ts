@@ -16,6 +16,7 @@
 import { getYahooQuote, searchYahoo } from './yahoo-finance';
 import { getQuote, searchStocks } from './finnhub';
 import { getAlphaVantageQuote, searchAlphaVantage } from './alpha-vantage';
+import { searchLocalStocks, LocalStock } from './stock-database';
 
 // =============================================================================
 // UNIFIED TYPES
@@ -143,8 +144,26 @@ export async function getStockQuote(symbol: string): Promise<StockQuoteData> {
 }
 
 /**
- * Searches for stocks/ETFs/bonds with triple source support.
- * Combines and deduplicates results from all sources for better coverage.
+ * Converts a local stock to a search result
+ */
+function localToSearchResult(stock: LocalStock): StockSearchResult {
+  return {
+    symbol: stock.symbol,
+    name: stock.name,
+    type: stock.type,
+    source: 'yahoo', // Mark as yahoo for consistency
+  };
+}
+
+/**
+ * Searches for stocks/ETFs/bonds with local database as primary source.
+ * Falls back to external APIs only if local search returns no results.
+ *
+ * The local database provides:
+ * - Instant results (no API latency)
+ * - No rate limiting issues
+ * - Works offline
+ * - Covers 150+ popular stocks, ETFs, and indices
  *
  * @param query - Search query (symbol or company name)
  * @returns Promise resolving to array of search results
@@ -153,26 +172,45 @@ export async function searchAllStocks(query: string): Promise<StockSearchResult[
   const allResults: StockSearchResult[] = [];
   const seenSymbols = new Set<string>();
 
-  // Try Yahoo Finance first (has better coverage including bonds and mutual funds)
-  try {
-    const yahooResults = await searchYahoo(query);
-    for (const result of yahooResults) {
-      if (!seenSymbols.has(result.symbol)) {
-        seenSymbols.add(result.symbol);
-        allResults.push({
-          symbol: result.symbol,
-          name: result.name,
-          type: result.type,
-          exchange: result.exchangeDisplay || result.exchange,
-          source: 'yahoo',
-        });
-      }
+  // STEP 1: Search local database first (instant, reliable)
+  const localResults = searchLocalStocks(query);
+  for (const result of localResults) {
+    if (!seenSymbols.has(result.symbol)) {
+      seenSymbols.add(result.symbol);
+      allResults.push(localToSearchResult(result));
     }
-  } catch (error) {
-    console.warn('[StockAPI] Yahoo search failed:', error instanceof Error ? error.message : error);
   }
 
-  // Try Finnhub if we need more results
+  // If we have enough results from local DB, return immediately
+  if (allResults.length >= 10) {
+    return allResults.slice(0, 15);
+  }
+
+  // STEP 2: Try external APIs only if local search returned few/no results
+  // This helps find less common stocks not in our curated database
+
+  // Try Yahoo Finance (note: may fail due to rate limiting as of Jan 2026)
+  if (allResults.length < 5) {
+    try {
+      const yahooResults = await searchYahoo(query);
+      for (const result of yahooResults) {
+        if (!seenSymbols.has(result.symbol)) {
+          seenSymbols.add(result.symbol);
+          allResults.push({
+            symbol: result.symbol,
+            name: result.name,
+            type: result.type,
+            exchange: result.exchangeDisplay || result.exchange,
+            source: 'yahoo',
+          });
+        }
+      }
+    } catch (error) {
+      console.warn('[StockAPI] Yahoo search failed:', error instanceof Error ? error.message : error);
+    }
+  }
+
+  // Try Finnhub if we still need more results
   if (allResults.length < 10) {
     try {
       const finnhubResults = await searchStocks(query);
