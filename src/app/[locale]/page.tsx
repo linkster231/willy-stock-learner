@@ -119,7 +119,7 @@ export default function HomePage() {
             <h2 className="mb-4 text-xl font-semibold">{t('yourProgress')}</h2>
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
               <div className="text-center">
-                <div className="text-2xl font-bold">0/8</div>
+                <div className="text-2xl font-bold">0/9</div>
                 <div className="text-sm text-blue-100">{t('modulesCompleted')}</div>
               </div>
               <div className="text-center">
