@@ -224,8 +224,9 @@ export function StockSearch({
   /**
    * Whether dropdown should be open - derived from results and user interaction
    * The dropdown auto-opens when results arrive, but can be manually closed
+   * Also shows when loading to give user feedback that search is in progress
    */
-  const shouldShowDropdown = isOpen || (results.length > 0 && hasValidQuery);
+  const shouldShowDropdown = hasValidQuery && (isOpen || results.length > 0 || isLoading || showNoResults);
 
   /**
    * Close dropdown when clicking outside the component
@@ -370,8 +371,16 @@ export function StockSearch({
             'max-h-64 overflow-y-auto'
           )}
         >
+          {/* Loading State */}
+          {isLoading && (
+            <div className="flex items-center gap-2 p-3 text-sm text-gray-500" role="status">
+              <span className="h-4 w-4 animate-spin rounded-full border-2 border-gray-300 border-t-blue-600" />
+              <span>Searching for &quot;{query}&quot;...</span>
+            </div>
+          )}
+
           {/* Error State */}
-          {error && (
+          {!isLoading && error && (
             <div
               className="p-3 text-sm text-red-600"
               role="alert"
@@ -382,14 +391,14 @@ export function StockSearch({
           )}
 
           {/* No Results State */}
-          {showNoResults && (
+          {!isLoading && showNoResults && (
             <div className="p-3 text-sm text-gray-500" role="status">
               No results found for &quot;{debouncedQuery}&quot;
             </div>
           )}
 
           {/* Results List */}
-          {results.length > 0 && (
+          {!isLoading && results.length > 0 && (
             <ul className="py-1">
               {results.map((result, index) => (
                 <li

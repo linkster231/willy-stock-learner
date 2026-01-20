@@ -14,19 +14,26 @@ import { module5 } from './module-5';
 import { module6 } from './module-6';
 import { module7 } from './module-7';
 import { module8 } from './module-8';
+import { module9 } from './module-9';
 
 /**
  * All modules in recommended learning order
+ *
+ * Learning flow:
+ * 1. Stock Basics → 2. Getting Started → 9. Chart Reading →
+ * 3. Risk Management → 4. Trading Psychology → 6. Market Influences →
+ * 5. Avoiding Fraud → 7. Taxes → 8. Using Fidelity (capstone)
  */
 export const modules: Module[] = [
-  module1,
-  module2,
-  module3,
-  module4,
-  module5,
-  module6,
-  module7,
-  module8,
+  module1,  // Stock Market Basics
+  module2,  // Getting Started
+  module9,  // Reading Charts (candlesticks)
+  module3,  // Risk Management
+  module4,  // Trading Psychology
+  module6,  // Market Influences
+  module5,  // Avoiding Fraud
+  module7,  // Taxes & Strategy
+  module8,  // Using Fidelity (capstone)
 ];
 
 /**
@@ -230,7 +237,7 @@ export function getLearningPath(
 }
 
 // Named exports for individual modules
-export { module1, module2, module3, module4, module5, module6, module7, module8 };
+export { module1, module2, module3, module4, module5, module6, module7, module8, module9 };
 
 // Default export
 export default modules;

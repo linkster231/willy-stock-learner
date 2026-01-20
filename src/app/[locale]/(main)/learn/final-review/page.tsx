@@ -1,62 +1,43 @@
 /**
- * Quiz Page
+ * Final Review Challenge Page
  *
- * Interactive quiz for testing knowledge after completing a module.
- * Tracks answers, shows feedback, and displays final score.
- *
- * Features:
- * - Randomized question order on each attempt
- * - Randomized answer options for each question
- * - Immediate feedback with explanations
+ * A comprehensive quiz that pulls questions from ALL modules.
+ * Questions and answer options are randomized each attempt.
+ * Serves as the ultimate test of everything learned.
  */
 
 'use client';
 
-import { useState, useMemo, useEffect, useRef } from 'react';
+import { useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { useParams, notFound } from 'next/navigation';
 import { Link, useRouter } from '@/i18n/routing';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { QuizResults, ProgressBar } from '@/components/learning';
-import { getModuleById } from '@/content/modules';
-import { getRandomizedQuizByModuleId } from '@/content/quizzes';
-import { useUserStore } from '@/stores/useUserStore';
+import { getFinalReviewQuiz } from '@/content/quizzes';
 import { Quiz } from '@/types/content';
 import { cn } from '@/lib/utils';
 
+// Number of questions in the final review
+const FINAL_REVIEW_QUESTION_COUNT = 20;
+
 interface QuizState {
   currentQuestionIndex: number;
-  answers: Record<string, string>; // questionId -> selectedOptionId
+  answers: Record<string, string>;
   showingFeedback: boolean;
   isComplete: boolean;
 }
 
-export default function QuizPage() {
+export default function FinalReviewPage() {
   const t = useTranslations();
-  const params = useParams();
   const router = useRouter();
-  const moduleId = `module-${params.moduleId}`;
 
-  // Get module data
-  const learningModule = getModuleById(moduleId);
-
-  // Get randomized quiz - memoized so it doesn't change during the quiz
-  // but will re-randomize on restart
+  // Get randomized final review quiz - re-randomizes on restart
   const [quizKey, setQuizKey] = useState(0);
-  const quiz = useMemo<Quiz | undefined>(() => {
-    return getRandomizedQuizByModuleId(moduleId);
+  const quiz = useMemo<Quiz>(() => {
+    return getFinalReviewQuiz(FINAL_REVIEW_QUESTION_COUNT);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [moduleId, quizKey]);
-
-  if (!learningModule || !quiz) {
-    notFound();
-  }
-
-  // User progress store
-  const { getCurrentUser, recordQuizAttempt, completeModule } = useUserStore();
-  const user = getCurrentUser();
-  const hasRecordedRef = useRef(false);
+  }, [quizKey]);
 
   // Quiz state
   const [state, setState] = useState<QuizState>({
@@ -87,19 +68,6 @@ export default function QuizPage() {
   // Check if passed
   const passed = scorePercent >= quiz.passingScore;
 
-  // Save quiz results when complete
-  useEffect(() => {
-    if (state.isComplete && user && !hasRecordedRef.current) {
-      hasRecordedRef.current = true;
-      // Record the quiz attempt
-      recordQuizAttempt(moduleId, correctAnswers, totalQuestions);
-      // If passed, mark module as complete
-      if (passed) {
-        completeModule(moduleId);
-      }
-    }
-  }, [state.isComplete, user, moduleId, correctAnswers, totalQuestions, passed, recordQuizAttempt, completeModule]);
-
   // Handle answer selection
   const handleAnswer = (optionId: string) => {
     if (state.showingFeedback) return;
@@ -123,7 +91,6 @@ export default function QuizPage() {
         showingFeedback: false,
       }));
     } else {
-      // Quiz complete
       setState((prev) => ({
         ...prev,
         isComplete: true,
@@ -131,10 +98,9 @@ export default function QuizPage() {
     }
   };
 
-  // Restart quiz - also re-randomizes questions and answers
+  // Restart quiz with new randomized questions
   const handleRestart = () => {
-    hasRecordedRef.current = false; // Reset recording flag for new attempt
-    setQuizKey((prev) => prev + 1); // Trigger quiz re-randomization
+    setQuizKey((prev) => prev + 1);
     setState({
       currentQuestionIndex: 0,
       answers: {},
@@ -149,8 +115,8 @@ export default function QuizPage() {
       <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6">
         {/* Back Link */}
         <Link
-          href={`/learn/${params.moduleId}`}
-          className="mb-6 inline-flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900"
+          href="/learn"
+          className="mb-6 inline-flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900 min-h-[44px] min-w-[44px]"
         >
           ← {t('common.back')}
         </Link>
@@ -163,6 +129,7 @@ export default function QuizPage() {
           onContinue={() => {
             router.push('/learn');
           }}
+          isFinalReview
         />
       </div>
     );
@@ -176,8 +143,8 @@ export default function QuizPage() {
     <div className="mx-auto max-w-2xl px-4 py-6 sm:px-6">
       {/* Back Link */}
       <Link
-        href={`/learn/${params.moduleId}`}
-        className="mb-4 inline-flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900"
+        href="/learn"
+        className="mb-4 inline-flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900 min-h-[44px] min-w-[44px]"
       >
         ← {t('common.back')}
       </Link>
@@ -185,11 +152,14 @@ export default function QuizPage() {
       {/* Quiz Header */}
       <div className="mb-6">
         <div className="flex items-center gap-2">
-          <span className="text-2xl">{learningModule.icon}</span>
+          <span className="text-2xl">🏆</span>
           <h1 className="text-xl font-bold text-gray-900">
-            {t(learningModule.titleKey)} - {t('learn.quiz.title')}
+            {t('learn.finalReview.title')}
           </h1>
         </div>
+        <p className="mt-1 text-sm text-gray-500">
+          {t('learn.finalReview.subtitle')}
+        </p>
 
         {/* Progress */}
         <div className="mt-4">
@@ -217,11 +187,14 @@ export default function QuizPage() {
 
           {/* Options */}
           <div className="space-y-3">
-            {currentQuestion.options.map((option) => {
+            {currentQuestion.options.map((option, index) => {
               const isSelected = selectedAnswer === option.id;
               const isCorrectOption = option.id === currentQuestion.correctOptionId;
               const showCorrect = state.showingFeedback && isCorrectOption;
               const showWrong = state.showingFeedback && isSelected && !isCorrectOption;
+
+              // Use index-based letters since options are shuffled
+              const optionLetters = ['A', 'B', 'C', 'D'];
 
               return (
                 <button
@@ -230,7 +203,7 @@ export default function QuizPage() {
                   onClick={() => handleAnswer(option.id)}
                   disabled={state.showingFeedback}
                   className={cn(
-                    'w-full rounded-lg border-2 p-4 text-left transition-all',
+                    'w-full rounded-lg border-2 p-4 text-left transition-all min-h-[56px]',
                     !state.showingFeedback &&
                       'hover:border-blue-300 hover:bg-blue-50',
                     isSelected && !state.showingFeedback && 'border-blue-500 bg-blue-50',
@@ -243,13 +216,13 @@ export default function QuizPage() {
                     {/* Option Letter */}
                     <span
                       className={cn(
-                        'flex h-8 w-8 items-center justify-center rounded-full font-semibold',
+                        'flex h-8 w-8 items-center justify-center rounded-full font-semibold flex-shrink-0',
                         showCorrect && 'bg-green-500 text-white',
                         showWrong && 'bg-red-500 text-white',
                         !showCorrect && !showWrong && 'bg-gray-100 text-gray-600'
                       )}
                     >
-                      {showCorrect ? '✓' : showWrong ? '✗' : option.id.toUpperCase()}
+                      {showCorrect ? '✓' : showWrong ? '✗' : optionLetters[index]}
                     </span>
                     {/* Option Text */}
                     <span
@@ -277,7 +250,7 @@ export default function QuizPage() {
               )}
             >
               <div className="flex items-start gap-3">
-                <span className="text-xl">
+                <span className="text-xl flex-shrink-0">
                   {isCorrect ? '🎉' : '💡'}
                 </span>
                 <div>

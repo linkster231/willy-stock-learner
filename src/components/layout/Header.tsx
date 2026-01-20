@@ -12,6 +12,7 @@ import { useTranslations } from 'next-intl';
 import { Link, usePathname } from '@/i18n/routing';
 import { cn } from '@/lib/utils';
 import { LanguageToggle } from './LanguageToggle';
+import { UserMenu } from '@/components/auth/UserMenu';
 
 /**
  * Main header component with navigation.
@@ -68,8 +69,9 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Right side: Language toggle + Mobile menu button */}
+          {/* Right side: User menu, Language toggle + Mobile menu button */}
           <div className="flex items-center gap-2">
+            <UserMenu />
             <LanguageToggle className="hidden sm:flex" />
 
             {/* Mobile menu button */}

@@ -7,63 +7,80 @@
 
 'use client';
 
+import { useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import { Card } from '@/components/ui/Card';
+import { modules } from '@/content/modules';
+import { useUserStore } from '@/stores/useUserStore';
 import { cn } from '@/lib/utils';
-
-/**
- * Module data - will be replaced with actual content imports
- */
-const modules = [
-  { id: '1', icon: '📈', color: 'blue' },
-  { id: '2', icon: '🚀', color: 'green' },
-  { id: '3', icon: '⚠️', color: 'yellow' },
-  { id: '4', icon: '🧠', color: 'purple' },
-  { id: '5', icon: '🕵️', color: 'red' },
-  { id: '6', icon: '🏛️', color: 'indigo' },
-  { id: '7', icon: '💰', color: 'emerald' },
-  { id: '8', icon: '📱', color: 'teal' },
-];
-
-// Simulated progress (will come from Supabase later)
-const userProgress: Record<string, { completed: boolean; quizPassed: boolean; progress: number }> = {
-  '1': { completed: false, quizPassed: false, progress: 0 },
-  '2': { completed: false, quizPassed: false, progress: 0 },
-  '3': { completed: false, quizPassed: false, progress: 0 },
-  '4': { completed: false, quizPassed: false, progress: 0 },
-  '5': { completed: false, quizPassed: false, progress: 0 },
-  '6': { completed: false, quizPassed: false, progress: 0 },
-  '7': { completed: false, quizPassed: false, progress: 0 },
-  '8': { completed: false, quizPassed: false, progress: 0 },
-};
 
 export default function LearnPage() {
   const t = useTranslations('learn');
 
-  // Check if a module is locked (previous module not completed)
-  const isLocked = (moduleId: string): boolean => {
-    const id = parseInt(moduleId, 10);
-    if (id === 1) return false; // First module always unlocked
-    const prevId = String(id - 1);
-    return !userProgress[prevId]?.quizPassed;
+  // User progress from store
+  const { getCurrentUser, getProgress, isModuleCompleted, isQuizPassed } = useUserStore();
+  const user = getCurrentUser();
+  const userProgress = getProgress();
+
+  // Calculate progress for each module
+  const moduleProgress = useMemo(() => {
+    const progress: Record<string, { lessonsCompleted: number; totalLessons: number; quizPassed: boolean; completed: boolean }> = {};
+
+    modules.forEach((mod) => {
+      const totalLessons = mod.lessons.length;
+      const completedLessons = userProgress
+        ? mod.lessons.filter((l) => userProgress.completedLessons.includes(l.id)).length
+        : 0;
+      const quizPassed = user ? isQuizPassed(mod.id) : false;
+      const completed = user ? isModuleCompleted(mod.id) : false;
+
+      progress[mod.id] = {
+        lessonsCompleted: completedLessons,
+        totalLessons,
+        quizPassed,
+        completed,
+      };
+    });
+
+    return progress;
+  }, [userProgress, user, isQuizPassed, isModuleCompleted]);
+
+  // Calculate overall progress
+  const overallProgress = useMemo(() => {
+    const totalModules = modules.length;
+    const completedModules = Object.values(moduleProgress).filter((p) => p.completed).length;
+    return { completed: completedModules, total: totalModules };
+  }, [moduleProgress]);
+
+  // Check if a module is locked (all previous modules must be completed)
+  const isLocked = (moduleIndex: number): boolean => {
+    if (moduleIndex === 0) return false; // First module always unlocked
+    // Check if previous module's quiz is passed
+    const prevModule = modules[moduleIndex - 1];
+    return !moduleProgress[prevModule.id]?.quizPassed;
   };
 
-  const getColorClasses = (color: string, locked: boolean) => {
+  // Color mapping for modules
+  const colors = ['blue', 'green', 'purple', 'yellow', 'red', 'indigo', 'emerald', 'teal', 'cyan'];
+
+  const getColorClasses = (index: number, locked: boolean) => {
     if (locked) {
       return 'bg-gray-100 border-gray-200 opacity-60';
     }
-    const colors: Record<string, string> = {
+    const colorMap: Record<string, string> = {
       blue: 'bg-blue-50 border-blue-200 hover:border-blue-300',
       green: 'bg-green-50 border-green-200 hover:border-green-300',
-      yellow: 'bg-yellow-50 border-yellow-200 hover:border-yellow-300',
       purple: 'bg-purple-50 border-purple-200 hover:border-purple-300',
+      yellow: 'bg-yellow-50 border-yellow-200 hover:border-yellow-300',
       red: 'bg-red-50 border-red-200 hover:border-red-300',
       indigo: 'bg-indigo-50 border-indigo-200 hover:border-indigo-300',
       emerald: 'bg-emerald-50 border-emerald-200 hover:border-emerald-300',
       teal: 'bg-teal-50 border-teal-200 hover:border-teal-300',
+      cyan: 'bg-cyan-50 border-cyan-200 hover:border-cyan-300',
     };
-    return colors[color] || colors.blue;
+    const color = colors[index % colors.length];
+    return colorMap[color] || colorMap.blue;
   };
 
   return (
@@ -83,29 +100,42 @@ export default function LearnPage() {
               <div className="h-3 overflow-hidden rounded-full bg-blue-400">
                 <div
                   className="h-full bg-white transition-all duration-500"
-                  style={{ width: '0%' }}
+                  style={{
+                    width: `${(overallProgress.completed / overallProgress.total) * 100}%`,
+                  }}
                 />
               </div>
             </div>
-            <span className="text-sm font-medium">0/8</span>
+            <span className="text-sm font-medium">
+              {overallProgress.completed}/{overallProgress.total}
+            </span>
           </div>
-          <p className="mt-2 text-sm text-blue-100">{t('passScore')}</p>
+          <p className="mt-2 text-sm text-blue-100">
+            {user ? t('passScore') : t('loginToSave')}
+          </p>
         </div>
       </Card>
 
       {/* Modules Grid */}
       <div className="space-y-4">
-        {modules.map((module) => {
-          const locked = isLocked(module.id);
-          const progress = userProgress[module.id];
+        {modules.map((mod, index) => {
+          const locked = isLocked(index);
+          const progress = moduleProgress[mod.id];
+          const progressPercent =
+            progress.totalLessons > 0
+              ? Math.round((progress.lessonsCompleted / progress.totalLessons) * 100)
+              : 0;
+
+          // Extract module number from ID for translation key
+          const moduleNum = mod.id.replace('module-', '');
 
           return (
-            <div key={module.id}>
+            <div key={mod.id}>
               {locked ? (
                 <Card
                   className={cn(
                     'border-2 cursor-not-allowed',
-                    getColorClasses(module.color, locked)
+                    getColorClasses(index, locked)
                   )}
                 >
                   <div className="flex items-center gap-4 p-4">
@@ -114,52 +144,60 @@ export default function LearnPage() {
                     </div>
                     <div className="flex-1">
                       <h3 className="font-semibold text-gray-500">
-                        {t(`modules.${module.id}.title`)}
+                        {t(`modules.${moduleNum}.title`)}
                       </h3>
                       <p className="text-sm text-gray-400">{t('locked')}</p>
                     </div>
                   </div>
                 </Card>
               ) : (
-                <Link href={`/learn/${module.id}`}>
+                <Link href={`/learn/${moduleNum}`}>
                   <Card
                     className={cn(
                       'border-2 transition-all hover:shadow-md',
-                      getColorClasses(module.color, locked)
+                      getColorClasses(index, locked),
+                      progress.completed && 'ring-2 ring-green-300'
                     )}
                   >
                     <div className="flex items-center gap-4 p-4">
-                      <div
-                        className={cn(
-                          'flex h-12 w-12 items-center justify-center rounded-lg text-2xl',
-                          `bg-${module.color}-100`
-                        )}
-                      >
-                        {module.icon}
+                      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white text-2xl shadow-sm">
+                        {mod.icon}
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold text-gray-900">
-                          {t(`modules.${module.id}.title`)}
-                        </h3>
+                        <div className="flex items-center gap-2">
+                          <h3 className="font-semibold text-gray-900">
+                            {t(`modules.${moduleNum}.title`)}
+                          </h3>
+                          {progress.completed && (
+                            <span className="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700">
+                              ✓ {t('completed')}
+                            </span>
+                          )}
+                        </div>
                         <p className="text-sm text-gray-600">
-                          {t(`modules.${module.id}.description`)}
+                          {t(`modules.${moduleNum}.description`)}
                         </p>
-                        {progress?.progress > 0 && (
+                        {progressPercent > 0 && !progress.completed && (
                           <div className="mt-2">
-                            <div className="h-1.5 w-full overflow-hidden rounded-full bg-gray-200">
-                              <div
-                                className="h-full bg-blue-500"
-                                style={{ width: `${progress.progress}%` }}
-                              />
+                            <div className="flex items-center gap-2">
+                              <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-gray-200">
+                                <div
+                                  className="h-full bg-blue-500 transition-all"
+                                  style={{ width: `${progressPercent}%` }}
+                                />
+                              </div>
+                              <span className="text-xs text-gray-500">
+                                {progress.lessonsCompleted}/{progress.totalLessons}
+                              </span>
                             </div>
                           </div>
                         )}
                       </div>
                       <div className="text-gray-400">
-                        {progress?.completed ? (
-                          <span className="text-green-500">✓</span>
+                        {progress.completed ? (
+                          <span className="text-2xl text-green-500">✓</span>
                         ) : (
-                          <span>→</span>
+                          <span className="text-xl">→</span>
                         )}
                       </div>
                     </div>
@@ -170,6 +208,30 @@ export default function LearnPage() {
           );
         })}
       </div>
+
+      {/* Final Review Link */}
+      {overallProgress.completed === overallProgress.total && overallProgress.total > 0 && (
+        <div className="mt-8">
+          <Link href="/learn/final-review">
+            <Card className="border-2 border-yellow-300 bg-gradient-to-r from-yellow-50 to-amber-50 hover:shadow-md transition-all">
+              <div className="flex items-center gap-4 p-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-yellow-100 text-2xl">
+                  🏆
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold text-gray-900">
+                    {t('finalReview.title')}
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    {t('finalReview.subtitle')}
+                  </p>
+                </div>
+                <span className="text-xl text-yellow-500">→</span>
+              </div>
+            </Card>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

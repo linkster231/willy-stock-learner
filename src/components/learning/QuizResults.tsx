@@ -25,6 +25,8 @@ interface QuizResultsProps {
   onContinue: () => void;
   /** Custom class name */
   className?: string;
+  /** Whether this is the final review challenge */
+  isFinalReview?: boolean;
 }
 
 /**
@@ -46,8 +48,9 @@ export function QuizResults({
   onRetry,
   onContinue,
   className,
+  isFinalReview = false,
 }: QuizResultsProps) {
-  const t = useTranslations('learning');
+  const t = useTranslations('learn.quiz.results');
 
   const percentage = Math.round((score / totalQuestions) * 100);
 
@@ -110,7 +113,13 @@ export function QuizResults({
           passed ? 'text-green-800' : 'text-amber-800'
         )}
       >
-        {passed ? t('quizPassed') : t('quizFailed')}
+        {isFinalReview
+          ? passed
+            ? t('finalReviewPassed')
+            : t('finalReviewFailed')
+          : passed
+          ? t('quizPassed')
+          : t('quizFailed')}
       </h2>
 
       {/* Score display */}

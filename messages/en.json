@@ -15,6 +15,29 @@
     "no": "No",
     "or": "or"
   },
+  "auth": {
+    "login": "Log In",
+    "loginTitle": "Welcome Back!",
+    "loginButton": "Log In",
+    "loginFailed": "Could not log in. Check your username and PIN.",
+    "signupTitle": "Create Your Account",
+    "signupButton": "Create Account",
+    "signupFailed": "Could not create account. Try again.",
+    "username": "Username",
+    "usernamePlaceholder": "Pick a cool username",
+    "pin": "4-Digit PIN",
+    "confirmPin": "Confirm PIN",
+    "pinMismatch": "PINs don't match",
+    "noAccount": "New here?",
+    "signupLink": "Create an account",
+    "hasAccount": "Already have an account?",
+    "loginLink": "Log in",
+    "logout": "Log Out",
+    "memberSince": "Member since {date}",
+    "yourProgress": "Your Progress",
+    "modulesCompleted": "Modules",
+    "lessonsCompleted": "Lessons"
+  },
   "nav": {
     "home": "Home",
     "learn": "Learn to Invest",
@@ -246,39 +269,311 @@
     "continueModule": "Keep Going",
     "retakeQuiz": "Try Again",
     "completed": "Done!",
+    "passed": "Passed",
     "locked": "Finish the lesson before this one to unlock",
     "quizScore": "Quiz Score: {score}%",
     "passScore": "You need 80% to pass",
+    "loginToSave": "Log in to save your progress!",
     "markComplete": "I Finished This!",
     "keyPoints": "What You Learned",
     "modules": {
       "1": {
         "title": "Your First Steps Into Stocks! (Stock Market Basics)",
-        "description": "Discover what stocks really are, how the market works, and why people invest"
+        "description": "Discover what stocks really are, how the market works, and why people invest",
+        "lessons": {
+          "1": {
+            "title": "What is a Stock?",
+            "content": "Imagine you and your friends want to start a lemonade stand, but you need $100 to buy supplies. You could ask 10 friends to each give you $10, and in return, they each own a piece of your business. That's basically what a stock is!\n\n**A stock is a tiny piece of ownership in a company.** When you buy a share of Apple stock, you literally become a part-owner of Apple - the company that makes iPhones, MacBooks, and AirPods. Pretty cool, right?\n\nCompanies sell stock to raise money. Instead of borrowing from a bank, they sell little pieces of ownership to regular people like you and me. This money helps them build new products, hire employees, and grow their business.\n\n**Why would you want to own stock?**\n- **Growth**: If the company does well, your piece becomes more valuable\n- **Dividends**: Some companies share their profits with owners (that's you!)\n- **Voting rights**: As an owner, you can vote on big company decisions\n\n**Real Example:** If you bought 1 share of Apple in 2010 for about $10, it would be worth over $170 today! That's the power of owning great companies.",
+            "point1": "A stock is a tiny piece of ownership in a company - you become a real part-owner",
+            "point2": "Companies sell stock to raise money to grow their business",
+            "point3": "Stock owners can make money when the company grows or pays dividends",
+            "point4": "Even one share makes you an official owner with voting rights"
+          },
+          "2": {
+            "title": "How Stock Exchanges Work",
+            "content": "Think of a stock exchange like a giant marketplace - but instead of buying fruits and vegetables, people buy and sell pieces of companies. The two biggest exchanges in the US are the New York Stock Exchange (NYSE) and NASDAQ.\n\n**The NYSE** is the oldest and most famous exchange. It's that building on Wall Street with the big American flag. Companies like Disney, Coca-Cola, and Walmart trade here.\n\n**NASDAQ** is a newer, electronic exchange. It's home to many tech companies like Apple, Google, Amazon, and Microsoft.\n\n**How Trading Works:**\nWhen you want to buy a stock, your order goes to the exchange. The exchange matches buyers with sellers. If someone is willing to sell at the price you want to pay, the trade happens instantly!\n\n**Every stock has a ticker symbol** - a short code that identifies it:\n- Apple = AAPL\n- Disney = DIS\n- Tesla = TSLA\n- Nike = NKE\n\n**The market is open on weekdays** from 9:30 AM to 4:00 PM Eastern Time. It's closed on weekends and holidays.\n\n**Fun Fact:** The NYSE started under a buttonwood tree in 1792, when 24 stockbrokers signed an agreement to trade with each other. Today, trillions of dollars trade hands every single day!",
+            "point1": "Stock exchanges are marketplaces where people buy and sell stocks",
+            "point2": "The NYSE and NASDAQ are the two biggest US exchanges",
+            "point3": "Every stock has a ticker symbol - like AAPL for Apple",
+            "point4": "The market is open weekdays 9:30 AM - 4:00 PM Eastern Time"
+          },
+          "3": {
+            "title": "Reading Stock Prices",
+            "content": "When you look up a stock, you'll see lots of numbers. Let's break down what they all mean so you're not confused!\n\n**Current Price:** This is what one share costs right now. If Apple shows $175.50, that's the price for one share.\n\n**Change:** Shows how much the price moved today. \"+$2.50\" means it went UP $2.50. \"-$3.00\" means it went DOWN $3.00. Green = up, Red = down.\n\n**Percentage Change:** Same thing but as a percent. \"+1.5%\" is easier to compare across different stocks than dollar amounts.\n\n**Open:** The price when the market opened this morning.\n\n**High/Low:** The highest and lowest prices reached today. This shows how much the price bounced around.\n\n**52-Week High/Low:** The highest and lowest prices in the past year. Useful to see if the stock is near its peak or bottom.\n\n**Volume:** How many shares traded today. High volume means lots of people are buying and selling. Low volume means less activity.\n\n**Market Cap:** The total value of the entire company. Calculated by: Stock Price × Total Shares. Apple's market cap is over $2 trillion - the most valuable company in the world!\n\n**Pro Tip:** Don't worry about memorizing everything. The most important numbers are the current price, the change (to see if it's up or down), and the trend over time.",
+            "point1": "The current price shows what one share costs right now",
+            "point2": "Green means the price went up, red means it went down",
+            "point3": "Volume tells you how many shares were bought and sold today",
+            "point4": "Market cap shows the total value of the entire company"
+          },
+          "4": {
+            "title": "Market History and Famous Crashes",
+            "content": "The stock market has been around for over 200 years, and it's had some wild rides! Learning about past crashes helps you stay calm when markets get scary.\n\n**The Great Depression (1929)**\nThe market crashed 89% over three years. People lost everything. Banks failed. It took 25 years for stocks to recover. This led to new rules to protect investors.\n\n**Black Monday (1987)**\nThe market dropped 22% in ONE DAY - the biggest single-day drop ever. But here's the key: it recovered within two years. People who panicked and sold lost money. Those who held on were fine.\n\n**Dot-Com Crash (2000)**\nEveryone went crazy for internet companies. Pets.com, Webvan, and hundreds of others promised to change the world. Most went bankrupt. The lesson? Just because something is exciting doesn't mean it's a good investment.\n\n**2008 Financial Crisis**\nBanks made risky bets on housing. When housing prices fell, banks collapsed. The market dropped 50%. But if you invested $10,000 at the BOTTOM of the crash, it would be worth over $50,000 today.\n\n**COVID Crash (2020)**\nThe market dropped 34% in just one month! But then it recovered faster than any crash in history - hitting new highs within months.\n\n**The Big Lesson:** Every crash looks like the end of the world when it's happening. But the market has ALWAYS recovered and gone higher. The secret is: don't panic, don't sell, and think long-term.",
+            "point1": "The stock market has crashed many times but always recovered",
+            "point2": "The 2008 crash was caused by risky bets on housing",
+            "point3": "People who panic and sell during crashes often lose money",
+            "point4": "Long-term investors who stay calm tend to come out ahead"
+          },
+          "5": {
+            "title": "Why Companies Go Public (IPOs)",
+            "content": "When a company first sells its stock to the public, it's called an IPO - Initial Public Offering. It's like a company's debut on the stock market stage!\n\n**Why Do Companies Go Public?**\n- **Raise Money:** They can raise billions to grow faster. When Facebook went public, they raised $16 billion!\n- **Cash Out Early Investors:** Founders and employees who got stock can finally sell it\n- **Gain Credibility:** Being publicly traded makes companies seem more trustworthy\n- **Attract Talent:** They can offer stock to employees as part of their pay\n\n**How an IPO Works:**\n1. The company hires investment banks (like Goldman Sachs) to help\n2. They decide how many shares to sell and at what price\n3. Big investors get to buy first (not fair, but that's how it works)\n4. On IPO day, regular people can finally buy shares\n\n**Famous IPOs:**\n- **Google (2004):** Started at $85, now worth over $140 (after splits)\n- **Facebook (2012):** Started at $38, now worth over $300\n- **Amazon (1997):** Started at $18, now worth over $150 (after splits)\n\n**Warning About IPO Hype:**\nNot every IPO is a winner. Many IPOs drop after the first day. WeWork tried to go public at $47 billion but nearly went bankrupt. Be careful about buying stocks just because they're new and exciting!\n\n**Pro Tip:** It's often better to wait a few months after an IPO before buying. Let the hype settle down and see how the company actually performs.",
+            "point1": "An IPO is when a company first sells stock to the public",
+            "point2": "Companies go public to raise money and let early investors cash out",
+            "point3": "Not all IPOs are winners - some drop significantly after launch",
+            "point4": "Consider waiting a few months after an IPO before investing"
+          }
+        }
       },
       "2": {
         "title": "Ready, Set, Invest! (Getting Started)",
-        "description": "Open your first account, understand the costs, and make your first trade"
+        "description": "Open your first account, understand the costs, and make your first trade",
+        "lessons": {
+          "1": {
+            "title": "Opening Your First Brokerage Account",
+            "content": "Before you can buy stocks, you need a brokerage account. Think of it like a bank account, but for investing. Here's everything you need to know to get started!\n\n**What is a Brokerage Account?**\nA brokerage is a company that lets you buy and sell stocks, ETFs, and other investments. Popular options include Fidelity, Charles Schwab, Robinhood, and Vanguard.\n\n**Types of Accounts:**\n- **Individual Brokerage Account**: The most common type. You can deposit and withdraw anytime, but you pay taxes on your gains each year.\n- **Roth IRA**: Special retirement account. You pay taxes now, but your money grows tax-free forever! Great for young investors.\n- **Traditional IRA**: Pay taxes later when you retire. Good if you think you'll be in a lower tax bracket then.\n- **Custodial Account (UTMA/UGMA)**: For kids under 18. A parent manages it until you're an adult.\n\n**What You Need to Open an Account:**\n- Social Security Number\n- Date of birth\n- Home address\n- Employment information\n- Bank account for transfers\n\n**Choosing the Right Broker:**\nLook for: commission-free trading, no account minimums, good mobile app, educational resources, and strong customer service. Fidelity and Schwab are great for beginners!\n\n**Pro Tip:** Start with one account to keep things simple. You can always open more later as your investing grows.",
+            "point1": "A brokerage account is where you buy and sell stocks - you need one to invest",
+            "point2": "Individual accounts are flexible; IRAs offer tax advantages for retirement",
+            "point3": "Most brokers now have $0 minimums and free stock trading",
+            "point4": "Choose a broker with good education, mobile app, and customer service"
+          },
+          "2": {
+            "title": "Understanding Fees and Costs",
+            "content": "Good news: investing has never been cheaper! But there are still some costs to watch out for. Let's break them all down.\n\n**Commission-Free Trading:**\nMost major brokers no longer charge fees to buy or sell stocks and ETFs. This is huge - it used to cost $7-10 per trade! Now you can invest small amounts without fees eating your returns.\n\n**Expense Ratios (for ETFs and Mutual Funds):**\nWhen you buy a fund (a basket of stocks), there's a small annual fee. This is expressed as a percentage:\n- 0.03% = Excellent (pay $0.30 per $1,000 invested)\n- 0.20% = Good (pay $2 per $1,000)\n- 1.00% = Expensive (pay $10 per $1,000)\n\n**Fees to Watch Out For:**\n- **Account maintenance fees**: Some brokers charge if your balance is too low\n- **Inactivity fees**: Charges if you don't trade for a while\n- **Transfer fees**: Costs to move your account to another broker ($50-100)\n- **Paper statement fees**: Extra charges for physical mail\n- **Foreign transaction fees**: Extra costs for international stocks\n\n**The Hidden Cost - Bid/Ask Spread:**\nWhen you buy a stock, you pay slightly more than if you sold it at the same moment. This difference is called the \"spread.\" For popular stocks like Apple, it's just pennies. For tiny stocks, it can be much more.\n\n**Pro Tip:** Stick with low-cost index funds (0.03-0.10% expense ratio) and avoid any account with maintenance fees. Every dollar in fees is a dollar that's not growing for you!",
+            "point1": "Most brokers now offer commission-free stock and ETF trading",
+            "point2": "Expense ratios are annual fees for funds - look for 0.20% or less",
+            "point3": "Watch out for hidden fees like maintenance, inactivity, and transfer fees",
+            "point4": "The bid/ask spread is a small hidden cost on every trade"
+          },
+          "3": {
+            "title": "Funding Your Account and Your First Deposit",
+            "content": "You've opened your account - now let's put some money in it! Here's how to fund your account and get ready to invest.\n\n**How to Add Money:**\n- **Bank Transfer (ACH)**: Free, but takes 1-3 business days. Most common method.\n- **Wire Transfer**: Faster (same day) but costs $15-30. Only use for large amounts.\n- **Check Deposit**: Mail a check or use mobile deposit. Takes a few days.\n\n**How Much Do You Need to Start?**\nGood news: most brokers have $0 minimums! You can literally start with $1. But here's what's realistic:\n- **$1-50**: Great for learning with fractional shares\n- **$100-500**: Good starting point to build a small portfolio\n- **$1,000+**: Gives you more options and diversification\n\n**Fractional Shares - The Game Changer:**\nCan't afford a $500 share of Tesla? No problem! Most brokers now let you buy \"fractional shares\" - a piece of a share. With $10, you could own 0.02 shares of Tesla or Amazon. This makes it easy for anyone to invest in expensive stocks.\n\n**Setting Up Automatic Investments:**\nThe secret to building wealth? Invest regularly without thinking about it. Set up automatic transfers from your bank:\n- Weekly: $25/week = $1,300/year\n- Bi-weekly: $50/paycheck = $1,300/year\n- Monthly: $100/month = $1,200/year\n\n**Pro Tip:** Start small but start NOW. Investing $25/week starting at age 15 could turn into over $1 million by retirement, thanks to compound growth!",
+            "point1": "Bank transfers (ACH) are free and take 1-3 days to process",
+            "point2": "You can start investing with as little as $1 thanks to fractional shares",
+            "point3": "Fractional shares let you own pieces of expensive stocks like Amazon or Tesla",
+            "point4": "Set up automatic investments to build wealth without thinking about it"
+          },
+          "4": {
+            "title": "Making Your First Investment",
+            "content": "This is it - the moment you become an investor! Let's walk through placing your first trade step by step.\n\n**Step 1: Decide What to Buy**\nFor your first investment, keep it simple:\n- **Index Fund (like VTI or VOO)**: Owns hundreds of companies at once. Super diversified and low cost.\n- **Blue Chip Stock**: A big, stable company like Apple, Disney, or Coca-Cola.\n\n**Step 2: Research Before You Buy**\nAsk yourself:\n- Do I understand what this company does?\n- Is this company growing or shrinking?\n- Am I okay holding this for 5+ years?\n\n**Step 3: Choose Your Order Type**\n- **Market Order**: Buy right now at whatever the current price is. Simple and fast.\n- **Limit Order**: Set the maximum price you'll pay. More control, but might not execute.\n\nFor beginners, market orders are fine for large, popular stocks.\n\n**Step 4: Decide How Much**\nYou can usually enter:\n- Number of shares (e.g., \"10 shares\")\n- Dollar amount (e.g., \"$100 worth\")\n\n**Step 5: Review and Submit**\nDouble-check everything:\n- Right stock? (Check the ticker symbol!)\n- Right amount?\n- Right order type?\n\nThen hit \"Submit\" or \"Place Order.\" Congratulations - you're now an investor!\n\n**What Happens Next:**\nFor market orders, your trade usually fills in seconds. You'll see the shares in your account almost immediately. You'll also get a confirmation with all the details.\n\n**Pro Tip:** Don't stress about timing the market perfectly. Time IN the market beats timing the market. Just get started!",
+            "point1": "Start simple with an index fund (VTI, VOO) or a blue chip stock you understand",
+            "point2": "Market orders execute immediately; limit orders let you set your price",
+            "point3": "Always double-check the ticker symbol and amount before submitting",
+            "point4": "Don't wait for the 'perfect' time - starting early matters more than timing"
+          }
+        }
       },
       "3": {
         "title": "Don't Lose Your Shirt! (Risk Management)",
-        "description": "Master the art of protecting your money while still growing it"
+        "description": "Master the art of protecting your money while still growing it",
+        "lessons": {
+          "1": {
+            "title": "What is Risk?",
+            "content": "Every investment has risk. Understanding risk is the first step to managing it - and protecting your money!\n\n**What is Investment Risk?**\nRisk is the chance that you might lose money, or that your investment won't grow as much as you hoped. The key rule: higher potential reward usually means higher risk.\n\n**Types of Risk:**\n- **Market Risk**: The whole market goes down (like in a crash). Even good companies fall.\n- **Company Risk**: One specific company has problems. Think Enron or Blockbuster.\n- **Inflation Risk**: Your money grows slower than prices rise. $100 today buys less in 10 years.\n- **Liquidity Risk**: You can't sell when you need to. Some investments are hard to cash out.\n\n**Risk vs. Reward:**\nImagine a scale:\n- **Low Risk, Low Reward**: Savings accounts (1-2% growth, but very safe)\n- **Medium Risk, Medium Reward**: Bonds and balanced funds (3-6% growth)\n- **Higher Risk, Higher Reward**: Stocks (7-10% average, but wild swings)\n- **Highest Risk**: Individual stocks, crypto, options (could double... or lose everything)\n\n**Your Risk Tolerance:**\nHow would you feel if your investment dropped 20% tomorrow?\n- \"I'd panic and sell\" → You need lower-risk investments\n- \"I'd be nervous but hold\" → Moderate risk is okay\n- \"I'd buy more at the discount\" → You can handle higher risk\n\n**Pro Tip:** Only invest money you won't need for 5+ years. Short-term money should stay in savings. Long-term money can ride out the ups and downs.",
+            "point1": "Risk is the chance you might lose money or not grow as much as hoped",
+            "point2": "Higher potential reward usually means higher risk",
+            "point3": "Market risk affects everything; company risk affects one stock",
+            "point4": "Know your risk tolerance - how would you react to a 20% drop?"
+          },
+          "2": {
+            "title": "The Magic of Diversification",
+            "content": "Don't put all your eggs in one basket! Diversification is your superpower for reducing risk without giving up growth.\n\n**What is Diversification?**\nDiversification means spreading your money across different investments. If one goes down, others might go up - balancing things out.\n\n**Why It Works:**\nImagine you own just one stock - a pizza company. If pizza becomes unpopular, you lose big. But if you also own a salad company, a gym, and a streaming service, the gym and salad gains might offset your pizza losses!\n\n**Ways to Diversify:**\n1. **Across Companies**: Own many stocks, not just one\n2. **Across Industries**: Mix tech, healthcare, retail, finance, etc.\n3. **Across Size**: Big companies (Apple) + small companies (growth potential)\n4. **Across Countries**: US stocks + international stocks\n5. **Across Asset Types**: Stocks + bonds + real estate\n\n**The Easy Way: Index Funds**\nOne index fund like VTI owns over 4,000 US companies! Instant diversification in one purchase. S&P 500 funds (like VOO) own the 500 biggest US companies.\n\n**How Much Diversification is Enough?**\n- 1 stock = Very risky\n- 10-15 stocks = Good start\n- 30+ stocks = Well diversified\n- Index fund = Ultimate diversification\n\n**Warning: Over-Diversification**\nOwning 100 individual stocks is actually worse than one index fund. It's more work, more fees, and you're basically recreating the index anyway!\n\n**Pro Tip:** For most beginners, one total market index fund (like VTI) gives you all the diversification you need. Keep it simple!",
+            "point1": "Diversification means spreading money across different investments",
+            "point2": "If one investment falls, others might rise to balance it out",
+            "point3": "Diversify across companies, industries, sizes, and countries",
+            "point4": "Index funds are the easiest way to get instant diversification"
+          },
+          "3": {
+            "title": "Understanding Volatility",
+            "content": "Stocks go up and down - sometimes a lot! Understanding volatility helps you stay calm when markets get crazy.\n\n**What is Volatility?**\nVolatility measures how much a stock's price swings up and down. High volatility = big swings. Low volatility = steady and calm.\n\n**Examples:**\n- **Low Volatility**: Coca-Cola might move 1-2% on a typical day\n- **Medium Volatility**: Apple might move 2-4% on a typical day\n- **High Volatility**: Tesla might move 5-10% on a typical day\n- **Extreme Volatility**: Meme stocks can move 50%+ in a day!\n\n**Volatility is Not the Same as Risk:**\nA stock can be volatile (bouncy) but still be a good long-term investment. Tesla has been super volatile, but long-term holders have done great. Volatility is only a problem if you panic and sell at the wrong time.\n\n**Why Stocks Are Volatile:**\n- Earnings reports (good or bad news)\n- Economic data (jobs, inflation, interest rates)\n- World events (wars, pandemics, elections)\n- Investor emotions (fear and greed)\n\n**Volatility and Time:**\nShort-term: Stocks can swing wildly\nLong-term: Returns smooth out\n\nThe S&P 500 has had years of -37% AND years of +38%. But over 20+ years, it's averaged about 10% annually.\n\n**How to Handle Volatility:**\n1. Don't check your portfolio every day\n2. Remember: volatility is normal\n3. Focus on years, not days\n4. Volatility creates buying opportunities\n\n**Pro Tip:** If seeing red numbers makes you anxious, check your portfolio less often. Seriously - once a month is plenty. Your investments don't grow faster just because you watch them!",
+            "point1": "Volatility measures how much prices swing up and down",
+            "point2": "High volatility doesn't always mean high risk - time horizon matters",
+            "point3": "Over long periods, stock returns tend to smooth out",
+            "point4": "Check your portfolio less often to avoid emotional decisions"
+          },
+          "4": {
+            "title": "Position Sizing - How Much to Invest",
+            "content": "How much of your money should go into any single investment? Position sizing helps you avoid betting too big on one thing.\n\n**What is Position Sizing?**\nPosition sizing is deciding what percentage of your total portfolio goes into each investment. It's about not putting too much in one basket.\n\n**The Basic Rules:**\n- **Never put more than 10% in a single stock**: If it crashes, you only lose 10%\n- **5% is even safer**: Gives you room for 20 different investments\n- **Index funds can be bigger**: Since they're already diversified, 25-50% is fine\n\n**Example Portfolio ($1,000):**\n- 40% in Total Market Index Fund (VTI) = $400\n- 20% in International Fund = $200\n- 10% in Apple = $100\n- 10% in Microsoft = $100\n- 10% in Amazon = $100\n- 10% in Cash (for opportunities) = $100\n\n**Position Sizing Based on Confidence:**\n- Very confident: Up to 10% in one stock\n- Somewhat confident: 3-5%\n- Speculative bet: 1-2% max\n- Super risky (meme stocks, crypto): Only money you can lose completely\n\n**The Concentration Trap:**\nMany people's biggest mistake is putting too much in one stock because \"it's definitely going up.\" Even the best investors are wrong often. By limiting position sizes, you protect yourself from being wrong.\n\n**Special Case - Your Employer's Stock:**\nDon't put more than 10% in your employer's stock. If the company struggles, you could lose your job AND your savings. Enron employees learned this the hard way.\n\n**Pro Tip:** As you add more money to your portfolio, make sure new purchases balance out your positions. If one stock has grown to 15% of your portfolio, buy other things to bring it back down.",
+            "point1": "Never put more than 10% of your portfolio in a single stock",
+            "point2": "Index funds can be larger positions since they're already diversified",
+            "point3": "Size positions based on your confidence level - smaller for riskier bets",
+            "point4": "Rebalance when any position grows too large compared to others"
+          },
+          "5": {
+            "title": "Emergency Funds and Investing Safely",
+            "content": "Before investing a single dollar, you need a financial safety net. An emergency fund protects you AND your investments!\n\n**What is an Emergency Fund?**\nMoney set aside for unexpected expenses: car repairs, medical bills, job loss. This money stays in cash (savings account) - NOT invested in stocks.\n\n**Why You Need One BEFORE Investing:**\nImagine you invest $1,000 in stocks. Then your car breaks down and needs $800 to fix. If you have no emergency fund, you might have to sell your stocks - possibly at a loss - to pay for it.\n\nWorse: What if the market is down 20% when you need to sell? You'd lock in losses and miss the recovery.\n\n**How Much Do You Need?**\n- **Minimum**: $500-1,000 for small emergencies\n- **Good goal**: 1-2 months of expenses\n- **Ideal**: 3-6 months of expenses (for adults with bills)\n\n**Where to Keep Your Emergency Fund:**\n- High-yield savings account (earning 4-5% in 2024)\n- Money market account\n- NOT in stocks, bonds, or anything that can lose value\n\n**The Right Order:**\n1. First: Build a starter emergency fund ($500-1,000)\n2. Then: Start investing, even small amounts\n3. Over time: Grow emergency fund to 3+ months\n4. Always: Keep emergency fund separate from investments\n\n**Golden Rule:**\nOnly invest money you won't need for at least 5 years. Bills, rent, emergency money? Keep that safe in cash.\n\n**Pro Tip:** Set up a separate savings account labeled \"Emergency Fund\" - don't mix it with your regular savings. Out of sight, out of mind until you really need it.",
+            "point1": "Build an emergency fund before investing - at least $500-1,000 to start",
+            "point2": "Emergency funds stay in savings accounts, not invested in stocks",
+            "point3": "Only invest money you won't need for at least 5 years",
+            "point4": "Having cash reserves means you won't be forced to sell stocks at a bad time"
+          }
+        }
       },
       "4": {
         "title": "Think Like a Pro Trader (Trading Psychology)",
-        "description": "Control your emotions, avoid rookie mistakes, and build winning habits"
+        "description": "Control your emotions, avoid rookie mistakes, and build winning habits",
+        "lessons": {
+          "1": {
+            "title": "Emotions and Money Don't Mix",
+            "content": "Your brain is wired to make terrible investing decisions. Understanding why helps you fight back!\n\n**The Two Emotions That Destroy Portfolios:**\n\n**FEAR** makes you:\n- Sell at the bottom when things look scariest\n- Miss opportunities because \"what if it goes down?\"\n- Panic when you see red in your portfolio\n\n**GREED** makes you:\n- Buy at the top when everyone's excited\n- Put too much money in one \"sure thing\"\n- Chase hot stocks after they've already risen\n\n**Why Your Brain Betrays You:**\nOur brains evolved to survive in the wild, not to invest in stock markets. When you see your portfolio drop, your brain screams \"DANGER! RUN!\" - the same reaction as seeing a lion. But in investing, running (selling) is usually the wrong move.\n\n**Loss Aversion:**\nStudies show losing $100 feels TWICE as painful as gaining $100 feels good. This is called \"loss aversion.\" It's why a small drop can feel devastating, even when you're still up overall.\n\n**The Emotional Investing Cycle:**\n1. Market rises → You feel confident → You buy (often at the top)\n2. Market falls → You feel scared → You sell (often at the bottom)\n3. Market rises again → You feel regret → You buy again (too late)\n\nThis cycle is the opposite of \"buy low, sell high\"!\n\n**Pro Tip:** The best investors are often described as \"boring.\" They don't get excited about gains or panicked about losses. They stick to their plan. Be boring!",
+            "point1": "Fear makes you sell low; greed makes you buy high - the opposite of what works",
+            "point2": "Loss aversion means losses feel twice as painful as gains feel good",
+            "point3": "Your survival instincts work against you in investing",
+            "point4": "The best investors stay calm and stick to their plan - be boring!"
+          },
+          "2": {
+            "title": "FOMO and FUD - The Investor's Enemies",
+            "content": "Two powerful forces drive bad decisions: FOMO (fear of missing out) and FUD (fear, uncertainty, and doubt). Learn to recognize them!\n\n**What is FOMO?**\nFOMO is that panicky feeling when everyone's talking about a stock going up, and you're not in it. \"If I don't buy NOW, I'll miss out!\"\n\n**FOMO Warning Signs:**\n- \"Everyone on social media is getting rich on this!\"\n- \"It's up 200% - I need to get in before it doubles again!\"\n- \"My friend made $10,000 on this stock last week!\"\n- Feeling anxious that you're missing the opportunity of a lifetime\n\n**The Truth About FOMO:**\nBy the time everyone's talking about a stock, the big gains are often over. The people who post their wins don't post their losses. And for every winner, there are many losers you don't hear about.\n\n**What is FUD?**\nFUD is Fear, Uncertainty, and Doubt. It's the opposite of FOMO - it makes you too scared to invest or causes you to sell good investments.\n\n**FUD Warning Signs:**\n- \"The market is about to crash!\"\n- \"This company is doomed!\"\n- Headlines designed to scare you into clicking\n- Feeling like the world is ending (when it isn't)\n\n**How to Fight FOMO and FUD:**\n1. Have a written investment plan and stick to it\n2. Don't make decisions based on social media hype\n3. Remember: headlines are designed to get clicks, not help you invest\n4. When you feel FOMO or FUD, wait 24 hours before acting\n\n**Pro Tip:** The best trades are often boring. If a stock is exciting everyone, that's usually a warning sign, not a green light.",
+            "point1": "FOMO makes you buy into hype after prices have already risen",
+            "point2": "FUD makes you sell or avoid good investments out of fear",
+            "point3": "Social media shows winners but hides all the losers",
+            "point4": "When you feel FOMO or FUD, wait 24 hours before making any decisions"
+          },
+          "3": {
+            "title": "Building an Investment Plan",
+            "content": "A written investment plan is your best defense against emotional decisions. Here's how to create one!\n\n**Why You Need a Plan:**\nWhen markets are crazy, your emotions are high. That's the worst time to make decisions. A plan made when you're calm helps you act rationally when things get scary.\n\n**What Your Plan Should Include:**\n\n**1. Your Goals**\n- What are you investing for? (Retirement, house, car, college?)\n- When do you need the money? (5 years, 20 years, 40 years?)\n- How much do you want to have?\n\n**2. Your Strategy**\n- What will you invest in? (Index funds, individual stocks, mix?)\n- How much will you invest each month?\n- What's your asset allocation? (e.g., 80% stocks, 20% bonds)\n\n**3. Your Rules**\n- \"I will invest $X every month no matter what the market does\"\n- \"I will not check my portfolio more than once a week\"\n- \"I will not sell during a crash - I will buy more\"\n- \"I will not put more than 10% in any single stock\"\n\n**4. Your Rebalancing Plan**\n- When will you review and adjust? (Annually is fine)\n- What triggers a rebalance? (If any asset is 5% off target)\n\n**Sample Simple Plan:**\n\"I invest $200/month into VTI (total market index fund) on the 15th. I will not sell until retirement. If the market drops 20%, I will add an extra $100 that month. I check my portfolio once a month.\"\n\n**Pro Tip:** Write your plan down and put it somewhere you'll see it. When you're tempted to panic, read your plan. Future you wrote it when you were thinking clearly!",
+            "point1": "A written plan made when calm helps you act rationally when emotional",
+            "point2": "Include your goals, strategy, rules, and when you'll rebalance",
+            "point3": "Your plan should include what you'll do when the market crashes",
+            "point4": "Write it down and read it when you're tempted to make emotional decisions"
+          },
+          "4": {
+            "title": "Common Investing Mistakes",
+            "content": "Learn from others' mistakes so you don't make them yourself! Here are the most common traps new investors fall into.\n\n**Mistake #1: Trying to Time the Market**\n\"I'll wait for the dip to buy.\" The problem? You can't predict dips. Studies show that missing just the 10 best days in the market over 20 years can cut your returns in HALF. Time in the market beats timing the market.\n\n**Mistake #2: Checking Your Portfolio Too Often**\nThe more you check, the more you'll be tempted to tinker. And tinkering usually hurts returns. Daily checking leads to emotional decisions. Once a month is plenty.\n\n**Mistake #3: Following Hot Tips**\n\"My cousin says this stock is going to moon!\" By the time you hear a \"hot tip,\" it's usually too late. The big gains have already happened. Worse, it might be a scam.\n\n**Mistake #4: Selling Winners Too Early**\n\"I'm up 50%, I should take profits!\" Great companies can grow for decades. If you had sold Apple in 2010 when it doubled, you'd have missed 1,700% more gains. Let winners run!\n\n**Mistake #5: Holding Losers Too Long**\n\"It'll come back.\" Sometimes a stock falls for good reasons. Holding onto a bad investment hoping it recovers means your money isn't growing elsewhere.\n\n**Mistake #6: Not Starting**\n\"I'll invest when I have more money / know more / the market is better.\" There's never a perfect time. The best time to start was yesterday. The second best time is today.\n\n**Mistake #7: Overtrading**\nBuying and selling frequently racks up fees (even if small) and often leads to buying high and selling low. The best portfolios are often the ones left alone.\n\n**Pro Tip:** The most successful investors are often the most boring. They buy good investments, hold them for years, and don't try to be clever. Be boring!",
+            "point1": "Trying to time the market usually backfires - time IN the market wins",
+            "point2": "The more you check your portfolio, the more likely you'll make emotional mistakes",
+            "point3": "Let winners run - great companies can grow for decades",
+            "point4": "The best time to start investing was yesterday; the second best is today"
+          }
+        }
       },
       "5": {
         "title": "Spot the Scammers! (Avoiding Fraud)",
-        "description": "Learn to recognize tricks, scams, and shady deals before they get you"
+        "description": "Learn to recognize tricks, scams, and shady deals before they get you",
+        "lessons": {
+          "1": {
+            "title": "Pump and Dump Schemes",
+            "content": "One of the oldest scams in the book is the \"pump and dump.\" Here's how to spot it and avoid becoming a victim.\n\n**What is a Pump and Dump?**\nScammers buy a cheap stock (usually under $5), then hype it up to get others to buy. When the price rises, they sell (dump) their shares, and the price crashes. Everyone who bought the hype loses money.\n\n**How They \"Pump\" the Stock:**\n- Spam emails: \"This stock is about to explode! 1000% gains coming!\"\n- Social media hype: Fake accounts talking about a \"hidden gem\"\n- Fake news: Made-up press releases about partnerships or breakthroughs\n- Discord/Telegram groups: \"We're all buying at 9am - get in now!\"\n- Paid promoters: Influencers paid to hype stocks (often hidden)\n\n**Red Flags to Watch For:**\n1. Unsolicited tips about stocks you've never heard of\n2. Promises of guaranteed returns or \"can't lose\" opportunities\n3. Pressure to buy RIGHT NOW before it's too late\n4. Very small companies with no real business or revenue\n5. Huge hype with no actual news or reason for the stock to rise\n\n**Real Example:**\nIn 2021, several small companies were hyped on social media. Some rose 500% in days, then crashed 90% when promoters sold. Regular people who bought the hype lost their savings.\n\n**How to Protect Yourself:**\n- Never buy a stock based on a tip from a stranger\n- Research any company before investing (do they have real revenue?)\n- If something sounds too good to be true, it probably is\n- Ask: \"Why is this random person telling ME about this opportunity?\"\n\n**Pro Tip:** Legitimate investment opportunities don't need to be hyped in spam emails or group chats. If someone's pushing hard, they're probably selling.",
+            "point1": "Pump and dump: scammers hype a cheap stock, then sell when others buy in",
+            "point2": "Watch for unsolicited tips, guaranteed returns, and pressure to buy now",
+            "point3": "If strangers are hyping a stock to you, ask why they'd share a 'sure thing'",
+            "point4": "Real investment opportunities don't come through spam or group chats"
+          },
+          "2": {
+            "title": "Social Media Scams",
+            "content": "Social media is full of scammers pretending to be successful investors. Learn to spot the fakes!\n\n**Common Social Media Scams:**\n\n**1. Fake Gurus**\nPeople showing off mansions, cars, and stacks of cash claiming they got rich from trading. They make money by selling courses, not investing. Their \"trading income\" screenshots are often fake.\n\n**2. Copy Trading Traps**\n\"Just copy my trades and get rich!\" They might win sometimes, but:\n- They often buy before they tell you (getting better prices)\n- They sell to you, not with you\n- Their \"wins\" are cherry-picked; losses are hidden\n\n**3. Discord/Telegram Groups**\nFree or paid groups promising \"signals\" and \"picks.\" Often:\n- Coordinated pump and dumps\n- Leaders profit while members lose\n- Fake screenshots of \"proof\" of gains\n\n**4. Impersonator Accounts**\nFake accounts pretending to be Warren Buffett, Elon Musk, or other famous investors, offering \"investment opportunities\" or crypto giveaways.\n\n**5. \"I'll invest for you\" Schemes**\nSomeone offers to manage your money and promises huge returns. They either steal it directly or lose it trading.\n\n**Red Flags:**\n- Lifestyle photos (cars, jets, watches) instead of actual education\n- \"DM me to learn more\" (real educators teach publicly)\n- Promises of specific returns (\"make 10% per week\")\n- Pressure to join exclusive groups or pay for access\n- No mention of risks or losses\n\n**Pro Tip:** Real successful investors rarely need to brag on social media. Warren Buffett doesn't DM people about stock picks. Neither does anyone else worth listening to.",
+            "point1": "Fake gurus make money selling courses, not from trading",
+            "point2": "Copy trading often means you buy after them at worse prices",
+            "point3": "Watch for lifestyle flexing, promises of specific returns, and 'DM me'",
+            "point4": "Real successful investors don't DM strangers about stock picks"
+          },
+          "3": {
+            "title": "Insider Trading - What It Is and Why It's Illegal",
+            "content": "Insider trading sounds like a good deal - but it's a federal crime that can land you in prison. Here's what you need to know.\n\n**What is Insider Trading?**\nInsider trading is buying or selling stocks based on important information that isn't public yet. For example, if you work at Apple and know they're about to announce a great new product, buying stock before the announcement is illegal.\n\n**Why is it Illegal?**\nThe stock market only works if everyone has access to the same information. If insiders could trade on secrets, regular investors would always lose. It's cheating.\n\n**Who Counts as an \"Insider\"?**\n- Company employees and executives\n- Board members\n- Family and friends of the above\n- Anyone who receives confidential information\n- Even YOU if someone tells you secret info\n\n**Real Examples of People Who Got Caught:**\n- Martha Stewart went to prison for 5 months for insider trading\n- A congressman was convicted for trading on COVID info\n- Tech executives regularly get caught and fined millions\n\n**How the SEC Catches People:**\n- They use algorithms to spot suspicious trading patterns\n- They track trades before big announcements\n- They investigate connections between traders and company insiders\n- Tip lines where people report suspicious activity\n\n**What About \"Legal\" Insider Info?**\nCompany executives CAN trade their own company's stock, but:\n- They must report all trades publicly (Form 4)\n- They must follow trading windows\n- They can't trade before major announcements\n\n**Pro Tip:** If someone offers you a \"hot tip\" about non-public information, walk away. Even if you make money, you could go to prison. It's never worth it.",
+            "point1": "Insider trading means using non-public information to trade - it's a federal crime",
+            "point2": "Anyone who trades on secret information can be prosecuted, even if you just received a tip",
+            "point3": "The SEC uses algorithms and investigates to catch insider traders",
+            "point4": "If someone offers you non-public information, walk away - prison isn't worth it"
+          },
+          "4": {
+            "title": "Protecting Yourself From Fraud",
+            "content": "Now that you know the common scams, here's your complete guide to staying safe.\n\n**The Golden Rules:**\n\n**1. If It Sounds Too Good To Be True, It Is**\nNo legitimate investment guarantees returns. Anyone promising \"risk-free\" gains is lying.\n\n**2. Never Invest in Something You Don't Understand**\nScammers rely on confusion. If you can't explain what a company does in simple terms, don't invest.\n\n**3. Verify Everything**\n- Check if the company is real (SEC EDGAR database)\n- Look up the person giving advice (are they registered?)\n- Read real news sources, not promotional material\n\n**4. Protect Your Account**\n- Use strong, unique passwords for brokerage accounts\n- Enable two-factor authentication (2FA)\n- Never share login info with anyone\n- Beware of phishing emails pretending to be your broker\n\n**5. Don't Share Personal Financial Info**\nLegitimate advisors don't ask for your passwords or account access via DM.\n\n**Where to Report Scams:**\n- SEC: sec.gov/tcr (Securities violations)\n- FINRA: finra.org/investors/have-problem (Broker complaints)\n- FTC: reportfraud.ftc.gov (General fraud)\n- Your state's Attorney General\n\n**Before Any Investment, Ask:**\n1. Who is telling me about this and why?\n2. What do they gain if I invest?\n3. What are the risks they're not mentioning?\n4. Would I be embarrassed explaining this to a parent?\n\n**Warning Signs Checklist:**\n□ Unsolicited contact about investments\n□ Pressure to act immediately\n□ Promises of guaranteed returns\n□ Complicated strategies you don't understand\n□ Requests for payment via wire or crypto\n□ Difficulty getting your money back out\n\n**Pro Tip:** When in doubt, wait. Legitimate opportunities will still be there tomorrow. Scams disappear when you don't act immediately - which is why scammers always create urgency.",
+            "point1": "If it sounds too good to be true, it always is - no legitimate investment guarantees returns",
+            "point2": "Verify everything: check SEC databases, look up credentials, read real news",
+            "point3": "Protect your accounts with strong passwords and two-factor authentication",
+            "point4": "When in doubt, wait - legitimate opportunities don't disappear overnight"
+          }
+        }
       },
       "6": {
         "title": "How the World Moves Markets (Market Influences)",
-        "description": "See how presidents, news, and world events shake up stock prices"
+        "description": "See how presidents, news, and world events shake up stock prices",
+        "lessons": {
+          "1": {
+            "title": "Elections and Politics",
+            "content": "Elections can shake up the stock market. Here's what you need to know about politics and your investments.\n\n**Do Markets Care About Politics?**\nYes and no. In the short term, elections create uncertainty, and markets hate uncertainty. In the long term, the economy matters more than who's president.\n\n**What Happens During Elections:**\n- Markets often get volatile before elections (uncertainty)\n- After results are clear, volatility usually settles down\n- Markets often rise after elections, regardless of who wins\n\n**Party Myths vs. Reality:**\nPeople think: \"Republicans are better for stocks\" or \"Democrats crash markets.\"\nReality: The S&P 500 has done well under both parties. Other factors (economy, Fed policy, global events) matter more than which party is in power.\n\n**What Actually Moves Markets:**\n- Tax policy changes (corporate tax cuts/hikes)\n- Regulation changes (stricter or looser rules)\n- Trade policy (tariffs, trade deals)\n- Government spending (infrastructure, defense)\n\n**Sectors That React to Politics:**\n- Energy: Oil stocks vs. renewable energy\n- Healthcare: Drug pricing, insurance rules\n- Defense: Military spending budgets\n- Banks: Financial regulations\n\n**Historical Performance:**\nMarkets have gone up under Democrats, Republicans, divided governments, and unified governments. No pattern is reliable enough to invest based on politics.\n\n**The Best Strategy:**\nDon't make investment decisions based on who won an election. The economy is bigger than any president. Stay diversified, stick to your plan, and don't panic over political headlines.\n\n**Pro Tip:** If you're tempted to sell because of an election, remember: you'd have to be right twice - when to sell AND when to buy back. Most people get both wrong.",
+            "point1": "Elections create short-term volatility, but long-term, the economy matters more",
+            "point2": "Markets have done well under both political parties - no reliable pattern",
+            "point3": "Tax, regulation, and trade policies are what actually affect specific sectors",
+            "point4": "Don't make investment decisions based on election outcomes - stay the course"
+          },
+          "2": {
+            "title": "The Federal Reserve and Interest Rates",
+            "content": "The Federal Reserve (\"the Fed\") is the most powerful force in financial markets. Understanding what they do helps you understand why markets move.\n\n**What is the Federal Reserve?**\nThe Fed is America's central bank. Their main job is to keep the economy stable by controlling interest rates and the money supply.\n\n**What Are Interest Rates?**\nThe \"federal funds rate\" is what banks pay to borrow money overnight. When the Fed changes this rate, it affects everything: mortgages, car loans, credit cards, and yes - stocks.\n\n**How Interest Rates Affect Stocks:**\n\n**When Rates Go DOWN:**\n- Borrowing is cheaper → companies can grow faster\n- Savings accounts pay less → investors look for better returns in stocks\n- Home buying increases → economy strengthens\n- Stock prices usually RISE\n\n**When Rates Go UP:**\n- Borrowing is expensive → companies slow down\n- Savings accounts pay more → some money leaves stocks\n- Mortgages get pricier → housing slows\n- Stock prices often FALL (at least short-term)\n\n**Why Does the Fed Change Rates?**\n- To fight inflation (raise rates to slow spending)\n- To boost the economy (lower rates to encourage borrowing)\n\n**Fed Meetings:**\nThe Fed meets 8 times a year. Traders watch these closely. Sometimes markets move 2-3% based on one sentence from the Fed chair!\n\n**\"Don't Fight the Fed\":**\nA common investor saying. When the Fed is cutting rates (being \"dovish\"), stocks often do well. When raising rates (being \"hawkish\"), stocks often struggle.\n\n**Pro Tip:** You don't need to predict Fed moves. Just understand that when you see headlines about interest rates, that's why the market is reacting.",
+            "point1": "The Federal Reserve controls interest rates, which affect all borrowing and stocks",
+            "point2": "Lower rates usually help stocks; higher rates can pressure them",
+            "point3": "The Fed raises rates to fight inflation and lowers them to boost the economy",
+            "point4": "Don't fight the Fed - their policy direction often predicts market direction"
+          },
+          "3": {
+            "title": "Global Events and Markets",
+            "content": "We live in a connected world. Events on the other side of the planet can move your stocks. Here's how global events affect markets.\n\n**Wars and Conflicts:**\n- Usually cause short-term market drops (uncertainty)\n- Energy and defense stocks often rise\n- International companies with operations in war zones suffer\n- Example: Russia-Ukraine conflict sent oil and grain prices soaring\n\n**Pandemics and Health Crises:**\n- COVID-19 crashed markets 34% in a month\n- Then tech stocks soared (people working from home)\n- Travel, restaurant, and entertainment stocks collapsed\n- Vaccine makers became huge winners\n\n**Trade Wars and Tariffs:**\n- Tariffs raise costs for companies importing goods\n- Can hurt companies on both sides of the trade relationship\n- Creates uncertainty that markets hate\n- Example: US-China trade tensions moved markets for years\n\n**Natural Disasters:**\n- Can disrupt supply chains (factory damage, shipping delays)\n- Insurance stocks often fall\n- Reconstruction companies may rise\n- Usually short-term impact unless massive\n\n**Currency Movements:**\n- Strong US dollar hurts US companies selling overseas\n- Weak dollar helps US exporters\n- Emerging market stocks suffer when dollar strengthens\n\n**How to Think About Global Events:**\n1. Most events have short-term impacts that fade\n2. Major structural changes (like COVID) have lasting effects\n3. Diversification helps protect against any single event\n4. Trying to trade on news is very hard - by the time you hear it, markets have moved\n\n**Pro Tip:** Turn off news notifications if they stress you out. Global events make for scary headlines but rarely change long-term investment outcomes.",
+            "point1": "Wars, pandemics, and trade conflicts create short-term market volatility",
+            "point2": "Different sectors react differently - some benefit while others suffer",
+            "point3": "By the time you hear news, markets have usually already reacted",
+            "point4": "Most global events have short-term impacts - stay diversified and don't panic"
+          },
+          "4": {
+            "title": "Earnings Reports and Company News",
+            "content": "Four times a year, companies tell everyone how they're doing. These \"earnings reports\" are the most important events for individual stocks.\n\n**What Are Earnings Reports?**\nPublic companies must report their financial results every quarter (every 3 months). They announce revenue (money coming in), profit (money kept), and guidance (what they expect next quarter).\n\n**Why Earnings Matter:**\nOver time, stock prices follow earnings. If a company keeps making more money, the stock price will eventually follow. Earnings are the ultimate proof of a company's health.\n\n**Earnings Season:**\nMost companies report in the weeks after each quarter ends:\n- January-February (Q4 results)\n- April-May (Q1 results)\n- July-August (Q2 results)\n- October-November (Q3 results)\n\n**What Moves Stocks on Earnings Day:**\nIt's not just whether they made money - it's whether they did BETTER or WORSE than expected:\n- Beat expectations → stock often rises\n- Miss expectations → stock often falls\n- Even good results can tank a stock if expectations were higher\n\n**Key Numbers to Watch:**\n- **Revenue**: Total sales (is it growing?)\n- **Earnings Per Share (EPS)**: Profit divided by shares outstanding\n- **Guidance**: What management says about the future (this moves stocks most!)\n\n**Earnings Surprises:**\nSometimes stocks move 10-20% in one day after earnings. This is normal! It's why diversification matters - one bad earnings report won't wreck your portfolio if you own many companies.\n\n**Pro Tip:** Don't buy a stock right before earnings hoping for a pop. You're basically gambling. Many traders get burned trying to \"play earnings.\" Long-term investing is safer.",
+            "point1": "Companies report earnings every quarter - these are the most important stock events",
+            "point2": "Stocks move based on whether results beat or miss expectations, not just if they're good",
+            "point3": "Guidance (future outlook) often moves stocks more than current results",
+            "point4": "Don't try to trade around earnings - it's gambling. Focus on long-term investing."
+          },
+          "5": {
+            "title": "Economic Indicators",
+            "content": "Certain numbers give us clues about the economy's health. Learning these helps you understand why markets move.\n\n**The Big Economic Numbers:**\n\n**GDP (Gross Domestic Product)**\nThe total value of everything the country produces. Growing GDP = healthy economy. Shrinking GDP for 2+ quarters = recession.\n\n**Unemployment Rate**\nPercentage of people looking for work who can't find it. Low unemployment (under 4%) = strong economy. Rising unemployment = trouble ahead.\n\n**Inflation (CPI)**\nHow fast prices are rising. Some inflation is normal (2-3%). High inflation (over 5%) leads to Fed rate hikes, which can hurt stocks.\n\n**Jobs Report (Nonfarm Payrolls)**\nReleased first Friday of each month. Shows how many jobs were added. Markets watch this closely - too hot or too cold both concern investors.\n\n**Consumer Spending**\nAmerican consumers drive about 70% of the economy. When people spend, companies profit. Retail sales and consumer confidence surveys matter.\n\n**Housing Data**\nHome sales, building permits, home prices. Housing is a major part of the economy and affects consumer wealth.\n\n**How These Affect Markets:**\n- Strong economy → stocks usually do well\n- TOO strong → Fed raises rates → stocks may struggle\n- Weak economy → stocks fall on earnings fears\n- Fed cuts rates → can boost stocks despite weak economy\n\n**Goldilocks Economy:**\nMarkets love \"not too hot, not too cold.\" Strong enough for company profits, but not so strong that the Fed has to slam the brakes.\n\n**Where to Find These:**\n- Bureau of Labor Statistics (jobs, inflation)\n- Bureau of Economic Analysis (GDP)\n- Federal Reserve Economic Data (FRED) - everything!\n\n**Pro Tip:** You don't need to track every report. Just understand that when you see \"jobs report beats expectations\" in headlines, that's what's moving the market.",
+            "point1": "GDP, unemployment, inflation, and jobs data are the most-watched economic indicators",
+            "point2": "Strong economy is good for stocks, but TOO strong leads to rate hikes",
+            "point3": "Markets love a 'goldilocks' economy - not too hot, not too cold",
+            "point4": "You don't need to track every report - just understand why headlines move markets"
+          }
+        }
       },
       "7": {
         "title": "Keep More of Your Money (Taxes & Strategy)",
-        "description": "Smart strategies to pay less taxes on your investment gains"
+        "description": "Smart strategies to pay less taxes on your investment gains",
+        "lessons": {
+          "1": {
+            "title": "Capital Gains Basics",
+            "content": "When you make money on investments, Uncle Sam wants his share. Understanding capital gains taxes helps you keep more of what you earn.\n\n**What is a Capital Gain?**\nA capital gain is the profit you make when you sell an investment for more than you paid. Buy a stock at $50, sell at $75 = $25 capital gain.\n\n**When Do You Owe Taxes?**\nYou only pay taxes when you SELL. If your stocks go up but you don't sell, you don't owe any taxes yet. This is called an \"unrealized gain.\" Smart investors use this to delay taxes for years or even decades.\n\n**Capital Gains vs. Regular Income:**\nCapital gains from investments are taxed differently (often lower) than regular income from a job. This is one reason investing is so powerful for building wealth.\n\n**Capital Losses - The Silver Lining:**\nIf you sell at a loss, you can use that loss to offset gains:\n- $1,000 gain + $500 loss = only $500 taxable\n- If losses exceed gains, you can deduct up to $3,000 from regular income\n- Extra losses carry forward to future years\n\n**Dividends Are Taxed Too:**\nDividends you receive are also taxed. \"Qualified dividends\" (from most US companies held 60+ days) get the lower capital gains rate. Regular dividends are taxed like income.\n\n**Important Terms:**\n- **Cost Basis**: What you paid for the investment (including fees)\n- **Proceeds**: What you sold it for\n- **Capital Gain/Loss**: Proceeds minus cost basis\n\n**Pro Tip:** The easiest tax strategy? Don't sell. Long-term investors who hold for decades can defer taxes indefinitely. When they do sell, they often pay lower rates.",
+            "point1": "Capital gains tax is only owed when you sell - unrealized gains aren't taxed",
+            "point2": "Losses can offset gains, reducing your tax bill",
+            "point3": "Qualified dividends are taxed at lower capital gains rates",
+            "point4": "The easiest tax strategy is to hold long-term and avoid selling"
+          },
+          "2": {
+            "title": "Short-Term vs. Long-Term Gains",
+            "content": "How long you hold an investment can dramatically change how much tax you pay. This is one of the most important tax rules for investors!\n\n**The One-Year Rule:**\n- Hold for 1 year or less = **Short-term capital gains** (taxed like regular income)\n- Hold for more than 1 year = **Long-term capital gains** (taxed at special lower rates)\n\n**Why This Matters - Tax Rates:**\n\n**Short-Term Rates (same as income tax):**\n- 10%, 12%, 22%, 24%, 32%, 35%, or 37% depending on your income\n\n**Long-Term Rates (special lower rates):**\n- 0% if income is under ~$44,000 (single) or ~$89,000 (married)\n- 15% for most people\n- 20% for high earners (over ~$500,000)\n\n**Example - $10,000 Profit:**\n- Short-term (22% bracket): Pay $2,200 in taxes\n- Long-term (15% rate): Pay $1,500 in taxes\n- That's $700 saved just by waiting!\n\n**The Simple Rule:**\nUnless you have a strong reason to sell early, wait at least one year and one day to get the long-term rate.\n\n**Day Traders Beware:**\nPeople who buy and sell frequently pay short-term rates on everything. Combined with transaction costs and bad timing, most day traders actually lose money. Long-term investing wins.\n\n**Planning Tip:**\nKeep track of when you bought each investment. Before selling, check: \"Have I held this for over a year?\" If you're close to the one-year mark, waiting a few more weeks could save real money.\n\n**Pro Tip:** This is why \"buy and hold\" investing is so powerful. You avoid short-term tax rates AND let compound growth work longer.",
+            "point1": "Hold over 1 year for long-term rates (usually 15%), under 1 year for short-term (up to 37%)",
+            "point2": "The difference can save you thousands in taxes on the same profit",
+            "point3": "Before selling, check if waiting a bit longer gets you long-term treatment",
+            "point4": "Buy and hold naturally gets you the best tax rates"
+          },
+          "3": {
+            "title": "Tax-Advantaged Accounts",
+            "content": "Some accounts let you avoid or delay taxes entirely. Using them is one of the biggest advantages you have as an investor.\n\n**Roth IRA - The Gold Standard:**\n- Contribute money you've already paid taxes on\n- All growth is TAX-FREE forever\n- Withdraw tax-free in retirement (after 59½)\n- 2024 limit: $7,000/year ($8,000 if 50+)\n- Best for: Young investors (decades of tax-free growth!)\n\n**Traditional IRA:**\n- Contributions may be tax-deductible NOW\n- Pay taxes when you withdraw in retirement\n- Same contribution limits as Roth\n- Best for: People in high tax brackets now who expect lower taxes in retirement\n\n**401(k) - Employer Plans:**\n- Money taken from your paycheck pre-tax\n- Grows tax-deferred until retirement\n- 2024 limit: $23,000/year\n- Many employers MATCH contributions (free money!)\n- Roth 401(k) option: pay taxes now, tax-free later\n\n**The Magic of Tax-Free Growth:**\nIn a Roth IRA, $10,000 growing at 10% for 40 years becomes $452,000 - and you pay ZERO taxes on that growth. In a taxable account, you'd owe over $60,000 in taxes!\n\n**Order of Priority:**\n1. Get your employer's 401(k) match first (free money)\n2. Max out Roth IRA ($7,000)\n3. Max out 401(k) beyond match ($23,000)\n4. Taxable brokerage account for the rest\n\n**HSA - The Triple Tax Advantage:**\nIf you have a high-deductible health plan, HSAs are incredible:\n- Contributions are tax-deductible\n- Growth is tax-free\n- Withdrawals for medical expenses are tax-free\n\n**Pro Tip:** Start a Roth IRA as young as possible, even with just $100. Time is the most powerful force in tax-free compounding.",
+            "point1": "Roth IRAs grow 100% tax-free - best for young investors with decades to grow",
+            "point2": "Always get your employer's 401(k) match - it's free money",
+            "point3": "Order: Employer match → Roth IRA → Max 401(k) → Taxable account",
+            "point4": "Start as young as possible - time magnifies tax-free growth exponentially"
+          },
+          "4": {
+            "title": "Tax-Loss Harvesting",
+            "content": "What if you could turn your investment losses into tax savings? That's exactly what tax-loss harvesting does.\n\n**What is Tax-Loss Harvesting?**\nSelling investments that are down to \"realize\" a loss, then using that loss to offset gains and reduce taxes.\n\n**How It Works:**\n1. You have $5,000 in gains from selling Stock A\n2. You have Stock B that's down $3,000\n3. You sell Stock B to realize the $3,000 loss\n4. Your taxable gain is now only $2,000 ($5,000 - $3,000)\n5. At 15% tax rate, you save $450!\n\n**What If Losses Exceed Gains?**\n- You can deduct up to $3,000 of net losses from regular income\n- Remaining losses carry forward to future years indefinitely\n- Example: $10,000 loss this year → use $3,000 each year for over 3 years\n\n**The Wash Sale Rule:**\nThe IRS isn't stupid. You can't sell a stock for the loss, then immediately buy it back. The \"wash sale rule\" says:\n- You can't buy the same or \"substantially identical\" security\n- Within 30 days before OR after the sale\n- If you do, the loss is disallowed\n\n**How to Stay Invested:**\nSell Stock A at a loss, then buy a similar (but not identical) investment:\n- Sell S&P 500 ETF (SPY) → Buy total market ETF (VTI)\n- Sell Apple → Buy Microsoft (similar but not identical)\n\n**When to Harvest Losses:**\n- End of year (to offset current year gains)\n- After major market drops (lots of losses available)\n- Whenever you have gains to offset\n\n**Pro Tip:** Many robo-advisors do tax-loss harvesting automatically. It can add 0.5-1% to your after-tax returns over time - that adds up!",
+            "point1": "Tax-loss harvesting turns paper losses into real tax savings",
+            "point2": "Losses offset gains, and up to $3,000 can offset regular income annually",
+            "point3": "Watch the wash sale rule - wait 30 days or buy a similar but not identical investment",
+            "point4": "Harvest losses during market drops and at year-end to maximize savings"
+          },
+          "5": {
+            "title": "Estate and Inheritance Planning",
+            "content": "Here's an incredible tax benefit most people don't know about: when you die, your heirs might pay ZERO taxes on your investment gains. Seriously.\n\n**The Step-Up in Basis:**\nWhen you inherit investments, your cost basis \"steps up\" to the value at the date of death:\n- Your grandma bought Apple at $10 in 1990\n- She dies in 2024 when it's worth $170\n- You inherit it with a $170 cost basis\n- You sell for $170 = $0 taxable gain!\n- The $160 of gains are never taxed by anyone\n\n**Why This Matters:**\nThis is why some financial advisors say: \"Never sell appreciated assets if you can avoid it.\" Let the gains pass to heirs tax-free.\n\n**Gift vs. Inheritance:**\n- **Gift while alive**: Recipient keeps original cost basis (taxes owed on all gains)\n- **Inheritance**: Steps up to current value (gains erased)\n\n**Annual Gift Exclusion:**\nYou can give up to $18,000/year (2024) to any person without gift tax consequences. Married couples can give $36,000/year to each recipient.\n\n**Basic Estate Planning Tips:**\n- Keep good records of what you paid for investments\n- Consider holding highly appreciated assets until death\n- For large estates, trusts can help manage tax efficiently\n- Talk to a professional for complex situations\n\n**Note for Young Investors:**\nThis might seem far off, but understanding it helps you:\n- Know why your parents/grandparents might hold old investments\n- Make better long-term planning decisions\n- Start building wealth that could benefit future generations\n\n**Pro Tip:** If you inherit investments, check the cost basis before selling. Many people accidentally pay taxes they don't owe because they don't know about step-up basis.",
+            "point1": "Step-up in basis at death can erase decades of capital gains taxes",
+            "point2": "Inheriting investments is more tax-efficient than receiving gifts of appreciated assets",
+            "point3": "You can give $18,000/year per person without gift tax implications",
+            "point4": "If you inherit investments, verify the stepped-up cost basis before selling"
+          }
+        }
       },
       "8": {
         "title": "Master Your Trading App (Using Fidelity)",
@@ -324,6 +619,44 @@
             "point4": "Circuit breakers pause trading if the market drops 7%, 13%, or 20%"
           }
         }
+      },
+      "9": {
+        "title": "Reading Charts Like a Pro (Candlestick Basics)",
+        "description": "Learn to read stock charts and understand what candlesticks tell you",
+        "lessons": {
+          "1": {
+            "title": "Introduction to Stock Charts",
+            "content": "Before you invest, you need to understand what you're looking at. Stock charts are your window into how a stock has performed and where it might be going.\n\n**Why Charts Matter:**\nCharts show you a stock's price history at a glance. Instead of reading thousands of numbers, you can see patterns, trends, and key moments visually.\n\n**Types of Charts:**\n\n**1. Line Charts**\nThe simplest type - just a line connecting closing prices over time. Great for seeing the overall trend.\n\n**2. Bar Charts**\nShow four prices for each period: open, high, low, close (OHLC). More information than line charts.\n\n**3. Candlestick Charts**\nThe most popular type for traders. Each \"candle\" shows the same four prices as bar charts, but in a visual format that's easier to read.\n\n**Time Frames:**\nYou can view charts over different periods:\n- 1 day (minute-by-minute)\n- 1 week, 1 month (daily)\n- 1 year, 5 years (daily or weekly)\n- All time (weekly or monthly)\n\nShort-term traders focus on short time frames. Long-term investors look at months and years.\n\n**What to Look For:**\n- **Trend**: Is the stock going up, down, or sideways?\n- **Volatility**: How much does it bounce around?\n- **Key Levels**: Are there prices where it tends to stop or reverse?\n\n**Pro Tip:** As a beginner, focus on longer time frames (1 year or more). Daily movements are just noise - the long-term trend is what matters for your investments.",
+            "point1": "Charts show price history visually - easier than reading thousands of numbers",
+            "point2": "Candlestick charts are most popular, showing open, high, low, and close",
+            "point3": "Use longer time frames (1 year+) for investing; short frames for trading",
+            "point4": "Look for the overall trend, not daily noise"
+          },
+          "2": {
+            "title": "Anatomy of a Candlestick",
+            "content": "Candlesticks might look confusing at first, but each one tells a complete story about what happened to a stock's price. Let's break it down!\n\n**The Four Key Prices:**\nEvery candlestick shows four numbers:\n- **Open**: The price when the period started\n- **Close**: The price when the period ended\n- **High**: The highest price during the period\n- **Low**: The lowest price during the period\n\n**The Body (The Thick Part):**\nThe rectangular \"body\" shows the range between open and close:\n- **Green/White candle**: Close is HIGHER than open (price went UP)\n- **Red/Black candle**: Close is LOWER than open (price went DOWN)\n- The bigger the body, the bigger the move\n\n**The Wicks/Shadows (The Thin Lines):**\nThe thin lines above and below the body show the high and low:\n- **Upper wick**: How high the price went above the open/close\n- **Lower wick**: How low the price went below the open/close\n\n**Reading a Candle's Story:**\nA candle with a long lower wick and green body says: \"The price dropped a lot, but buyers stepped in and pushed it back up.\" That's a story of strength!\n\n**Examples:**\n- Tall green body, no wicks = Strong buying all day\n- Tall red body, no wicks = Strong selling all day\n- Small body, long wicks = Indecision, price moved but ended near where it started\n\n**Pro Tip:** Don't memorize every pattern. Just understand what the body and wicks mean. A green candle = buyers won that day. Red = sellers won. Long wicks = there was a battle.",
+            "point1": "The body shows open-to-close range; green means up, red means down",
+            "point2": "Wicks show the high and low extremes during the period",
+            "point3": "Long bodies mean strong moves; small bodies mean indecision",
+            "point4": "Long wicks show price was pushed back - rejection of extreme prices"
+          },
+          "3": {
+            "title": "Common Candlestick Patterns",
+            "content": "Certain candlestick shapes appear over and over. While patterns don't predict the future perfectly, they can give you clues about what might happen next.\n\n**Important Note First:**\nNo pattern works 100% of the time. These are hints, not guarantees. Always combine pattern recognition with other research!\n\n**Bullish Patterns (May Suggest Prices Going UP):**\n\n**Hammer**\nSmall body at top, long lower wick. After a downtrend, it suggests buyers are stepping in. \"The price tried to fall, but buyers pushed it back up.\"\n\n**Bullish Engulfing**\nA small red candle followed by a larger green candle that completely covers it. Shows buyers overwhelming sellers.\n\n**Morning Star**\nThree candles: big red, small body (any color), big green. Suggests a bottom and potential reversal upward.\n\n**Bearish Patterns (May Suggest Prices Going DOWN):**\n\n**Shooting Star**\nSmall body at bottom, long upper wick. After an uptrend, suggests sellers are pushing back. \"Price tried to rise, but sellers pushed it back down.\"\n\n**Bearish Engulfing**\nSmall green candle followed by larger red candle that engulfs it. Shows sellers overwhelming buyers.\n\n**Evening Star**\nThree candles: big green, small body, big red. Suggests a top and potential reversal downward.\n\n**Neutral Pattern:**\n\n**Doji**\nOpen and close are almost the same (tiny or no body). Shows indecision - neither buyers nor sellers won.\n\n**Pro Tip:** Pattern recognition is more art than science. Don't make buy/sell decisions based solely on candlestick patterns. Use them as one piece of information, not the whole picture.",
+            "point1": "Hammer and Morning Star are bullish patterns (may suggest price increase)",
+            "point2": "Shooting Star and Evening Star are bearish patterns (may suggest price decrease)",
+            "point3": "Doji candles show indecision - neither buyers nor sellers dominated",
+            "point4": "Patterns are hints, not guarantees - use them with other research, not alone"
+          },
+          "4": {
+            "title": "Support, Resistance, and Trends",
+            "content": "Now that you can read individual candles, let's look at the bigger picture: trends and key price levels.\n\n**What is a Trend?**\n- **Uptrend**: Higher highs and higher lows - the stock is climbing\n- **Downtrend**: Lower highs and lower lows - the stock is falling\n- **Sideways/Range**: Price bounces between two levels - no clear direction\n\n**Support Levels:**\nSupport is a price floor where buyers tend to step in. When a stock falls to this level, it often bounces back up. Think of it as the price where people say \"That's cheap enough, I'll buy.\"\n\n**Resistance Levels:**\nResistance is a price ceiling where sellers tend to appear. When a stock rises to this level, it often gets pushed back down. Think of it as the price where people say \"That's expensive enough, I'll sell.\"\n\n**How to Spot Them:**\nLook for prices where the stock has bounced multiple times. If it touched $50 and bounced up three times, $50 is support. If it hit $75 and fell back three times, $75 is resistance.\n\n**Breakouts:**\nWhen a stock pushes through resistance or falls through support with strong volume, it's called a breakout. This often leads to a bigger move in that direction.\n\n**Why This Matters for Investors:**\nEven long-term investors can use these concepts:\n- Buying near support = potentially better entry price\n- Buying during a clear uptrend = momentum on your side\n- Understanding resistance = realistic expectations for gains\n\n**Pro Tip:** Don't obsess over finding perfect support and resistance. These are zones, not exact prices. Focus on the general trend instead of trying to time exact prices.",
+            "point1": "Uptrend = higher highs/lows; downtrend = lower highs/lows; sideways = no clear direction",
+            "point2": "Support is a price floor where buyers step in; resistance is a ceiling where sellers appear",
+            "point3": "Breakouts through support or resistance often lead to bigger moves",
+            "point4": "Focus on the general trend rather than trying to time exact prices"
+          }
+        }
       }
     },
     "quiz": {
@@ -339,16 +672,89 @@
       "ready": "You finished all the lessons! Ready to show what you know?",
       "completeLessons": "Finish all lessons to unlock the quiz",
       "start": "Start Quiz",
+      "retake": "Take Again",
+      "alreadyPassed": "You've passed this quiz! Take it again to improve your score.",
       "results": {
         "title": "Your Results",
         "score": "You got {score} out of {total}",
         "passed": "Awesome! You passed!",
         "failed": "You need 80% to pass. Review the lessons and try again.",
         "tryAgain": "Try Again",
-        "nextModule": "Next Lesson"
+        "nextModule": "Next Lesson",
+        "quizPassed": "Great Job!",
+        "quizFailed": "Keep Trying!",
+        "finalReviewPassed": "You're a Stock Market Champion!",
+        "finalReviewFailed": "Almost There!",
+        "scoreDisplay": "You got {score} out of {total} correct",
+        "quizPassedMessage": "You really know your stuff! Ready for the next challenge?",
+        "quizFailedMessage": "Don't give up! Review the lessons and try again.",
+        "continueButton": "Continue",
+        "retryButton": "Try Again",
+        "tryAgainButton": "Try Again",
+        "reviewLessonsButton": "Review Lessons",
+        "quizTip": "Tip: Go back and read through the lessons again. Pay attention to the key points - they often show up on quizzes!"
       }
     },
+    "finalReview": {
+      "title": "The Ultimate Challenge!",
+      "subtitle": "Questions from ALL modules - randomized every time!",
+      "description": "Think you've mastered everything? This challenge pulls questions from all your lessons. Pass it to prove you're ready to invest!",
+      "startChallenge": "Start Challenge",
+      "locked": "Complete all modules to unlock the Ultimate Challenge",
+      "passed": "You're a Stock Market Champion!",
+      "failed": "Almost there! Keep learning!"
+    },
     "quizzes": {
+      "1": {
+        "q1": {
+          "question": "What does owning a share of stock mean?",
+          "optionA": "You loaned money to the company and they'll pay you back",
+          "optionB": "You own a small piece of the company",
+          "optionC": "You work for the company as an employee",
+          "optionD": "You can tell the CEO what to do",
+          "explanation": "When you buy stock, you become a part-owner of the company! Even just one share makes you an official owner, though you own a very tiny piece of a large company."
+        },
+        "q2": {
+          "question": "When is the US stock market open for regular trading?",
+          "optionA": "24 hours a day, 7 days a week",
+          "optionB": "9:00 AM to 5:00 PM, Monday-Friday",
+          "optionC": "9:30 AM to 4:00 PM Eastern Time, Monday-Friday",
+          "optionD": "8:00 AM to 6:00 PM, every day including weekends",
+          "explanation": "The US stock market is open from 9:30 AM to 4:00 PM Eastern Time, Monday through Friday. It's closed on weekends and major holidays."
+        },
+        "q3": {
+          "question": "What is a ticker symbol?",
+          "optionA": "The price of one share of stock",
+          "optionB": "A short code that identifies a company's stock (like AAPL for Apple)",
+          "optionC": "The password you need to buy stocks",
+          "optionD": "The total value of a company",
+          "explanation": "A ticker symbol is a short code (usually 1-5 letters) that identifies a company's stock. For example, Apple is AAPL, Disney is DIS, and Tesla is TSLA."
+        },
+        "q4": {
+          "question": "What usually happens to people who panic and sell all their stocks during a market crash?",
+          "optionA": "They usually make the most money",
+          "optionB": "They often lock in their losses and miss the recovery",
+          "optionC": "The government gives them their money back",
+          "optionD": "They automatically buy back in at a lower price",
+          "explanation": "People who panic sell during crashes often sell at the lowest prices and miss the recovery. History shows that patient investors who hold through crashes usually come out ahead."
+        },
+        "q5": {
+          "question": "Why do companies sell stock to the public (go public)?",
+          "optionA": "The government forces them to",
+          "optionB": "To raise money and let early investors cash out",
+          "optionC": "To give away free money to regular people",
+          "optionD": "Because they're going bankrupt",
+          "explanation": "Companies go public mainly to raise money to grow their business and to let early investors (founders, employees) sell their shares. It also increases the company's credibility."
+        },
+        "q6": {
+          "question": "What is market cap?",
+          "optionA": "The limit on how much you can invest",
+          "optionB": "The total value of all a company's stock combined",
+          "optionC": "The price change from yesterday",
+          "optionD": "The building where stocks are traded",
+          "explanation": "Market cap (market capitalization) is the total value of a company in the stock market. It's calculated by multiplying the stock price by the total number of shares."
+        }
+      },
       "8": {
         "q1": {
           "question": "What is the main difference between a full-service broker and a discount broker?",
@@ -389,6 +795,300 @@
           "optionC": "9:00 AM - 4:30 PM Eastern Time",
           "optionD": "10:00 AM - 3:00 PM Eastern Time",
           "explanation": "The US stock market is open Monday through Friday from 9:30 AM to 4:00 PM Eastern Time. Pre-market trading starts at 4:00 AM ET and after-hours trading continues until 8:00 PM ET."
+        }
+      },
+      "2": {
+        "q1": {
+          "question": "What type of account lets your money grow 100% tax-free?",
+          "optionA": "Individual brokerage account",
+          "optionB": "Traditional IRA",
+          "optionC": "Roth IRA",
+          "optionD": "Checking account",
+          "explanation": "A Roth IRA lets your investments grow completely tax-free. You pay taxes on money going in, but never pay taxes on the growth or withdrawals in retirement."
+        },
+        "q2": {
+          "question": "What is an expense ratio?",
+          "optionA": "The fee to open a brokerage account",
+          "optionB": "The annual fee charged by ETFs and mutual funds as a percentage",
+          "optionC": "The commission on each trade",
+          "optionD": "The tax rate on your investments",
+          "explanation": "An expense ratio is the annual fee that ETFs and mutual funds charge, expressed as a percentage. A 0.03% expense ratio means you pay $0.30 per year for every $1,000 invested."
+        },
+        "q3": {
+          "question": "What are fractional shares?",
+          "optionA": "Shares that have lost value",
+          "optionB": "Pieces of a share that let you invest any dollar amount",
+          "optionC": "Shares that are split into smaller units",
+          "optionD": "Discounted shares for new investors",
+          "explanation": "Fractional shares let you buy a portion of a stock. If a share costs $500, you can buy $50 worth (0.1 shares). This makes it easy to invest any amount in expensive stocks."
+        },
+        "q4": {
+          "question": "What's the best order type for a beginner buying popular stocks?",
+          "optionA": "Stop-loss order",
+          "optionB": "Market order",
+          "optionC": "Trailing stop order",
+          "optionD": "Fill-or-kill order",
+          "explanation": "Market orders are simplest for beginners buying popular, liquid stocks. They execute immediately at the current price. For popular stocks like Apple, the price you get will be very close to what you see."
+        },
+        "q5": {
+          "question": "Why is it important to start investing early?",
+          "optionA": "Early investors get special discounts",
+          "optionB": "Compound growth means more time = dramatically more money",
+          "optionC": "You can only open accounts before age 30",
+          "optionD": "Stocks perform better for young investors",
+          "explanation": "Compound growth means your money earns returns on returns. Starting at 15 vs 25 could mean hundreds of thousands more dollars by retirement, even investing the same monthly amount."
+        }
+      },
+      "3": {
+        "q1": {
+          "question": "What is the relationship between risk and reward in investing?",
+          "optionA": "Higher risk investments always lose money",
+          "optionB": "Lower risk investments have the highest returns",
+          "optionC": "Higher potential reward usually comes with higher risk",
+          "optionD": "Risk and reward are not related",
+          "explanation": "Generally, investments with higher potential returns come with higher risk of losing money. Safe investments like savings accounts have low risk but also low returns."
+        },
+        "q2": {
+          "question": "What is diversification?",
+          "optionA": "Buying only the best-performing stock",
+          "optionB": "Spreading your money across different investments",
+          "optionC": "Investing everything in index funds",
+          "optionD": "Changing your investments frequently",
+          "explanation": "Diversification means spreading your money across different investments, industries, and asset types. If one investment falls, others may rise, reducing your overall risk."
+        },
+        "q3": {
+          "question": "How much of your portfolio should you put in any single stock?",
+          "optionA": "50% or more if you really believe in it",
+          "optionB": "No more than 10%",
+          "optionC": "100% - go all in",
+          "optionD": "It doesn't matter",
+          "explanation": "A common rule is to never put more than 10% in any single stock. This way, if that company fails, you only lose 10% of your portfolio, not everything."
+        },
+        "q4": {
+          "question": "Why do you need an emergency fund before investing?",
+          "optionA": "Banks require it to open investment accounts",
+          "optionB": "So you won't be forced to sell investments at a bad time",
+          "optionC": "Emergency funds earn higher returns than stocks",
+          "optionD": "It's required by law",
+          "explanation": "Without an emergency fund, you might have to sell investments to cover unexpected expenses. If the market is down, you'd lock in losses. An emergency fund lets your investments grow undisturbed."
+        },
+        "q5": {
+          "question": "What does volatility measure?",
+          "optionA": "How much money you can lose",
+          "optionB": "How much a stock's price swings up and down",
+          "optionC": "The average return of a stock",
+          "optionD": "How popular a stock is",
+          "explanation": "Volatility measures how much a stock's price moves up and down. High volatility means big swings; low volatility means steady, predictable movement."
+        }
+      },
+      "4": {
+        "q1": {
+          "question": "What is FOMO in investing?",
+          "optionA": "A type of stock order",
+          "optionB": "Fear of missing out - buying because everyone else is",
+          "optionC": "A trading strategy",
+          "optionD": "A market index",
+          "explanation": "FOMO (Fear of Missing Out) makes investors buy stocks just because prices are rising and others are buying. It often leads to buying at the top, right before prices fall."
+        },
+        "q2": {
+          "question": "Why is having a written investment plan important?",
+          "optionA": "It's required to open a brokerage account",
+          "optionB": "It helps you make rational decisions when emotions are high",
+          "optionC": "It guarantees higher returns",
+          "optionD": "It reduces your taxes",
+          "explanation": "A written plan made when you're calm helps you stick to your strategy when markets get scary or exciting. It prevents emotional decisions that often hurt returns."
+        },
+        "q3": {
+          "question": "What usually happens when investors try to time the market?",
+          "optionA": "They consistently beat the market",
+          "optionB": "They often miss the best days and underperform",
+          "optionC": "They break even",
+          "optionD": "They get special tax benefits",
+          "explanation": "Studies show timing the market rarely works. Missing just the 10 best days over 20 years can cut your returns in half. Time IN the market beats timing the market."
+        },
+        "q4": {
+          "question": "What is loss aversion?",
+          "optionA": "A strategy to avoid all losses",
+          "optionB": "Losses feeling twice as painful as equivalent gains feel good",
+          "optionC": "Selling stocks before they drop",
+          "optionD": "Insurance against market crashes",
+          "explanation": "Loss aversion means losing $100 feels about twice as bad as gaining $100 feels good. This psychological bias can lead to panic selling and poor investment decisions."
+        },
+        "q5": {
+          "question": "How often should you check your investment portfolio?",
+          "optionA": "Multiple times per day",
+          "optionB": "Every hour the market is open",
+          "optionC": "Once a month is usually enough",
+          "optionD": "Never",
+          "explanation": "Checking your portfolio too often leads to emotional decisions and overtrading. For long-term investors, once a month or even quarterly is plenty. Your investments don't grow faster just because you watch them."
+        }
+      },
+      "5": {
+        "q1": {
+          "question": "What is a pump and dump scheme?",
+          "optionA": "A legitimate investment strategy",
+          "optionB": "Scammers hype a stock, then sell when others buy in",
+          "optionC": "A type of mutual fund",
+          "optionD": "A day trading technique",
+          "explanation": "In a pump and dump, scammers buy cheap stocks, hype them to get others to buy (pumping the price), then sell their shares (dumping). Regular investors are left with worthless stocks."
+        },
+        "q2": {
+          "question": "Why should you be suspicious of unsolicited stock tips?",
+          "optionA": "They're always wrong",
+          "optionB": "The person giving the tip often profits when you buy",
+          "optionC": "It's illegal to share stock tips",
+          "optionD": "Only brokers can give stock advice",
+          "explanation": "When someone pushes a stock on you, ask why. Often they already own it and profit when you drive up the price, or they're being paid to promote it. Legitimate opportunities don't come through spam."
+        },
+        "q3": {
+          "question": "What is insider trading?",
+          "optionA": "Trading during market hours",
+          "optionB": "Trading based on non-public information",
+          "optionC": "Working inside a brokerage firm",
+          "optionD": "Trading without a broker",
+          "explanation": "Insider trading is buying or selling stocks based on important information that isn't public yet. It's a federal crime because it gives unfair advantage over regular investors."
+        },
+        "q4": {
+          "question": "What should you do if someone offers to invest your money for guaranteed returns?",
+          "optionA": "Give them your money immediately",
+          "optionB": "Ask for more details about the opportunity",
+          "optionC": "Walk away - guaranteed returns don't exist and it's likely a scam",
+          "optionD": "Invest a small amount to test it",
+          "explanation": "No legitimate investment can guarantee returns. Anyone promising guaranteed profits is likely running a scam. Even small 'test' investments can lead to bigger losses."
+        },
+        "q5": {
+          "question": "What's a red flag when evaluating investment advice on social media?",
+          "optionA": "The person has many followers",
+          "optionB": "Lifestyle photos (cars, jets) instead of actual education",
+          "optionC": "They discuss multiple stocks",
+          "optionD": "They have a verified account",
+          "explanation": "Fake gurus flex expensive lifestyles to attract followers. Real investors focus on education, not showing off. If someone's selling the dream more than teaching, be very skeptical."
+        }
+      },
+      "6": {
+        "q1": {
+          "question": "What does the Federal Reserve primarily control?",
+          "optionA": "Stock prices",
+          "optionB": "Company earnings",
+          "optionC": "Interest rates and money supply",
+          "optionD": "Tax rates",
+          "explanation": "The Federal Reserve (the Fed) controls interest rates and the money supply to keep the economy stable. Their decisions affect everything from mortgages to stock prices."
+        },
+        "q2": {
+          "question": "What typically happens to stocks when interest rates go DOWN?",
+          "optionA": "Stocks usually fall",
+          "optionB": "Stocks usually rise",
+          "optionC": "Nothing happens",
+          "optionD": "Only bank stocks are affected",
+          "explanation": "Lower interest rates make borrowing cheaper, helping companies grow. They also make savings accounts less attractive, pushing investors toward stocks. Stocks usually rise when rates fall."
+        },
+        "q3": {
+          "question": "What are earnings reports?",
+          "optionA": "Government economic updates",
+          "optionB": "Quarterly financial results companies must report",
+          "optionC": "Annual tax documents",
+          "optionD": "Stock price predictions",
+          "explanation": "Public companies must report their financial results (revenue, profit, guidance) every quarter. These reports are the most important events for individual stock prices."
+        },
+        "q4": {
+          "question": "What moves stocks more on earnings day?",
+          "optionA": "The total profit number",
+          "optionB": "Whether results beat or miss expectations",
+          "optionC": "The CEO's salary",
+          "optionD": "The stock's trading volume",
+          "explanation": "It's not just about being profitable - it's about beating or missing what analysts expected. A profitable company can see its stock drop if results were lower than expected."
+        },
+        "q5": {
+          "question": "What is a 'goldilocks economy'?",
+          "optionA": "An economy only good for large companies",
+          "optionB": "An economy that's not too hot, not too cold",
+          "optionC": "A recession",
+          "optionD": "An economy with zero inflation",
+          "explanation": "A 'goldilocks economy' is just right - strong enough for company profits but not so hot that it causes high inflation and rate hikes. Markets love this balance."
+        }
+      },
+      "7": {
+        "q1": {
+          "question": "When do you owe taxes on stock gains?",
+          "optionA": "Every year, even if you don't sell",
+          "optionB": "Only when you sell at a profit",
+          "optionC": "Never, stocks are tax-free",
+          "optionD": "Monthly, based on your portfolio value",
+          "explanation": "You only pay capital gains tax when you actually sell an investment for a profit. If you hold and don't sell, you have 'unrealized gains' - no taxes owed yet."
+        },
+        "q2": {
+          "question": "What's the difference between short-term and long-term capital gains?",
+          "optionA": "Short-term is for stocks under $100",
+          "optionB": "Long-term gets lower tax rates if you hold over 1 year",
+          "optionC": "There is no difference",
+          "optionD": "Short-term has lower taxes",
+          "explanation": "Hold investments for more than 1 year to get long-term rates (usually 15%). Under 1 year, you pay short-term rates (same as your income tax, up to 37%). The difference can be huge!"
+        },
+        "q3": {
+          "question": "What is tax-loss harvesting?",
+          "optionA": "Selling winners to pay less taxes",
+          "optionB": "Selling losing investments to offset gains and reduce taxes",
+          "optionC": "Avoiding all stock sales",
+          "optionD": "Moving money to tax-free states",
+          "explanation": "Tax-loss harvesting means selling investments that are down to realize losses, which offset your gains. This reduces your tax bill. Up to $3,000 in excess losses can offset regular income."
+        },
+        "q4": {
+          "question": "What is the 'step-up in basis' for inherited investments?",
+          "optionA": "Inheritors must pay all back taxes",
+          "optionB": "The cost basis resets to value at death, erasing unrealized gains",
+          "optionC": "You must sell inherited stocks immediately",
+          "optionD": "Inherited stocks can't be sold for 1 year",
+          "explanation": "When you inherit investments, your cost basis 'steps up' to the value at date of death. Decades of gains can be completely erased for tax purposes. This is a powerful wealth transfer tool."
+        },
+        "q5": {
+          "question": "What's the best order for investing in tax-advantaged accounts?",
+          "optionA": "Taxable account first, then retirement accounts",
+          "optionB": "401k match → Roth IRA → Max 401k → Taxable",
+          "optionC": "Only use Roth IRA, nothing else",
+          "optionD": "It doesn't matter",
+          "explanation": "First get your employer's 401k match (free money!), then max out a Roth IRA ($7,000/year), then max out the rest of your 401k, then use taxable accounts for additional savings."
+        }
+      },
+      "9": {
+        "q1": {
+          "question": "What are the four prices shown in a candlestick?",
+          "optionA": "Buy, sell, average, volume",
+          "optionB": "Open, high, low, close",
+          "optionC": "Start, middle, end, change",
+          "optionD": "Bid, ask, last, volume",
+          "explanation": "Every candlestick shows four prices: Open (start of period), High (highest price reached), Low (lowest price), and Close (end of period). These are often called OHLC."
+        },
+        "q2": {
+          "question": "What does a green (or white) candlestick body mean?",
+          "optionA": "The price closed higher than it opened",
+          "optionB": "The price closed lower than it opened",
+          "optionC": "High trading volume",
+          "optionD": "The stock is a good buy",
+          "explanation": "A green candlestick means the close was higher than the open - the price went UP during that period. A red candlestick means the close was lower - price went DOWN."
+        },
+        "q3": {
+          "question": "What do the 'wicks' (thin lines) on a candlestick show?",
+          "optionA": "Trading volume",
+          "optionB": "The high and low prices reached during the period",
+          "optionC": "The opening price",
+          "optionD": "How many shares were traded",
+          "explanation": "The upper wick shows how high the price went above the open/close. The lower wick shows how low it went. Long wicks show the price was pushed back from extremes."
+        },
+        "q4": {
+          "question": "What is a 'hammer' pattern?",
+          "optionA": "A very large red candle",
+          "optionB": "Small body at top with long lower wick, potentially bullish after a downtrend",
+          "optionC": "Three candles in a row",
+          "optionD": "A candle with no wicks",
+          "explanation": "A hammer has a small body at the top and a long lower wick. After a downtrend, it suggests buyers stepped in and pushed the price back up - a potentially bullish signal."
+        },
+        "q5": {
+          "question": "What is a support level?",
+          "optionA": "The highest price a stock can reach",
+          "optionB": "A price floor where buyers tend to step in",
+          "optionC": "The average price over time",
+          "optionD": "A guaranteed price for selling",
+          "explanation": "Support is a price level where a stock has historically bounced back up. It's like a floor - when the stock falls to this level, buyers step in because they see it as a good value."
         }
       }
     }

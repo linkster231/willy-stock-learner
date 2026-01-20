@@ -17,6 +17,7 @@ import { Modal } from '@/components/ui/Modal';
 import { ProgressBar } from '@/components/learning';
 import { getModuleById } from '@/content/modules';
 import { hasQuiz } from '@/content/quizzes';
+import { useUserStore } from '@/stores/useUserStore';
 import { cn } from '@/lib/utils';
 
 /**
@@ -41,19 +42,45 @@ export default function ModulePage() {
     notFound();
   }
 
-  // Local state for progress (will be replaced with Supabase later)
-  const [completedLessons, setCompletedLessons] = useState<string[]>([]);
+  // User progress from store
+  const {
+    getCurrentUser,
+    getProgress,
+    completeLesson: saveLesson,
+    isQuizPassed
+  } = useUserStore();
+
+  const user = getCurrentUser();
+  const userProgress = getProgress();
+
+  // Local state for UI
   const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
   const [showVideo, setShowVideo] = useState(false);
+
+  // Calculate completed lessons from user progress (memoized to avoid effect)
+  const completedLessons = useMemo(() => {
+    if (!userProgress) return [];
+    const moduleLessonIds = learningModule.lessons.map(l => l.id);
+    return userProgress.completedLessons.filter(id => moduleLessonIds.includes(id));
+  }, [userProgress, learningModule.lessons]);
+
+  // Local state for session-only progress (non-logged-in users)
+  const [sessionCompleted, setSessionCompleted] = useState<string[]>([]);
+
+  // Combined completed lessons
+  const allCompletedLessons = user ? completedLessons : sessionCompleted;
 
   // Calculate progress
   const progress = useMemo(() => {
     if (learningModule.lessons.length === 0) return 0;
-    return Math.round((completedLessons.length / learningModule.lessons.length) * 100);
-  }, [completedLessons, learningModule.lessons.length]);
+    return Math.round((allCompletedLessons.length / learningModule.lessons.length) * 100);
+  }, [allCompletedLessons, learningModule.lessons.length]);
 
   // Check if all lessons completed
-  const allLessonsCompleted = completedLessons.length === learningModule.lessons.length;
+  const allLessonsCompleted = allCompletedLessons.length === learningModule.lessons.length;
+
+  // Check if quiz is passed
+  const quizPassed = user ? isQuizPassed(moduleId) : false;
 
   // Get current lesson
   const currentLesson = currentLessonId
@@ -62,8 +89,13 @@ export default function ModulePage() {
 
   // Handle marking lesson complete
   const markLessonComplete = (lessonId: string) => {
-    if (!completedLessons.includes(lessonId)) {
-      setCompletedLessons((prev) => [...prev, lessonId]);
+    if (!allCompletedLessons.includes(lessonId)) {
+      // Update session state for non-logged-in users
+      setSessionCompleted((prev) => [...prev, lessonId]);
+      // Save to user store if logged in
+      if (user) {
+        saveLesson(lessonId);
+      }
     }
   };
 
@@ -195,7 +227,9 @@ export default function ModulePage() {
           <Card
             className={cn(
               'border-2',
-              allLessonsCompleted
+              quizPassed
+                ? 'border-green-300 bg-green-50'
+                : allLessonsCompleted
                 ? 'border-blue-300 bg-blue-50'
                 : 'border-gray-200 bg-gray-50'
             )}
@@ -203,13 +237,20 @@ export default function ModulePage() {
             <div className="p-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <span className="text-2xl">📝</span>
+                  <span className="text-2xl">{quizPassed ? '✅' : '📝'}</span>
                   <div>
                     <h3 className="font-semibold text-gray-900">
                       {t('learn.quiz.title')}
+                      {quizPassed && (
+                        <span className="ml-2 inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700">
+                          {t('learn.passed')}
+                        </span>
+                      )}
                     </h3>
                     <p className="text-sm text-gray-600">
-                      {allLessonsCompleted
+                      {quizPassed
+                        ? t('learn.quiz.alreadyPassed')
+                        : allLessonsCompleted
                         ? t('learn.quiz.ready')
                         : t('learn.quiz.completeLessons')}
                     </p>
@@ -217,7 +258,9 @@ export default function ModulePage() {
                 </div>
                 {allLessonsCompleted ? (
                   <Link href={`/learn/${params.moduleId}/quiz`}>
-                    <Button variant="primary">{t('learn.quiz.start')}</Button>
+                    <Button variant={quizPassed ? 'secondary' : 'primary'}>
+                      {quizPassed ? t('learn.quiz.retake') : t('learn.quiz.start')}
+                    </Button>
                   </Link>
                 ) : (
                   <Button variant="secondary" disabled>

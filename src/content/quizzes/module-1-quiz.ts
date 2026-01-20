@@ -45,7 +45,7 @@ export const module1Quiz: Quiz = {
         { id: 'c', labelKey: 'learn.quizzes.1.q3.optionC' },
         { id: 'd', labelKey: 'learn.quizzes.1.q3.optionD' },
       ],
-      correctOptionId: 'a',
+      correctOptionId: 'b',
       explanationKey: 'learn.quizzes.1.q3.explanation',
     },
     {
@@ -57,7 +57,7 @@ export const module1Quiz: Quiz = {
         { id: 'c', labelKey: 'learn.quizzes.1.q4.optionC' },
         { id: 'd', labelKey: 'learn.quizzes.1.q4.optionD' },
       ],
-      correctOptionId: 'd',
+      correctOptionId: 'b',
       explanationKey: 'learn.quizzes.1.q4.explanation',
     },
     {
@@ -81,7 +81,7 @@ export const module1Quiz: Quiz = {
         { id: 'c', labelKey: 'learn.quizzes.1.q6.optionC' },
         { id: 'd', labelKey: 'learn.quizzes.1.q6.optionD' },
       ],
-      correctOptionId: 'c',
+      correctOptionId: 'b',
       explanationKey: 'learn.quizzes.1.q6.explanation',
     },
   ],
