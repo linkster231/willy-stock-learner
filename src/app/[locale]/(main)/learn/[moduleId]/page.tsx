@@ -298,45 +298,45 @@ export default function ModulePage() {
             )}
 
             {/* Lesson Info Bar */}
-            <div className="flex items-center gap-4 text-sm text-gray-500">
-              <span className="flex items-center gap-1">
+            <div className="flex flex-wrap items-center gap-3 text-sm">
+              <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gray-100 text-gray-600">
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 {currentLesson.duration} min
               </span>
-              <span className="flex items-center gap-1 text-purple-600">
+              <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-purple-100 text-purple-700">
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                 </svg>
                 {t('glossary.selectToLookup')}
               </span>
             </div>
 
             {/* Lesson Content - Selectable for word lookup */}
-            <div className="rounded-xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-5">
-              <h4 className="flex items-center gap-2 mb-3 font-semibold text-gray-900">
-                <span className="text-xl">📚</span>
+            <div className="rounded-2xl bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 border border-amber-200/60 p-6 shadow-sm">
+              <h4 className="flex items-center gap-2 mb-4 font-bold text-amber-900">
+                <span className="flex items-center justify-center h-8 w-8 rounded-lg bg-amber-200 text-lg">📚</span>
                 {t('learn.lessonSummary')}
               </h4>
-              <SelectableText className="text-gray-700 leading-relaxed">
+              <SelectableText className="text-amber-950/80 leading-relaxed text-[15px]">
                 {t(currentLesson.contentKey)}
               </SelectableText>
             </div>
 
             {/* Key Points */}
-            <div className="rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100 p-5">
-              <h4 className="flex items-center gap-2 mb-3 font-semibold text-blue-900">
-                <span className="text-xl">💡</span>
+            <div className="rounded-2xl bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 border border-emerald-200/60 p-6 shadow-sm">
+              <h4 className="flex items-center gap-2 mb-4 font-bold text-emerald-900">
+                <span className="flex items-center justify-center h-8 w-8 rounded-lg bg-emerald-200 text-lg">💡</span>
                 {t('learn.keyPoints')}
               </h4>
               <ul className="space-y-3">
                 {currentLesson.keyPoints.map((pointKey, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-blue-200 text-blue-700 text-xs font-bold">
+                  <li key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-white/60 border border-emerald-100/50">
+                    <span className="flex-shrink-0 flex items-center justify-center h-7 w-7 rounded-full bg-emerald-500 text-white text-sm font-bold shadow-sm">
                       {idx + 1}
                     </span>
-                    <SelectableText className="text-blue-800 leading-snug">
+                    <SelectableText className="text-emerald-900 leading-snug text-[15px] pt-0.5">
                       {t(pointKey)}
                     </SelectableText>
                   </li>

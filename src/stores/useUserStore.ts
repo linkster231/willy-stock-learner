@@ -87,6 +87,22 @@ export interface UserState {
 }
 
 /**
+ * Quiz attempt limit info
+ */
+export interface QuizAttemptLimitInfo {
+  /** Can the user attempt the quiz right now? */
+  canAttempt: boolean;
+  /** Number of attempts used in the current hour */
+  attemptsUsed: number;
+  /** Maximum attempts per hour */
+  maxAttempts: number;
+  /** Remaining attempts */
+  remainingAttempts: number;
+  /** Minutes until next attempt reset (null if can attempt) */
+  minutesUntilReset: number | null;
+}
+
+/**
  * User store actions
  */
 export interface UserActions {
@@ -121,6 +137,8 @@ export interface UserActions {
   getProgress: () => UserProgress | null;
   /** Get quiz attempts for a module */
   getQuizAttempts: (moduleId: string) => QuizAttemptRecord[];
+  /** Get quiz attempt limit info for a module */
+  getQuizAttemptLimit: (moduleId: string) => QuizAttemptLimitInfo;
   /** Record final review attempt */
   recordFinalReviewAttempt: (score: number, totalQuestions: number) => void;
   /** Add time spent */
@@ -128,6 +146,16 @@ export interface UserActions {
   /** Reset progress for current user */
   resetProgress: () => void;
 }
+
+// =============================================================================
+// CONSTANTS
+// =============================================================================
+
+/** Maximum quiz attempts per hour */
+const MAX_QUIZ_ATTEMPTS_PER_HOUR = 3;
+
+/** Time window for quiz attempts in milliseconds (1 hour) */
+const QUIZ_ATTEMPT_WINDOW_MS = 60 * 60 * 1000;
 
 // =============================================================================
 // HELPERS
@@ -452,6 +480,60 @@ export const useUserStore = create<UserState & UserActions>()(
         if (!userProgress) return [];
 
         return userProgress.quizAttempts[moduleId] || [];
+      },
+
+      getQuizAttemptLimit: (moduleId) => {
+        const { currentUserId, progress } = get();
+
+        // Default response for non-logged-in users (allow unlimited attempts for guests)
+        if (!currentUserId) {
+          return {
+            canAttempt: true,
+            attemptsUsed: 0,
+            maxAttempts: MAX_QUIZ_ATTEMPTS_PER_HOUR,
+            remainingAttempts: MAX_QUIZ_ATTEMPTS_PER_HOUR,
+            minutesUntilReset: null,
+          };
+        }
+
+        const userProgress = progress[currentUserId];
+        if (!userProgress) {
+          return {
+            canAttempt: true,
+            attemptsUsed: 0,
+            maxAttempts: MAX_QUIZ_ATTEMPTS_PER_HOUR,
+            remainingAttempts: MAX_QUIZ_ATTEMPTS_PER_HOUR,
+            minutesUntilReset: null,
+          };
+        }
+
+        const attempts = userProgress.quizAttempts[moduleId] || [];
+        const now = Date.now();
+        const oneHourAgo = now - QUIZ_ATTEMPT_WINDOW_MS;
+
+        // Filter attempts in the last hour
+        const recentAttempts = attempts.filter((a) => a.attemptedAt > oneHourAgo);
+        const attemptsUsed = recentAttempts.length;
+        const remainingAttempts = Math.max(0, MAX_QUIZ_ATTEMPTS_PER_HOUR - attemptsUsed);
+        const canAttempt = remainingAttempts > 0;
+
+        // Calculate minutes until the oldest recent attempt expires
+        let minutesUntilReset: number | null = null;
+        if (!canAttempt && recentAttempts.length > 0) {
+          // Sort by time (oldest first)
+          const sortedAttempts = [...recentAttempts].sort((a, b) => a.attemptedAt - b.attemptedAt);
+          const oldestAttempt = sortedAttempts[0];
+          const resetTime = oldestAttempt.attemptedAt + QUIZ_ATTEMPT_WINDOW_MS;
+          minutesUntilReset = Math.ceil((resetTime - now) / (60 * 1000));
+        }
+
+        return {
+          canAttempt,
+          attemptsUsed,
+          maxAttempts: MAX_QUIZ_ATTEMPTS_PER_HOUR,
+          remainingAttempts,
+          minutesUntilReset,
+        };
       },
 
       recordFinalReviewAttempt: (score, totalQuestions) => {

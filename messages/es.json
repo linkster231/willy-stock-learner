@@ -250,35 +250,306 @@
     "quizScore": "Puntuación del Examen: {score}%",
     "passScore": "Necesitas 80% para pasar",
     "markComplete": "¡Terminé Esta!",
+    "lessonSummary": "Resumen de la Lección",
     "keyPoints": "Lo Que Aprendiste",
     "modules": {
       "1": {
         "title": "¡Tus Primeros Pasos en las Acciones!",
-        "description": "Descubre qué son realmente las acciones, cómo funciona el mercado y por qué la gente invierte"
+        "description": "Descubre qué son realmente las acciones, cómo funciona el mercado y por qué la gente invierte",
+        "lessons": {
+          "1": {
+            "title": "¿Qué es una Acción?",
+            "content": "¿Alguna vez quisiste ser dueño de una parte de tu empresa favorita? ¡Eso es exactamente lo que es una acción! Cuando compras una acción, te conviertes en un verdadero dueño parcial de esa empresa. Imagina que una empresa es como una pizza gigante cortada en millones de rebanadas. Cada rebanada es una 'acción', y cuando compras una, esa rebanada es tuya.\n\nLas empresas venden acciones para recaudar dinero. Digamos que Disney quiere construir un nuevo parque temático pero no tiene suficiente efectivo. Puede vender acciones a personas como tú, y usa ese dinero para construir el parque. A cambio, obtienes una pequeña parte de las ganancias futuras de Disney.\n\n¿Por qué querrías tener acciones? Dos razones: Primero, si la empresa crece y gana más dinero, tus acciones valen más - puedes venderlas por más de lo que pagaste. Segundo, algunas empresas pagan 'dividendos' - eso es como una mesada que te envían solo por ser dueño de sus acciones. Coca-Cola, por ejemplo, ha pagado dividendos por más de 100 años.\n\nAquí está la parte genial: ¡incluso una sola acción te convierte en dueño oficial! Recibirás correos de la empresa, podrás votar en algunas decisiones, e ir a reuniones de accionistas. ¡Imagina presentarte a una reunión de Apple y decir 'Soy uno de los dueños'!",
+            "point1": "Una acción es un pedacito de propiedad en una empresa - te conviertes en dueño real",
+            "point2": "Las empresas venden acciones para recaudar dinero para hacer crecer su negocio",
+            "point3": "Los dueños de acciones pueden ganar dinero cuando la empresa crece o paga dividendos",
+            "point4": "Incluso una acción te hace dueño oficial con derechos de voto"
+          },
+          "2": {
+            "title": "Cómo Funcionan las Bolsas de Valores",
+            "content": "Piensa en una bolsa de valores como un mercado de agricultores gigante, pero en lugar de frutas y verduras, la gente compra y vende acciones. Las dos bolsas más grandes de Estados Unidos son la Bolsa de Nueva York (NYSE) y el NASDAQ.\n\nLa NYSE es la más antigua, fundada en 1792 bajo un árbol de botoncillo en la ciudad de Nueva York. Hoy es un edificio masivo en Wall Street donde miles de millones de dólares cambian de manos cada día. El NASDAQ es más nuevo y totalmente electrónico - no hay un edificio físico donde la gente grite órdenes.\n\nCada acción tiene un 'símbolo de cotización' - un apodo corto que lo identifica. Apple es AAPL, Disney es DIS, Nike es NKE, y Tesla es TSLA. Estos símbolos facilitan encontrar y operar acciones rápidamente.\n\nEl mercado de valores de EE.UU. está abierto de lunes a viernes, de 9:30 AM a 4:00 PM hora del Este. Está cerrado los fines de semana y días festivos importantes como Navidad y Acción de Gracias. Cuando el mercado está cerrado, no puedes comprar ni vender acciones (bueno, hay trading 'fuera de horario', pero eso es más avanzado).\n\nLos precios cambian cada segundo basándose en cuántas personas quieren comprar vs. vender. Si todos quieren acciones de Apple, el precio sube. Si todos están vendiendo, el precio baja. Es pura oferta y demanda.",
+            "point1": "Las bolsas de valores son mercados donde la gente compra y vende acciones",
+            "point2": "NYSE y NASDAQ son las dos bolsas más grandes de EE.UU.",
+            "point3": "Cada acción tiene un símbolo de cotización - como AAPL para Apple",
+            "point4": "El mercado está abierto de lunes a viernes de 9:30 AM a 4:00 PM hora del Este"
+          },
+          "3": {
+            "title": "Leyendo los Precios de las Acciones",
+            "content": "Cuando miras una acción, verás muchos números. ¡No te asustes! Veamos qué significa cada uno.\n\nEl 'precio actual' es cuánto cuesta una acción ahora mismo. Si Apple muestra $175, eso es lo que pagarías por comprar una acción. Este precio cambia constantemente durante las horas de mercado.\n\n¿Ves texto verde o rojo? Verde significa que el precio subió comparado con ayer, rojo significa que bajó. Junto al color verás dos números: el cambio en dólares (como +$2.50) y el cambio porcentual (como +1.5%). Una acción de $100 subiendo $1 es +1%, pero una acción de $10 subiendo $1 es +10% - ¡el porcentaje te ayuda a comparar!\n\n'Volumen' te dice cuántas acciones se compraron y vendieron hoy. Alto volumen significa mucha actividad - la gente está muy interesada en esta acción. Bajo volumen significa que no está pasando mucho.\n\n'Capitalización de mercado' (o 'cap de mercado') es el valor total de todas las acciones de la empresa combinadas. Si una empresa tiene 1 mil millones de acciones a $100 cada una, su cap de mercado es $100 mil millones. Esto te dice qué tan grande es una empresa. Apple tiene un cap de mercado de más de $2 billones - ¡es una de las empresas más valiosas del mundo!\n\nTambién verás el máximo de 52 semanas (el precio más alto del último año) y el mínimo de 52 semanas (el más bajo). Esto te ayuda a entender si una acción está cerca de su mejor o peor precio recientemente.",
+            "point1": "El precio actual muestra cuánto cuesta una acción ahora mismo",
+            "point2": "Verde significa que el precio subió, rojo significa que bajó",
+            "point3": "El volumen te dice cuántas acciones se compraron y vendieron hoy",
+            "point4": "El cap de mercado muestra el valor total de toda la empresa"
+          },
+          "4": {
+            "title": "Historia del Mercado y Crashes Famosos",
+            "content": "El mercado de valores ha existido por cientos de años, y una cosa es cierta: ¡a veces se derrumba! Un 'crash' es cuando los precios de las acciones caen súper rápido, a veces 20% o más en solo días o semanas.\n\nEl crash más famoso fue en 1929, que inició la Gran Depresión. Los precios de las acciones cayeron casi 90%, y tomó 25 años recuperar todo ese dinero. Más recientemente, el crash de 2008 fue causado por apuestas arriesgadas en préstamos de vivienda. Los bancos colapsaron, la gente perdió sus casas, y el mercado cayó más del 50%.\n\n¿La buena noticia? El mercado SIEMPRE se ha recuperado. Cada crash en la historia eventualmente se recuperó y alcanzó nuevos máximos. La gente que entró en pánico y vendió durante los crashes generalmente perdió dinero. La gente que mantuvo la calma y conservó sus inversiones (o incluso compró más) generalmente terminó bien.\n\nToma el crash de COVID en marzo de 2020. El mercado cayó 34% en solo un mes - ¡aterrador! Pero si no vendiste, tus acciones se recuperaron en menos de 6 meses y siguieron subiendo a nuevos máximos.\n\nLa lección: Los crashes se sienten terribles, pero son parte normal de la inversión. La gente que mantiene la calma y piensa a largo plazo generalmente gana. Los que entran en pánico y venden generalmente lamentan.",
+            "point1": "El mercado de valores ha crasheado muchas veces pero siempre se ha recuperado",
+            "point2": "El crash de 2008 fue causado por apuestas arriesgadas en viviendas",
+            "point3": "La gente que entra en pánico y vende durante crashes a menudo pierde dinero",
+            "point4": "Los inversores a largo plazo que mantienen la calma tienden a salir adelante"
+          },
+          "5": {
+            "title": "Por Qué las Empresas Salen a Bolsa (IPOs)",
+            "content": "Cuando una empresa 'sale a bolsa', significa que está vendiendo acciones al público por primera vez. Esto se llama Oferta Pública Inicial, o IPO. Antes de una IPO, solo los fundadores de la empresa, empleados y primeros inversores pueden tener acciones.\n\n¿Por qué una empresa haría una IPO? Principalmente para recaudar dinero. Si una empresa tecnológica quiere construir nuevos productos, contratar a miles de ingenieros o expandirse a nivel mundial, necesita efectivo. Vender acciones al público puede recaudar miles de millones de dólares.\n\nLas IPOs también permiten a los primeros inversores y empleados cobrar. Imagina que trabajaste en una startup y te dieron acciones en lugar de un salario más alto. Cuando la empresa sale a bolsa, finalmente puedes vender esas acciones y comprar una casa!\n\nSin embargo, las IPOs son riesgosas para compradores normales. A menudo hay mucho hype, así que los precios pueden estar inflados. Algunas IPOs (como Google y Facebook) resultaron grandes ganadoras. Pero muchas otras cayeron después del lanzamiento y nunca se recuperaron.\n\nEl consejo inteligente: no te apures a comprar IPOs. Deja que la emoción se calme, espera unos meses y mira cómo le va a la empresa. Los inversores a largo plazo generalmente lo hacen mejor evitando la locura de las IPO.",
+            "point1": "Una IPO es cuando una empresa vende acciones al público por primera vez",
+            "point2": "Las empresas salen a bolsa para recaudar dinero y dejar que los primeros inversores cobren",
+            "point3": "No todas las IPOs son ganadoras - algunas caen significativamente después del lanzamiento",
+            "point4": "Considera esperar unos meses después de una IPO antes de invertir"
+          }
+        }
       },
       "2": {
         "title": "¡Listos, Preparados, a Invertir!",
-        "description": "Abre tu primera cuenta, entiende los costos y haz tu primera operación"
+        "description": "Abre tu primera cuenta, entiende los costos y haz tu primera operación",
+        "lessons": {
+          "1": {
+            "title": "Abriendo Tu Primera Cuenta de Corretaje",
+            "content": "Para comprar acciones, necesitas una cuenta de corretaje. Piensa en ella como una cuenta de banco especial hecha para invertir. No puedes simplemente ir a una tienda y comprar acciones de Apple - ¡necesitas un corredor que maneje la transacción por ti!\n\nHay dos tipos principales de cuentas:\n\n**Cuentas Individuales de Corretaje** son las más comunes. Puedes depositar dinero, comprar y vender acciones cuando quieras, y retirar efectivo en cualquier momento. Son muy flexibles pero pagas impuestos sobre las ganancias cada año.\n\n**Cuentas IRA (Individual Retirement Account)** son especiales para el retiro. Roth IRA te permite hacer crecer el dinero sin pagar impuestos sobre las ganancias - ¡increíble para gente joven! La desventaja es que no puedes sacar el dinero fácilmente hasta los 59.5 años.\n\nLa mayoría de los corredores ahora no tienen mínimos - puedes abrir una cuenta con $0 y agregar dinero después. Corredores populares incluyen Fidelity, Charles Schwab, y Robinhood. Todos ofrecen trading de acciones gratis.\n\nAl elegir un corredor, busca: buen servicio al cliente, una app móvil fácil de usar, recursos educativos para aprender, y acciones fraccionadas (que te permiten comprar pedacitos de acciones caras).",
+            "point1": "Una cuenta de corretaje es donde compras y vendes acciones - necesitas una para invertir",
+            "point2": "Las cuentas individuales son flexibles; las IRAs ofrecen ventajas fiscales para el retiro",
+            "point3": "La mayoría de corredores ahora tienen mínimos de $0 y trading de acciones gratis",
+            "point4": "Elige un corredor con buena educación, app móvil y servicio al cliente"
+          },
+          "2": {
+            "title": "Entendiendo las Tarifas y Costos",
+            "content": "¡Buenas noticias! La mayoría de corredores ahora ofrecen trading de acciones y ETFs sin comisiones. Eso significa que puedes comprar $50 de acciones de Apple sin pagar una tarifa extra. Hace 10 años, cada trade costaba $7-10.\n\nPero hay algunas tarifas ocultas que debes conocer:\n\n**Ratios de Gastos** son tarifas anuales cobradas por ETFs y fondos mutuos. Se expresan como porcentaje - un ratio de 0.03% significa que pagas $0.30 por año por cada $1,000 invertidos. Busca fondos con ratios de 0.20% o menos.\n\n**Spread Bid/Ask** es la diferencia entre el precio de compra y venta. Si el precio de compra es $99.95 y el de venta es $100.05, el spread es $0.10. Esto es un pequeño costo oculto en cada trade.\n\n**Tarifas de Cuenta** como mantenimiento, inactividad, o transferencia. La mayoría de corredores grandes no cobran estas, pero verifica por si acaso.\n\n**Pago por Flujo de Órdenes (PFOF)** es cuando corredores 'gratis' como Robinhood venden tus órdenes a creadores de mercado. Esto puede resultar en precios ligeramente peores. Fidelity y Schwab no hacen esto con acciones.\n\nEl punto clave: el trading es mayormente gratis ahora, pero las tarifas pequeñas se acumulan. Elige ETFs de bajo costo y un corredor confiable.",
+            "point1": "La mayoría de corredores ahora ofrecen trading de acciones y ETFs sin comisiones",
+            "point2": "Los ratios de gastos son tarifas anuales para fondos - busca 0.20% o menos",
+            "point3": "Cuidado con tarifas ocultas como mantenimiento, inactividad y transferencia",
+            "point4": "El spread bid/ask es un pequeño costo oculto en cada trade"
+          },
+          "3": {
+            "title": "Financiando Tu Cuenta y Tu Primer Depósito",
+            "content": "Una vez que abres una cuenta de corretaje, necesitas agregar dinero antes de poder invertir. Aquí te explico cómo:\n\n**Transferencias Bancarias (ACH)** son gratis y toman 1-3 días hábiles. Conectas tu cuenta de banco, ingresas la cantidad, y el dinero aparece en unos días. Esta es la forma más común.\n\n**Transferencia Bancaria** es más rápida (mismo día) pero cuesta $25-30. Solo vale la pena para grandes cantidades urgentes.\n\n**Depósito de Cheque** - algunos corredores te dejan tomar foto de un cheque para depositarlo.\n\n¿Cuánto necesitas para empezar? ¡Gracias a las acciones fraccionadas, puedes empezar con tan solo $1! No necesitas $300+ para comprar una acción de Apple - puedes comprar 0.01 de una acción por $3.\n\nLas acciones fraccionadas cambiaron todo para nuevos inversores. Antes, si una acción costaba $500, necesitabas $500. Ahora puedes poseer pedacitos de cualquier acción con cualquier cantidad.\n\nConsejo profesional: Configura inversiones automáticas. La mayoría de corredores te dejan programar transferencias automáticas (digamos $50 cada cheque de pago) que compran automáticamente tus inversiones elegidas. Esto se llama 'promediar el costo en dólares' y es una forma súper inteligente de construir riqueza.",
+            "point1": "Las transferencias bancarias (ACH) son gratis y toman 1-3 días en procesarse",
+            "point2": "Puedes empezar a invertir con tan solo $1 gracias a las acciones fraccionadas",
+            "point3": "Las acciones fraccionadas te permiten poseer pedazos de acciones caras como Amazon o Tesla",
+            "point4": "Configura inversiones automáticas para construir riqueza sin pensarlo"
+          },
+          "4": {
+            "title": "Haciendo Tu Primera Inversión",
+            "content": "¡Llegó el momento emocionante - tu primera inversión! Aquí te explico cómo hacerlo bien:\n\n**Empieza Simple.** Para tu primera inversión, considera un fondo índice como VTI (Mercado Total de EE.UU.) o VOO (S&P 500). Estos te dan exposición a cientos de empresas instantáneamente. O elige una acción 'blue chip' que entiendas, como Apple, Disney o Nike.\n\n**Tipos de Órdenes:**\n- **Orden de Mercado**: Compra inmediatamente al precio actual. Simple y rápido.\n- **Orden Límite**: Tú estableces el precio que pagarás. La orden solo se ejecuta si la acción alcanza tu precio.\n\nPara principiantes comprando acciones populares, las órdenes de mercado están bien - el precio que obtienes será muy cercano a lo que ves.\n\n**Pasos para Hacer un Trade:**\n1. Busca la acción por nombre o símbolo\n2. Haz clic en 'Trade' o 'Comprar'\n3. Elige el tipo de orden\n4. Ingresa el número de acciones o cantidad en dólares\n5. Revisa todos los detalles\n6. ¡Confirma y envía!\n\n**Errores Comunes a Evitar:**\n- Verificar dos veces el símbolo de la acción (hay acciones con nombres similares)\n- Revisar la cantidad antes de enviar\n- No obsesionarte con el 'momento perfecto'\n\nLa verdad es: empezar temprano importa más que el timing. ¡Incluso $10 invertidos hoy pueden crecer significativamente en décadas!",
+            "point1": "Empieza simple con un fondo índice (VTI, VOO) o una acción blue chip que entiendas",
+            "point2": "Las órdenes de mercado se ejecutan inmediatamente; las órdenes límite te dejan establecer tu precio",
+            "point3": "Siempre verifica dos veces el símbolo de la acción y la cantidad antes de enviar",
+            "point4": "No esperes el momento 'perfecto' - empezar temprano importa más que el timing"
+          }
+        }
       },
       "3": {
         "title": "¡No Pierdas Tu Dinero!",
-        "description": "Domina el arte de proteger tu dinero mientras lo haces crecer"
+        "description": "Domina el arte de proteger tu dinero mientras lo haces crecer",
+        "lessons": {
+          "1": {
+            "title": "¿Qué es el Riesgo?",
+            "content": "En inversiones, 'riesgo' significa la posibilidad de perder dinero o no ganar tanto como esperabas. ¡Toda inversión tiene algún riesgo - hasta el efectivo bajo tu almohada pierde valor por la inflación!\n\nAquí está la regla de oro: **Mayor recompensa potencial usualmente significa mayor riesgo.** Una cuenta de ahorros es súper segura pero solo gana 0.5-5% al año. Las acciones pueden ganar 10%+ por año, pero también pueden caer 20% o más.\n\n**Tipos de Riesgo:**\n- **Riesgo de Mercado**: Todo el mercado cae (como en 2008 o 2020). Esto afecta casi todas las acciones.\n- **Riesgo de Empresa**: Una empresa específica tiene problemas. Si solo tienes acciones de una empresa y quiebra, ¡pierdes todo!\n- **Riesgo de Inflación**: Tus rendimientos no siguen el ritmo del aumento de precios.\n\n**Tolerancia al Riesgo** es cuánto riesgo puedes manejar sin entrar en pánico. Pregúntate: si tu portafolio cayera 20% mañana, ¿venderías en pánico o mantendrías la calma? No hay respuesta correcta - solo sé honesto contigo mismo.\n\nLa gente joven generalmente puede tomar más riesgo porque tienen décadas para recuperarse de caídas. Alguien que se retira el próximo año necesita más seguridad.",
+            "point1": "El riesgo es la posibilidad de perder dinero o no crecer tanto como esperabas",
+            "point2": "Mayor recompensa potencial usualmente significa mayor riesgo",
+            "point3": "El riesgo de mercado afecta todo; el riesgo de empresa afecta una acción",
+            "point4": "Conoce tu tolerancia al riesgo - ¿cómo reaccionarías ante una caída del 20%?"
+          },
+          "2": {
+            "title": "La Magia de la Diversificación",
+            "content": "¿Has escuchado 'no pongas todos los huevos en una canasta'? ¡Esa es la diversificación! Significa repartir tu dinero en diferentes inversiones para que si una va mal, las otras puedan ir bien.\n\nImagina que pones todo tu dinero en una empresa de videojuegos. Si la empresa lanza un juego exitoso, ¡genial! Pero si el juego fracasa, podrías perder mucho. Ahora imagina que tu dinero está repartido en videojuegos, comida, salud y tecnología. Si los videojuegos van mal, los otros pueden compensar.\n\n**Cómo Diversificar:**\n- **Entre empresas**: No solo Apple, sino Apple + Disney + Nike + Coca-Cola\n- **Entre industrias**: Tecnología + Salud + Finanzas + Consumo\n- **Entre tamaños**: Empresas grandes (Apple) + medianas + pequeñas\n- **Entre países**: EE.UU. + Internacional + Mercados emergentes\n\n**La Forma Más Fácil**: ¡Fondos índice! Un solo fondo como VTI te da acceso a más de 4,000 empresas. Un fondo como VT incluye empresas de todo el mundo. ¡Diversificación instantánea con una compra!\n\nRecuerda: la diversificación no garantiza ganancias ni elimina todo el riesgo. Pero sí reduce las posibilidades de pérdidas catastróficas de una sola mala inversión.",
+            "point1": "La diversificación significa repartir dinero en diferentes inversiones",
+            "point2": "Si una inversión cae, otras pueden subir para compensar",
+            "point3": "Diversifica entre empresas, industrias, tamaños y países",
+            "point4": "Los fondos índice son la forma más fácil de obtener diversificación instantánea"
+          },
+          "3": {
+            "title": "Entendiendo la Volatilidad",
+            "content": "La volatilidad mide cuánto sube y baja el precio de una acción. Alta volatilidad significa grandes cambios de precio - como una montaña rusa. Baja volatilidad significa precios más estables - como un carrusel tranquilo.\n\n**Ejemplo Real**: En 2020, las acciones de GameStop pasaron de $20 a $400 y de vuelta a $40 en semanas. ¡Eso es volatilidad extrema! Una empresa como Coca-Cola rara vez se mueve más del 1-2% por día - eso es baja volatilidad.\n\n**¿Alta volatilidad = Alto riesgo?** No siempre. Depende de tu horizonte de tiempo.\n- Si necesitas el dinero en 6 meses, la alta volatilidad ES riesgosa - podrías necesitar vender cuando esté abajo.\n- Si estás invirtiendo para dentro de 30 años, las caídas de corto plazo no importan tanto. Históricamente, el mercado sube con el tiempo.\n\n**Cómo Manejar la Volatilidad:**\n1. No revises tu portafolio todos los días - te estresarás innecesariamente\n2. Recuerda tu horizonte de tiempo - ¿realmente necesitas este dinero pronto?\n3. Si ves rojo, NO hagas nada impulsivo\n4. Los precios que bajan pueden ser oportunidades de compra, no razones para entrar en pánico\n\nLa volatilidad es normal y esperada. Los mejores inversores la aceptan como parte del viaje.",
+            "point1": "La volatilidad mide cuánto suben y bajan los precios",
+            "point2": "Alta volatilidad no siempre significa alto riesgo - el horizonte de tiempo importa",
+            "point3": "A largo plazo, los rendimientos de las acciones tienden a estabilizarse",
+            "point4": "Revisa tu portafolio menos seguido para evitar decisiones emocionales"
+          },
+          "4": {
+            "title": "Tamaño de Posición - Cuánto Invertir",
+            "content": "El tamaño de posición es decidir cuánto dinero poner en cada inversión. Es una de las habilidades más importantes de manejo de riesgo.\n\n**La Regla del 10%**: Nunca pongas más del 10% de tu portafolio en una sola acción. ¿Por qué? Si esa empresa quiebra, solo pierdes 10%, no todo.\n\nEjemplo: Si tienes $1,000 para invertir, no pondrías más de $100 en ninguna acción individual.\n\n**Excepciones**:\n- Los fondos índice (como VOO) pueden ser posiciones más grandes porque ya están diversificados - posees cientos de empresas en un solo fondo.\n- Si estás empezando con poco dinero, está bien tener menos posiciones al principio.\n\n**Cómo Decidir el Tamaño**:\n- **Nivel de confianza**: Posiciones más pequeñas para inversiones más especulativas\n- **Volatilidad**: Acciones más volátiles = posiciones más pequeñas\n- **Diversificación**: Asegúrate de que ningún sector domine tu portafolio\n\n**Rebalanceo**: Si una acción sube mucho y se convierte en más del 15-20% de tu portafolio, considera vender un poco para volver al balance. Esto te protege de tener demasiado en una sola cosa.",
+            "point1": "Nunca pongas más del 10% de tu portafolio en una sola acción",
+            "point2": "Los fondos índice pueden ser posiciones más grandes porque ya están diversificados",
+            "point3": "Ajusta el tamaño según tu nivel de confianza - más pequeño para apuestas más arriesgadas",
+            "point4": "Rebalancea cuando cualquier posición crezca demasiado comparada con las otras"
+          },
+          "5": {
+            "title": "Fondos de Emergencia e Inversión Segura",
+            "content": "Antes de invertir un solo dólar en el mercado de valores, necesitas un fondo de emergencia. ¿Por qué? Porque la vida pasa - el carro se descompone, necesitas ir al doctor, pierdes tu trabajo.\n\n**¿Qué es un Fondo de Emergencia?** Es dinero guardado en una cuenta de ahorros regular (NO invertido en acciones) para emergencias. Debe ser fácilmente accesible.\n\n**¿Cuánto necesitas?**\n- Para empezar: $500-1,000\n- Meta ideal: 3-6 meses de gastos\n- Si eres más conservador: 6-12 meses\n\n**¿Por qué es tan importante?** Sin un fondo de emergencia, una emergencia te forzaría a vender tus inversiones. Si el mercado está abajo cuando necesitas vender, fijarías pérdidas.\n\nEjemplo: Invertiste $1,000. El mercado cae 30%, así que vale $700. Tu carro se descompone y necesitas $700. Sin fondo de emergencia, estás forzado a vender todo a pérdida. CON un fondo de emergencia, usas ese dinero y dejas que tus inversiones se recuperen.\n\n**Regla de Oro**: Solo invierte dinero que no necesitarás por al menos 5 años. El mercado puede tardar años en recuperarse de una caída. Si tu horizonte es más corto, mantén ese dinero en efectivo.",
+            "point1": "Construye un fondo de emergencia antes de invertir - al menos $500-1,000 para empezar",
+            "point2": "Los fondos de emergencia se guardan en cuentas de ahorro, no invertidos en acciones",
+            "point3": "Solo invierte dinero que no necesitarás por al menos 5 años",
+            "point4": "Tener reservas de efectivo significa que no serás forzado a vender acciones en mal momento"
+          }
+        }
       },
       "4": {
         "title": "Piensa Como un Trader Profesional",
-        "description": "Controla tus emociones, evita errores de novato y crea hábitos ganadores"
+        "description": "Controla tus emociones, evita errores de novato y crea hábitos ganadores",
+        "lessons": {
+          "1": {
+            "title": "Las Emociones y el Dinero No se Mezclan",
+            "content": "Tu cerebro evolucionó para sobrevivir en la naturaleza, no para invertir. Y eso es un problema, porque tus instintos de supervivencia trabajan EN TU CONTRA cuando inviertes.\n\n**Miedo**: Cuando ves que tus inversiones caen, tu cerebro grita '¡PELIGRO! ¡HUYE!' Esto te hace querer vender todo y correr. Pero en inversiones, vender cuando todo está abajo fija tus pérdidas.\n\n**Avaricia**: Cuando las acciones suben, tu cerebro dice '¡MÁS! ¡QUIERO MÁS!' Esto te hace querer comprar más exactamente cuando los precios están más altos.\n\n**Aversión a la Pérdida**: Perder $100 se siente PEOR de lo que se siente BIEN ganar $100. Esto te hace mantener inversiones perdedoras demasiado tiempo, esperando que se recuperen.\n\nLos mejores inversores del mundo no son más inteligentes que tú - son mejores controlando sus emociones. Warren Buffett famosamente dijo: 'Ten miedo cuando otros son avaros, y sé avaro cuando otros tienen miedo.'\n\n**La Clave**: Sé aburrido. Los inversores aburridos que hacen un plan y lo siguen sin importar qué generalmente ganan a los traders emocionales que compran y venden basándose en sentimientos.",
+            "point1": "El miedo te hace vender bajo; la avaricia te hace comprar alto - lo opuesto de lo que funciona",
+            "point2": "La aversión a la pérdida significa que las pérdidas duelen el doble de lo bien que se sienten las ganancias",
+            "point3": "Tus instintos de supervivencia trabajan en tu contra al invertir",
+            "point4": "Los mejores inversores mantienen la calma y siguen su plan - ¡sé aburrido!"
+          },
+          "2": {
+            "title": "FOMO y FUD - Los Enemigos del Inversor",
+            "content": "**FOMO** (Fear Of Missing Out / Miedo a Perderse Algo) es esa sensación de '¡Todos están ganando dinero con esta acción y yo no!' Te hace comprar cosas DESPUÉS de que ya subieron, cuando los precios están más altos.\n\nEjemplo: Todos en redes sociales están hablando de cierta acción que subió 500%. El FOMO te hace comprar... justo antes de que caiga 80%. La gente que compró temprano ganó; los que compraron por FOMO perdieron.\n\n**FUD** (Fear, Uncertainty, Doubt / Miedo, Incertidumbre, Duda) es lo opuesto. Es cuando las noticias negativas te asustan tanto que vendes inversiones buenas o evitas comprar.\n\nEjemplo: Un titular dice 'Crash del Mercado Inminente'. El FUD te hace vender todo. Pero los titulares aterradores a menudo no se hacen realidad, y te pierdes las ganancias.\n\n**Las Redes Sociales Empeoran Esto**: Instagram y TikTok muestran gente presumiendo sus ganadores. NUNCA muestran sus perdedores. Piensas que todos ganan excepto tú - eso no es verdad.\n\n**La Regla de las 24 Horas**: Cuando sientas FOMO o FUD fuerte, NO hagas nada. Espera 24 horas. La mayoría de las veces, la urgencia desaparece y puedes pensar más claramente.",
+            "point1": "FOMO te hace comprar en el hype después de que los precios ya subieron",
+            "point2": "FUD te hace vender o evitar buenas inversiones por miedo",
+            "point3": "Las redes sociales muestran ganadores pero esconden a todos los perdedores",
+            "point4": "Cuando sientas FOMO o FUD, espera 24 horas antes de tomar cualquier decisión"
+          },
+          "3": {
+            "title": "Construyendo un Plan de Inversión",
+            "content": "Un plan de inversión es como un mapa antes de un viaje. Lo escribes cuando estás tranquilo y lo sigues cuando las cosas se ponen locas.\n\n**¿Por qué escribirlo?** Cuando el mercado cae 30%, estarás aterrorizado. Tu cerebro emocional querrá vender todo. Pero si tienes un plan escrito que dice 'En una caída, MANTÉN y considera comprar más', puedes actuar racionalmente.\n\n**Qué Incluir en Tu Plan:**\n1. **Tus Metas**: ¿Para qué estás invirtiendo? ¿Retiro? ¿Una casa? ¿Universidad?\n2. **Tu Horizonte de Tiempo**: ¿En cuántos años necesitarás el dinero?\n3. **Tu Estrategia**: ¿Qué tipo de inversiones? ¿Fondos índice? ¿Acciones individuales?\n4. **Tus Reglas**: ¿Cuánto invertirás cada mes? ¿Cuándo venderás?\n5. **Tu Plan de Crisis**: ¿Qué harás cuando el mercado caiga 20%? ¿30%?\n\n**Ejemplo de Regla de Crisis**: 'Si el mercado cae más del 20%, invertiré $100 extra ese mes en lugar de vender.'\n\n**Revisión Importante**: Guarda tu plan donde puedas encontrarlo. Léelo cada vez que sientas la urgencia de hacer algo impulsivo. Tu yo tranquilo es más inteligente que tu yo asustado.",
+            "point1": "Un plan escrito cuando estás calmado te ayuda a actuar racionalmente cuando estás emocional",
+            "point2": "Incluye tus metas, estrategia, reglas y cuándo rebalancearás",
+            "point3": "Tu plan debe incluir qué harás cuando el mercado crashee",
+            "point4": "Escríbelo y léelo cuando estés tentado a tomar decisiones emocionales"
+          },
+          "4": {
+            "title": "Errores Comunes de Inversión",
+            "content": "Aprende de los errores de otros para no cometerlos tú.\n\n**Error #1: Intentar Cronometrar el Mercado**\n'Esperaré a que baje para comprar.' El problema: nadie puede predecir consistentemente cuándo subirá o bajará. Estudios muestran que el tiempo EN el mercado es mejor que cronometrar el mercado.\n\n**Error #2: Revisar Demasiado Seguido**\nEntre más revises tu portafolio, más probable que hagas algo tonto. Ver rojo cada día te tienta a vender. Configúralo y olvídalo - revisa mensual o trimestralmente, no diariamente.\n\n**Error #3: Vender Ganadores Demasiado Pronto**\n'¡Mi acción subió 50%! ¡Mejor vendo!' El problema: las grandes empresas pueden crecer por décadas. Si hubieras vendido Apple en 2010 con 50% de ganancia, te habrías perdido más de 5,000% de ganancias adicionales.\n\n**Error #4: Mantener Perdedores Demasiado Tiempo**\n'Ya bajó mucho, seguro se recuperará.' A veces empresas malas siguen empeorando. No te enamores de tus acciones.\n\n**Error #5: Seguir la Multitud**\nSolo porque todos están comprando algo no significa que sea buena inversión. Recuerda: cuando es noticia, ya es tarde.\n\n**La Verdad**: El mejor momento para empezar a invertir fue ayer. El segundo mejor momento es hoy.",
+            "point1": "Intentar cronometrar el mercado usualmente falla - el tiempo EN el mercado gana",
+            "point2": "Entre más revises tu portafolio, más probable que cometas errores emocionales",
+            "point3": "Deja correr a los ganadores - grandes empresas pueden crecer por décadas",
+            "point4": "El mejor momento para empezar a invertir fue ayer; el segundo mejor es hoy"
+          }
+        }
       },
       "5": {
         "title": "¡Detecta a los Estafadores!",
-        "description": "Aprende a reconocer trucos, estafas y tratos sospechosos antes de que te atrapen"
+        "description": "Aprende a reconocer trucos, estafas y tratos sospechosos antes de que te atrapen",
+        "lessons": {
+          "1": {
+            "title": "Esquemas de Pump and Dump",
+            "content": "Pump and dump es una de las estafas más comunes en el mercado de valores. Así es como funciona:\n\n**El Esquema:**\n1. Los estafadores compran MUCHAS acciones de una empresa pequeña y barata\n2. Luego hacen mucho ruido - mensajes, videos, 'tips secretos' - diciendo que la acción va a explotar\n3. Gente inocente compra por el hype, haciendo que el precio suba\n4. Cuando el precio está alto, los estafadores VENDEN todo\n5. El precio colapsa, y los compradores inocentes pierden su dinero\n\n**Señales de Alerta:**\n- Tips no solicitados de desconocidos (correos, mensajes, DMs)\n- Promesas de 'rendimientos garantizados' o '1000% seguro'\n- Presión para 'comprar AHORA antes de que sea tarde'\n- Acciones de empresas que nunca has escuchado\n- Lenguaje como 'oportunidad secreta' o 'antes de que el público lo sepa'\n\n**Pregúntate**: Si alguien tiene un tip tan bueno, ¿por qué lo comparte con extraños? ¡Ellos comprarían todo para sí mismos!\n\n**La Regla de Oro**: Las oportunidades reales de inversión NO llegan por spam, grupos de WhatsApp, o DMs de desconocidos. Si suena demasiado bueno para ser verdad, SIEMPRE lo es.",
+            "point1": "Pump and dump: estafadores inflan una acción barata, luego venden cuando otros compran",
+            "point2": "Cuidado con tips no solicitados, rendimientos garantizados y presión para comprar ahora",
+            "point3": "Si extraños te están dando tips de acciones, pregunta por qué compartirían algo 'seguro'",
+            "point4": "Las oportunidades reales de inversión no llegan por spam o grupos de chat"
+          },
+          "2": {
+            "title": "Estafas en Redes Sociales",
+            "content": "Las redes sociales están LLENAS de estafadores de inversiones. Aquí te explico cómo identificarlos:\n\n**Gurús Falsos:**\nPublican fotos con carros lujosos, relojes caros, y fajos de efectivo. Afirman haber ganado millones en el mercado. Pero la verdad: ganan dinero vendiendo CURSOS, no trading. Sus 'estrategias secretas' son básicas o no funcionan.\n\n**Copy Trading:**\n'¡Solo copia mis trades!' Suena fácil, pero cuando tú compras, ellos ya compraron a mejor precio. Cuando suben los precios, ellos venden mientras tú todavía estás entrando.\n\n**Señales de Alerta en Redes:**\n- Mucho show de estilo de vida (carros, viajes, efectivo)\n- Promesas de rendimientos específicos ('gana 50% mensual')\n- 'DM me para más información'\n- Urgencia artificial ('solo quedan 5 lugares')\n- Screenshots de 'ganancias' (fáciles de falsificar)\n\n**La Realidad:** Los inversores verdaderamente exitosos NO mandan DMs a extraños ofreciendo tips. Warren Buffett no está en Instagram reclutando estudiantes.\n\n**Protégete:** Si alguien en redes te contacta sobre inversiones, bloquea y reporta. Cero excepciones.",
+            "point1": "Los gurús falsos ganan dinero vendiendo cursos, no haciendo trading",
+            "point2": "Copy trading a menudo significa que compras después de ellos a peores precios",
+            "point3": "Cuidado con presumir estilos de vida, promesas de rendimientos específicos y 'DM me'",
+            "point4": "Los inversores exitosos de verdad no mandan DMs a extraños con tips de acciones"
+          },
+          "3": {
+            "title": "Insider Trading - Qué Es y Por Qué Es Ilegal",
+            "content": "Insider trading significa comprar o vender acciones basándote en información secreta que el público no tiene. Es un CRIMEN FEDERAL y puedes ir a prisión por hacerlo.\n\n**Ejemplos de Insider Trading Ilegal:**\n- Un empleado de Apple sabe que el nuevo iPhone será un desastre. Vende sus acciones antes del anuncio.\n- Un abogado trabajando en una fusión secreta compra acciones antes de que se anuncie.\n- Un amigo te cuenta que su empresa va a ser comprada mañana, y tú compras acciones.\n\n**El Problema:** Usar información secreta es como hacer trampa. Le da ventaja injusta a algunas personas sobre todos los demás.\n\n**¿Quién Puede Ser Acusado?**\n- La persona con la información original\n- CUALQUIER persona que recibe el tip y lo usa\n- Sí, incluso si tú no trabajas para la empresa\n\n**La SEC (Securities and Exchange Commission)** usa algoritmos avanzados y investigaciones para atrapar insider traders. Analizan patrones sospechosos de trading alrededor de anuncios importantes.\n\n**Si Alguien Te Ofrece Información Secreta:** Aléjate. Di que no. La prisión no vale ninguna ganancia.",
+            "point1": "Insider trading significa usar información no pública para operar - es un crimen federal",
+            "point2": "Cualquier persona que opera basándose en información secreta puede ser procesada, incluso si solo recibiste un tip",
+            "point3": "La SEC usa algoritmos e investiga para atrapar insider traders",
+            "point4": "Si alguien te ofrece información no pública, aléjate - la prisión no vale la pena"
+          },
+          "4": {
+            "title": "Protegerte del Fraude",
+            "content": "Ahora que conoces las estafas comunes, aquí está cómo protegerte:\n\n**Regla #1: Si Suena Demasiado Bueno Para Ser Verdad, Lo Es**\nNinguna inversión legítima GARANTIZA rendimientos. El mercado de valores tiene riesgo. Cualquiera que prometa ganancias seguras está mintiendo o es ilegal.\n\n**Regla #2: Verifica TODO**\n- Busca a la persona o empresa en bases de datos de la SEC\n- Lee noticias reales, no solo posts de redes sociales\n- Verifica credenciales - ¿realmente tienen licencia?\n- Si es una empresa, ¿tienen estados financieros públicos?\n\n**Regla #3: Protege Tus Cuentas**\n- Contraseñas fuertes y únicas para cada cuenta\n- Autenticación de dos factores (2FA) siempre activada\n- NUNCA compartas tu contraseña o información de cuenta\n- Cuidado con correos de phishing que parecen de tu corredor\n\n**Regla #4: Cuando Tengas Dudas, Espera**\nLas oportunidades legítimas no desaparecen de la noche a la mañana. Si alguien te presiona para decidir AHORA, es una señal de alerta gigante.\n\n**Recuerda:** Es mejor perderse una oportunidad que perder todo tu dinero en una estafa.",
+            "point1": "Si suena demasiado bueno para ser verdad, siempre lo es - ninguna inversión legítima garantiza rendimientos",
+            "point2": "Verifica todo: revisa bases de datos de la SEC, busca credenciales, lee noticias reales",
+            "point3": "Protege tus cuentas con contraseñas fuertes y autenticación de dos factores",
+            "point4": "Cuando tengas dudas, espera - las oportunidades legítimas no desaparecen de la noche a la mañana"
+          }
+        }
       },
       "6": {
         "title": "Cómo el Mundo Mueve los Mercados",
-        "description": "Mira cómo los presidentes, las noticias y eventos mundiales sacuden los precios de las acciones"
+        "description": "Mira cómo los presidentes, las noticias y eventos mundiales sacuden los precios de las acciones",
+        "lessons": {
+          "1": {
+            "title": "Elecciones y Política",
+            "content": "Cada vez que hay elecciones, la gente se pregunta: '¿Qué pasará con mis acciones?' La respuesta puede sorprenderte.\n\n**La Verdad Sobre Elecciones y el Mercado:**\n- Las elecciones crean volatilidad a corto plazo - incertidumbre hace que los precios suban y bajen\n- Pero a largo plazo, la economía importa más que quién gana\n- El mercado ha subido bajo presidentes de AMBOS partidos\n- No hay patrón confiable de 'demócratas buenos/malos' o 'republicanos buenos/malos'\n\n**Lo Que Realmente Importa:**\n- **Políticas de impuestos**: Afectan las ganancias de empresas y tus impuestos de inversión\n- **Regulaciones**: Pueden ayudar o perjudicar industrias específicas\n- **Política comercial**: Aranceles afectan empresas que importan/exportan\n\nEjemplo: Si un presidente aumenta impuestos a petroleras, esas acciones pueden bajar. Pero si bajan impuestos a tecnología, esas pueden subir.\n\n**El Consejo Más Importante:**\nNO tomes decisiones de inversión basándote en resultados de elecciones. Los inversores que vendieron todo porque 'el candidato equivocado ganó' casi siempre se arrepienten cuando el mercado sigue subiendo.\n\nMantén la calma, sigue tu plan, y recuerda: el mercado ha sobrevivido a todos los presidentes de la historia.",
+            "point1": "Las elecciones crean volatilidad a corto plazo, pero a largo plazo la economía importa más",
+            "point2": "Los mercados han subido bajo ambos partidos políticos - no hay patrón confiable",
+            "point3": "Políticas de impuestos, regulaciones y comercio son lo que afecta sectores específicos",
+            "point4": "No tomes decisiones de inversión basándote en resultados de elecciones - mantén el curso"
+          },
+          "2": {
+            "title": "La Reserva Federal y las Tasas de Interés",
+            "content": "La Reserva Federal (el 'Fed') es el banco central de Estados Unidos. Su decisión más importante: establecer las tasas de interés. Esto afecta TODO.\n\n**¿Cómo Funcionan las Tasas de Interés?**\nCuando el Fed baja las tasas, es más barato pedir préstamos. Empresas pueden expandirse, gente compra casas y carros. Esto generalmente es BUENO para las acciones.\n\nCuando el Fed sube las tasas, pedir prestado es más caro. Empresas gastan menos, la gente compra menos. Esto puede presionar las acciones hacia abajo.\n\n**¿Por Qué el Fed Cambia las Tasas?**\n- **Sube tasas** para combatir la inflación (cuando los precios suben muy rápido)\n- **Baja tasas** para estimular la economía (cuando hay recesión o crisis)\n\n**Ejemplo Real (2022-2023):**\nLa inflación se disparó, así que el Fed subió las tasas agresivamente. Las acciones de tecnología cayeron fuerte porque estas empresas dependen mucho de préstamos baratos para crecer.\n\n**'No pelees contra el Fed'**\nEste es un dicho famoso en Wall Street. Significa: si el Fed está bajando tasas, usualmente es buen momento para acciones. Si está subiendo tasas, ten más cuidado.\n\nNo necesitas seguir cada reunión del Fed, pero entiende la dirección general.",
+            "point1": "La Reserva Federal controla las tasas de interés, que afectan todo el préstamo y las acciones",
+            "point2": "Tasas más bajas usualmente ayudan a las acciones; tasas más altas pueden presionarlas",
+            "point3": "El Fed sube tasas para combatir la inflación y las baja para estimular la economía",
+            "point4": "No pelees contra el Fed - su dirección de política a menudo predice la dirección del mercado"
+          },
+          "3": {
+            "title": "Eventos Globales y Mercados",
+            "content": "Guerras, pandemias, crisis internacionales - todos afectan el mercado de valores. Pero tal vez no de la manera que esperas.\n\n**Cómo los Eventos Globales Afectan los Mercados:**\n- **Guerras y conflictos**: Crean incertidumbre → volatilidad de corto plazo. Pero algunos sectores (defensa, energía) pueden subir.\n- **Pandemias**: COVID-19 causó un crash rápido, pero también hizo que acciones de tecnología, streaming y comercio en línea explotaran.\n- **Conflictos comerciales**: Aranceles afectan empresas que dependen de importaciones o exportaciones.\n\n**La Regla de las Noticias:**\nPara cuando TÚ escuchas una noticia, el mercado generalmente ya reaccionó. Los traders profesionales actúan en segundos. Si lees sobre algo en las noticias, ya es viejo para el mercado.\n\n**Ejemplos Históricos:**\n- El crash de COVID (Marzo 2020) fue aterrador, pero el mercado se recuperó en menos de 6 meses\n- La crisis del 11 de Septiembre cerró el mercado por días, pero se recuperó en semanas\n- La guerra en Ucrania (2022) causó volatilidad, pero el impacto se estabilizó\n\n**La Lección:**\nLa mayoría de eventos globales tienen impactos de CORTO plazo. Mantente diversificado, no entres en pánico, y recuerda: el mercado ha sobrevivido guerras mundiales, pandemias y crisis de todo tipo.",
+            "point1": "Guerras, pandemias y conflictos comerciales crean volatilidad de corto plazo",
+            "point2": "Diferentes sectores reaccionan diferente - algunos sufren mientras otros se benefician",
+            "point3": "Para cuando escuchas la noticia, el mercado usualmente ya reaccionó",
+            "point4": "La mayoría de eventos globales tienen impactos de corto plazo - mantente diversificado y no entres en pánico"
+          },
+          "4": {
+            "title": "Reportes de Ganancias y Noticias de Empresas",
+            "content": "Cada tres meses, las empresas públicas reportan sus ganancias. Estos 'earnings reports' son los eventos más importantes para acciones individuales.\n\n**¿Qué es un Reporte de Ganancias?**\nLas empresas anuncian cuánto dinero ganaron (o perdieron) en el trimestre. También comparten ventas, costos, y sus expectativas para el futuro.\n\n**Por Qué los Precios se Mueven Tanto:**\nNo es solo si los números son 'buenos' o 'malos'. Lo que importa es: ¿fueron MEJOR o PEOR que lo que la gente esperaba?\n\nEjemplo: Apple reporta ganancias récord de $20 mil millones. Suena genial, ¿verdad? Pero si los analistas esperaban $22 mil millones, la acción puede CAER porque no cumplió expectativas.\n\n**La Guía (Guidance) es Clave:**\nLo que la empresa dice sobre el FUTURO a menudo mueve la acción más que los resultados actuales. Si dicen 'esperamos que las ventas bajen el próximo trimestre', la acción puede caer aunque los resultados actuales fueron buenos.\n\n**Para Inversores a Largo Plazo:**\nNo intentes 'tradear' alrededor de earnings. Es básicamente apostar. Muchos profesionales se equivocan constantemente.\n\nEn su lugar, usa los earnings para entender cómo va tu empresa a largo plazo. ¿Están creciendo? ¿Tienen deuda sana? ¿El CEO suena optimista?",
+            "point1": "Las empresas reportan ganancias cada trimestre - estos son los eventos más importantes para acciones",
+            "point2": "Las acciones se mueven basándose en si los resultados superan o fallan las expectativas, no solo si son buenos",
+            "point3": "La guía (perspectiva futura) a menudo mueve las acciones más que los resultados actuales",
+            "point4": "No intentes tradear alrededor de earnings - es apostar. Enfócate en inversión a largo plazo."
+          },
+          "5": {
+            "title": "Indicadores Económicos",
+            "content": "Los 'indicadores económicos' son números que muestran cómo está la economía. Los inversores los observan de cerca porque predicen hacia dónde van los mercados.\n\n**Los Indicadores Más Importantes:**\n\n**PIB (Producto Interno Bruto)**: El valor total de todo lo que produce el país. PIB creciendo = economía sana. PIB cayendo por 2 trimestres = recesión.\n\n**Desempleo**: ¿Cuánta gente no tiene trabajo? Bajo desempleo = economía fuerte. Alto desempleo = problemas.\n\n**Inflación (CPI)**: ¿Qué tan rápido suben los precios? Un poco de inflación (2%) es normal. Mucha inflación (8%+) es mala - el Fed subirá tasas.\n\n**Reporte de Empleos**: Cada mes, el gobierno reporta cuántos empleos se crearon. Más empleos = gente con dinero para gastar.\n\n**La Economía 'Goldilocks':**\nLos mercados aman una economía que no está 'ni muy caliente ni muy fría':\n- Muy caliente (mucho crecimiento, inflación alta) → Fed sube tasas → malo para acciones\n- Muy fría (recesión, alto desempleo) → Empresas ganan menos → malo para acciones\n- Perfecto (crecimiento moderado, baja inflación) → ¡Todos contentos!\n\n**Para Ti:**\nNo necesitas seguir cada reporte económico. Solo entiende por qué a veces los titulares dicen 'buenas noticias económicas hicieron caer las acciones' - usualmente es porque buenas noticias significan que el Fed subirá tasas.",
+            "point1": "PIB, desempleo, inflación y datos de empleos son los indicadores económicos más observados",
+            "point2": "Una economía fuerte es buena para acciones, pero DEMASIADO fuerte lleva a alzas de tasas",
+            "point3": "Los mercados aman una economía 'goldilocks' - ni muy caliente ni muy fría",
+            "point4": "No necesitas seguir cada reporte - solo entiende por qué los titulares mueven mercados"
+          }
+        }
       },
       "7": {
         "title": "Quédate con Más de Tu Dinero (Impuestos)",
-        "description": "Estrategias inteligentes para pagar menos impuestos en tus ganancias de inversión"
+        "description": "Estrategias inteligentes para pagar menos impuestos en tus ganancias de inversión",
+        "lessons": {
+          "1": {
+            "title": "Conceptos Básicos de Ganancias de Capital",
+            "content": "Cuando vendes una inversión por más de lo que pagaste, esa ganancia se llama 'ganancia de capital'. Y el gobierno quiere su parte.\n\n**La Buena Noticia:**\nSolo debes impuestos cuando VENDES. Si tu acción sube 500% pero no la vendes, no debes nada. Esto se llama 'ganancia no realizada'.\n\n**Ganancias vs Pérdidas:**\n- **Ganancia de capital**: Vendiste por más de lo que pagaste → debes impuestos\n- **Pérdida de capital**: Vendiste por menos de lo que pagaste → puede reducir tus impuestos\n\nEjemplo: Compraste acciones por $1,000 y las vendiste por $1,500. Tu ganancia de capital es $500, y debes impuestos sobre esos $500.\n\n**Pérdidas Pueden Ayudarte:**\nSi tienes pérdidas, puedes usarlas para 'cancelar' ganancias. Si ganaste $500 en una acción pero perdiste $300 en otra, solo pagas impuestos sobre $200.\n\n**Dividendos:**\nLos dividendos también pagan impuestos, pero los 'dividendos calificados' (de la mayoría de acciones de EE.UU. mantenidas más de 60 días) tienen tasas más bajas.\n\n**La Estrategia Más Fácil:**\nMantén tus inversiones a largo plazo y evita vender. No hay impuestos hasta que vendas, y si esperas más de un año, pagas tasas más bajas.",
+            "point1": "El impuesto de ganancias de capital solo se debe cuando vendes - ganancias no realizadas no pagan impuestos",
+            "point2": "Las pérdidas pueden compensar ganancias, reduciendo tu cuenta de impuestos",
+            "point3": "Los dividendos calificados pagan tasas más bajas de ganancias de capital",
+            "point4": "La estrategia fiscal más fácil es mantener a largo plazo y evitar vender"
+          },
+          "2": {
+            "title": "Ganancias a Corto Plazo vs Largo Plazo",
+            "content": "¿Cuánto tiempo mantuviste una inversión antes de vender? Esta simple pregunta puede significar MILES de dólares de diferencia en impuestos.\n\n**Ganancias a Corto Plazo (Menos de 1 Año):**\nSi vendes antes de mantener por un año, la ganancia se trata como ingreso regular. Dependiendo de tus ingresos, podrías pagar hasta 37% en impuestos federales.\n\n**Ganancias a Largo Plazo (Más de 1 Año):**\nSi mantienes por más de un año antes de vender, obtienes tasas especiales más bajas:\n- 0% si tus ingresos son bajos\n- 15% para la mayoría de personas\n- 20% para ingresos muy altos\n\n**Ejemplo Real:**\nGanaste $10,000 en una inversión.\n- Si vendiste a los 11 meses: podrías deber ~$2,400 (tasa del 24%)\n- Si esperaste 1 año y 1 día: solo deberías ~$1,500 (tasa del 15%)\n¡Esperar unas semanas más te ahorró $900!\n\n**Consejo Práctico:**\nAntes de vender una posición ganadora, verifica cuánto tiempo la has tenido. Si estás cerca del año, considera esperar para obtener el tratamiento de largo plazo.\n\n**La Mejor Estrategia:**\nComprar y mantener naturalmente te da las mejores tasas de impuestos. Otro motivo para ser un inversor aburrido de largo plazo.",
+            "point1": "Mantén más de 1 año para tasas de largo plazo (usualmente 15%), menos de 1 año paga tasas de corto plazo (hasta 37%)",
+            "point2": "La diferencia puede ahorrarte miles de dólares en impuestos sobre la misma ganancia",
+            "point3": "Antes de vender, verifica si esperar un poco más te da tratamiento de largo plazo",
+            "point4": "Comprar y mantener naturalmente te da las mejores tasas de impuestos"
+          },
+          "3": {
+            "title": "Cuentas con Ventajas Fiscales",
+            "content": "Ciertas cuentas especiales te permiten hacer crecer tu dinero con ENORMES ventajas fiscales. Para gente joven, estas son un súper poder.\n\n**Roth IRA:**\nPagas impuestos sobre el dinero AHORA, pero todo crece y sale 100% LIBRE de impuestos después. Para alguien joven, esto es increíble.\n\nEjemplo: Pones $1,000 a los 18 años. A los 65, creció a $25,000. ¡Todo ese crecimiento sale sin pagar un centavo de impuestos!\n\n**401(k):**\nCuenta de retiro a través de tu trabajo. El dinero entra ANTES de impuestos, así que reduces tu cuenta de impuestos hoy. Pero pagas impuestos cuando lo sacas en el retiro.\n\n**El Match del Empleador:**\nMuchos empleadores 'igualan' tu contribución al 401(k). Si pones 5%, ellos ponen 5%. ¡ESO ES DINERO GRATIS! Siempre contribuye al menos lo suficiente para obtener el match completo.\n\n**El Orden Óptimo de Inversión:**\n1. **Primero**: Contribuye al 401(k) hasta obtener el match del empleador\n2. **Segundo**: Máxima contribución al Roth IRA ($7,000/año)\n3. **Tercero**: Vuelve al 401(k) y maximízalo\n4. **Cuarto**: Usa cuenta de corretaje regular para el resto\n\n**Para Gente Joven:**\nEmpieza lo más pronto posible. El tiempo magnifica el crecimiento libre de impuestos exponencialmente.",
+            "point1": "Las Roth IRAs crecen 100% libres de impuestos - lo mejor para inversores jóvenes con décadas para crecer",
+            "point2": "Siempre obtén el match de tu empleador en el 401(k) - es dinero gratis",
+            "point3": "Orden: Match del empleador → Roth IRA → Maximizar 401(k) → Cuenta regular",
+            "point4": "Empieza lo más joven posible - el tiempo magnifica el crecimiento libre de impuestos exponencialmente"
+          },
+          "4": {
+            "title": "Cosecha de Pérdidas Fiscales",
+            "content": "La cosecha de pérdidas fiscales es una estrategia inteligente para convertir pérdidas en ahorros reales de impuestos.\n\n**¿Cómo Funciona?**\nSi tienes una inversión que ha bajado, puedes venderla para 'cosechar' la pérdida. Esta pérdida reduce tus ganancias gravables.\n\nEjemplo: Ganaste $5,000 en Apple, pero tienes otra acción que bajó $2,000. Si vendes la perdedora, tu ganancia gravable baja a $3,000. ¡Menos impuestos!\n\n**Beneficio Extra:**\nSi tus pérdidas superan tus ganancias, puedes deducir hasta $3,000 de tu ingreso regular cada año. Las pérdidas extras se guardan para años futuros.\n\n**La Regla de Wash Sale:**\n¡Cuidado! No puedes vender una acción a pérdida y recomprarla inmediatamente. Si compras la misma acción (o una 'sustancialmente idéntica') dentro de 30 días antes o después de vender, la pérdida NO cuenta.\n\n**Truco Legal:**\nPuedes vender una acción a pérdida y comprar algo SIMILAR pero no idéntico. Ejemplo: vendes un ETF de S&P 500, esperas 30 días o compras inmediatamente un ETF de mercado total diferente.\n\n**Mejor Momento:**\n- Durante caídas del mercado\n- Al final del año fiscal (diciembre)\n- Cuando quieras rebalancear tu portafolio de todos modos",
+            "point1": "La cosecha de pérdidas fiscales convierte pérdidas en papel en ahorros reales de impuestos",
+            "point2": "Las pérdidas compensan ganancias, y hasta $3,000 pueden compensar ingreso regular anualmente",
+            "point3": "Cuidado con la regla de wash sale - espera 30 días o compra una inversión similar pero no idéntica",
+            "point4": "Cosecha pérdidas durante caídas del mercado y al final del año para maximizar ahorros"
+          },
+          "5": {
+            "title": "Planificación de Herencias y Patrimonio",
+            "content": "Esto puede parecer lejano, pero entender cómo funcionan los impuestos con herencias puede ayudarte (y a tu familia) a ahorrar mucho dinero.\n\n**El Step-Up en Base (Ajuste de Base):**\nCuando alguien muere, sus inversiones obtienen un 'step-up' en base al valor actual. Esto puede eliminar DÉCADAS de impuestos de ganancias de capital.\n\nEjemplo: Tu abuela compró acciones por $10,000 hace 40 años. Ahora valen $500,000. Si ella las vendiera, debería impuestos sobre $490,000 de ganancias. PERO si las hereda a su muerte, tu nueva base es $500,000. ¡Si las vendes por $500,000, no debes NADA en ganancias!\n\n**Heredar vs Recibir como Regalo:**\n- **Herencia**: Obtienes step-up en base = potencialmente cero impuestos sobre décadas de ganancias\n- **Regalo en vida**: Heredas la base original = pagarás todos los impuestos sobre las ganancias\n\nPor esto, a menudo es mejor fiscalmente heredar inversiones que recibirlas como regalo.\n\n**Exclusión Anual de Regalos:**\nPuedes dar hasta $18,000 por año a cualquier persona sin implicaciones de impuesto sobre regalos. Esto es útil para planificación patrimonial.\n\n**Si Heredas Inversiones:**\nVerifica la base ajustada antes de vender. Tu corredor o contador puede ayudarte a determinar el valor correcto.",
+            "point1": "El step-up en base al morir puede eliminar décadas de impuestos de ganancias de capital",
+            "point2": "Heredar inversiones es más eficiente fiscalmente que recibir regalos de activos apreciados",
+            "point3": "Puedes dar $18,000/año por persona sin implicaciones de impuesto sobre regalos",
+            "point4": "Si heredas inversiones, verifica la base ajustada antes de vender"
+          }
+        }
       },
       "8": {
         "title": "Domina Tu App de Trading",
@@ -339,6 +610,13 @@
       "ready": "¡Terminaste todas las lecciones! ¿Listo para mostrar lo que sabes?",
       "completeLessons": "Termina todas las lecciones para desbloquear el examen",
       "start": "Comenzar Examen",
+      "retake": "Tomar de Nuevo",
+      "alreadyPassed": "¡Ya pasaste este examen! Tómalo de nuevo para mejorar tu puntuación.",
+      "attemptsRemaining": "{remaining} de {max} intentos restantes esta hora",
+      "noAttemptsLeft": "¡Sin intentos disponibles!",
+      "waitToRetry": "Intenta de nuevo en {minutes} minutos",
+      "limitReached": "Has usado los 3 intentos de esta hora",
+      "limitExplanation": "Toma un descanso y revisa las lecciones. Tus intentos se reiniciarán después de una hora.",
       "results": {
         "title": "Tus Resultados",
         "score": "Obtuviste {score} de {total}",
@@ -397,6 +675,9 @@
     "title": "Mis Palabras",
     "subtitle": "¡Palabras grandes hechas simples!",
     "searchPlaceholder": "Buscar una palabra...",
+    "selectToLookup": "¡Resalta cualquier palabra para buscarla!",
+    "notInWordBank": "Esta palabra no está en Mis Palabras todavía",
+    "foundInWordBank": "¡Encontrada en Mis Palabras!",
     "myWords": "Palabras que Estoy Aprendiendo",
     "addToList": "Agregar a Mi Lista",
     "removeFromList": "Eliminar",

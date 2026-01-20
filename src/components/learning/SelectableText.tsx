@@ -124,6 +124,28 @@ export function SelectableText({ children, className }: SelectableTextProps) {
     return () => window.removeEventListener('scroll', handleScroll, true);
   }, []);
 
+  // Process text to render paragraphs correctly
+  const renderContent = () => {
+    // Split by double newlines to create paragraphs
+    const paragraphs = children.split(/\n\n+/);
+
+    return paragraphs.map((paragraph, idx) => {
+      // Split by single newlines within paragraphs for line breaks
+      const lines = paragraph.split(/\n/);
+
+      return (
+        <p key={idx} className={idx > 0 ? 'mt-4' : ''}>
+          {lines.map((line, lineIdx) => (
+            <span key={lineIdx}>
+              {lineIdx > 0 && <br />}
+              {line}
+            </span>
+          ))}
+        </p>
+      );
+    });
+  };
+
   return (
     <div ref={containerRef} className={cn('relative', className)}>
       {/* The selectable text */}
@@ -131,7 +153,7 @@ export function SelectableText({ children, className }: SelectableTextProps) {
         onMouseUp={handleMouseUp}
         className="select-text cursor-text"
       >
-        {children}
+        {renderContent()}
       </div>
 
       {/* Tooltip */}

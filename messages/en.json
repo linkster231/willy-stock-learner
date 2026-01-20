@@ -660,6 +660,11 @@
       "start": "Start Quiz",
       "retake": "Take Again",
       "alreadyPassed": "You've passed this quiz! Take it again to improve your score.",
+      "attemptsRemaining": "{remaining} of {max} attempts left this hour",
+      "noAttemptsLeft": "No attempts left!",
+      "waitToRetry": "Try again in {minutes} minutes",
+      "limitReached": "You've used all 3 attempts this hour",
+      "limitExplanation": "Take a break and review the lessons. Your attempts will reset after an hour.",
       "results": {
         "title": "Your Results",
         "score": "You got {score} out of {total}",

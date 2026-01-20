@@ -54,9 +54,12 @@ export default function QuizPage() {
   }
 
   // User progress store
-  const { getCurrentUser, recordQuizAttempt, completeModule } = useUserStore();
+  const { getCurrentUser, recordQuizAttempt, completeModule, getQuizAttemptLimit } = useUserStore();
   const user = getCurrentUser();
   const hasRecordedRef = useRef(false);
+
+  // Get quiz attempt limit info
+  const attemptLimit = getQuizAttemptLimit(moduleId);
 
   // Quiz state
   const [state, setState] = useState<QuizState>({
@@ -159,11 +162,54 @@ export default function QuizPage() {
           score={correctAnswers}
           totalQuestions={totalQuestions}
           passed={passed}
-          onRetry={handleRestart}
+          onRetry={attemptLimit.canAttempt ? handleRestart : undefined}
           onContinue={() => {
             router.push('/learn');
           }}
+          attemptLimit={user ? attemptLimit : undefined}
         />
+      </div>
+    );
+  }
+
+  // Show blocked state if user has used all attempts
+  if (user && !attemptLimit.canAttempt) {
+    return (
+      <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6">
+        {/* Back Link */}
+        <Link
+          href={`/learn/${params.moduleId}`}
+          className="mb-6 inline-flex items-center gap-1 text-sm text-gray-600 hover:text-gray-900"
+        >
+          ← {t('common.back')}
+        </Link>
+
+        <Card className="text-center p-8">
+          <div className="mb-4 text-6xl">⏰</div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            {t('learn.quiz.noAttemptsLeft')}
+          </h2>
+          <p className="text-gray-600 mb-4">
+            {t('learn.quiz.limitReached')}
+          </p>
+          <p className="text-gray-500 text-sm mb-6">
+            {t('learn.quiz.limitExplanation')}
+          </p>
+
+          {attemptLimit.minutesUntilReset && (
+            <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6">
+              <p className="text-amber-800 font-medium">
+                {t('learn.quiz.waitToRetry', { minutes: attemptLimit.minutesUntilReset })}
+              </p>
+            </div>
+          )}
+
+          <Link href={`/learn/${params.moduleId}`}>
+            <Button variant="secondary">
+              {t('learn.quiz.results.reviewLessonsButton')}
+            </Button>
+          </Link>
+        </Card>
       </div>
     );
   }

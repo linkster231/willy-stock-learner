@@ -11,6 +11,7 @@ import { useTranslations } from 'next-intl';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { cn } from '@/lib/utils';
+import type { QuizAttemptLimitInfo } from '@/stores/useUserStore';
 
 interface QuizResultsProps {
   /** Number of correct answers */
@@ -19,14 +20,16 @@ interface QuizResultsProps {
   totalQuestions: number;
   /** Whether the user passed the quiz */
   passed: boolean;
-  /** Handler for retrying the quiz */
-  onRetry: () => void;
+  /** Handler for retrying the quiz (undefined if no retries available) */
+  onRetry?: () => void;
   /** Handler for continuing to next module */
   onContinue: () => void;
   /** Custom class name */
   className?: string;
   /** Whether this is the final review challenge */
   isFinalReview?: boolean;
+  /** Optional attempt limit info to display */
+  attemptLimit?: QuizAttemptLimitInfo;
 }
 
 /**
@@ -49,8 +52,10 @@ export function QuizResults({
   onContinue,
   className,
   isFinalReview = false,
+  attemptLimit,
 }: QuizResultsProps) {
   const t = useTranslations('learn.quiz.results');
+  const tQuiz = useTranslations('learn.quiz');
 
   const percentage = Math.round((score / totalQuestions) * 100);
 
@@ -164,6 +169,34 @@ export function QuizResults({
         {passed ? t('quizPassedMessage') : t('quizFailedMessage')}
       </p>
 
+      {/* Attempt limit info */}
+      {attemptLimit && (
+        <div className={cn(
+          'mb-4 rounded-lg p-3 text-sm',
+          attemptLimit.canAttempt
+            ? 'bg-blue-50 text-blue-700'
+            : 'bg-amber-50 text-amber-700'
+        )}>
+          {attemptLimit.canAttempt ? (
+            <p>
+              {tQuiz('attemptsRemaining', {
+                remaining: attemptLimit.remainingAttempts,
+                max: attemptLimit.maxAttempts,
+              })}
+            </p>
+          ) : (
+            <>
+              <p className="font-medium">{tQuiz('noAttemptsLeft')}</p>
+              {attemptLimit.minutesUntilReset && (
+                <p className="mt-1">
+                  {tQuiz('waitToRetry', { minutes: attemptLimit.minutesUntilReset })}
+                </p>
+              )}
+            </>
+          )}
+        </div>
+      )}
+
       {/* Action buttons */}
       <div className="flex flex-col sm:flex-row gap-3 justify-center">
         {passed ? (
@@ -176,25 +209,38 @@ export function QuizResults({
             >
               {t('continueButton')}
             </Button>
-            <Button
-              variant="ghost"
-              size="lg"
-              onClick={onRetry}
-              className="min-w-[140px]"
-            >
-              {t('retryButton')}
-            </Button>
+            {onRetry && (
+              <Button
+                variant="ghost"
+                size="lg"
+                onClick={onRetry}
+                className="min-w-[140px]"
+              >
+                {t('retryButton')}
+              </Button>
+            )}
           </>
         ) : (
           <>
-            <Button
-              variant="primary"
-              size="lg"
-              onClick={onRetry}
-              className="min-w-[140px]"
-            >
-              {t('tryAgainButton')}
-            </Button>
+            {onRetry ? (
+              <Button
+                variant="primary"
+                size="lg"
+                onClick={onRetry}
+                className="min-w-[140px]"
+              >
+                {t('tryAgainButton')}
+              </Button>
+            ) : (
+              <Button
+                variant="secondary"
+                size="lg"
+                disabled
+                className="min-w-[140px]"
+              >
+                {tQuiz('noAttemptsLeft')}
+              </Button>
+            )}
             <Button
               variant="ghost"
               size="lg"
