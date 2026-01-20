@@ -392,8 +392,13 @@ export function StockSearch({
 
           {/* No Results State */}
           {!isLoading && showNoResults && (
-            <div className="p-3 text-sm text-gray-500" role="status">
-              No results found for &quot;{debouncedQuery}&quot;
+            <div className="p-3 text-sm" role="status">
+              <p className="text-gray-600">
+                No results found for &quot;{debouncedQuery}&quot;
+              </p>
+              <p className="text-gray-400 mt-1 text-xs">
+                Try clicking a popular stock below instead!
+              </p>
             </div>
           )}
 

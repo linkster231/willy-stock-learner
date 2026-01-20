@@ -14,7 +14,7 @@ import { Link } from '@/i18n/routing';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { Modal } from '@/components/ui/Modal';
-import { ProgressBar } from '@/components/learning';
+import { ProgressBar, SelectableText } from '@/components/learning';
 import { getModuleById } from '@/content/modules';
 import { hasQuiz } from '@/content/quizzes';
 import { useUserStore } from '@/stores/useUserStore';
@@ -281,10 +281,10 @@ export default function ModulePage() {
         size="lg"
       >
         {currentLesson && (
-          <div className="space-y-4">
+          <div className="space-y-5">
             {/* Video Player */}
             {currentLesson.videoUrl && (
-              <div className="relative aspect-video overflow-hidden rounded-lg bg-black">
+              <div className="relative aspect-video overflow-hidden rounded-xl bg-gray-900 shadow-lg">
                 <iframe
                   src={`https://www.youtube.com/embed/${getYouTubeId(
                     currentLesson.videoUrl
@@ -297,28 +297,55 @@ export default function ModulePage() {
               </div>
             )}
 
-            {/* Lesson Content */}
-            <div className="prose prose-sm max-w-none">
-              <p className="text-gray-600">{t(currentLesson.contentKey)}</p>
+            {/* Lesson Info Bar */}
+            <div className="flex items-center gap-4 text-sm text-gray-500">
+              <span className="flex items-center gap-1">
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {currentLesson.duration} min
+              </span>
+              <span className="flex items-center gap-1 text-purple-600">
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {t('glossary.selectToLookup')}
+              </span>
+            </div>
+
+            {/* Lesson Content - Selectable for word lookup */}
+            <div className="rounded-xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-5">
+              <h4 className="flex items-center gap-2 mb-3 font-semibold text-gray-900">
+                <span className="text-xl">📚</span>
+                {t('learn.lessonSummary')}
+              </h4>
+              <SelectableText className="text-gray-700 leading-relaxed">
+                {t(currentLesson.contentKey)}
+              </SelectableText>
             </div>
 
             {/* Key Points */}
-            <div className="rounded-lg bg-blue-50 p-4">
-              <h4 className="mb-2 font-semibold text-blue-900">
+            <div className="rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100 p-5">
+              <h4 className="flex items-center gap-2 mb-3 font-semibold text-blue-900">
+                <span className="text-xl">💡</span>
                 {t('learn.keyPoints')}
               </h4>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {currentLesson.keyPoints.map((pointKey, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-blue-800">
-                    <span className="mt-1 text-blue-500">•</span>
-                    <span>{t(pointKey)}</span>
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-blue-200 text-blue-700 text-xs font-bold">
+                      {idx + 1}
+                    </span>
+                    <SelectableText className="text-blue-800 leading-snug">
+                      {t(pointKey)}
+                    </SelectableText>
                   </li>
                 ))}
               </ul>
             </div>
 
             {/* Actions */}
-            <div className="flex gap-3 pt-4">
+            <div className="flex gap-3 pt-2 border-t border-gray-100">
               <Button
                 variant="secondary"
                 fullWidth
@@ -326,7 +353,7 @@ export default function ModulePage() {
               >
                 {t('common.close')}
               </Button>
-              {!completedLessons.includes(currentLesson.id) && (
+              {!allCompletedLessons.includes(currentLesson.id) && (
                 <Button
                   variant="success"
                   fullWidth

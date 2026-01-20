@@ -10,3 +10,4 @@ export { ModuleCard } from './ModuleCard';
 export { QuizQuestion } from './QuizQuestion';
 export { QuizResults } from './QuizResults';
 export { ProgressBar } from './ProgressBar';
+export { SelectableText } from './SelectableText';

@@ -129,12 +129,13 @@ export function Modal({
           className={cn(
             'w-full rounded-xl bg-white shadow-xl',
             'animate-in zoom-in-95 duration-200',
+            'max-h-[90vh] flex flex-col',
             sizeClasses[size]
           )}
         >
           {/* Header */}
           {(title || showCloseButton) && (
-            <div className="flex items-start justify-between border-b border-gray-200 p-4">
+            <div className="flex items-start justify-between border-b border-gray-200 p-4 flex-shrink-0">
               <div>
                 {title && (
                   <h2
@@ -181,8 +182,8 @@ export function Modal({
             </div>
           )}
 
-          {/* Body */}
-          <div className="p-4">{children}</div>
+          {/* Body - scrollable */}
+          <div className="p-4 overflow-y-auto flex-1">{children}</div>
         </div>
       </div>
     </Fragment>

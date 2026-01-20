@@ -30,17 +30,16 @@ import {
 import { cn } from '@/lib/utils';
 
 // Popular stocks that most beginners recognize
+// Dividend yields are approximate and updated quarterly
 const POPULAR_STOCKS = [
-  { symbol: 'AAPL', name: 'Apple Inc', emoji: '🍎' },
-  { symbol: 'GOOGL', name: 'Alphabet Inc', emoji: '🔍' },
-  { symbol: 'MSFT', name: 'Microsoft Corp', emoji: '💻' },
-  { symbol: 'AMZN', name: 'Amazon.com Inc', emoji: '📦' },
-  { symbol: 'TSLA', name: 'Tesla Inc', emoji: '🚗' },
-  { symbol: 'META', name: 'Meta Platforms', emoji: '👤' },
-  { symbol: 'NVDA', name: 'NVIDIA Corp', emoji: '🎮' },
-  { symbol: 'DIS', name: 'Walt Disney Co', emoji: '🏰' },
-  { symbol: 'KO', name: 'Coca-Cola Co', emoji: '🥤' },
-  { symbol: 'MCD', name: "McDonald's Corp", emoji: '🍔' },
+  { symbol: 'AAPL', name: 'Apple Inc', emoji: '🍎', dividend: 0.5 },
+  { symbol: 'GOOGL', name: 'Alphabet Inc', emoji: '🔍', dividend: null },
+  { symbol: 'MSFT', name: 'Microsoft Corp', emoji: '💻', dividend: 0.8 },
+  { symbol: 'AMZN', name: 'Amazon.com Inc', emoji: '📦', dividend: null },
+  { symbol: 'TSLA', name: 'Tesla Inc', emoji: '🚗', dividend: null },
+  { symbol: 'NVDA', name: 'NVIDIA Corp', emoji: '🎮', dividend: 0.03 },
+  { symbol: 'META', name: 'Meta Platforms', emoji: '👤', dividend: 0.4 },
+  { symbol: 'VOO', name: 'S&P 500 ETF', emoji: '📊', dividend: 1.5 },
 ];
 
 /**
@@ -136,7 +135,7 @@ export default function PaperTradingPage() {
             <label className="block text-sm font-medium text-gray-700 mb-2">
               {t('trade.popularStocks') || 'Or pick a popular stock:'}
             </label>
-            <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               {POPULAR_STOCKS.map((stock) => (
                 <button
                   key={stock.symbol}
@@ -154,6 +153,12 @@ export default function PaperTradingPage() {
                   <span className="font-bold text-sm text-gray-900">{stock.symbol}</span>
                   <span className="text-xs text-gray-500 text-center leading-tight">
                     {stock.name.split(' ')[0]}
+                  </span>
+                  <span className={cn(
+                    'text-xs mt-1',
+                    stock.dividend ? 'text-green-600' : 'text-gray-400'
+                  )}>
+                    {stock.dividend ? `💰 ${stock.dividend}% div` : 'No dividend'}
                   </span>
                 </button>
               ))}

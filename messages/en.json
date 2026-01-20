@@ -83,21 +83,6 @@
     "reviewPrompt": "Keep your streak going!",
     "reviewNow": "Review Now"
   },
-  "auth": {
-    "login": "Log In",
-    "signup": "Sign Up",
-    "logout": "Log Out",
-    "email": "Email Address",
-    "password": "Password",
-    "confirmPassword": "Confirm Password",
-    "forgotPassword": "Forgot Password?",
-    "noAccount": "Don't have an account?",
-    "hasAccount": "Already have an account?",
-    "loginSuccess": "Welcome back!",
-    "signupSuccess": "Account created! Check your email to confirm.",
-    "errorInvalid": "Invalid email or password",
-    "errorEmailTaken": "This email is already registered"
-  },
   "calculators": {
     "title": "Money Tools",
     "description": "Fun tools to help you understand how money grows",
@@ -275,6 +260,7 @@
     "passScore": "You need 80% to pass",
     "loginToSave": "Log in to save your progress!",
     "markComplete": "I Finished This!",
+    "lessonSummary": "Lesson Summary",
     "keyPoints": "What You Learned",
     "modules": {
       "1": {
@@ -1145,6 +1131,9 @@
     "swipeInstructions": "Swipe right if you knew it, left to review again",
     "readMore": "Read more",
     "showLess": "Show less",
+    "notInWordBank": "This word isn't in the Word Bank yet",
+    "foundInWordBank": "Found in Word Bank!",
+    "selectToLookup": "Highlight any word to look it up!",
     "terms": {
       "stock": {
         "term": "Stock",
